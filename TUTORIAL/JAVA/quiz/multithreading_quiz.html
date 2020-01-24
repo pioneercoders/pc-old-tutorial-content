@@ -1,0 +1,74 @@
+<!-- widget Quiz  -->	
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','c','a','d','d','c','a','c','a','a'], selAnswers: []}">
+		<div>
+			<h6>1).What is multithreaded programming?</h6>
+			<options values='{"values":["It’s a process in which two different processes run simultaneously.","It’s a process in which two or more parts of same process run simultaneously.","Its a process in which many different process are able to access same information","Its a process in which a single process can access information from many sources"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2. Which of these are types of multitasking?</h6>
+			<options values='{"values":["Process based","Thread based","Process and Thread based","None of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+
+		<br>
+		<div>
+			<h6>3.Thread priority in Java is?</h6>
+			<options values='{"values":["Integer","Float","double","long"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4. What will happen if two thread of same priority are called to be processed simultaneously?</h6>
+			<options values='{"values":["Any one will be executed first lexographically","Both of them will be executed simultaneously","None of them will be executed","It is dependent on the operating system."]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. Which of these statements is incorrect?</h6>
+			<options values='{"values":["a. By multithreading CPU’s idle time is minimized, and we can take maximum use of it.","b. By multitasking CPU’s idle time is minimized, and we can take maximum use of it.","Two thread in Java can have same priority","A thread can exist only in two states, running and blocked."]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6.Which of these class is used to make a thread?</h6>
+			<options values='{"values":["String","System","Thread","Runnable"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. Which of these interface is implemented by Thread class?</h6>
+			<options values='{"values":["Runnable","Connections","Set","MapConnections"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. Which of these method of Thread class is used to find out the priority given to a thread?</h6>
+			<options values='{"values":["get()","ThreadPriority()","getPriority()","getThreadPriority()"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>9. Which of these method of Thread class is used to Suspend a thread for a period of time?</h6>
+			<options values='{"values":["sleep()","terminate()","suspend()","stop()"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+			<div>
+			<h6>10. Which function of pre defined class Thread is used to check weather current thread being checked</h6>
+			<options values='{"values":["isAlive()","Join()","isRunning()","Alive()"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

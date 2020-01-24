@@ -1,0 +1,123 @@
+		<h4>Finally Keyword :</h4>
+		<ul>
+			<li>The finally keyword is used to create a block of code that follows a try block. A finally block of code always executes, whether or not an exception has occurred.</li>
+			<li>Using a finally block allows you to run any cleanup-type statements that you want to execute, no matter what happens in the protected code.</li>
+			<li>A finally block appears at the end of the catch blocks and has the following syntax:</li>
+		</ul>
+		<h5>Syntax</h5>
+		@CODE_START@@JAVA@
+		try {
+			//Protected Code
+		}
+		catch (ExceptionType1 e1) {
+			//Catch Block
+		}
+		catch (ExceptionType2 e2) {
+			//Catch Block
+		}
+		catch (ExceptionType3 e3) {
+			//Catch Block
+		}
+		Finally {
+			//The Finally block always executes
+		}
+		@CODE_END@	
+		@IMG_START@JAVA/finallytutorial_image1/png@IMG_END@		
+		<p><b>Note :</b>Before terminating the program, JVM executes finally block(if any).</p>
+		<p><b>Note :</b>Finally must be followed by try or catch block.</p>
+		<h4>Why use finally block?</h4>
+		<p>Sometimes there may be cleanup codes, which are required to be executed. However, when an execution occurs, the program halts abruptly and the clean up code never gets executed. To close a file before terminating a program, that has encountered an exception during execution, Java provides the finally block. The finally gets executed at runtime regardless of what happens in the try/catch block. A finally block ensures that all cleanup work is taken care of when an exception occurs. It is used in conjunction with a try block. The finally block contains statements that either return resources to the system or print messages.</p>	
+<h5>Case 1:</h5>
+<section>  
+    <div id="FinallyBlock" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:400px;border-radius:10px;">public class FinallyBlock {
+			public static void main(String[] args){ 
+				int a[] = new int[]{2,3,5};
+				try {
+					System.out.println("Access element three :" +a[2]);
+				}
+				catch (ArrayIndexOutOfBoundsException e) {
+					System.out.println("Exception thrown :" +e);
+				}
+				finally {
+					a[0] = 6;
+					System.out.println("First element value :" +a[0]);
+					System.out.println("The finally statement"+
+													"is executed");
+				}
+			}
+		}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('FinallyBlock','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+		
+<h5>Case 2:</h5>
+<section>  
+    <div id="FinallyBlock1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:350px;border-radius:10px;">public class FinallyBlock1 {
+	public static void main(String[] args){ 
+		int a[] = new int[]{2,3,5};
+		try {	
+			System.out.println("Access element three :" +a[3]);
+		}
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Exception thrown :" +e);
+		}
+		finally {
+			a[0] = 6;
+			System.out.println("First element value :" +a[0]);	
+			System.out.println("The finally statement is executed");
+		}
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('FinallyBlock1','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+	
+<h5>Case 3:</h5>
+<section>  
+    <div id="FinallyBlock2" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:350px;border-radius:10px;">public class FinallyBlock2 {
+	public static void main(String[] args){ 
+		int a[] = new int[]{2,3,5};
+		try {
+			System.out.println("Access element three :" +a[2]/0);
+		}
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Exception thrown :" +e);
+		}
+		finally {
+			a[0] = 6;
+			System.out.println("First element value :" +a[0]);
+			System.out.println("The finally statement is executed");
+		}
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('FinallyBlock2','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>
+	
+		<h4>Note the following :</h4>		
+		<ul>
+			<li>A catch clause cannot exist without a try statement.</li>
+			<li>It is not compulsory to have finally clauses when ever a try/catch block is present.</li>
+			<li>The try block cannot be present without either catch clause or finally clause.</li>
+			<li>Any code cannot be present in between the try, catch, finally blocks.</li>
+			<li>For each try block there can be zero or more catch blocks, but only one finally block.</li>
+		</ul>
+		<p><b>Note :</b>The finally block will not be executed if program exits(either by calling System.exit() or by causing a fatal error that causes the process to abort).</p>

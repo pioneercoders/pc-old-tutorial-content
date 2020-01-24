@@ -1,0 +1,65 @@
+<p>The main objective of Generics is to provide <b>Type-Safety</b> and to resolve <b>Type-Casting</b> problems.</p>
+	<p><b>Case 1: Type-Safety</b></p>
+	<ul>
+		<li>Arrays are always type safe that is we can give the guarantee for the type of elements present inside array.</li>
+		<li>For example if our programming requirement is to hold String type of objects it is recommended to use String array. In the case of string array we can add only string type of objects by mistake if we are trying to add any other type we will get compile time error.</li>
+	</ul>
+	<p><b>Example:</b></p>		
+@CODE_START@@JAVA@String[] s = new String[100];
+s[0]="pioneer"
+s[1]="coders"
+s[2]=new Integer(10)---> (invalid)
+@CODE_END@	
+
+<ul>
+	<li>That is we can always provide guarantee for the type of elements present inside array and hence arrays are safe to use with respect to type that is arrays are type safe.</li>
+	<li>But collections are not type safe that is we can't provide any guarantee for the type of elements present inside collection.</li>
+	<li>For example if our programming requirement is to hold only string type of objects it is never recommended to go for ArrayList.</li>
+	<li>By mistake if we are trying to add any other type we won't get any compile time error but the program may fail at runtime.</li>
+</ul>
+	<p><b>Example</b></p>
+@CODE_START@@JAVA@ArrayList al = new ArrayList();
+al.add("sachin");
+
+al.add("Tendhulkhar");
+
+al.add(new Integer(10));
+
+.
+
+.
+
+String name1 = (String)al.get(0);
+
+String name2=(String)al.get(1);
+
+String name3 =(String)al.get(2);-->runtime exception
+@CODE_END@
+<ul><li>Hence we can't provide guarantee for the type of elements present inside collections that is collections are not safe to use with respect to type.</li></ul>
+
+	<h4>Type-Casting:</h4>		
+	<ul>
+		<li>In the case of array at the time of retrieval it is not required to perform any type casting.</li>
+	</ul>										
+@CODE_START@@JAVA@String[] s = new String[100];
+s[0]="sachin";
+
+s[1]="Tendulkar"
+
+.............
+
+.............
+
+String name1=s[0]; At the time of retrieval type casting is not required.@CODE_END@				
+<ul>
+	<li>But in the case of collection at the time of retrieval compulsory we should perform type casting otherwise we will get compile time error.</li>
+</ul>			
+
+
+@CODE_START@@JAVA@ArrayList al = new ArrayList();
+al.add("sachin");
+al.add("Tendulkhar");
+String name1 = al.get(0); ---->compilation error At the time of retrieval type casting is mandatory
+String name1=(String)al.get(0);
+@CODE_END@	
+			

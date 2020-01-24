@@ -1,0 +1,28 @@
+<!-- widget Quiz  -->	
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','c'], selAnswers: []}">
+		<div>
+			<h6>1).	What is process of defining two or more methods within same class that have same name but different parameters declaration?</h6>
+			<options values='{"values":["method overloading", "method overriding", "method hiding", "None of the mentioned "]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6> 2). Which of these can be overloaded?</h6>
+			<options values='{"values":["Methods", "Constructors", "All of the mentioned", "None of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6> 3).Which of the following statements are incorrect? </h6>
+			<options values='{"values":["Default constructor is called at the time of declaration of the object if a constructor has not been defined.", "Constructor can be parameterized.", "finalize() method is called when a object goes out of scope and is no longer needed.", "finalize() method must be declared protected"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

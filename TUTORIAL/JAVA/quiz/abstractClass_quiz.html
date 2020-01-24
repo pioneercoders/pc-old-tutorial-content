@@ -1,0 +1,66 @@
+<!-- widget Quiz  -->	
+<h3>Abstract Class Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','c'], selAnswers: []}">
+		<div>
+			<h6>1).Can an abstract class define both abstract methods and non-abstract methods?</h6>
+			<options values='{"values":["NO-it must have all one or the other","NO-it must have all abstract methods ","Yes-but the child classes do not inherit the abstract methods ","Yes- the child classes inherit both. "]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2).Can an abstract method be defined in a non-abstract class ? ?</h6>
+			<options values='{"values":["No- if a class defines an abstract method the class itself must be abstract","No-only classes are abstract, not methods","Yes-a method can be declared abstract in any parent as long as the child classes also declare it abstract ","Yes-there is no restriction on where abstract methods can be defined."]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>>3. Which of the following is FALSE about abstract classes in Java </h6>
+			<options values='{"values":["If we derive an abstract class and do not implement all the abstract methods, then the derived class should also be marked as abstract using ‘abstract’ keyword ","Abstract classes can have constructors "," A class can be made abstract without any abstract method ","A class can inherit from multiple abstract classes. "]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4). Can an abstract parent class have non-abstract children?</h6>
+			<options values='{"values":["No-an abstract parent must have only abstract children ","No- an abstract parent must have no children at all ","Yes- all children of an abstract parent must be non-abstract. ","Yes-an abstract parent can have both abstract and non-abstract children "]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5. Which of the following is true for abstract class and interface ?</h6>
+			<options values='{"values":["A class can extend only one abstract class ","A class can implement any no of interfaces ","A class can extend any no of abstract classes ","A class can implement one interface "]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6. which of the following conditions are true.? </h6>
+			@CODE_START@@JAVA@
+			i) In abstract class keyword ‘abstract’ is not mandatory to declare a method as an abstract
+			ii) In an interface keyword ‘abstract’ is mandatory declare a method as an abstract
+			iii) In abstract class keyword ‘abstract’ is mandatory to declare a method as an abstract
+			iv) In an interface keyword ‘abstract’ is optional to declare a method as an abstract
+			@CODE_END@
+			<options values='{"values":["i&ii","i&iv","ii&iii","iii&iv"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>7).	Which of the following conditions are true?</h6>
+			@CODE_START@@JAVA@
+			i) abstract  class can have  protected , public and public abstract methods
+			ii) Interface can have only public abstract methods i.e. by default
+			iii) abstract class can have  static, final  or static final  variable with any access specifier
+			iv) interface  can  have only static final (constant) variable i.e. by default
+			@CODE_END@
+			<options values='{"values":["i&ii","i&iii","i,ii &iii","i,ii,iii & iv"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

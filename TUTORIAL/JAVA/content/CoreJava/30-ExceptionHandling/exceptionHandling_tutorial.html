@@ -1,0 +1,105 @@
+	<h4>Exceptions in Java - What are Java Exceptions?</h4>
+		<P>A Java Exception is an abnormal condition that arises during the execution of a program and also called a run-time error. An exception in Java signals the unusual or catastrophic situations that can arise.</p>
+		<p><b>Examples</b> of Java Exceptions are:</p>	
+		<ul>
+			<li>Incorrect user input such as division by zero</li>
+			<li>File that needs to be opened not found</li>
+			<li>Network connection problem</li>
+		</ul>			
+	<h4>Types of Java Exceptions :</h4>
+		<p>Like anything else in this world, Exceptions can also be categorized! Based on whether or not you are required to handle the exception, there are two types of exceptions:</p>
+		<p>1.Checked Exceptions</p>
+		<p>2.Unchecked Exceptions</p>
+	<h4>Checked Exceptions :</h4>
+		<p>These are the type of exceptions for which the compiler checks to ensure that your code is prepared for handling such exceptions. These are the exceptions that you can expect to occur frequently and you must handle them in your code. The conditions that generate such exceptions are generally outside the control of your program and they can occur in a correct program. But you can anticipate them and thus you must write code to deal with them. Programmatically, checkedexceptions are the instances of the Exception class or one of its subclasses, excluding RuntimeException subtree. </p>
+	<h5>List Of Checked Exceptions</h5>
+		<ul>
+			<li><b>ClassNotFoundException :</b>Class not found.</li>
+			<li><b>CloneNotSupportedException :</b>Attempt to clone an object that does not implement theCloneable interface.</li>
+			<li><b>IllegalAccessException :</b>Access to a class is denied.</li>
+			<li><b>InstantiationException :</b> Attempt to create an object of an abstract class or interface.</li>
+			<li><b>InterruptedException :</b> One thread has been interrupted by another thread.</li>
+			<li><b>NoSuchFieldException :</b>A requested field does not exist.</li>
+			<li><b>NoSuchMethodException :</b>A requested method does not exist.</li>
+		</ul>		
+	<h5>Unchecked Exceptions :</h5>
+		<p>The compiler does not check for such type of exceptions. Unchecked Exceptions comprise of run time exceptions (of type RuntimeException or its subclasses) and errors (of type Error or its subclasses). Runtime Exceptions occur due to program bugs and include exceptions such as division by zero and invalid array indexing. You can not recover from an unchecked exception and you are not required to handle such type of exceptions either, but still you can do so if you want. ArithmeticException class is an example of unchecked exception. Errors are the exceptions that are not expected to be caught under normal circumstances by your program. They are used by the Java run time environment to indicate errors related to run time environment itself. Stack Overflow is an example of error.</p>
+		<h5>List Of Unchecked Exceptions</h5>
+		<ul>
+			<li><b>ArithmeticException</b>Arithmetic error, such as divide-by-zero.</li>
+			<li><b>ArrayIndexOutOfBoundsException </b>Array index is out-of-bounds.</li>
+			<li><b>ArrayStoreException </b> Assignment to an array element of an incompatible type.</li>
+			<li><b>ClassCastException</b> Invalid cast</li>
+			<li><b>IllegalArgumentException</b>Illegal argument used to invoke a method</li>
+			<li><b>IllegalMonitorStateException </b>Illegal monitor operation, such as waiting on an unlocked thread.</li>
+			<li><b>IllegalStateException</b> Environment or application is in incorrect state.</li>
+			<li><b>IllegalThreadStateException </b>Requested operation not compatible with current thread state.</li>
+			<li><b>IndexOutOfBoundsException</b>Some type of index is out-of-bounds.</li>
+			<li><b>NegativeArraySizeException</b> Array created with a negative size.</li>
+			<li><b>NullPointerException</b> Invalid use of a null reference.</li>
+			<li><b>NumberFormatException </b> Invalid conversion of a string to a numeric format.</li>
+			<li><b>SecurityException</b> Attempt to violate security.</li>
+			<li><b>StringIndexOutOfBounds </b>Attempt to index outside the bounds of a string.</li>
+			<li><b>UnsupportedOperationException</b> An unsupported operation was encountered.</li>
+		</ul>						
+		@IMG_START@JAVA/exceptionhandlingtutorial_image1/png@IMG_END@
+		<h4>Common scenarios of Exception Handling where exceptions may occur :</h4>
+		<p>There are given some scenarios where unchecked exceptions can occur. They are as follows:</p>
+		<h4>1)Scenario where ArithmeticException occurs</h4>
+		<p>If we divide any number by zero, there occurs an ArithmeticException.</p>
+		<h5>Syntax</h5>
+		@CODE_START@@JAVA@ 
+		int a = 50/0;//ArithmeticException
+		@CODE_END@					
+					
+		<h4>2)Scenario where NullPointerException occurs</h4>
+		<p>If we have null value in any variable, performing any operation by the variable occurs an NullPointerException.</p>
+		<h5>Syntax</h5>
+		@CODE_START@@JAVA@String s = null;
+		System.out.println(s.length());//NullPointerException
+		@CODE_END@							
+		<h4>3)Scenario where NumberFormatException occurs</h4>
+		<p>The wrong formatting of any value, may occur NumberFormatException. Suppose I have a string variable that have characters, converting this variable into digit will occur NumberFormatException.</p>
+		<h5>Syntax</p>
+		@CODE_START@@JAVA@String s = "abc";
+		int i = Integer.parseInt(s);//NumberFormatException
+		@CODE_END@				
+		<h4>4)Scenario where ArrayIndexOutOfBoundsException occurs :</h4>
+		<p>If you are inserting any value in the wrong index, it would result ArrayIndexOutOfBoundsException as shown below:</p>
+		<h5>Syntax</h5>
+		@CODE_START@@JAVA@
+		int a[] = new int[5];
+		a[10] = 50; //ArrayIndexOutOfBoundsException
+		@CODE_END@		
+		<h4>Exceptions Methods :</h4>
+		<p>Following is the list of important methods available in the Throwable class.</p>
+		<table class="pc-table">
+			<tr>
+				<td><b>S.No</b></td>
+				<td><b>Methods with Description</b></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td><b>public String getMessage()</b><br>Returns a detailed message about the exception that has occurred. This message is initialized in the Throwable constructor.</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td><b>public Throwable getCause()</b><br>Returns the cause of the exception as represented by a Throwable object</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td><b>public String toString()</b><br>Returns the name of the class concatenated with the result of getMessage()</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td><b>public void printStackTrace()</b><br>Prints the result of toString() along with the stack trace to System.err, the error output stream.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td><b>public StackTraceElement [] getStackTrace()</b><br>Returns an array containing each element on the stack trace. The element at index 0 represents the top of the call stack, and the last element in the array represents the method at the bottom of the call stack.</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td><b>public Throwable fillInStackTrace()</b><br>Fills the stack trace of this Throwable object with the current stack trace, adding to any previousinformation in the stack trace.</td>
+			</tr>
+		</table>

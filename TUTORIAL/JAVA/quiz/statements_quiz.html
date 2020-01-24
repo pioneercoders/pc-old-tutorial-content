@@ -1,0 +1,54 @@
+<h3>Statements Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','a','d','b','a','d'], selAnswers: []}">
+		<div>
+			<h6>1).Which of these selection statements test only for equality?</h6>
+			<options values='{"values":["if", "switch", "if&switch", "None of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2).Which of these are selection statements in Java?</h6>
+			<options values='{"values":["if()", "for()", "break", "continue"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3). Which of these jump statements can skip processing remainder of code in its body for a particular iteration?</h6>
+			<options values='{"values":["break", "return", "exit", "continue"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4). Which of these statement is correct?</h6>
+			<options values='{"values":["switch statement is more efficient than a set of nested ifs.", "case constants in the same switch can have identical values.", "switch statement can only test for equality,whereas if statement can evaluate any type of boolean expression.", "it is possible to create a nested switch statements"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		
+<h6> 5. What is the out put of the following program? </h6>
+@CODE_START@@C@
+#include &lt;stdio.h&gt;
+
+int main() {
+   /* my first program in C */
+   printf("Hello, World! \n");
+   
+   return 0;
+}
+@CODE_END@
+			<options values='{"values":["Hello, World!", "Pioneer Coders", "n", "nothing"]}' bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		
+		<div>
+			<h6>6). Which of these statements are incorrect? </h6>
+			<options values='{"values":["Assignment operators are more efficiently implemented by Java run-time system than their equivalent long forms.", "Assignment operators can be used only with numeric and character data type.", "Assignment operators run faster than their equivalent long forms.", "None"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

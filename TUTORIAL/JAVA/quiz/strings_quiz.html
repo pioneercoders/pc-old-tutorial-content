@@ -1,0 +1,118 @@
+<!-- widget Quiz  -->	
+<h3>Strings Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b','b','d','a','d','d','b','d''b','c','a','c'], selAnswers: []}">
+		<div>
+			<h6>1. String in Java is a?</h6>
+			<options values='{"values":["class","object","variable","character array"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6> Which of these class is superclass of String and StringBuffer class?</h6>
+			<options values='{"values":["java.util","java.lang","ArrayList","None of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3. Which of the following is true  </h6>
+			@CODE_START@@JAVA@
+				String Buffer is Synchronized component
+				String Builder is non-Synchronized component
+				String Buffer is non-Synchronezed component
+				String Builder is Synchronized component
+			@CODE_END@
+			<options values='{"values":["i&ii","i&iv","ii&iii","iii&iv"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.What is the output of the following program</h6>
+			@CODE_START@@JAVA@
+			Class StringEx{
+				public static void main(String[] args){
+				int i=10;
+				int j=20;
+				A a1=new A();
+				A a2 = new A();
+				String str1 = new String(“abc”);
+				String str2 = new String(“abc”);
+				System.out.println(i==j);
+				System.out.println(a1==a2);
+				System.out.println(str1==str2);
+				System.out.println(a1.equals(a2));
+				System.out.println(str1.equals(str2));
+				}
+				}
+			@CODE_END@
+			<options values='{"values":["false,false,true,true,false","false,true,true,true,true","true,true,false,false,false","false,false,false,false,ture"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. Which of these operators can be used to concatenate two or more String objects?</h6>
+			<options values='{"values":["+","+=","&","||"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6. Which of these method of class String is used to obtain length of String object?</h6>
+			<options values='{"values":["get()","Sizeof()","lengthof()","length()"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. Which of these method of String class is used to obtain character at specified index?</h6>
+			<options values='{"values":["char()","Charat()","charat()","charAt()"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. Which of these keywords is used to refer to member of base class from a sub class?</h6>
+			<options values='{"values":["upper","super","this","None of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>9. Which of these method of String class can be used to test to strings for equality?</h6>
+			<options values='{"values":["isequal()","isequals()","equal()","equals()"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>10. Which of the following statements are incorrect?</h6>
+			<options values='{"values":["String is a class.","Strings in java are mutable.","Every string is an object of class String.","Java defines a peer class of String, called StringBuffer, which allows string to be "]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+		<div>
+			<h6>11. Which of these method of class String is used to extract a single character from a String object?</h6>
+			<options values='{"values":["CHARAT()","chatat()","charAt()","ChatAt()"]}' 
+			bind-model='quizObj.selAnswers' id="10"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>12. Which of these constructors is used to create an empty String object?</h6>
+			<options values='{"values":["String()","String(void)","String(0)","None of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="11"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>13.Which of these is an oncorrect statement?</h6>
+			<options values='{"values":["String objects are immutable, they cannot be changed.","String object can point to some other reference of String variable","StringBuffer class is used to store string in a buffer for later use.","None of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="12"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

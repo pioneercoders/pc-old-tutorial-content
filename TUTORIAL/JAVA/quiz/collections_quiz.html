@@ -1,0 +1,154 @@
+<!-- widget Quiz  -->	
+<h3>Collections Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ["b","d","d","b","b","d","c","c","c","a","a","d","a","d","b","a","b","b","b","a","d","a"], selAnswers: []}">
+		<div>
+			<h6>1. Which of these packages contain all the collection classes?</h6>
+			<options values='{"values":["java.lang","java.util","java.net","java.awt"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2. Which of these classes is not part of Java’s collection framework?</h6>
+			<options values='{"values":["Maps","Array","Stack","Queue"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3. Which of these interface is not a part of Java’s collection framework?</h6>
+			<options values='{"values":["List","Set","sortedMap"," SortedList"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Which of these interface handle sequences?</h6>
+			<options values='{"values":["Set","List","Comparator","Collection"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. Which of these standard collection classes implements a linked list data structure?</h6>
+			<options values='{"values":["AbstractList","LinkedList","HashSet","AbstractSet"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6. Which of these method is used to add an element to the start of a LinkedList object?</h6>
+			<options values='{"values":["add()","first()","AddFirst()","addFirst()"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. Which of these methods can be used to delete the last element in a LinkedList object?</h6>
+			<options values='{"values":["remove()","delete()","removeLast()","deleteLast()"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. Which of these method is used to change an element in a LinkedList Object?</h6>
+			<options values='{"values":["change()","set()","redo()","add()"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>9. Which of these standard collection classes implements a dynamic array?</h6>
+			<options values='{"values":["AbstractList","LinkedList","ArrayList","AbstractSet"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>10. Which of these class can generate an array which can increase and decrease in size automatically? </h6>
+			<options values='{"values":["ArrayList","DynamicList()","LinkedList()","DynamicList()"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+		<div>
+			<h6>11. Which of these method of ArrayList class is used to obtain present size of an object?</h6>
+			<options values='{"values":["size()","length()","index()","capacity()"]}' 
+			bind-model='quizObj.selAnswers' id="10"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>12. Which of these method is used to reduce the capacity of an ArrayList object?</h6>
+			<options values='{"values":["trim()","trimSize()","trimTosize()","trimToSize()"]}' 
+			bind-model='quizObj.selAnswers' id="11"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>13. Which of these interface must contain a unique element? </h6>
+			<options values='{"values":["Set","List","Array","Collection"]}' 
+			bind-model='quizObj.selAnswers' id="12"></options>
+		</div>
+		<br>
+		<div>
+			<h6>14. Which of these is Basic interface that all other interface inherits?</h6>
+			<options values='{"values":["Set","List","Array","Collection"]}' 
+			bind-model='quizObj.selAnswers' id="13"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>15. Which of these classes implements Set interface?</h6>
+			<options values='{"values":["ArrayList","HashSet","LinkedList","DynamicList"]}' 
+			bind-model='quizObj.selAnswers' id="14"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>16. Which of these method of HashSet class is used to add elements to its object?</h6>
+			<options values='{"values":["add()","Add()","addFirst()","insert()"]}' 
+			bind-model='quizObj.selAnswers' id="15"></options>
+		</div>
+		<br>
+		<div>
+			<h6>17. Which of these object stores association between keys and values?</h6>
+			<options values='{"values":["Hash table","Map","Array","String"]}' 
+			bind-model='quizObj.selAnswers' id="16"></options>
+		</div>
+		<br>
+		<div>
+			<h6>18. Which of these classes provide implementation of map interface?	</h6>
+			<options values='{"values":["ArrayLis","HashMap","LinkedList","DynamicList"]}' 
+			bind-model='quizObj.selAnswers' id="17"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>19. Which of these method is used to remove all keys/values pair from the invoking map?</h6>
+			<options values='{"values":["delete()","remove()","clear()","removeAll()"]}' 
+			bind-model='quizObj.selAnswers' id="18"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>20. Which of these method Map class is used to obtain an element in the map having specified key?</h6>
+			<options values='{"values":["search()","get()","set()","look()"]}' 
+			bind-model='quizObj.selAnswers' id="19"></options>
+		</div>
+		<br>
+
+		<div>
+			<h6>21. Which of these methods can be used to obtain set of all keys in a map?</h6>
+			<options values='{"values":["getAll()","getKeys()","keyall()","keySet()"]}' 
+			bind-model='quizObj.selAnswers' id="20"></options>
+		</div>
+		<br>
+		<div>
+			<h6>22. Which of these method is used add an element and corresponding key to a map?</h6>
+			<options values='{"values":["put()","set()","redo()","add()"]}' 
+			bind-model='quizObj.selAnswers' id="21"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

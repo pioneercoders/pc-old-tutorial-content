@@ -1,0 +1,166 @@
+<h4> What is method ?</h4>
+<p> In programming, the concept of methods/functions came from the idea of functions in mathematics. </p>
+<p> In mathematics, a function is a relation between a set of inputs and a set of permissible outputs with the property that each input is related to exactly one output. Ex</p>
+@CODE_START@@JAVA@f(x) = x*2;
+f(1) = 2;
+f(2) = 4;
+@CODE_END@
+
+@IMG_START@JAVA/function_maths/png@IMG_END@
+
+<p>Similarly in Java method is a collection of statements that are grouped
+	together to perform an operation.</p>
+	
+<h5>Syntax</h5>
+
+@CODE_START@@JAVA@Modifier returnValueType methodName(list of parameters) exceptions{ 
+// collection of statements or Method Body; 
+return;
+}@CODE_END@
+
+<p>Method has two parts 1) Method defination 2) Method calling </p>
+<h4> Method Defination </h4>
+<p> Method defination tells about method.
+
+@IMG_START@JAVA/methodstutorials_image1/png@IMG_END@
+
+<p>A method definition consists of a method header and a method
+	body. Here are all the parts of a method:</p>
+<p>
+	<b>Modifiers:</b> The modifier, which is optional, tells the
+	compiler how to call the method. This defines the access type of
+	the method.
+</p>
+<p>
+	<b>Return Type:</b> A method may return a value nothing but output of the method. The
+	returnValueType is the data type of the value the method returns.
+	Some methods perform the desired operations without returning a
+	value. In this case, the returnValueType is the keyword <b>void</b>.
+</p>
+<p>
+	<b>Method Name:</b> This is the actual name of the method. The
+	method name and the parameter list together constitute the method
+	signature.
+</p>
+<p>
+	<b>Parameters:</b> A parameter is like a placeholder for inputs. When a
+	method is invoked, you pass a value to the parameter. This value
+	is referred to as actual parameter or argument. The parameter list
+	refers to the type, order, and number of the parameters of a
+	method. Parameters are optional; that is, a method may contain no
+	parameters.
+</p>
+<p>
+	<b>Method Body:</b> The method body contains a collection of
+	statements that define what the method does.
+</p>
+
+
+<h4>Calling a Method:</h4>
+<p>In creating a method, you give a definition of what the
+	method is to do. To use a method, you have to call or invoke it.
+	There are two ways to call a method; the choice is based on
+	whether the method returns a value or not.</p>
+<p>When a program calls a method, program control is
+	transferred to the called method. A called method returns control
+	to the caller when its return statement is executed or when its
+	method-ending closing brace is reached.</p>
+<p>If the method returns a value, a call to the method is
+	usually treated as a value. For example:</p>
+@CODE_START@@JAVA@int larger = max(30, 40);@CODE_END@
+<p>If the method returns void, a call to the method must be a
+	statement. For example, the method println returns void. The
+	following call is a statement:</p>
+@CODE_START@@JAVA@System.out.println("Welcome to Java!");@CODE_END@
+
+<h5>Program to find Maximum number between the two numbers</h5>
+<section>  
+    <div id="LargestNumber" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:350px;border-radius:10px;">class LargestNumber { 
+	public static void main(String[] args) { 
+		System.out.println("Enter a and b"); 
+		<!--Scanner s=new Scanner(System.in); 
+		int a=s.nextInt(); 
+		int b=s.nextInt();-->
+		int largeNum = largestNumber(1,2);
+		System.out.println("Large Number is::"+largeNum);		
+	} 
+	public static int largestNumber(int num1,int num2){
+		int max;
+		if(num1>num2) { 	
+			max = num1; 
+		}else{ 
+			max = num2; 
+		} 
+		return max;
+	} 
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('LargestNumber','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+
+<p>This section shows how to declare and invoke a void method.
+	Following example gives a program that declares a method named
+	printGrade and invokes it to print the grade for a given score.</p>
+
+<h5>Simple example to Print a Grade</h5>
+<section>  
+    <div id="TestVoidMethod" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:400px;border-radius:10px;">class TestVoidMethod { 
+	public static void main(String[] args){ 
+		printGrade(78.5); 
+	}
+	public static void printGrade(double score){ 
+		if(score >= 90.0){
+			System.out.println('A'); 
+		}else if(score >= 80.0){
+			System.out.println('B'); 
+		}else if(score >= 70.0){
+			System.out.println('C'); 
+		}else if(score >= 60.0){
+			System.out.println('D'); 
+		}else{ 
+			System.out.println('F'); 
+		} 
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('TestVoidMethod','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+
+
+
+<p>Here the printGrade method is a void method. It does not
+	return any value. A call to a void method must be a statement. So,
+	it is invoked as a statement in line 3 in the main method. This
+	statement is like any Java statement terminated with a semicolon.</p>
+	
+<h4>The Scope of Variables:</h4>
+<p>The scope of a variable is the part of the program where the
+	variable can be referenced. A variable defined inside a method is
+	referred to as a local variable.</p>
+<p>The scope of a local variable starts from its declaration
+	and continues to the end of the block that contains the variable.
+	A local variable must be declared before it can be used.</p>
+<p>A parameter is actually a local variable. The scope of a
+	method parameter covers the entire method.</p>
+	
+	@IMG_START@JAVA/local_variables/png@IMG_END@
+	
+<p>A variable declared in the initial action part of a for loop
+	header has its scope in the entire loop. But a variable declared
+	inside a for loop body has its scope limited in the loop body from
+	its declaration to the end of the block that contains the variable
+	as shown below:</p>
+@IMG_START@JAVA/methodstutorials_image2/png@IMG_END@
+

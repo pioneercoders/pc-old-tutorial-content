@@ -1,0 +1,57 @@
+<p>Abstraction can be defined as the process of hiding the unwanted details and exposing only the essential features of a particular object or concept. The concept of abstraction is used by classes and lists of attributes are defined in them like cost, size and weight, and methods that operate on their attributes. Abstraction is also achieved through composition.For example, a class Car would be made up of an Engine, Gearbox, Steering objects, and many more components. To build the Car class, one does not need to know how the different components work internally, but only how to interface with them, i.e., send messages to them, receive messages from them, and perhaps make the different objects composing the class interact with each other.</p>
+	<h4>Encapsulation in Java</h4>
+	<p>Encapsulation is a way of wrapping up data and methods into a single unit. Encapsulation puts the data safe from the outside world by binding the data and codes into single unit This is best way to protect the data from outside the world.</p>
+	<p>Encapsulation is nothing but protecting anything which is prone to change. rational behind encapsulation is that if any functionality which is well encapsulated in code i.e maintained in just one place and not scattered around code is easy to change. this can be better explained with a simple example of encapsulation in Java.</p>
+	<p><b>Advantages of encapsulation in java and OOPS :</b></p>
+	<p>Here are few advantages of using Encapsulation while writing code in Java or any Object orientedprogramming language:</p>
+	<ul>
+		<li>Encapsulated Code is more flexible and easy to change with new requirements.</li>
+		<li>Encapsulation in Java makes unit testing easy.</li>
+		<li>Encapsulation in Java allows you to control who can access what.</li>
+		<li>Encapsulation also helps to write immutable class in Java which are a good choice in multi-threading environment.</li>
+		<li>Encapsulation reduce coupling of modules and increase cohesion inside a module because all piece of one thing are encapsulated in one place.</li>
+		<li>Encapsulation allows you to change one part of code without affecting other part of code.</li>
+	</ul>
+	
+		<h5>Simple Example on Encapsulation</h5>
+
+	@CODE_START@@JAVA@
+	public class Person {
+		private string name;
+		private int age;
+		private double height;
+		private double weight;
+		public void setName(string name){
+		this.name = name;
+		}
+		public string getName(){
+		return name;
+		}
+		public void setAge(int age){
+		this.age = age;
+		}
+		public int getAge(){
+		return age;
+		}
+		public void setHeight(double height){
+		this.height = height;
+		}
+		public double getHeight(){
+		return height;
+		}
+		public void setWeight(double weight){
+		this.weight = weight;
+		}
+		public double getweight(){
+		this weight;
+	}	
+	@CODE_END@
+	<p>As you can see in the above class all of its properties are private-meaning that they cannot be accessed from outside the class- and the only way to interact with class properties is through its public methods.</p>
+	<h4>Example 1</h4>
+	<p>I have create a class Car which has two methods:</p>
+	<p>1.move().</p>
+	<p>2.internalCombustion().</p>
+	<p>The move method depends on <b>internalCombustion()</b> method. But an Employee needs only move method and need not be aware of internalCombustion behavior. So, the internalCombustion behavior can be declared private so that it can be only visible to the members inside the class.</p>
+	@IMG_START@JAVA/abstraction&encapsulationtutorial_image1/png@IMG_END@
+	<h4>Summary :</h4>
+	<p>Encapsulation is a primary fundamental principle in Object oriented programming. It is used to enforce the security to restrict the visibility of the members to other components.</p>

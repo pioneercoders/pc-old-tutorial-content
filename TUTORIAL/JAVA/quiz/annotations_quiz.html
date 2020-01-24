@@ -1,0 +1,42 @@
+<!-- widget Quiz  -->	
+<h3>Annotations Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','b','a','c','a'], selAnswers: []}">
+		<div>
+			<h6>1).Was there any annotation or similar functionality existing prior to 1.5 of java? </h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2).Which of the following synmbol is used to represent an annotation?</h6>
+			<options values='{"values":["#","@","%","&"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3). Can you apply more than one annotation in a target?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4).Which of the following way is a valid annotation definition?</h6>
+			<options values='{"values":["public @annotation MyAnnotation{}","private @interface MyAnnotation{}","public @interface MyAnnotation{}","public @MyAnnotation{}"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. Which of the following retention policy and the type that defines @override?</h6>
+			<options values='{"values":["SOURCE,METHOD","CLASS,METHOD","TYPE,CLASS","None"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

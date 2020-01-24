@@ -1,0 +1,60 @@
+		<h4>What is String in java?</h4>
+		<p>Normally, String is a sequence of character. But  in java, string is an object that represents a sequence of characters. String class is used to create string object</p>
+		
+		<p>Similarly to store the string data and to perform various operation on String data, we have three predefined classes they are:</p>
+		
+		<p><b>String</b></p>
+		<p><b>StringBuffer</b></p>
+		<p><b>StringBuilder</b></p>
+		
+		<h4>String</h4>
+		
+		<p><b>String</b> class object is immutable that means when we create an object of String class it never changes in the existing object</p>
+		
+		<p><b>Example:</b></p>
+<section>  
+    <div id="StringEx" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:200px;border-radius:10px;">class StringEx {
+	public static void main(String[] args){ 
+		String s = new String("pioneer coders");
+		String data=s.concat(" software");
+		System.out.println(data);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('StringEx','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+	
+	<p><b>Note:</b>here we can't change the object of string class</p>
+	
+	
+	<h4>Create String object:</h4>
+	
+	<p><b>two ways to create String object:</b></p>
+	<ul>
+		<li>By string literal</li>
+		<li>By new keyword</li>
+	</ul>
+	<h4>String Literal</h4>
+	<p>String literal is created by using double quotes.</p>
+	<p><b>String s = "coders"</b></p>
+	<p>If we use above instruction, then string object will be created in String Constant pool area in method area memory.</p>	
+	<p>Note: String Constant pool area objects are not eligible for garbage collection, Heap memory objects are eligible for Garbage collection. String constant pool area objects are destroyed when our java program is terminated or when our system is shutdown.</p>
+	<p>Each time you create a string literal, the JVM checks the string constant pool first. If the string already exists in the pool, a reference to the pooled instance is returned. If string doesn't exist in the pool, a new string instance is created and placed in the pool. </p>
+		
+	<p><b>For example:</b></p>
+@CODE_START@@JAVA@ String s1 = "coders"
+String s2 = "coders" // will not create new instance
+@CODE_END@	
+
+	<p>In the above example only one object will be created. Firstly JVM will not find any string object with the value "Welcome" in string constant pool, so it will create a new object. After that it will find the string with the value "Welcome" in the pool, it will not create new object but will return the reference to the same instance.</p>	
+	<h4>By new keyword</h4>
+	
+	<p><b>String s = new String("coders");</b></p>
+	
+	<p>If we use above instruction, then string object will created in heapmemory and in String constant pool area. In this context 's' variable is able to refer heap memory object</p>

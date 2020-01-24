@@ -1,0 +1,75 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program to throw an exception</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="TestThrow1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class TestThrow1 {  
+   static void validate(int age){  
+     if(age<18)  
+      throw new ArithmeticException("not valid");  
+     else  
+      System.out.println("welcome to vote");  
+   }  
+   public static void main(String args[]){  
+      validate(13);  
+      System.out.println("rest of the code...");  
+  }  
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('TestThrow1','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Example program to throw a nullpionter exception</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="SecondThrowExcep" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'ste2',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:550px;border-radius:10px;">class SecondThrowExcep {
+    static void fun()
+    {
+        try
+        {
+            throw new NullPointerException("demo");
+        }
+        catch(NullPointerException e)
+        {
+            System.out.println("Caught inside fun().");
+            throw e; // rethrowing the exception
+        }
+    }
+ 
+    public static void main(String args[])
+    {
+        try
+        {
+            fun();
+        }
+        catch(NullPointerException e)
+        {
+            System.out.println("Caught in main.");
+        }
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('SecondThrowExcep','ste2','java' )">Run</button>
+	<div>
+        <iframe id="ste2"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>
+

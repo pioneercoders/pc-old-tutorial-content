@@ -1,0 +1,62 @@
+
+				<ul>
+					<li>The throw keyword is used to explicitly throw an exception.</li>
+					<li>We can throw either checked or unchecked exception. The throw keyword is mainly used to throw custom exception. We will see custom exceptions later.</li>
+				</ul>
+				<p>In this example, we have created the validateStudent() method that takes integer value as a parameter. If the age is less than 5, we are throwing the ArithmeticException otherwise print a message welcome to school.</p>
+	<h5>Simple Program on Throw Keyword</h5>
+
+<section>  
+    <div id="AgeValidator" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:300px;border-radius:10px;">public class AgeValidator { 
+		static void validateStudent(int age) {
+		if (age<5)
+			throw new ArithmeticException("Age to play more");
+		else
+			System.out.println("Welcome to school");
+		}
+		public static void main(String[] args){ 
+			validateStudent (4);
+			System.out.println("Rest of the code .....");
+		}
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('AgeValidator','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>				
+					
+		<h4>Difference between throw and throws keywords :</h4>
+		<h5>Throw </h5>
+		<p>Throw is used to actually throw the exception, whereas throws is declarative for the method. They are not interchangeable.</p>
+		<h5>Throws</h5>
+		<p>Throws is to be used when you are not using the try catch statement in your code but you know that this particular class is capable of throwing so and so exception(only checked exceptions). In this you do not use try catch block but write using the throw clause at appropriate point in you code and the exception is thrown to caller of the method and is handled by it.</p>
+		<table class="pc-table">
+			<tr>
+				<td>Throw</td>
+				<td>Throws</td>
+			</tr>
+			<tr>
+				<td>throw is used to explicitly throw an exception.</td>
+				<td>throws is used to declare an exception.</td>
+			</tr>
+			<tr>
+				<td>checked exception can not be propagated without throws.</td>
+				<td>checked exception can be propagated with throws.</td>
+			</tr>
+			<tr>
+				<td>throw is followed by an instance.</td>
+				<td>throws is followed by class.</td>
+			</tr>
+			<tr>
+				<td>throw is used within the method.</td>
+				<td>throws is used with the method signature.</td>
+			</tr>
+			<tr>
+				<td>You cannot throw multiple exception</td>
+				<td>You can declare multiple exception e.g.public void method()throws IOException,SQLException.</td>
+			</tr>
+		</table>

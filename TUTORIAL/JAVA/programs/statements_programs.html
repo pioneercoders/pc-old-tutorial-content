@@ -1,0 +1,126 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>write a programm for if statment?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Conditions1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'condition1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:400px;border-radius:10px;">public class Conditions1 {  
+    public static void main(String[] args) {           
+        int age = 7;   
+        System.out.print("Please enter Age value is above 18 : ");   
+        if(age > 18)  
+            System.out.println("your are eligible for vote");  
+		if(age < 18)
+        	System.out.println("your are not elibible for vote");
+    }  
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Conditions1','condition1','java' )">Run</button>
+	<div>
+        <iframe id="condition1"></iframe>
+    </div>
+</section>	
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>write a programm for if-else statment?</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="NewIfElseStatment" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'condition2',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:400px;border-radius:10px;">public class NewIfElseStatment {  
+    public static void main( String[] args )  
+    {  
+        int age = 19;   
+        if ( age >= 18 )  
+            System.out.println( "your are eligible for voting" );  
+        else  
+            System.out.println( "sorry you are not eligible fot voting" ); 
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('NewIfElseStatment','condition2','java' )">Run</button>
+	<div>
+        <iframe id="condition2"></iframe>
+    </div>
+</section>	
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write a programm for if-elseif statment</accordion-title>
+		<accordion-content>
+		
+<section>  
+    <div id="NewIfElseStatment" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'condition3',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:400px;border-radius:10px;">public class IfElseIfStatment {  
+    public static void main( String[] args )  
+    {  
+        int age = 20;  
+        if ( age >= 1 && age <=18 )  
+            System.out.println( "you are child person"); 
+        else if(age >18 && age <=25)  
+            System.out.println("you are young person");  
+        else if(age >25 && age <=55)  
+            System.out.println("you are middle aged person");  
+        else  
+            System.out.println( "you are old person" );  
+    }  
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('NewIfElseStatment','condition3','java' )">Run</button>
+	<div>
+        <iframe id="condition3"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write a program for switch statment</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="SwitchDemo" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'condition4',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:400px;border-radius:10px;">public class SwitchDemo {
+	public static void main(String[] args) {
+		String gender = "male";
+		switch (gender) {
+		case "male":
+			System.out.println("you are boy");
+			break;
+		case "female":
+			System.out.println("you are girl");
+			break;
+		default:
+			System.out.println("not matched");
+			break;
+		}
+	}
+}
+
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('SwitchDemo','condition4','java' )">Run</button>
+	<div>
+        <iframe id="condition4"></iframe>
+    </div>
+</section>
+
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>

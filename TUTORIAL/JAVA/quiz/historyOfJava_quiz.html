@@ -1,0 +1,53 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','b','f','a','a','a','d'], selAnswers: []}">
+		<div>
+			<h6>1.Java was developed by?</h6>
+			<options values='{"values":["Sun Microsystems", "Microsoft", "Oracle", "Cisco Systems"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. Which of the following programming language is interpreted?</h6>
+			<options values='{"values":["C", "C++", "Java", "Pascal"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. ______contains predefined classes and interfaces for developing Java programs?</h6>
+			<options values='{"values":["Java language specification", "Java API", "Java JD", "Java IDE"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Which of the following is not a feature of java?</h6>
+			<options values='{"values":["Robust", "Portable", "Interpreted", "Distributed","Multithreaded","none of the above"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5. Java compiler translates Java source code into </h6>
+			<options values='{"values":["Java bytecode", "machine code", "assembly code", "another high-level language code"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6. ____is a software that interprets Java bytecode </h6>
+			<options values='{"values":["Java virtual machine", "Java compiler", "Java debugger", "Java API"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. The extension name of a Java bytecode file is</h6>
+			<options values='{"values":[".java", ".obj", ".class", ".exe"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. ________ provides an integrated development environment (IDE) for rapidly developing Java programs. Editing, compiling, building, debugging, and online help are integrated in one graphical user interface.</h6>
+			<options values='{"values":["Java language specifiacation", "Java API", "Java JDK", "Java IDE"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

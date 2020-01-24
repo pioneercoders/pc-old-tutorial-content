@@ -1,0 +1,42 @@
+<h4>Class Methods :</h4>
+	<p>If a subclass defines a class method with the same signature
+		as a class method in the superclass, the method in the subclass
+		hides the one in the superclass.</p>
+	<p>The distinction between hiding and overriding has important
+		implications. The version of the overridden method that gets
+		invoked is the one in the subclass. The version of the hidden
+		method that gets invoked depends on whether it is invoked from the
+		superclass or the subclass. Let's look at an example that contains
+		two classes. The first is Animal, which contains one instance
+		method and one class method:</p>
+
+	<h5>Simple example on instance method</h5>
+
+	@CODE_START@@JAVA@ public class Animal { public static void
+	testClassMethod() { System.out.println("The Class" + "method in
+	animal."); } public void testInstanceMethod() {
+	System.out.println("The instance" + "method in animal."); } }
+	@CODE_END@
+	<p>The second class, a subclass of Animal, is called Cat:</p>
+
+	<h5>Simple Example on Instance Method</h5>
+
+	@CODE_START@@JAVA@ public class Cat extends Animal { public static
+	void testClassMethod() { System.out.println("The class" + "method
+	in Cat."); } public void testInstanceMethod() {
+	System.out.println("The instance" + "method in Cat."); } public
+	static void main(String[] args) { Cat myCat = new Cat(); Animal
+	myAnimal = new Animal(); Animal.testClassMethod();
+	myAnimal.testInstanceMethod(); } } @CODE_END@
+
+	<div class="output-panel">
+		<p>The Classmethod in animal.</p>
+		<p>The instancemethod in animal.</p>
+	</div>
+	<p>The Cat class overrides the instance method in Animal and
+		hides the class method in Animal. The mainmethod in this class
+		creates an instance of Cat and calls testClassMethod() on the
+		class and testInstanceMethod() on the instance.</p>
+	<p>As promised, the version of the hidden method that gets
+		invoked is the one in the superclass, and the version of the
+		overridden method that gets invoked is the one in the subclass.</p>

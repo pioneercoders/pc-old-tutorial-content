@@ -1,0 +1,201 @@
+<h4> What is final ? </h4>
+<p> In maths, Whenever we want a varible that dont change the value then make it as constant, similarly in java we can use final to make it constant. </p>
+<p>  The final keyword can be used in many context. Final can be:.</p>
+	<ul>
+		<li>variable</p>
+		<li>Method</p>
+		<li>Class</p>		
+	</ul>
+	
+	<h4>What is Final Variable</h4>
+
+	<ul>
+		<li>A variable declared using final keyword is called final variable</li>
+		<li>A final variable value will be assigned only once, to make it constant. This value cannot be changed latter.</li>
+		<li>A final variable that is not initialized at the time of declaration is known as blank final variable, It can be initialized in the constructor only.</li>
+		<li>Attempting to change the value of final variable/field will generate error.</li>
+		<li>The blank final variable can be static also which will be initialized in the static block only.</li>
+		<li>Unlike the constant value, the value of a final variable is not necessarily known at compile time.</li> 
+		<li>Finalvariable comes in mostly two important situations: to prevent accidental changes to method parameters, and with variables accessed by anonymous classes.</li>	
+	</ul>
+	
+	<h5>Syntax</h5>
+
+@CODE_START@@JAVA@public final double radius = 126.45;
+  public final int PI = 3.145;	
+@CODE_END@
+
+	<h5>Example on final variable</h5>
+
+<section>  
+    <div id="Day" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:350px;border-radius:10px;">public class Day {
+	final int hoursInDay=24; //Final Variable
+	int workingHours; 
+	
+	void weeklyWorkingHours() {
+		//This statement will not compile. Value can't be changed.
+        hoursInDay=8;
+		
+		workingHours = hoursInDay / 3;
+		System.out.println("Working hours::"+hoursInDay);
+	}
+	public static void main(String[] args){ 
+		Day d = new Day();
+		d.weeklyWorkingHours();
+	}
+} 
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Day','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+	
+	<h4>What is blank final variable?</h4>
+	<p>A final variable that is not initialized at the time of declaration is known as blank final variable. If you want to create a variable that is initialized at the time of creating object and once initialized may not be changed, it is useful. For example PAN CARD number of an employee. It can be initialized only in constructor.</p>
+	
+	<h5>Simple Example on Final Variable</h5>
+<section>  
+    <div id="Employee" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:300px;border-radius:10px;">class Employee {
+	int empId;
+	String empName;
+	final String panCard;
+
+	Employee() {
+		panCard = "CSA122ASG";
+		System.out.println(panCard);
+	}
+
+	public static void main(String[] args){ 
+		new Employee();
+	}
+} 
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Employee','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+
+	
+	<h4>static blank final variable</h4>
+	<p>A static final variable that is not initialized at the time of declaration is known as static blank final variable. It can be initialized only in static block.</p>
+	
+	<h5>Simple Example on Final Variable</h5>
+<section>  
+    <div id="Data1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class Data1 {
+	static final int data; // static blank final variable
+	static {
+		data = 50;
+	}
+public static void main(String[] args){ 
+	Data1 a=new Data1();
+	System.out.println(a.data);
+	}
+} 
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Data1','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>
+	
+	<h4>What is final parameter?</h4>
+	<p>If you declare any parameter as final, you cannot change the value of it.</p>
+
+<h5>Simple Example on Final parameter</h5>
+<section>  
+    <div id="Circle" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class Circle {
+	int area(final int radius) {
+		radius = radius +2;;//can't be changed as n is final
+		int area = 3.14 * radius * radius;
+		return area;
+	}
+	public static void main(String[] args){ 
+		Cicle b = new Circle();
+		b.area(5);
+	}
+} 
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Circle','preview4','java' )">Run</button>
+	<div>
+        <iframe id="preview4"></iframe>
+    </div>
+</section>
+	
+	<h4>Final Method</h4>
+	<ul>
+		<li>A method declared with final keyword it is called final method. </li>
+		<li>A final method cannot be overridden by subclasses and not be hidden. This technology prevents unexpected behavior from a subclass for altering a method that may be crucial to the function of the class.</li>
+		<li>private and static methods are always implicitly final in Java, since they cannot be overridden.</li>
+	</ul>	
+	
+	<h5>Syntax</h5>
+
+@CODE_START@@JAVA@public class Test {
+	public final void MyFinalMethod() {
+	//code here 
+	}
+}	
+@CODE_END@
+	
+	<p> You might wish to make a method final if it has an implementation that should not be changed and it is critical to the consistent state of the object. For example, you might want to make the getFirstPlayer method in this ChessAlgorithm class final:</p>
+
+@CODE_START@@JAVA@class ChessAlgorithm {
+    enum ChessPlayer { WHITE, BLACK }
+    ...
+    final ChessPlayer getFirstPlayer() {
+        return ChessPlayer.WHITE;
+    }
+    ...
+}
+@CODE_END@
+
+	
+	<h4>Final Class :</h4>
+	<p>A final class cannot be extended. A final class implicitly has all the methods declared as final, but not necessarily the data members.</p>
+		<h5>Syntax</h5>
+
+@CODE_START@@JAVA@public final class MyFinalClass {
+//code here 
+}	
+@CODE_END@
+
+<h5>Simple Example on Final Method</h5>
+ <section>  
+    <div id="Cars" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:300px;border-radius:10px;">final class Cars {
+	void run() {
+	System.out.println("Running safely below 500kmph");
+	}
+}
+class Dog extends Cars  {
+	void run() {
+	System.out.println("hey Dog Running safely below 50kmph");
+	}
+	public static void main(String[] args){ 
+	Dog d = new Dog();
+	d.run();
+	}
+} 
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Cars','preview5','java' )">Run</button>
+	<div>
+        <iframe id="preview5"></iframe>
+    </div>
+</section>
+

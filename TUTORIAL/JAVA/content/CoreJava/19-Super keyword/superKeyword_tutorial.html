@@ -1,0 +1,83 @@
+<h4> What is super keyword </h4>
+<p> Super keyword is used to access super class members (Methods and Variables) and Calling super class Constructor. </p>
+
+ <h5>Example to access super class methods and variables.</h5>
+
+	@CODE_START@@JAVA@
+	public class Circle {
+		private double radius;
+		private double area; 
+
+		Circle(double radius){
+			this.radius = radius;
+			
+		}
+		public double getArea(){
+			this.area = Math.PI * radius * radius;
+			return area;
+		}
+	}
+
+	public class Cylinder extends Circle {
+		private double height;
+		
+		public Cylinder(double radius, double height){
+			super(radius); // calling super class constructor.
+			this.height = height;
+		}
+		public double getVolume(){
+			// calling methods using super keyword.
+			super.getArea(); 
+			// accessing super class variables.
+			double volume = super.area*height;
+			return volume;
+		}
+	}
+	
+	public class AppMain {
+		public static void main(String args[]){
+			Cylinder c = new Cylinder(2.5,4.0);
+			c.getVolume();
+			
+		}
+	}
+	@CODE_END@
+	
+<ul> 
+	<li> Using super keyword we can call the super class variables as shown super.area</li>
+	<li> We can call the methods like as shown super.getArea()</li> 
+	<li> We can also call the super class constructor. </li>
+</ul>
+<div class="output-panel"> 
+	<p>12.4</p>
+</div>
+
+	<p><b>Note :</b>super() is added in each class constructor automatically by compiler.</p>
+	
+	<p>As we know well that default constructor is provided by compiler automatically but it also adds super() for the first statement.If you are creating your own constructor and you don't have either this() or super() as the first statement, compiler will provide super() as the first statement of the constructor. so that super class default will be called.</p>
+	
+	<h5>Example of super keyword where super() is provided by the compiler implicitly.</h5>
+
+	@CODE_START@@JAVA@
+	class Vehicle{
+		Vehicle(){
+			System.out.println("Vehicle is created");
+		}
+	}
+	class Bike extends Vehicle {
+		int speed;
+		Bike(int speed) {
+			this.speed = speed;
+			System.out.println(speed);
+		}
+		public static void main(String[] args){ 
+			Bike b = new Bike(10);
+		}
+	}	
+	@CODE_END@
+
+<div class="output-panel"> 
+<p>Vehicle is created</p>
+<p>10</p>
+</div>	
+ 

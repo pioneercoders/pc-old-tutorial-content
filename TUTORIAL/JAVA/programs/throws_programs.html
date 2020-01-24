@@ -1,0 +1,72 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program using throws</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="FirstThrowsExample" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'fte',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class FirstThrowsExample { 
+    public static void main(String[] args){ 
+    try{
+    	M m = new M();
+    	m.method();
+    }	
+    catch(Exception e) {
+    	System.out.println("Exception Handled");
+    }
+    System.out.println("No error in the program");
+    }
+}
+class M { 
+    void method() throws Exception {
+    	throw new Exception("Error occured in the program");
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('FirstThrowsExample','fte','java' )">Run</button>
+	<div>
+        <iframe id="fte"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Second Example to demostrate working of throws</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="SecondthrowsExample" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'ste',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class SecondthrowsExample {
+    static void fun() throws IllegalAccessException
+    {
+        System.out.println("Inside fun(). ");
+        throw new IllegalAccessException("demo");
+    }
+    public static void main(String args[])
+    {
+        try
+        {
+            fun();
+        }
+        catch(IllegalAccessException e)
+        {
+            System.out.println("caught in main.");
+        }
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('SecondthrowsExample','ste','java' )">Run</button>
+	<div>
+        <iframe id="ste"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>
+

@@ -1,0 +1,69 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program using this keyword</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="Aeroplane" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'aero1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class Aeroplane {
+	public int wings;
+	public int speed;
+	public int accelaration;
+	//Constructor
+	public Aeroplane (int wings, int speed, int accelaration) {
+		this.wings = wings;
+		this.speed = speed;
+		this.accelaration = accelaration;
+	}
+	void display() {
+		System.out.println("Aeroplane has "+wings + " wings and going with speed of " +speed+" and accelaration of "+accelaration +"km/sec");
+	}
+	public static void main(String[] args){ 
+		Aeroplane s1 = new Aeroplane(2,90,180);
+		s1.display();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Aeroplane','aero1','java' )">Run</button>
+	<div>
+        <iframe id="aero1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	
+		<accordion-item>
+		<accordion-title>Example program with this using constructor</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="Thisconstructor" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'thisc1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class Thisconstructor {
+	Thisconstructor() {
+    this("Thisconstructor");
+    System.out.println("Inside Constructor without parameter");
+  }
+  Thisconstructor(String str) {
+    System.out.println("Inside Constructor with String parameter as " + str);
+  }
+  public static void main(String[] args) {
+    Thisconstructor obj = new Thisconstructor();
+  }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Thisconstructor','thisc1','java' )">Run</button>
+	<div>
+        <iframe id="thisc1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	
+</pc-accordion>
+

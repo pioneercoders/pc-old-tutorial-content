@@ -1,0 +1,71 @@
+<!-- widget Quiz  -->	
+<h3>Arrays Quiz</h3>
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','a'], selAnswers: []}">
+		<div>
+			<h6> 1). Which of the following is FALSE about arrays on Java  </h6>
+			<options values='{"values":["A java array is always an object", "Length of array can be changed after creation of array", "Arrays in Java are always allocated on heap", "none"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		
+		
+		<div>
+			<h6>2). Which of the following declaration is incorrect ?</h6>
+			<options values='{"values":["int[] a[];", "int b[3];", "int []c[];", "int[] d[];"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3). What is the result of compiling and running the following code?</h6>
+			@CODE_START@@JAVA@public static void main(String[] args){
+int[] a = new int[0];
+System.out.print(a. length);
+}@CODE_END@
+		<options values='{"values":["0", "Compilation error because arrays can not be size of 0.", "Compilation error because a. length is not a property of arrays; and a. length() should be used.", "none"]}' bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4).What is true after running the following code?</h6>
+			@CODE_START@@JAVA@public static void main(String[] args) {
+	String entries[] = { "entry1", "entry2" };
+	int count = 0;
+	while (entries[count++] != null) {
+		System.out.println(count);
+	}
+	System.out.println(count);
+}@CODE_END@
+			<options values='{"values":["3 will be printed as part of output.", "0 will be printed as part of output", "An exception will be thrown", "2 will be printed as part of output."]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. What is the output of following programm</h6>
+			@CODE_START@@JAVA@public static void main(String[] args) {
+byte b1= 25;
+byte b2=45;
+byte b3= b1+b2;
+}@CODE_END@
+			<options values='{"values":["25", " Compilation Error-Type mismatch: cannot convert from int to byte.", "70", "Runtime Exception"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6. Which of the following statements are valid array declaration?</h6>
+			@CODE_START@@JAVA@a)int number();
+b)float average[];
+c)double[] marks;
+d)counter int[];@CODE_END@
+			<options values='{"values":["b&c", "a", "a&c", "d"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

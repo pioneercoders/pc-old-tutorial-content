@@ -1,0 +1,100 @@
+<pc-accordion>
+	
+	<accordion-item>
+		<accordion-title>Example for TryCatch</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Testtrycatch2" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'pre1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Testtrycatch2 {  
+  public static void main(String args[]){  
+   try{  
+      int data=50/0;  
+   }catch(ArithmeticException e){
+   System.out.println(e);
+   }  
+   System.out.println("rest of the code...");  
+	}  
+} 
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Testtrycatch2','pre1','java' )">Run</button>
+	<div>
+        <iframe id="pre1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Example for TryCatch using Exception keyword to handle all exceptions</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="ExceptionLanguage" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'EL1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class ExceptionLanguage {
+  public static void main(String[] args) {
+ 
+  String languages[] = { "C", "C++", "Java", "Perl", "Python" };
+ 
+  try {
+    for (int c = 1; c <= 5; c++) {
+      System.out.println(languages[c]);
+    }
+  }
+  catch (Exception e) {
+    System.out.println(e);
+  }
+  }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('ExceptionLanguage','EL1','java' )">Run</button>
+	<div>
+        <iframe id="EL1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+
+	
+		<accordion-item>
+		<accordion-title>Example for Exceptionhandling using try catch</accordion-title>
+		<accordion-content>
+
+@CODE_START@@JAVA@package pioneercoders;
+import java.io.BufferedReader;  
+import java.io.IOException;  
+import java.io.InputStreamReader;  
+  
+public class ExceptionHandling {  
+ public static void main(String args[]){  
+  BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));  
+  System.out.println("Enter your name : ");  
+  try {  
+   String input = reader.readLine();  
+   System.out.println("You typed : "+input); // Exception prone area  
+  } catch (IOException e) {  
+   e.printStackTrace();  
+  }  
+ }  
+}  
+   
+@CODE_END@
+<div class="output-panel">
+	<P>Enter your name :<br>
+		Ankush Thakur<br>
+	You typed : Ankush Thakur
+
+</P>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>
+

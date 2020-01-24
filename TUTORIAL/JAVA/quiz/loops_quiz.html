@@ -1,0 +1,70 @@
+<!-- widget Quiz  -->	
+<h3>Loops Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','c','a','a','a','a','a'], selAnswers: []}">
+		<div>
+			<h6>1). Each pass through a loop is called a/an </h6>
+			<options values='{"values":["enumeration", "iteration", "culmination", "passthrough"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2). Which looping process checks the test condition at the end of the loop?</h6>
+			<options values='{"values":["for", "while", "do-while", "no looping process checks the test condition at the end"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3). Which looping process is best used when the number of iterations is known</h6>
+			<options values='{"values":["for", "while", "do-while", "all looping process requires that the iterations be known"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4). If there is more than one statement in the block of a for loop, which of  the following must be placed at the beginning and the ending of the loop block?</h6>
+			<options values='{"values":["parentheses()", "French curly braces {}", " brackets[]", "arrows"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+
+			<div >
+			<h6>5). What displays from the following statements?</h6>
+@CODE_START@@JAVA@String word = "abcde";
+for (int i = 0; i <4; i+=2) System.out.print(word[i]);
+@CODE_END@
+			<options values='{"values":["Ab", "Ace", "Bd", "Ac"]}' bind-model='quizObj.selAnswers' id="4"></options>
+		</div>		
+		<div>
+			<h6>6).	What happens when the following code is compiled and run. Select the one correct answer.</h6>
+			@CODE_START@@JAVA@for(int i=1;i<3;i++)
+for(int j=3; j>=1;j--)
+assert i!=j:I;
+@CODE_END@
+			<options values='{"values":["The class compiles and runs, but does not print anything", "The number 1 gets printed with AssertionError", "The number 2 gets printed with AssertionError", "The number 3 gets printed with AssertionError"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7).	What gets printed when the following program is compiled and run? Select the one correct answer</h6>
+			@CODE_START@@JAVA@class xyz {
+	static int I;
+	public static void main(String args[]){
+	while(i<0){
+		i--;
+	}
+	System.out.println(i);
+	}
+}
+@CODE_END@
+			<options values='{"values":["The program does not compile as i is not initialized", "The program compiles but does not run.", "The program compiles and runs but does not print anything.", "The program prints 0."]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

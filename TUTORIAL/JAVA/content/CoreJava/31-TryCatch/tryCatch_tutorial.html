@@ -1,0 +1,92 @@
+<h4>Try Catch</h4>
+	<p>A method catches an exception using a combination of the try and catch keywords. A try/catch block is placed around the code that might generate an exception. Code within a try/catch block is referred to as protected code, and the syntax for using try/catch looks like the following :</p>
+	@CODE_START@@JAVA@
+	try {
+	//Protected Code
+	}
+	catch (ExceptionName e1) {
+	//Catch Block
+	} 
+	@CODE_END@	
+	<h4>Exception Handling in Java :</h4>
+	<p>It is a powerful feature provided in Java. It is a mechanism to handle run-time errors, so that the normal flow of the program is maintained.</p>	
+	<p>Exception handling consists of the following keywords:</p>
+	<ul>
+		<li>Try</li>
+		<li>Catch</li>
+		<li>Finally</li>
+		<li>Throw</li>
+		<li>Throws</li>
+	</ul>
+	<h4>Try Block :</h4>
+	<p>Enclose the code that might throw an exception in try block. It must be used within the method and must be followed by either catch or finally block.</p>
+	<h5>//Syntax for try With catch block</h5>
+	@CODE_START@@JAVA@
+	try {
+	.............
+	}
+	catch (Exception_class_Name reference) {
+	............
+	}
+	@CODE_END@
+	<h5>Syntax for try With finally block</h5>
+	@CODE_START@@JAVA@
+	try {
+	.............
+	}
+	finally {
+	............
+	}
+	@CODE_END@	
+	<p>Catch block is used to handle the Exception. It must be used after the try block.</p>
+	<h5>Simple Example on Code without exception handling</h5>
+	<section>  
+    <div id="App" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:150px;border-radius:10px;">class App { 
+		public static void main(String[] args){ 
+			int index =10/0; 
+			System.out.println("Another Code Here");
+		}
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('App','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+
+	<p>As displayed in the above example, rest of the code is not executed i.e. another code here statement is not printed. Let's see what happens behind the scene:</p>
+	@IMG_START@JAVA/trycatchtutorial_image2/png@IMG_END@
+	<p>The JVM firstly checks whether the exception is handled or not. If exception is not handled, JVM provides a default exception handler that performs the following tasks:</p>
+	<ul>
+		<li>Prints out exception description.</li>
+		<li>Prints the stack trace (Hierarchy of methods where the exception occurred).</li>
+		<li>Causes the program to terminate.</li>
+	</ul>
+	<p>But if exception is handled by the application programmer, normal flow of the application is maintained i.e. rest of the code is executed. </p>
+	<h5>Simple Example on Code with exception handling</h5>
+<section>  
+    <div id="App1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class App1 { 
+		public static void main(String[] args){ 
+			try {
+				int index =10/0; 
+			}
+			catch (ArithmeticException e) {
+				System.out.println(e);
+			}
+				System.out.println("Another Code Here");
+		}
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('App1','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+		
+	<p>Now, as displayed in the above example, rest of the code is executed i.e. another code here. statement is printed</p>

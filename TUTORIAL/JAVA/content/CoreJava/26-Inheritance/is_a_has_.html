@@ -1,0 +1,231 @@
+
+<h4>What is IS-A Relationship :</h4>
+<ul>
+	<li>This refers to inheritance or implementation.</li>
+	<li>Expressed using keyword “extends”.</li>
+	<li>Main advantage is code reusability.</li>
+</ul>
+
+	<h5>Syntax</h5>
+
+	@CODE_START@@JAVA@
+	class Bicycle {
+	
+	}
+	class MountainBike extends Bicycle {
+		// new fields and methods defining 
+		// a MountainBike would go here 
+		}
+		class RoadBike extends Bicycle {
+		// new fields and methods defining 
+		// a RoadBike would go here 
+		}
+		class TandemBike extends Bicycle {
+		// new fields and methods defining 
+		// a TandemBike would go here 
+	}
+	@CODE_END@
+<p>Now based on the above example, In Object Oriented terms following are true:</p>
+<ul>
+	<li>Bicycle is the superclass of MountainBike class.</li>
+	<li>Bicycle  is the superclass of RoadBike class.</li>
+	<li>RoadBike and MountainBike are sub classes of Bicycle class.</li>
+	<li>HondaShineBike is the subclass of both RoadBike and Bicycle  classes.</li>
+	<li>Now if we consider the IS-A relationship we can say:</li>
+	<li>MountainBike IS-A Bicycle</li>
+	<li>RoadBike IS-A Bicycle</li>
+	<li>HondaShineBike IS-A RoadBike</li>
+	<li>Hence : HondaShineBike IS-A Bicycle as well</li>
+</ul>
+
+<p>With use of the extends keyword the subclasses will be able to inherit all the properties of the superclass except for the private properties of the superclass.</p>
+<h5>Simple Example on Inheritance</h5>
+
+	@CODE_START@@JAVA@
+	class Bicycle {
+	}
+
+	class MountainBike extends Bicycle {
+	// new fields and methods defining
+	// a MountainBike would go here
+	}
+
+	class RoadBike extends Bicycle {
+	// new fields and methods defining
+	// a RoadBike would go here
+	}
+
+	class TandemBike extends Bicycle {
+	// new fields and methods defining
+	// a TandemBike would go here
+	}
+
+	public class Dog extends Bicycle {
+		public static void main(String[] args) {
+			MountainBike mountainBike = new MountainBike();
+			RoadBike roadBike = new RoadBike();
+			TandemBike tandeBike = new TandemBike();
+			System.out.println(mountainBike instanceof Bicycle);
+			System.out.println(roadBike instanceof RoadBike);
+			System.out.println(tandeBike instanceof Bicycle);
+		}
+	}
+
+	@CODE_END@
+
+<div class="output-panel"> 
+<p> true</p>
+<p> true</p>
+<p> true</p>
+</div>	
+<p>Since we have a good understanding of the extends keyword let us look into how the implements keyword is used to get the IS-A relationship.</p>
+<p>The implements keyword is used by classes by inherit from interfaces. Interfaces can never be extended by the classes.</p>
+
+<h5>Syntax</h5>
+
+	@CODE_START@@JAVA@
+	public interface Bicycle {
+	
+	}
+	public class RoadBike implements Bicycle {
+	
+	}
+	public class HondaShine extends RoadBike {
+	
+	}	
+	@CODE_END@
+<h3>The instanceof Keyword :</h3>
+<p>Let us use the instanceof operator to check determine whether RoadBike is actually a Bicycle, and HondaShine is actually an Bicycle</p>
+<h5>Simple Example on Inheritance</h5>
+
+	@CODE_START@@JAVA@
+	 interface Bicycle {
+	 
+	}
+	class RoadBike implements Bicycle {
+	
+	}
+	public class HondaShine extends RoadBike {
+		public static void main(String[] args){ 
+		RoadBike roadBike = new RoadBike();
+		HondaShine hondaBike = new HondaShine();
+		System.out.println(roadBike instanceof Bicycle);
+		System.out.println(hondaBike instanceof RoadBike);
+		System.out.println(hondaBike instanceof Bicycle);
+		}
+	}
+	@CODE_END@
+
+<div class="output-panel"> 
+<p>true</p>
+<p>true</p>
+<p>true</p>
+</div>	
+<h3>HAS-A relationship :</h3>
+<p>These relationships are mainly based on the usage. This determines whether a certain class HAS-A certain thing. This relationship helps to reduce duplication of code as well as bugs.</p>
+
+<h5>Syntax</h5>
+
+	@CODE_START@@JAVA@
+	public class Vehicle {
+	
+	}
+	public class Speed {
+	
+	}
+	public class Van extends Vehicle {
+		private Speed sp;
+	}	
+	@CODE_END@
+<p>This shows that class Van HAS-A Speed. By having a separate class for Speed we do not have to put the entire code that belongs to speed inside the Van class., which makes it possible to reuse the Speed class in multiple applications.</p>
+<p>In Object Oriented feature the users do not need to bother about which object is doing the real work. To achieve this, the Van class hides the implementation details from the users of the Van class. So basically what happens is the users would ask the Van class to do a certain action and the Van class will either do the work by itself or ask another class to perform the action.</p>
+<p><b>Note :</b>: A very important fact to remember is that Java only supports only single inheritance. This means that a class cannot extend more than one class.</p>
+<p>public class HondaShine extends RoadBike, Bicycle{}</p>
+
+
+<h4>Type of Inheritances :</h4>
+
+@IMG_START@JAVA/types_of_inheritances/png@IMG_END@
+
+
+<h5>1. Simple Inheritance</h5>
+<p>When a subclass is derived simply from it's parent class then this mechanism is known as simple inheritance. In case of simple inheritance there is only a sub class and it's parent class. It is also called single inheritance or one level inheritance. </p>
+
+	<h5>Simple Hello World Example</h5>
+
+	@CODE_START@@JAVA@
+	class A {
+		int x;
+		int y;
+
+		int get(int p, int q) {
+			x = p;
+			y = q;
+			return 0;
+		}
+
+		void show() {
+			System.out.println(x);
+		}
+		}
+
+		public class B extends A {
+		public static void main(String[] args) {
+			A a = new A();
+			a.get(5, 6);
+			a.show();
+		}
+	}
+	@CODE_END@
+
+<div class="output-panel"> 
+<p>5</p>
+</div>	
+<h4>2. Multilevel Inheritance</h4>
+<p>It is the enhancement of the concept of inheritance. When a subclass is derived from a derived class then this mechanism is known as the multilevel inheritance. The derived class is called the subclass or child class for it's parent class and this parent class works as the child class for it's just above ( parent ) class. Multilevel inheritance can go up to any number of level.</p>
+
+	<h5>Simple Hello World Example</h5>
+
+	@CODE_START@@JAVA@
+	class A {
+		int x;
+		int y;
+
+		int get(int p, int q) {
+			x = p;
+			y = q;
+			return 0;
+		}
+
+		void show() {
+			System.out.println(x);
+		}
+	}
+
+	class B extends A {
+		void showb() {
+			System.out.println("B");
+		}
+	}
+
+	public class C extends B {
+		void display() {
+			System.out.println("C");
+		}
+
+		public static void main(String[] args) {
+			A a = new A();
+			System.out.println(a.get(5, 6));
+			a.show();
+		}
+	}	
+	@CODE_END@
+
+<div class="output-panel"> 
+<p>0</p>
+<p>5</p>
+</div>	
+<h4>3. Multiple Inheritance</h4>
+<p><b>Note :</b>Java does not support multiple Inheritance.</p>
+<p>The mechanism of inheriting the features of more than one base class into a single class is known as multiple inheritance. Java does not support multiple inheritance but the multiple inheritance can be achieved by using the interface.</p>
+<p>In Java Multiple Inheritance can be achieved through use of Interfaces by implementing more than one interfaces in a class.</p>

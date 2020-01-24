@@ -1,0 +1,56 @@
+
+	<ul>
+		<li>A <b>java package </b>is a group of similar types of classes, interfaces and sub-packages.</li>
+		<li>Package in java can be categorized in two form, built-in package and user-defined package.</li>
+		<li>There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.</li>
+	</ul>
+	<p>Purpose of package</p>
+	
+	<p>The purpose of package concept is to provide common classes and interfaces for any program separately. In other words if we want to develop any class or interface which is common for most of the java programs than such common classes and interfaces must be place in a package</p>
+		
+	<p>Packages in Java are the way to organize files when a project has many modules. Same like we organized our files in Computer. For example we store all movies in one folder and songs in other folder, here also we store same type of files in a particular package for example in awt package have all classes and interfaces for design GUI components.</p>	
+		
+	<p>Advantage of Java Package</p>	
+	<ul>
+		<li>Java package is used to categorize the classes and interfaces so that they can be easily maintained.</li>
+		<li>Java package provides access protection.</li>
+		<li>Java package removes naming collision.</li>
+	</ul>
+	@IMG_START@JAVA/files/jpg@IMG_END@
+	
+	<p><b>Example:</b></p>
+	<p>Let us look at an example that creates a package called animals. It is a good practice to use names of packages with lower case letters to avoid any conflicts with the names of classes, interfaces.</p>
+
+	@CODE_START@@JAVA@package  animals;
+	interface Animal { 
+		public void eat();
+		public void travel();
+	}@CODE_END@	
+	<h4>Type of package</h4>
+	<p><b>Package are classified into two type which are given below.</b></p>
+	<p>1.Predefined or built-in package</p>
+	<p>2.User defined package</p>
+	
+	<h4>Predefined or built-in package</h4>
+	<p>These are the package which are already designed by the Sun Microsystem and supply as a part of java API, every predefined package is collection of predefined classes, interfaces and sub-package.</p>
+	
+	<h4>User defined package</h4>
+	<p>If any package is design by the user is known as user defined package. User defined package are those which are developed by java programmer and supply as a part of their project to deal with common requirement.</p>
+		
+		
+	<h5>Rules to create user defined package</h5>
+	<ul>
+		<li>package statement should be the first statement of any package program.</li>
+		<li>Choose an appropriate class name or interface name and whose modifier must be public.</li>
+		<li>Any package program can contain only one public class or only one public interface but it can contain any number of normal classes.</li>
+		<li>Package program should not contain any main class (that means it should not contain any main())</li>
+		<li>modifier of constructor of the class which is present in the package must be public. (This is not applicable in case of interface because interface have no constructor.)</li>
+		<li>The modifier of method of class or interface which is present in the package must be public (This rule is optional in case of interface because interface methods by default public)</li>
+		<li>Every package program should be save either with public class name or public Interface name</li>
+	</ul>
+	
+	<p><b>Difference between Inheritance and package</b></p>
+	<ul>
+		<li>Inheritance concept always used to reuse the feature within the program between class to class, interface to interface and interface to class but not accessing the feature across the program.</li>
+		<li>Package concept is to reuse the feature both within the program and across the programs between class to class, interface to interface and interface to class.</li>
+	</ul>

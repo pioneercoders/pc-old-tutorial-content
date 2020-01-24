@@ -1,0 +1,108 @@
+<h4> What is method overloading ?</h4>
+
+	<P>If a class have multiple methods by same name but different parameters, it is known as Method Overloading.</P>
+	<p>There are two ways to overload the method in java</p>
+	<ul>
+		<li>By changing number of arguments</li>
+		<li>By changing the data type</li>
+		<li>Method overloading is not possible by only changing the return type of the method </li>
+	</ul>
+	
+<h4> Why we need method overloading ? </h4>	
+	<p>If we have to perform only one operation, having same name of the methods increases the readability of the program.</p>
+	
+	<p>Suppose that you have a class that can use calligraphy to draw various types of data (strings, integers, and so on) and that contains a method for drawing each data type. It is cumbersome to use a new name for each method-for example, drawString, drawInteger, drawFloat, and so on. you can use the same name for all the drawing methods but pass a different argument list to each method. Thus, the data drawing class might declare four methods named draw, each of which has a different parameter list.</p>
+	
+	<p><b>Advantage of method overloading?</b></p>
+	<ul>
+		<li>Method overloading increases the readability of the program.</li>
+		<li>It also gives you more flexibility while writing API.</li>
+		<li>Makes your API a lot simpler to use.</li>
+	</ul>
+	
+	<h5> Example of Method Overloading.</h5>
+<section>  
+    <div id="DataArtist" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:550px;border-radius:10px;">public class DataArtist {
+    public void draw(String s) {
+        System.out.println("draw method of String "+s);
+    }
+	
+	// type of arguments are different compare with above method.
+    public void draw(int i) { 
+        System.out.println("draw method of int "+i);
+    }
+	
+	// type of arguments are different compare with above method.
+    public void draw(double f) {
+        System.out.println("draw method of double "+f);
+    }
+	
+	// list of arguments are different compare with above method.
+    public void draw(int i, double f) {
+        System.out.println("draw method of int and double "+f);
+    }
+	
+	public static void main(String args[]){
+		DataArtist art = new DataArtist();
+		art.draw("Pioneer Coders");
+		art.draw(88);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('DataArtist','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+	
+	<h4>Why Method Overloaing is not possible by changing the return type of method?</h4>
+	<p>In java, method overloading is not possible by changing the return type of the method because there may occur ambiguity. Let's see how ambiguity may occur:</p>
+<section>  
+    <div id="Addition" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:300px;border-radius:10px;">public class Addition {
+		int sum(int a,int b){
+		System.out.println(a+b);	
+		}
+		double sum(int a,int b){
+		System.out.println(a+b);	
+		}
+		public static void main(String[] args){ 
+		Addition obj = new Addition();
+		int result=obj.sum(20,20); 
+		//in above statement, how can java determine which sum() method should be called. 
+		}
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Addition','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+
+	<h4>Can we overload main() method?</h4>	
+	<p>Yes, by method overloading. You can have any number of main methods in a class by method overloading. Let's see the simple example:</p>
+	<h5>Simple example on method overloading</h5>
+<section>  
+    <div id="MainOverloading" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class MainOverloading {
+		public static void main(int a){ 
+			System.out.println(a);
+		}
+		public static void main(String[] args){ 
+			System.out.println("main() method invoked");
+			main(12);
+		}
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('MainOverloading','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>

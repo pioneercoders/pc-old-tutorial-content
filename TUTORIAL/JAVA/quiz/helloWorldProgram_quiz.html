@@ -1,0 +1,28 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','a'], selAnswers: []}">
+		<div>
+			<h6>1.The class file generated after the compilation of java program name is same as ..</h6>
+			<options values='{"values":["Class Name.", "Method Name.", "Variable Name.",
+                        " None"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which is the correct syntax for the Java main method…</h6>
+			<options values='{"values":[" public void main(String[] args).", 
+                         "static void main(String[] args).", 
+                        " public static final void main(String[] args).",
+                        "  public void static main(String[] args)."]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+                <div>
+			<h6>3. The access modifier public used in main class indicates…</h6>
+			<options values='{"values":[" Visibility of class to all other classes.", 
+                         "Not visible to all other classes."]}'                
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>	
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

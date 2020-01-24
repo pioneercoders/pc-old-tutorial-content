@@ -1,0 +1,21 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','f'], selAnswers: []}">
+		<div>
+			<h6>1.A Method catches an exception with the help of try and catch blocks.</h6>
+			<options values='{"values":["True", 
+                         "False"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                  <div>
+			<h6>2. The keywords that are not included in Exception Handling are?</h6>
+			<options values='{"values":["Try", 
+                         "Catch", 
+                        "Throws",
+                        "Throw ","Finally","None"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

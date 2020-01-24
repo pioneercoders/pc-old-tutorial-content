@@ -1,0 +1,22 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','a'], selAnswers: []}">
+		<div>
+			<h6>1.'this'is used to refer current class object?</h6>
+			<options values='{"values":["Yes", 
+                         "No"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                <div>
+			<h6>2. Select which of the following statements are incorrect? </h6>
+			<options values='{"values":[" It is used to refer current class static variable.", 
+                         " this can be passed as an argument for both method and constructor call.", 
+                        "It is used to distinguish between local and instance variable."]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

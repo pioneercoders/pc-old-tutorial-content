@@ -1,0 +1,87 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Example program using @Override</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class Base
+{
+     public void Display()
+     {
+         System.out.println("Base display()");
+     }
+     public static void main(String args[])
+     {
+         Base t1 = new Derived();
+         t1.Display();
+     }     
+}
+class Derived extends Base
+{
+     @Override
+     public void Display()
+     {
+         System.out.println("Derived display()");
+     }
+}
+@CODE_END@
+<div class="output-panel">
+	<P>Derived display()
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>	
+	<accordion-item>
+		<accordion-title>EXample program using @deprecated</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class DeprecatedTest
+{
+    @Deprecated
+    public void Display()
+    {
+        System.out.println("Deprecatedtest display()");
+    }
+    public static void main(String args[])
+    {
+        DeprecatedTest d1 = new DeprecatedTest();
+        d1.Display();
+    }
+}
+@CODE_END@
+<div class="output-panel">
+	<P> Deprecatedtest display()
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>	
+		<accordion-item>
+		<accordion-title>EXample program using @SupressWarnings</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class DeprecatedTest
+{
+    @Deprecated
+    public void Display()
+    {
+        System.out.println("Deprecatedtest display()");
+    }
+}
+public class SuppressWarningTest
+{
+    // If we comment below annotation, program generates
+    // warning
+    @SuppressWarnings({"checked", "deprecation"})
+    public static void main(String args[])
+    {
+        DeprecatedTest d1 = new DeprecatedTest();
+        d1.Display();
+    }
+}
+@CODE_END@
+<div class="output-panel">
+	<P> Deprecatedtest display()
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>	
+</pc-accordion>

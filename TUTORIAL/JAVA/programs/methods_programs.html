@@ -1,0 +1,180 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write example program on methods?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="MethodEx1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'me1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class MethodEx1 {
+	static int totalLength(String a, String b) {
+        // Add up lengths of two strings.
+        return a.length() + b.length();
+    }
+
+    static int averageLength(String a, String b) {
+        // Divide total length by 2.
+        return totalLength(a, b) / 2;
+    }
+
+    public static void main(String[] args) {
+
+        // Call methods.
+        int total = totalLength("Pioneer", "Coders");
+        int average = averageLength("Pioneer", "Coders");
+
+        System.out.println("total is "+total);
+        System.out.println("average is "+average);
+    }
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('MethodEx1','me1','java' )">Run</button>
+	<div>
+        <iframe id="me1"></iframe>
+    </div>
+</section>
+
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Write a example programm on instance method calling?</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="Samplemethod1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'sm1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class Samplemethod1 {
+	public int size() { // An instance method.
+		return 10;
+	}
+	public static void main(String[] args) {
+
+		// The size method can only be accessed from an instance.
+		Samplemethod1 exp1 = new Samplemethod1();
+		int value = exp1.size();
+		System.out.println("returned value is " +value);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Samplemethod1','sm1','java' )">Run</button>
+	<div>
+        <iframe id="sm1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+
+	
+		<accordion-item>
+		<accordion-title>Write a programm on method with public and private modifiers?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Methodvalidation" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'mv1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class Methodvalidation {
+	public void apply() {
+		System.out.println("Apply called");
+		this.validate();
+	}
+
+	private void validate() {
+		System.out.println("Validate called");
+	}
+	public static void main(String[] args) {
+
+		// Create new Test and call public method.
+		Methodvalidation t = new Methodvalidation();
+		t.apply();
+
+		// Cannot call a private method:
+		// t.validate();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Methodvalidation','mv1','java' )">Run</button>
+	<div>
+        <iframe id="mv1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Write a programm on method?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Staticmethodprogram" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'smp1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Staticmethodprogram {
+
+    static void test(int value) {
+        if (value == 0) {
+            // A void method has no return value.
+            // ... We use an empty return statement.
+            return;
+        }
+        System.out.println(value);
+        // A return statement is automatically added here.
+    }
+
+    public static void main(String[] args) {
+
+        // No variables can be assigned to a void method call.
+        test(0); // No effect.
+        test(1);
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Staticmethodprogram','smp1','java' )">Run</button>
+	<div>
+        <iframe id="smp1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Write a programm on method having variable argument list syntax?</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="ArgumentList" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'argument1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class ArgumentList {
+
+    static void displayAll(int... test) {
+        // The argument is an int array.
+        for (int value : test) {
+            System.out.println(value);
+        }
+        System.out.println("DONE");
+    }
+
+    public static void main(String[] args) {
+        // Pass variable argument lists to displayAll method.
+        displayAll(10, 20, 30);
+        displayAll(0);
+        displayAll();
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('ArgumentList','argument1','java' )">Run</button>
+	<div>
+        <iframe id="argument1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

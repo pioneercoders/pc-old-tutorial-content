@@ -1,0 +1,23 @@
+<!-- widget Quiz  -->	
+<h3>Introduction to OOPS-Quiz</h3>
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','d'], selAnswers: []}">
+		<div>
+			<h6>1).	Which declaration of the main method below would allow a class to be started as a standalone program.</h6>
+			<options values='{"values":["public static int main(char args[])", "public static void main(String args[])", "public static void MAIN(String args[])", "public static void main(String args)"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2). What is a object?</h6>
+			<options values='{"values":["An object is a class instance.", "An object can have null reference", "An object can be an array", "If there is insufficient space to allocate new object outofMemoryError will be thrown", "All"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

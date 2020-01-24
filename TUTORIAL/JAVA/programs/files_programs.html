@@ -1,0 +1,49 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program for how to read data from a file.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class FileEx {
+	public static void main(String args[]) throws IOException {
+		BufferedReader br = null;
+		String strLine = "";
+		br = new BufferedReader(new FileReader("D:/FileTest/file.txt")); // give your/ file// path// here
+		while ((strLine = br.readLine()) != null) {
+			System.out.println(strLine);
+		}
+	}
+}
+@CODE_END@
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>write a program for writing the data to file?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class FileEx2 {
+	public static void main(String args[]) throws IOException {
+		BufferedWriter bufferedWriter = null;
+		String strContent = "Data is stored to given file by using this example";
+		File myfile = new File("D:/FileTest/ab.txt"); // give your file path
+														// here
+		// check if file exist, otherwise create the file before writing
+		if (!myfile.exists()) {
+			myfile.createNewFile();
+		}
+		Writer writer = new FileWriter(myfile);
+		bufferedWriter = new BufferedWriter(writer);
+		bufferedWriter.write(strContent);
+		System.out.println("data is writing is completed...");
+		if (bufferedWriter != null) {
+			bufferedWriter.close();
+		}
+	}
+}
+@CODE_END@
+		</accordion-content>
+	</accordion-item>
+
+	
+</pc-accordion>

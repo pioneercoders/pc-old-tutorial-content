@@ -1,0 +1,162 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Example of one interface and one class</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class Main {
+  
+      
+             
+    public static void main(String[] args) {
+         
+          shape circleshape=new circle();
+           
+             circleshape.Draw();
+    }
+}
+ 
+interface shape
+ {
+     public   String baseclass="shape";
+      
+     public void Draw();     
+      
+ }
+ class circle implements shape
+ {
+ 
+    public void Draw() {
+        System.out.println("Drawing Circle here");
+    }
+      
+      
+ }
+@CODE_END@
+<div class="output-panel">
+	<P>
+	Drawing Circle here
+
+</P>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Example of interface inheriting an interface </accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class Main {
+   
+       
+              
+    public static void main(String[] args) {
+          
+          shapeA circleshape=new circle();
+            
+             circleshape.Draw();
+             circleshape.Draw();
+    }
+}
+  
+  interface shapeA
+ {
+     public   String baseclass="shape";      
+     public void Draw();     
+ }
+  interface shapeB extends shapeA
+ {
+     public   String baseclass="shape2";
+     public void Draw2();     
+ }
+   class circle implements shapeB
+ {
+    public   String baseclass="shape3";
+    public void Draw() {
+        System.out.println("Drawing Circle here:"+baseclass);
+    }
+    @Override
+    public void Draw2() {
+         System.out.println("Drawing Circle here:"+baseclass);
+    }     
+ }
+@CODE_END@
+<div class="output-panel">
+	<P>
+	Drawing Circle here:shape3
+Drawing Circle here:shape3
+
+</P>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Example of many interfaces and one class</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        shapeA circleshape = new circle();
+ 
+        circleshape.Draw();
+        // Note we can't call function Draw2 because the reference of type shapeA
+        //circleshape.Draw2();
+    }
+}
+ 
+interface shapeA {
+ 
+    public String baseclass = "shape";
+ 
+    public void Draw();
+}
+ 
+interface shapeB extends shapeA {
+ 
+    public String baseclass = "shape2";
+ 
+    public void Draw2();
+}
+ 
+interface shapeC {
+ 
+    public String baseclass = "shape3";
+ 
+    public void Draw3();
+}
+ 
+class circle implements shapeA, shapeB, shapeC {
+ 
+    public void Draw() {
+        // Try to change the value you will get error because baseclass is final
+        //baseclass = "Trying-To-Change Vlaue"
+        System.out.println("Drawing Circle here:" + shapeA.baseclass);
+    }
+ 
+    @Override
+    public void Draw2() {
+        System.out.println("Drawing Circle here:" + shapeB.baseclass);
+    }
+ 
+    @Override
+    public void Draw3() {
+        System.out.println("Drawing Circle here:" + shapeC.baseclass);
+    }
+}
+@CODE_END@
+<div class="output-panel">
+	<P>
+	Drawing Circle here:shape
+
+</P>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>
+

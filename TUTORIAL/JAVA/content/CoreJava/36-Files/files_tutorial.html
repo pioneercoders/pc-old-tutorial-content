@@ -1,0 +1,183 @@
+		<h4>Stream</h4>
+		
+		<p>Stream is a channel or medium, it able to allow data in continuous flow from input devices to java applications and from java app’s to output devices</p>
+		
+	<p><b>There are two types streams in java</b></p>	
+	<p>1)Byte oriented streams</p>
+	
+	<p>2)character oriented streams</p>
+	<h4>Input Streams:</h4>
+	
+	<p>These are byte oriented streams, which are able to allow data in continuous flow in the form of bytes from input devices to java programs</p>
+	<p><b>Example:</b></p>
+	<ul>
+		<li>Input stream</li>
+		<li>Byte Array Input Stream</li>
+		<li>FileInputStream</li>
+		<li>DataInputStream</li>
+		<li>ObjectInputStream</li>
+		<li>BufferedInputStream</li>
+	</ul>
+	<h4>OutputStream:</h4>
+	<p>These are byte oriented streams, which are able to allow data  in continuous flow in the form of bytes from java program to output devices</p>
+	<p><b>Example:</b></p>
+	<ul>
+		<li>OutputStream</li>
+		<li>Byte ArrayoutputStream</li>
+		<li>Fileoutputstream</li>
+		<li>Dataoutputstream</li>
+		<li>Objectoutputsteam</li>
+		<li>Bufferedoutputstream</li>
+	</ul>
+	<h4>Character orientedstreams:</h4>
+	<p>These streams are able to allow data in continuous flow in the form of characters from input devices to java programs and from java programs to output devices.</p>
+	<p><b>There are two types of character oriented stream</b></p>
+	<h4>1)Reader</h4>
+	<p>It is a character oriented stream, it able to allow data in continuous flow in the form of character from input devices to java programs</p>
+	<p><b>Example:</b></p>
+	<ul>
+		<li>CharArrayReader</li>
+		<li>BufferedReader</li>
+		<li>InputStreamReader</li>
+		<li>StringBufferedReader</li>
+	</ul>
+	<h4>2)Writer:</h4>
+	
+	<p>It able to allow data in continuous flow in the form of characters from java applications to outputdevices</p>
+	<p><b>Example:</b></p>
+	<ul>
+		<li>Writer</li>
+		<li>BufferedWriter</li>
+		<li>FilteredWriter</li>
+		<li>StringBufferedReader</li>
+		<li>PrintWrtier</li>
+		<li>FileWriter</li>
+		<li>StringBufferedWriter</li>
+	</ul>
+	
+	<h3>File operatios:</h3>
+	
+	<p>In java applications, it is convention to transfer the data from a particular source file to java applications and from java app’s to a particular target file</p>
+
+	<p>To perform File operations,  Java has provided the following predefined classes</p>	
+	<p><b>1)FileOutputStream</b></p>
+	<p><b>2)FileInputStream</b></p>
+	<p><b>3)FileWriter</b></p>
+	<p><b>4)FileReader</b></p>
+	
+	<h4>1)FileOutputStream:</h4>
+	<p>The main purpose of Fieoutputstream is to carry data in the form of bytes from java app’s to a particular target file</p>
+@CODE_START@@JAVA@public static void main(String[] args) {
+
+		FileOutputStream fop = null;
+		File file;
+		String content = "Pioneer Coders";
+
+		try {
+
+			file = new File("C:/Users/Appaji/Desktop/sample.txt");
+			fop = new FileOutputStream(file);
+
+			// if file doesnt exists, then create it
+			if (!file.exists()) {
+				file.createNewFile();
+			}
+
+			// get the content in bytes
+			byte[] contentInBytes = content.getBytes();
+
+			fop.write(contentInBytes);
+			fop.flush();
+			fop.close();
+
+			System.out.println("Done");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (fop != null) {
+					fop.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}@CODE_END@	
+<div class="output-panel"> 
+<p>Done</p>
+</div>	
+	
+	<h4>2)FileInputStream:</h4>
+	
+	<p>This byte oriented stream can be used to carry data from a particular source file to java program in the form of bytes</p>
+@CODE_START@@JAVA@ public class FileEx2{
+		public static void main(String[] args) throws IOException{ 
+			FileInputStream fis = new FileInputStream("C:/Users/Appaji/Desktop/sample.txt");
+			int size = fis.available();
+			byte[] b = new byte[size];
+			fis.read(b);
+			String data = new String(b);
+			System.out.println(data);	
+			fis.close();
+		}
+	}@CODE_END@	
+	<div class="output-panel"> 
+	<p>data displayed on console</p>
+	</div>		
+	<h4>3)FileReader:</h4>
+	<p>This character oriented stream can be used to transfer data from a particular source file to java application</p>
+	
+	<h4>4)FileWriter:</h4>
+	<p>This character oriented stream is used to carry data from java application to a particular target file.</p>
+
+	<h3>Serialization and Deserialization:</h3>
+	<ul>
+		<li>The process of separating data from an object is called as <b>serialization.</b></li>
+		<li>The process of reconstructing an object on the basis of data is called as <b>“Deserialization”</b></li>
+	</ul>
+	<p><b>java.io.Serializable interface</b></p>
+	<ul>
+		<li>Serializable is a marker interface (has no body). It is just used to "mark" java classes which support a certain capability.</li>
+	</ul>
+	<p><b>ObjectOutputStream class</b></p>
+	<ul>
+		<li>The ObjectOutputStream class is used to write primitive data types and Java objects to an OutputStream. Only objects that support the java.io.Serializable interface can be written to streams.</li>
+		<li>public ObjectOutputStream(OutputStream out) throws IOException {}creates an ObjectOutputStream that writes to the specified OutputStream.</li>
+	</ul>
+	<h4>Example of Java Serialization</h4>
+	
+	<p>In this example, we are going to serialize the object of Student class. The writeObject() method of ObjectOutputStream class provides the functionality to serialize the object. We are saving the state of the object in the file named f.txt.</p>
+	@CODE_START@@JAVA@class Student implements Serializable{
+		public static String name;
+		public static String age;
+		Student(String  name,String age){
+		this.name=name;
+		this.age=age;
+		}
+	}
+	public class persist{
+		public static void main(String[] args) throws IOException{ 
+			Student s1 = new Student("ravi","211");
+			FileOutputStream fos = new FileOutputStream("fileName.txt");
+			ObjectOutputStream out = new ObjectOutputStream(fos);
+			out.writeObject(s1.age +" "+s1.name); 
+			out.flush(); 
+		}
+	}@CODE_END@	
+	<div class="output-panel"> 
+	<p>data is displayed on fileName.txt</p>
+	</div>
+	
+<p><b>ObjectInputStream class</b></p>
+<ul><li>An ObjectInputStream deserializes objects and primitive data written using an ObjectOutputStream</li></ul>
+<h4>Example of Java Deserialization</h4>
+@CODE_START@@JAVA@class Depersist{
+	public static void main(String[] args){ 
+		ObjectInputStream in = new ObjectInputStream("new FileInputStream("f.txt")")
+		Student s = (Student)in. readObject();
+		System.out.println(s.id+" "+s.name);
+		in.close(); 
+	}
+}@CODE_END@	

@@ -1,0 +1,99 @@
+<h4>What is DataType?</h4>
+In maths, When we declare variables, we also specify the type of data and range of the data to that variable.
+@CODE_START@@JAVA@Ex: a = x+y; x,y &#8364; Z(integers) and 1<x<10 and 30<y<50 
+	numbers for each and every expriment of addition should be with the range.
+Expriment 1:  x=4 , y=5 then a = 9
+Expriment 2:  x=6 , y=6 then a = 12
+@CODE_END@
+	
+<p>Similarly in Java, Data Type is used to specify the type of the data and range of the data.</p> 
+
+<p> In Java Datatype is a spacial keyword(int, byte etc) used to allocate memory space for the data and it's range.</p>
+
+<h4>Whey we need DataType? </h4>
+The Java programming language is statically-typed, which means that all variables must first be declared before they can be used. This involves stating the variable's type and name, as you've already seen:
+
+@CODE_START@@JAVA@Datatype variable_name;
+byte age; 
+age = age+1;
+@CODE_END@
+
+
+<p><b>In Java, there are two types of data types:</b></p>
+<p>1.primitive data types</P>
+<p>2.non-primitive data types</P>
+
+@IMG_START@JAVA/Java-data-types/jpg@IMG_END@
+
+<h4> Primitive data types: </h4>
+<p>Primitive datatypes are predefined by the language and named by a keyword. it deals about basic data formate (numbers, strings, decimals and boolean) in our day to day life.</p>
+
+<table class="pc-table">
+	<tr> 
+		<td>Data type </td>
+		<td>Default value</td>
+		<td>Size</td>
+		<td>Data Range</td>
+	</tr>
+	<tr> 
+		<td>byte</td>
+		<td>0</td>
+		<td>1 byte</td>
+		<td>-128 (-2^7) to 127 (2^7 -1)</td>
+	</tr>
+	<tr> 
+		<td>short</td>
+		<td>0</td>
+		<td>2 byte</td>
+		<td>-32,768 (-2^15) to 32,767 (2^15 -1)</td>
+	</tr>
+	<tr> 
+		<td>int</td>
+		<td>0</td>
+		<td>4 byte</td>
+		<td>- 2,147,483,648 (-2^31) to 2,147,483,647 (2^31 -1)</td>
+	</tr>
+	<tr> 
+		<td>long</td>
+		<td>0L</td>
+		<td>8 byte</td>
+		<td> -9,223,372,036,854,775,808(-2^63) to 9,223,372,036,854,775,807 (2^63 -1)</td>
+	</tr>
+	<tr> 
+		<td>float</td>
+		<td>0.0F</td>
+		<td>4 byte</td>
+		<td> approximately ±3.40282347E+38F 
+			(6-7 significant decimal digits)  </td>
+	</tr>
+	<tr> 
+		<td>double</td>
+		<td>0.0D</td>
+		<td>8byte</td>
+		<td> approximately ±1.79769313486231570E+308
+			(15 significant decimal digits)</td>
+	</tr>
+	<tr> 
+		<td>boolean</td>
+		<td>false</td>
+		<td>bit</td>
+		<td></td>
+	</tr>
+	<tr> 
+		<td>char</td>
+		<td>'\u0000'</td>
+		<td>2byte</td>
+		<td>0 to 65,536 (unsigned)</td>
+	</tr>
+</table>
+
+@CODE_START@@JAVA@int a;//valid
+a=10;//valid
+a=10,20,30 //invalid
+char option_val = 'y';
+byte age = 24;
+@CODE_END@
+
+
+<h4> Non Primitive data types: </h4>
+<p> Non-primitive data types are not defined by the programming language, but are instead created by the programmer. They are sometimes called "reference variables," or "object references," since they reference a memory location, which stores the data. In the Java programming language, non-primitive data types are simply called "objects" because they are created, rather than predefined. While an object may contain any type of data, the information referenced by the object may still be stored as a primitive data type.</p>

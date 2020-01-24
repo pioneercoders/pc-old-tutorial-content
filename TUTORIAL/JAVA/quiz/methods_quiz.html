@@ -1,0 +1,47 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','c','b','a','b'], selAnswers: []}">
+		<div>
+			<h6>1. What is instance variable?</h6>
+			<options values='{"values":[" A variable that is declared inside method.", 
+                         "A variable that is declared inside class but outside method.", 
+                        "A variable that is declared outside class.",
+                        "None of the above."]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. Object communication is achieved by using…</h6>
+			<options values='{"values":["Variables.", 
+                         " By creating objects.", 
+                        " Methods.",
+                        " None of the above."]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+                <div>
+			<h6>3. Select which of the following statements are incorrect ?</h6>
+			<options values='{"values":[" The name of the function-call  must equal to the name of the function-definition.", 
+                         "The function call and definition may or may not have equal parameters in the parenthesis.", 
+                        "The function call can be made anywhere in the program based on the access-specifiers."]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+                <div>
+			<h6>4.Does Java support method overloading or not?</h6>
+			<options values='{"values":["Yes", 
+                         "No"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+               <div>
+			<h6>5. Does Java support operator overloading or not?</h6>
+			<options values='{"values":["Yes", "No"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

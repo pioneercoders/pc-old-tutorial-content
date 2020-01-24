@@ -1,0 +1,20 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','a'], selAnswers: []}">
+		<div>
+			<h6>1. java.lang comes under?</h6>
+			<options values='{"values":["user defined package.", 
+                         "built in package"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                  <div>
+			<h6>2. Date class comes under which package?</h6>
+			<options values='{"values":["java.util.", 
+                         "java.lang.", 
+                        "None"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

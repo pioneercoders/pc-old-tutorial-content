@@ -1,0 +1,158 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program on default-constructor?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="DefaultConstructorExample" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'con1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class DefaultConstructorExample {
+	public DefaultConstructorExample() {
+		System.out.println(" Hai i am inside default-constructor... ");
+	}
+
+	public static void main(String args[]) {
+		DefaultConstructorExample mdc = new DefaultConstructorExample();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('DefaultConstructorExample','con1','java' )">Run</button>
+	<div>
+        <iframe id="con1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Write a program on parameterized constructors?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Studentdetail" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Studentdetail {
+	int id;
+	String name;
+
+	Studentdetail(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	void displayData() {
+		System.out.println(id + " " + name);
+	}
+
+	public static void main(String args[]) {
+		Studentdetail student1 = new Studentdetail(111, "Arun");
+		Studentdetail student2 = new Studentdetail(222, "Varun");
+		student1.displayData();
+		student2.displayData();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Studentdetail','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Write a program on constructor-Overloading?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Persondetail" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Persondetail {
+	int id;
+	String name;
+	int age;
+
+	Persondetail(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	Persondetail(int id, String name, int age) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+
+	void display() {
+		System.out.println(id + " " + name + " " + age);
+	}
+
+	public static void main(String args[]) {
+		Persondetail person1 = new Persondetail(111, "Karan");
+		Persondetail person2 = new Persondetail(222, "Aryan", 25);
+		person1.display();
+		person2.display();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Persondetail','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>
+
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Write a program to call default constructor using ThisKeyword?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="ThisKeywordExamle" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class ThisKeywordExamle {
+	int id;
+	String name;
+
+	ThisKeywordExamle() {
+		System.out.println("default constructor is invoked ");
+	}
+
+	ThisKeywordExamle(int id, String name) {
+		// it is used to invoked current class constructor.
+		this();
+		this.id = id;
+		this.name = name;
+	}
+
+	void display(){
+System.out.println( id + " " + name);
+}
+
+	public static void main(String args[]) {
+		ThisKeywordExamle e1 = new ThisKeywordExamle(111, "Kiran");
+		ThisKeywordExamle e2 = new ThisKeywordExamle(222, "Arun");
+		e1.display();
+		e2.display();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('ThisKeywordExamle','preview4','java' )">Run</button>
+	<div>
+        <iframe id="preview4"></iframe>
+    </div>
+</section>
+
+
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

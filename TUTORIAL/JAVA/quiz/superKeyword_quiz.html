@@ -1,0 +1,35 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','a','b','b'], selAnswers: []}">
+		<div>
+			<h6>1.Which keyword is used to access parent class variables and methods to sub class?</h6>
+			<options values='{"values":["this", 
+                         "super"]}'
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                  <div>
+			<h6>2. Which keyword is used to access current class variable and method?</h6>
+			<options values='{"values":["this", 
+                         "super"]}'  
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+                <div>
+			<h6>3.Select which of the following is incorrect?</h6>
+			<options values='{"values":["super() must be first statement inside constructor.", 
+                         " If our class not extending any other class then we cannot use super(); in our class.", 
+                        " If we are not calling super(); inside the contructor then by default JVM adds it."]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4. Can we call super class methods from static methods on sub class?</h6>
+			<options values='{"values":["Yes", "No"]}'
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

@@ -1,0 +1,84 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program with super keyword</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class Super_Ex1 {
+	
+	public Super_Ex1(String str) {
+		
+		System.out.println("Base Class Constructor " + str);
+	}
+}
+ 
+class SubClass extends Super_Ex1 {
+	
+	public SubClass(String str) {
+		
+		super(str);
+		System.out.println("Sub Class Constructor " + str);
+	}
+}
+ 
+class MainClass {
+	
+	public static void main(String args[]) {
+		
+		SubClass obj = new SubClass("called");
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<P>
+	Base Class Constructor called
+Sub Class Constructor called
+
+</P>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Write a program to Call Base Class Method using super in Java</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class Super_Ex2 {
+	
+	void display() {
+		
+		System.out.println("Base Class method called");
+	}
+}
+ 
+class SubClass extends Super_Ex2 {
+	
+	void display() {
+		
+		super.display();
+		System.out.println("Sub Class method called");
+	}
+}
+ 
+class MainClass {
+	
+	public static void main(String args[]) {
+		
+		SubClass obj = new SubClass();
+		obj.display();
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<P>
+	Base Class method called
+Sub Class method called
+
+</P>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>
+

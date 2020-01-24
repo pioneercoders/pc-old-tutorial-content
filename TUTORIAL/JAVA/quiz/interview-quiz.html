@@ -1,0 +1,42 @@
+<!-- widget Quiz  -->	
+<h3>Generics Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : [c','c','b','b','a'], selAnswers: []}">
+		<div>
+			<h6>1).Why are generics used?</h6>
+			<options values='{"values":["Generics make code more fast.","Generics make code more optimised and readable.","Generics add stability to your code by making more of your bugs detectable at compile time.","Generics add stability to your code by making more of your bugs detectable at run time."]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2).Which of these type parameters is used for a generic class to return and accept any type of object?</h6>
+			<options values='{"values":["K","N","T","V"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3). Which of these type parameters is used for a generic class to return and accept a number? </h6>
+			<options values='{"values":["K","N","T","V"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4).Which of these is an correct way of defining generic class?</h6>
+			<options values='{"values":["class name(T1, T2, …, Tn) { /* … */ }<","class name { /* … */ }","class name[T1, T2, …, Tn] { /* … */ }","class name{T1, T2, …, Tn} { /* … */ }"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. Which of the following reference types cannot be generic?</h6>
+			<options values='{"values":["Anonymous inner class","Interface","Inner class","All of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

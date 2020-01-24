@@ -1,0 +1,31 @@
+	<h4>Environmental Variables</h4>	
+	<p>They are used by the operating system to save settings (default values, locations of resources) to be used by Windows or by processes launched by users.</p>
+	<p>There are two types of environmental variables they are:</p>
+		<ul>
+			<li>User variables that are specific to a particular Windows user account.</li>
+			<li>System variables are always visible, regardless of the used user account.</li>
+		</ul>
+	<p>Even if these variables are usually defined and initialized automatically when you install the system or other applications, there are situations in which the user must manually define them to put at the disposal of applications.</p>
+	<p>Please follow the following steps to set up the environment.</p>
+	<p><b>Step 1:</b>Download the Java Development Kit (JDK). You can download it <a href="#">here </a></p>
+	<p><b>Step 2:</b>Follow the instructions and install the JDK.</p>
+	<p><b>Step 3:</b>Right-click on 'My Computer' and select 'Properties'.</p>
+	<p><b>Step 4:</b>Click on Advanced system settings. A dialog box appears. </p>
+	<p><b>Step 5:</b>Click on the Environment Variables button at the bottom-right of the System Properties dialog box.</p>
+	<p><b>Step 6:</b> A dialog box named Environment Variables appears. Click on the TEMP variable in the User variables section. Now go down to the "Path" variable in the System Variables section and click on edit.</p>
+	<p><b>Step 7:</b>The Edit System Variable dialog appears. At the end of the Variable value section append a semi-colon and then enter the path of the bin directory of you JDK. To copy the path of the bin directory follow the picture below</p>
+	@IMG_START@JAVA/javaenvironmentalsetuptutorial_image1/png@IMG_END@
+	<p><b>Step 8:</b>Then paste the path on the field as shown below. Make sure you have appended a semi-colon before you paste the address. </p>
+	@IMG_START@JAVA/javaenvironmentalsetuptutorial_image2/png@IMG_END@
+	<p><b>Step 9:</b>Then click on OK as shown and then you are done. To confirm whether your settings are right, open command prompt and type "javac". You should get a response like this on your prompt.</p>
+	@IMG_START@JAVA/javaenvironmentalsetuptutorial_image3/png@IMG_END@
+	<p><b>Step 10:</b>Type "java" and you should get something like this.</p>
+	<p>If all of the above steps are followed correctly, you will be able to setup your java compiler and you can now start programming.</p>
+	<h3>Popular Java Editors:</h3>
+	<p>To write your java programs you will need a text editor. There are even more sophisticated IDE available in the market. But for now, you can consider one of the following:</p>
+	<p><b>Notepad :</b>On Windows machine you can use any simple text editor like Notepad (Recommended for this tutorial), TextPad.</p>
+	<p><b>SpringSource Tool Suite :</b>is a Java IDE that is open source and free which can be downloaded from <a href="http://www.springsource.org/">http://www.springsource.org/.</a></p>
+	<p><b>Netbeans :</b>is a Java IDE that is open source and free which can be downloaded from <a href="http://www.netbeans.org/index.html">http://www.netbeans.org/index.html.</a></p>
+	<p><b>Eclipse :</b>is also a java IDE developed by the eclipse open source community and can be downloaded from <a href="http://www.eclipse.org/">http://www.eclipse.org/.</a></p>
+
+

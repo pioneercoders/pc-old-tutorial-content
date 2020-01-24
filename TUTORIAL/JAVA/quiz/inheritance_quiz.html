@@ -1,0 +1,36 @@
+<!-- widget Quiz  -->	
+<h3>Inheritance Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['d','c','c','a'], selAnswers: []}">
+		<div>
+			<h6>1).Which of these keyword must be used to inherit a class?</h6>
+			<options values='{"values":["super", "this", "extent", "extends"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6> 2).Which of these is correct way of inheriting class A by class B? </h6>
+			<options values='{"values":["class B + class A {}", "class B inherits class A {}", "class B extends A {}", "class B extends class A {}"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6> 3. Which of the following statements are incorrect? ? </h6>
+			<options values='{"values":["public members of class can be accessed by any code in the program", "private members of class can only be accessed by other members of the class.", "private members of class can be inherited by a sub class, and become protected members in sub class", "protected members of a class can be inherited by a sub class, and become private members of the sub class."]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4). Is java support multilevel inheritance ?</h6>
+			<options values='{"values":["Yes", "No"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

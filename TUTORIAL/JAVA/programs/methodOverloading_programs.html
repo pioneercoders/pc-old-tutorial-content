@@ -1,0 +1,137 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program to calculate sum of two numbers using methodOverloading?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Calculatesum" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'ovl1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Calculatesum {
+	void sum(int a, int b) {
+		System.out.println("sum is " + (a + b));
+	}
+
+	void sum(float a, float b) {
+		System.out.println("sum is " + (a + b));
+	}
+
+	public static void main(String args[]) {
+		Calculate cal = new Calculate();
+		cal.sum(8, 5);
+		cal.sum(4.6f, 3.8f);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Calculatesum','ovl1','java' )">Run</button>
+	<div>
+        <iframe id="ovl1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Write a program for Overloading by passing different arguments?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="OverloadingEx2" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'ovl4',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class OverloadingEx2 {
+	public void display(String name) {
+		System.out.println(name);
+	}
+
+	public void display(String name, int age) {
+		System.out.println(name + " " + age);
+	}
+
+	public static void main(String args[]) {
+		OverloadingEx2 obj = new OverloadingEx2();
+		obj.display("raju");
+		obj.display("sai", 18);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('OverloadingEx2','ovl4','java' )">Run</button>
+	<div>
+        <iframe id="ovl4"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write a program for OverLoading with different return types?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class OverloadingExample3 {
+	public float myMethod(int num1, int num2) {
+		System.out.println("First myMethod of class Demo " + (num1 + num2));
+		return num1 + num2;
+	}
+
+	public int myMethod(int var1, int var2, int var3) {
+		System.out.println("Second myMethod of class Demo "
+				+ (var1 - var2 - var3));
+		return var1 - var2 - var3;
+	}
+
+	public static void main(String args[]) {
+		OverloadingExample3 obj = new OverloadingExample3();
+		obj.myMethod(10, 10);
+		obj.myMethod(20, 12, 1);
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>First myMethod of class Demo 20<br>
+	   Second myMethod of class Demo 7
+</p>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write an Example program for Method OverLoading?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Employees" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'Employees4',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Employees {
+	void getSalary(int basic, float hike, float pf) {
+		float salary = (basic + ((basic + hike) / 100) - ((basic * pf) / 100));
+		System.out.println("salary " + salary);
+	}
+
+	void getSalary(int basic, float hike, float pf, int tax, int bonus) {
+		float salary = (basic + ((basic + hike) / 100) - ((basic * pf) / 100)
+				+ tax + bonus);
+		System.out.println("salary " + salary);
+	}
+
+	public static void main(String args[]) {
+		Employees employees = new Employees();
+		employees.getSalary(20000, 25.0f, 12.5f);
+		employees.getSalary(20000, 25.0f, 12.5f, 2000, 5000);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Employees','Employees4','java' )">Run</button>
+	<div>
+        <iframe id="Employees4"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>

@@ -1,0 +1,57 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Example of the regular expression  used for searching the occurrence of string book in the text</accordion-title>
+		<accordion-content>
+
+@CODE_START@@JAVA@package pioneercoders;
+class FirstregularExpressionExample{  
+   public static void main(String args[]){  
+      String content = "This is Chaitanya " +
+	    "from Beginnersbook.com.";
+
+      String pattern = ".*book.*";
+
+      boolean isMatch = Pattern.matches(pattern, content);
+      System.out.println("The text contains 'book'? " + isMatch);
+   }
+}  
+@CODE_END@
+<div class="output-panel">
+	<P>The text contains 'book'? true
+
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Example of the regular expression to split a text into multiple strings based on a delimiter</accordion-title>
+		<accordion-content>
+
+@CODE_START@@JAVA@package pioneercoders;
+class RegexExample2{  
+public static void main(String args[]){  
+	String text = "This Is Pioneercoders";
+    // Pattern for delimiter
+	String patternString = "is";
+	Pattern pattern = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
+	String[] myStrings = pattern.split(text);
+	for(String temp: myStrings){
+	    System.out.println(temp);
+	}
+	System.out.println("Number of split strings: "+myStrings.length);
+}}
+@CODE_END@
+<div class="output-panel">
+	<P>Th<br>
+Chaitanya.It<br>
+MyWebsite<br>
+Number of split strings: 4
+
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>
+

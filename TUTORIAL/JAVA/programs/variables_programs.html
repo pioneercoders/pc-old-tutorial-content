@@ -1,0 +1,115 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>write a programm on local variable and blocklevel variables?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class LocalVariables {
+
+	// Constructor
+	public LocalVariables() {
+
+		// The scope of constructorLocalVariable is within the HelloWorld
+		// constructor and will be destroyed
+		// once it exits fron HelloWorld()
+		String constructorLocalVariable = "Constructor Level local variable";
+		System.out.println(constructorLocalVariable);
+
+	}
+
+	public static void main(String[] args) {
+
+		// The scope of methodLocalVariable is within the main method and will
+		// be destroyed
+		// once it exits fron main()
+		String methodLocalVariable = "method Level local variable";
+		System.out.println(methodLocalVariable);
+
+		{
+			// scope of blockLocalVariable is within the outside {}, and it gets
+			// destroyed after }
+			String blockLocalVariable = "block Level local variable";
+			System.out.println(blockLocalVariable);
+		}
+
+		// so the below line will give an error as the blockLocalVariable
+		// defined within the block
+		// gets destroyed once it exits the block
+		// System.out.println(blockLocalVariable + newLine);
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>method Level local variable<br>
+		block Level local variable
+	</p>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>write a sample programm on instance variables?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class VariablesInJava {
+
+	/*
+	 * Below variable is INSTANCE VARIABLE as it is outside any method and it is
+	 * not using STATIC modifier with it. It is using default access modifier.
+	 * To know more about ACCESS MODIFIER visit appropriate section
+	 */
+	int instanceField;
+
+	/*
+	 * Below variable is STATIC variable as it is outside any method and it is
+	 * using STATIC modifier with it. It is using default access modifier. To
+	 * know more about ACCESS MODIFIER visit appropriate section
+	 */
+	static String staticField;
+
+	public void method() {
+		/*
+		 * Below variable is LOCAL VARIABLE as it is defined inside method in
+		 * class. Only modifier that can be applied on local variable is FINAL.
+		 * To know more about access and non access modifier visit appropriate
+		 * section.
+		 * 
+		 * Note* : Local variable needs to initialize before they can be used.
+		 * Which is not true for Static or Instance variable.
+		 */
+		final String localVariable = "Initial Value";
+		System.out.println(localVariable);
+	}
+
+	public static void main(String args[]) {
+		VariablesInJava obj = new VariablesInJava();
+
+		/*
+		 * Instance variable can only be accessed by Object of the class only as
+		 * below.
+		 */
+		System.out.println(obj.instanceField);
+
+		/*
+		 * Static field can be accessed in two way. 1- Via Object of the class
+		 * 2- Via CLASS name
+		 */
+		System.out.println(obj.staticField);
+		System.out.println(VariablesInJava.staticField);
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>0<br>
+		null<br>
+		null
+	</p>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+	
+	
+	
+</pc-accordion>

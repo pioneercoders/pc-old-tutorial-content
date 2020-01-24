@@ -1,0 +1,77 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program for display the class propreties?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class SimpleClass {
+	int price;
+
+	public SimpleClass(String bookName) {
+		// This constructor has one parameter bookName.
+		System.out.println(" Choose book name is : " + bookName);
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public static void main(String args[]) {
+		/* Object creation */
+		SimpleClass simpleclass = new SimpleClass("Head first Servlet And Jsp");
+		/* Call class method to set book Price */
+		simpleclass.setPrice(200);
+		/* You can access instance variable as follows as well */
+		System.out.println(" Book Price is : " + simpleclass.getPrice());
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p> Choose book name is : Head first Servlet And Jsp<br>
+		Book Price is : 200
+	</p>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Write a program for accessing one class properties to another class?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class Persion {
+	String name;
+	int age;
+
+	void talk() {
+		System.out.println(" Hello I am : " + name);
+		System.out.println(" My age is : " + age);
+	}
+
+	public static class Demo {
+		public static void main(String args[]) {
+			// create person class
+			Persion persion = new Persion();
+			// Initialize the instance variables using the reference
+			persion.name = "Raj";
+			persion.age = 19;
+			persion.talk();
+		}
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p> Hello I am : Raj<br>
+		My age is : 19
+	</p>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+
+</pc-accordion>

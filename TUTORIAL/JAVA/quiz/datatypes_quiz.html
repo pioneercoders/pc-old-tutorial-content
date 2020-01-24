@@ -1,0 +1,71 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','a','a','a','a','a','a','a','a','a'],selAnswers:[]}">
+		<div>
+			<h6>1. What is the default value of char variable?</h6>
+			<options values='{"values":["\\u0000", "0", "null", "not defined"]}' bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. What is the default value of long?</h6>
+			<options values='{"values":["0", "1", "0L", "L"]}' bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. What is the size of the byte variable? </h6>
+			<options values='{"values":["8bit", "16bit", "32bit", "64bit"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4. What is the use of any variable?</h6>
+			<options values='{"values":["To print words on the screen", "To write Java codes", "To add numbers together", "To keep track of data in the memory of the computer"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5.Following code will result in: int num = 6.7;</h6>
+			<options values='{"values":["Compilation error", "Runtime error", "Num being 6.7", "Num being 6"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6. Following code will result in: float num = 5/0;</h6>
+			<options values='{"values":["No Error: a is NaN", "Runtime Exception", "Compilation error: DivideByZeroException", "Compilation error: Divisions must be in a try block"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>7. Choose the appropriate data type for this value: "1" ?</h6>
+			<options values='{"values":["char", "int", "string", "boolean"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		
+		
+		<div>
+			<h6>8. Which of these values can a boolean variable contain?</h6>
+			<options values='{"values":["True & False", "0 & 1", "Any integer value", "true"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+		
+		<div>
+			<h6>9. Literal can be of which of these data types?</h6>
+			<options values='{"values":["integer", "float", "boolean", "all of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>10. Which of these can not be used for a variable name in Java?</h6>
+			<options values='{"values":["integer", "keyword", "identifier & keyword", "None of the mentioned"]}'
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

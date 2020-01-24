@@ -1,0 +1,68 @@
+<!-- widget Quiz  -->	
+<h3>Constructor and this keyword Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','d','a','b','b'], selAnswers: []}">
+		<div>
+			<h6>1). If we place return type in constructor prototype will it leads to Error?</h6>
+			<options values='{"values":["Yes", "No"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2). How compiler and JVM can differentiate constructor and method definitions of both have same class name?</h6>
+			<options values='{"values":["by using decleration", "by using method name", "by using constructor name", " by using return type"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3). Can we declare constructor as private?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4).Is Constructor definition is mandatory in class?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. If class has explicit constructor , will it has default constructor?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		
+		
+
+
+
+
+
+
+
+
+<div >
+		<h6> 2. What is the out put of the following program? </h6>
+@CODE_START@@C@
+#include &lt;stdio.h&gt;
+
+int main() {
+   /* my first program in C */
+   printf("Hello, World! \n");
+   
+   return 0;
+}
+@CODE_END@
+			<options values='{"values":["Hello, World!", "Pioneer Coders", "n", "nothing"]}' bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

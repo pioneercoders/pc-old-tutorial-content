@@ -1,0 +1,70 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>simple program using different packages</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@//save by A.java  
+package pack;  
+public class A{  
+  public void msg(){System.out.println("Hello");}  
+}  
+//save by B.java  
+package mypack;  
+class B{  
+  public static void main(String args[]){  
+   pack.A obj = new pack.A();//using fully qualified name  
+   obj.msg();  
+  }  
+}  
+@CODE_END@
+<div class="output-panel">
+	<P>Hello
+
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Example for accessing data from different packages</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@
+package package_name;
+ 
+public class ClassOne {
+    public void methodClassOne() {
+        System.out.println("Hello there its ClassOne");
+    }
+}
+
+package package_one;
+ 
+public class ClassTwo {
+    public void methodClassTwo(){
+        System.out.println("Hello there i am ClassTwo");
+    }   
+}
+
+import package_one.ClassTwo;
+import package_name.ClassOne;
+ 
+public class Testing {
+    public static void main(String[] args){
+        ClassTwo a = new ClassTwo();
+        ClassOne b = new ClassOne();
+        a.methodClassTwo();
+        b.methodClassOne();
+    }
+}
+
+@CODE_END@
+<div class="output-panel">
+	<P>Hello there i am ClassTwo<br>
+Hello there its ClassOne
+
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>

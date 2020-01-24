@@ -1,0 +1,501 @@
+	<h4>Why collections:</h4>	
+	<ul>
+		<li>Arrays are available fixed size manner that is arrays are able to allow the elements upto the maximum size, not allowing extra elements.</li>
+		<li>Arrays are not allowing heterogeneous elements. And not providing predefined library to perform the operations like searching, sorting,…</li>
+		<li>To overcome above problems java has provided &rdquo;Collection Framework&rdquo;</li>
+	</ul>
+	<p><b>Collection:</b>Collection is an object, it able to store a group of other objects</p>
+	
+	<p><b>Collection Framework: </b>Collection Framework is a set of classes and interfaces to represent collection objects.</p>
+	
+	<p>Java has provided the complete predefined library of collection Framework in the form of a separate package "java.util" </p>
+	
+	<p>java.util package has provided the following predefined classes and interfaces in order to represent collections in java applications</p>
+	@IMG_START@JAVA/collection/jpg@IMG_END@
+	<h4>Collection:</h4>
+	<ul>
+		<li>Collection is root interface for all the collection implementations</li>
+		<li>Collection is able to represent a group of object as a single  unit</li>
+	</ul>
+	
+	<p><b>Collection interface has provided the following methods common to all implementation classes</b></p>
+
+	<table class="pc-table">
+			<tr>
+				<td>S.NO</td> 
+				<td>public boolean add(Object element)</td>
+				<td>Used to add the specified element to the collection object</td>
+			</tr>
+			<tr> 
+				<td>1.</td>
+				<td>public boolean addAll(Collection c)</td>
+				<td>Is used to add all the elements of the specified collection objects to the present collection object</td>							
+			</tr>
+			<tr> 
+				<td>2.</td>
+				<td>public boolean remove(Object element)</td>
+				<td>Can be used to remove the specified element from the collection object.</td>							
+			</tr>
+			<tr>
+				<td>3.</td>
+				<td>public boolean removeAll(Collection c)</td>
+				<td>can be used to remove all the elements which are available in the specified collection from the present collection object.</td>							
+			</tr>
+			<tr> 
+				<td>4.</td>
+				<td>Public int size()</td>
+				<td>Return the total no of elements in the collection</td>							
+			</tr>
+			<tr> 
+				<td>5.</td>
+				<td>Public void clear()</td>
+				<td>Removes the total no of elements in the collection</td>							
+			</tr>
+			<tr>
+				<td>6.</td>
+				<td>Public boolean contains(Object element)</td>
+				<td>is used to search an element</td>							
+			</tr>
+			<tr> 
+				<td>7.</td>
+				<td>Public boolean containsAll(Collection c)</td>
+				<td>is used to search the specified collection in this collection.</td>							
+			</tr>
+			<tr>
+				<td>8.</td>
+				<td>public Object[] toArray()</td>
+				<td>converts collection into array</td>							
+			</tr>
+			<tr> 
+				<td>9.</td>
+				<td>public boolean retainAll(Collection c)</td>
+				<td>is used to delete all the elements of invoking collection except the specified collection</td>							
+			</tr>		
+	</table>
+			
+			
+		<h4>List:</h4>
+	<ul>
+		<li>List interface is a child interface to Collection interface.</li>
+		<li>List implementation are index based. They are able to allow all the elements as per indexing right from 0 to size-1</li>
+		<li>List implementations are able to allow duplicate values, Heterogeneous elements and null values in any number</li>
+		<li>List implementations are able to follow insertion order, they are not following sorting order</li>
+	</ul>
+	<p><b>Create object for List Implementer classes</b></p>
+	<p><b>Syntax</b></p>
+	@CODE_START@@JAVA@ List_Implemented_class obj = new List_Implemented_class ();@CODE_END@		
+	<p><b>Example to create object of Stack</b></p>
+	@CODE_START@@JAVA@Stack obj = new Stack ();@CODE_END@
+	
+	<h4>ArrayList:</h4>
+	<ul>
+		<li>Arraylist is a direct implementation class to List interface</li>
+		<li>ArrayList implementation are index based.</li>
+		<li>ArrayList implementations are able to allow duplicate values, Heterogeneous elements and null values in any number</li>
+		<li>ArrayList implementations are able to follow insertion order, they are not following sorting order</li>
+		<li>ArrayList class is not Synchronized.</li>
+		<li>ArrayList class elements can be access randomly</li>
+	</ul>
+	<p><b>Advantages of ArrayList</b></p>
+	<ul>
+		<li>ArrayList based applications takes less memory space.</li>
+		<li>Retrieving the data from ArrayList will take less time.</li>
+		<li>Performance of ArrayList based applications is more.</li>
+	</ul>
+	@CODE_START@@JAVA@ ArrayList al = new ArrayList ();@CODE_END@	
+
+	<p><b>Difference Between Vector and ArrayList</b></p>	
+	<table class="pc-table">
+			<tr>
+				<td>S.No</td> 
+				<td>Vector </td>
+				<td>ArrayList </td>
+				</tr>
+			<tr> 
+				<td>1.</td>
+				<td>Vector is legacy Collection Framework (old class).</td>
+				<td>ArrayList is new Collection Framework.</td>
+			</tr>
+			<tr> 
+				<td>2.</td>
+				<td>Vector is Synchronized by default.</td>
+				<td>ArrayList is not Synchronized.</td>							
+			</tr>
+			<tr> 
+				<td>3.</td>
+				<td>For retrieving elements from Vector class can be use foreach loop, iterator, listiterator and enumeration.</td>
+				<td>For retrieving elements from ArrayList class can be use foreach loop, iterator and listiterator.</td>
+			</tr>							
+	</table>
+			
+		<p><b>Example of ArrayList</b></p
+<section>  
+    <div id="DemoArraylist" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class DemoArraylist {
+	public static void main(String args[]) { 
+	java.util.ArrayList al = new java.util.ArrayList();//creating arraylist
+	al.add(10);
+	al.add(20);
+	al.add(30);
+	java.util.Iterator itr = al.iterator();//getting Iterator from arraylist to traverse elements 
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('DemoArraylist','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>
+	
+		<h4>Stack</h4>
+		<p>Stack is a direct subclass to vector, it contains all the behavior s of vector class
+			Stack is able to retrieve all the elements in &rdquo;Last In First Out&rdquo; manner.</p>
+
+	<p><b>Cursors or Iterators</b></p>
+	<p><b>Why Iterators?</b></p>
+	
+	<p>If we want to retrieve all the elements from collection object individually in one by one fashion then we have to use cursors or Iterators</p>
+	
+	<p><b>There are 3 types of cursors in Collection Framework</b></p>
+		
+	<p>i)Enumeration</p>
+	<p>ii)Iterator</p>
+	<p>iii)ListIterator</p>
+	
+	<h4>Enumeration:</h4>
+	
+	<p>It is one of the predefined interface and whose object is always used for retrieving the data from any legacy collection framework variable (like vector, stack, HasTable etc.) only in forward direction but not in backward direction. Like Iterator interface object, Enumeration Interface object is pointing just before the first element of any legacy collection framework variable.</p>
+	
+	<p>The functionality of Enumeration is more or less similar to Iterator Interface but Enumeration Interface object belongs to synchronized and Iterator Interface object belong to non-synchronized.</p>	
+		
+		
+	<p><b>Points to Remember</b></p>		
+	<ul>
+		<li>Enumeration does not support addition, removing and replacing og elements.</li>
+		<li>Enumeration is Synchronized.</li>
+		<li>Using Enumeration elements of legacy collection can be access only in forward direction.</li>
+		<li>Every legacy class contains following methods to work with enumeration and it returns enumeration object.</li>
+	</ul>	
+	<p><b>Methods of Enumeration Interface</b></p>		
+	<ul>
+		<li><b>public boolean hasMoreElements():</b>Return true if Enumeration contains more elements otherwise returns false.</li>
+		<li><b>public object nextElement():</b>Returns the next elements of Enumeration</li>	
+	</ul>		
+	<p><b>Create an object of Enumeration</b></p>	
+	
+	<p><b>Syntax</b></p>		
+@CODE_START@@JAVA@Vector v = new Vector();
+Enumeration e = v.elements();
+@CODE_END@
+		
+	<p><b>Example of Enumeration</b></p>
+@CODE_START@@JAVA@class EnumerationDemo {
+	public static void main(String args[]) { 
+	Vector v = new Vector();//creating vector
+	v.add(10);
+	v.add(20);
+	v.add(30);
+
+	Enumeration e = v.elements();
+	System.out.println("Forward Direction");
+		while(e.hasMoreElements()) {
+			System.out.println(e.nextElement());
+		}
+	}
+}@CODE_END@
+<div class="output-panel"> 
+	<p>10</p>
+	<p>20</p>
+	<p>30</p>
+</div>		
+		
+		<h4>Iterator:</h4>
+		<p>It is one of the predefined interface present in java.util.* package. The purpose of this interface is that to extract or retrieve the elements of collection variable only in forward direction but not in backward direction. By default an object of iterator is pointing just before the first element of any collection framework variable.</p>
+	<p><b>Points to Remember</b></p>	
+	<ul>
+		<li>Iterator allows to remove the elements from collection object.</li>
+		<li>Iterator is not Synchronized.</li>
+		<li>Using Iterator elements of collection can be access only in forward direction</li>
+		<li>Iterator can be available to all the collection classes.</li>
+		<li>Every collection class contains Iterator() and that returns Iterator object, using this object reference elements can be retrieved from collection.</li>
+	</ul>		
+	<p><b>Methods of Iterator Interface</b></p>
+	<ul>
+		<li>public boolean hasNext()</li>
+		<li>public boolean hasNext()</li>
+		<li>public object next()</li>
+	</ul>
+	<p><b>public boolean hasNext()</b></p>
+	<ul><li>This method return true provided by Iterator interface object is having next element otherwise it returns false.</li></ul>
+	<p><b>public object next()</b></p>
+	<ul>
+		<li>This method is used for retrieving next element of any collection framework variable provided public boolean hasNext(). If next elements are available then this method returns true other wise it return false.</li>
+	</ul>
+	<p><b>public object remove()</b></p>
+	<ul><li>Remove from collection the last element returned by Iterator.</li></ul>
+	
+	<p><b>Example of Iterator</b></p>
+@CODE_START@@JAVA@import java.util.*;
+class IteratorDemo {
+	public static void main(String args[]) { 
+	ArrayList al = new ArrayList();//creating arraylist
+	al.add(10);
+	al.add(20);
+	al.add(30);
+
+	Iterator itr = al.iterator();//getting Iterator from arraylist to traverse elements 
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+}@CODE_END@	
+<div class="output-panel"> 
+	<p>10</p>
+	<p>20</p>
+	<p>30</p>
+</div>	
+			
+	<h4>ListIterator:</h4>
+
+<p>It is one of the predefined interface present in java.util.* package. The ListIterator interface object is always used for retrieving the data from any collection framework either forward direction or backward direction or in both direction. Like Iterator interface object, ListIterator interface object is pointing just before the first element of any collection framework variable.</p>
+	
+<p><b>Methods of ListIterator Interface</b></p>
+	<ul>
+		<li><b>public boolean hasNext():</b> Returns true if the ListIterator has more elements when traversing the list in the forward direction.</li>
+		<li><b>public object next(): </b>Return the next elements in the list</li>
+		<li><b>public boolean hasprevious(): </b>Return true if the ListIterator has more elements when traversing in list in reverse direction.</li>
+		<li><b>public object previous(): </b>Return the previous elements in the list.</li>
+		<li><b>public object previousIndex(): </b>Return the intex of the element that could be returned by subsequent call to previous method.</li>
+		<li><b>public object add(element): </b>Insert the specified element into the list.</li>
+		<li><b>public object set(element): </b>Replace the element returned by next or previous elements with the new element.</li>
+		<li><b>public object remove(): </b>Remove from the list the last elements that was returned by next or previous methods.</li>
+	</ul>
+	<table class="pc-table">
+			<tr> 
+				<td>S.No</td>
+				<td>Iterator </td>
+				<td>ListIterator </td>
+			</tr>
+			<tr> 
+				<td>1.</td>
+				<td>Iterator is one of the super Interface for ListIterator</td>
+				<td>ListIterator is one of sub-Interface of Iterator</td>
+			</tr>
+			<tr> 
+				<td>2.</td>
+				<td>This Interface is allow to retrieve the element only in forward direction</td>
+				<td>This Interface is allow to retrieve the element in both direction either in forward and backward direction.</td>							
+			</tr>													
+	</table>
+	<p><b>Example of ListIterator</b></p>		
+@CODE_START@@JAVA@import java.util.*;
+class ListIteratorDemo {
+	public static void main(String args[]) { 
+		LinkedList linkedList = new LinkedList();
+		linkedList.add(10);
+		linkedList.add(20);
+		linkedList.add(30);
+
+		ListIterator li = linkedList.listIterator();
+		System.out.println("Forward Direction");
+		while(li.hasNext()) {
+			System.out.println(li.next());
+		}
+		System.out.println("Reverse Direction");
+		while(li.hasPrevious()) {
+			System.out.println(li.previous());
+		}
+	}
+}@CODE_END@	
+<div class="output-panel"> 
+	<p>Forward Direction</p>
+	<p>10</p>
+	<p>20</p>
+	<p>30</p>
+	<p>Reverse Direction</p>
+	<p>30</p>
+	<p>20</p>
+	<p>10</p>
+</div>	
+
+	<h4>LinkedList</h4>
+	<ul>
+		<li>A LinkedList is a Collection of nodes.</li>
+		<li>LinkedList class is not Synchronized.</li>
+		<li>LinkedList class can contain duplicate elements.</li>
+		<li>LinkedList organize the data in the form of nodes.</li>
+	</ul>
+	<p><b>Constructor of LinkedList</b></p>
+	<ul>
+		<li><b>LinkedList(): </b>is used for creating an object of LinkedList without specifying any number of nodes.</li>
+		<li><b>LinkedList(int): </b>is used for creating an object of ll by specifying the initial number of nodes to be created.</li>
+	</ul>
+	
+	<p><b>Syntax:</b></p>
+	@CODE_START@@JAVA@LinkedList li = new LinkedList();@CODE_END@		
+	
+	<p><b>Methods of LinkedList</b></p>
+	<ul>
+		<li><b>public void addFirst(Object): </b>are used for adding the elements at first position of LinkedList.</li>
+		<li><b>public void addLast(Object): </b>are used for adding the elements at last position of LinkedList.</li>
+		<li><b>public Object getFirst(): </b>are used for get first position elements of LinkedList.</li>
+		<li><b>public Object getLast(): </b>are used for get last position elements of LinkedList.</li>
+		<li><b>public Object removedFirst(): </b>are used for remove first position elements of LinkedList.</li>
+		<li><b>public Object removedLast():</b>are used for remove last position elements of LinkedList.</li>
+	</ul>
+	<p><b>Advantages of LinkedList</b></p>
+	<ul>
+		<li>LinkedList class object allows us to organize the data and it may belong to both homogeneous or heterogeneous elements.</li>
+		<li>LinkedList class object contains dynamic size in nature.</li>
+		<li>LinkedList class object allows us to insert the data either in the beginning or in the ending or in the middle (dynamic insertion are allowed).</li>
+	</ul>
+	
+	<p><b>Limitations of LinkedList</b></p>
+	<ul>
+		<li>LinkedList class object takes more memory space (explicitly) memory space is created for Data part and Address part in heap memory.</li>
+		<li>LinkedList class object takes more retrieval time(after processing data of the current node,to process the data of next node,internally JVM will reterive address of next node from address part of current node which is one of the consuming process.).</li>
+		<li>Less performance</li>
+	</ul>
+
+	<p>To avoid the problems of LinkedList we use the concept of ArrayList. Because ArrayList class developed by Sun developers by making use of associative memory.</p>
+	<p><b>Note:</b>If we store anything in associative memory which will take negligible amount of space and if we retrieve anything from associative memory than it will take negligible amount of time.</p>
+	
+	
+	
+<p><b>Example of LinkedList</b></p>		
+	
+@CODE_START@@JAVA@import java.util.*;
+class LinkedListDemo {
+	public static void main(String args[]) { 
+	LinkedList li = new LinkedList();
+	li.add(20);
+	li.add(30);
+	li.add(40);
+	li.add(50);
+
+	Iterator itr = li.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+}@CODE_END@		
+<div class="output-panel"> 
+	<p>20</p>
+	<p>30</p>
+	<p>40</p>
+	<p>50</p>
+</div>	
+
+	<h3>Set</h3>
+	<p>Set is an Interface in java API which extends Collection Interface. It is used to store multiple objects with unique that means it do not allows to store duplicate elements. Set Interface are implemented in following collection classes.</p>
+	<ul>
+		<li>HashSet</li>
+		<li>TreeSet</li>
+		<li>LinkedHashSet</li>
+	</ul>
+	<p><b>Note:</b> Set is based on Set in general mathematics which also do not store duplicate elements so here Set Interface do not allows to store duplicate elements.</p>
+	
+	<p><b>Create object for Set Implementer classes</b></p>
+	<p><b>Syntax</b></p>
+	@CODE_START@@JAVA@Set_Implemented_class obj = new Set_Implemented_class ();@CODE_END@	
+		
+	<p><b>Example to create object of HashSet</b></p>
+	@CODE_START@@JAVA@HashSet obj = new HashSet ();@CODE_END@
+	
+	
+	<h4>HashSet</h4>
+	<ul>
+		<li>HashSet is Implementer class of Set Interface. HashSet supports hashing mechanism to store the value that means all the elements are stored in un-shorted random order (the elements will not be in same order as inserted).</li>
+		<li>HashSet are not allows to store duplicate elements.</li>
+		<li>HashSet allows to store heterogeneous elements.</li>
+		<li>For retrieving elements from HashSet you can use foreach loop and iterator interface to retrieve the elements.</li>
+		<li>HashSet is not Synchronized means multiple threads can work Sanctimoniously.</li>
+		<li>HashSet allows to store null value.</li>
+	</ul>
+	
+	<p><b>Example</b></p>
+@CODE_START@@JAVA@import java.util.*;
+class HashDemo {
+	public static void main(String args[]) { 
+	HashSet hs = new HashSet();
+	hs.add("java");
+	hs.add("c-language");
+	hs.add("C++");
+	System.out.println(hs);
+	Iterator i = hs.iterator();
+	System.out.println("Forward direction");
+		while(i.hasNext()) {
+			System.out.println(i.next());
+		}
+	}
+}@CODE_END@		
+<div class="output-panel"> 
+<p>[c-language, C++, java]</p>
+<p>Forward direction</p>
+	<p>java</p>
+	<p>c-language</p>
+	<p>C++</p>
+</div>	
+	
+	<h4>LinkedHashSet</h4>
+	<ul>
+		<li>LinkedHashSet is Implementer class of Set Interface, Which supports hashing mechanism to store the value that means all the elements are stored in the same order as inserted (In unsorted format).</li>
+		<li>LinkedHashSet does not allow duplicate elements</li>
+		<li>LinkedHashSet allows to store heterogeneous elements</li>
+		<li>LinkedHashSet is not Synchronized</li>
+		<li>For retrieving elements from LinkedHashSet you can use foreach loop and iterator interface.</li>
+		<li>LinkedHashSet allows null values.</li>
+	</ul>
+	<h4>Navigable Set:</h4>
+	
+	<p><b>Why Navigable Set:</b></p>
+	<p>The main purpose of NavigableSet interface is to arrange all the elements in a particular sorting order and it has defined some methods to provide navigations over all the elements like getting elements in Descending order, identifying ceiling element, higher element, floor element, lower element…..</p>
+	<p><b>Methods:</b></p>
+	<ul>
+		<li><b>public object pollFirst():</b>This method will remove first element from NavigableSet implementation</li>
+		<li><b>public object polllast():</b>This method will remove last element from NavigableSet implementation</li>
+		<li><b>public NavigableSet descendingSet():</b>This method will return all thelements in Descending order in the form of NavigableSet</li>
+		<li><b>public object celing(Object obj):</b>It will return an element which is lowest among all the elements which are greater than or equalsto he specified</li>
+		<li><b>public Object higher(Object obj):</b>It will return an element which is lowest among all elements which are greater than the specified element</li>
+		<li><b>public object floor(object obj):</b>It will return an element which is heighest among all the elements which are lessthan or equals to the specified element</li>
+		<li><b>public object lower(object obj):</b>It will return an element whichi is heighest among all the elements which are less than the specified element</li>
+	</ul>
+	
+<p><b>Example:</b></p>	
+@CODE_START@@JAVA@import java.util.*;
+class Test {
+	public static void main(String args[]) { 
+		TreeSet ts = new TreeSet();
+		ts.add("B");
+		ts.add("D");
+		ts.add("A");
+		ts.add("F");
+		ts.add("C");
+		ts.add("E");
+		System.out.println(ts);
+		System.out.println(ts.descendingSet());
+		System.out.println(ts.pollFirst());
+		System.out.println(ts.pollLast());
+		System.out.println(ts);
+		System.out.println(ts.ceiling("D"));;
+		System.out.println(ts.higher("D"));;
+		System.out.println(ts.floor("D"));;
+		System.out.println(ts.lower("D"));;
+	}
+}@CODE_END@		
+<div class="output-panel"> 
+	<p>[A,B,C,D,E,F]</p>
+	<p>[F,E,D,C,B,A]</p>
+	<p>A</p>
+	<p>F</p>
+	<p>[B,C,D,E]</p>
+	<p>D</p>
+	<p>E</p>
+	<p>D</p>
+	<p>C</p>
+</div>		

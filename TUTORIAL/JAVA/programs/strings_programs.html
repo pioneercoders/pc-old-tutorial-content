@@ -1,0 +1,190 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>write a programm on string class with CharAt()?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="StringProgram" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class StringProgram {
+    public static void main(String[] args) {
+
+        String value = "intercept";
+        // First two characters.
+        System.out.println(value.charAt(0));
+        System.out.println(value.charAt(1));
+
+        // Last two characters.
+        System.out.println(value.charAt(value.length() - 1));
+        System.out.println(value.charAt(value.length() - 2));
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('StringProgram','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>write a programm on string class with ComparTo()</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="StringAnimals" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'stringan',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class StringAnimals {
+    public static void main(String[] args) {
+
+        String value1 = "cat";
+        String value2 = "bird";
+
+        // Compare these strings.
+        int result1 = value1.compareTo(value2);
+        System.out.println("cat compareTo bird = " + result1);
+
+        int result2 = value2.compareTo(value1);
+        System.out.println("bird compareTo cat = " + result2);
+
+        // Compare string against itself.
+        // ... It is equal so the result is 0.
+        int result3 = value1.compareTo(value1);
+        System.out.println("cat compareTo cat = " + result3);
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('StringAnimals','stringan','java' )">Run</button>
+	<div>
+        <iframe id="stringan"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write a programm on String with concate method and plus operator?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Stringconcat" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Stringconcat {
+
+    public static void main(String[] args) {
+
+        String value = "123";
+        
+        String value1 = "abra";
+        String plus = "ca";
+        String value2 = "dabra";
+
+      
+
+        // Call concat twice in one statement.
+        String result1 = value.concat("456").concat("789");
+        System.out.println(result1);
+        
+        // The strings can be concatenated with a plus sign.
+        String result2 = value1 + plus + value2;
+        System.out.println(result2);
+    }
+} 
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Stringconcat','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write programm on string class with contains()?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Stringcontains" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Stringcontains {
+    public static void main(String[] args) {
+
+        String name = "socrates";
+        String value1 = "soc";
+        String value2 = "rate";
+        String value3 = "plato";
+
+        // The name contains this value.
+        if (name.contains(value1)) {
+            System.out.println(value1);
+        }
+
+        // The name also contains this value.
+        if (name.contains(value2)) {
+            System.out.println(value2);
+        }
+
+        // The name does not contain this value.
+        if (!name.contains(value3)) {
+            System.out.println("no: " + value3);
+        }
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Stringcontains','preview4','java' )">Run</button>
+	<div>
+        <iframe id="preview4"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write a programm on string class with equals and != operator?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="StringTest" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class StringTest {
+
+    public static void main(String[] args) {
+
+        String test = "carrot1";
+        String test2 = "carrot" + Integer.toString(1);
+        // Test the equals, not equals operator.
+        if (test != test2) {
+            System.out.println("Not equal");
+            System.out.println(test);
+            System.out.println(test2);
+        }
+        // The equals method is different.
+        if (test.equals(test2)) {
+            System.out.println("Equals = true");
+            System.out.println(test);
+            System.out.println(test2);
+        }
+    }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('StringTest','preview5','java' )">Run</button>
+	<div>
+        <iframe id="preview5"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+
+	
+</pc-accordion>

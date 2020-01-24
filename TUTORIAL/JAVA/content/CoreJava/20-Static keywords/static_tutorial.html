@@ -1,0 +1,133 @@
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wstRxWwqc38" frameborder="0" allowfullscreen></iframe>
+<h4> What is static ?</h4>
+<p> The static keyword is used in java mainly for memory management. it represent the global memory </p>
+<p> We may apply static keyword with variables, methods, blocks and inner classes. </p>
+
+<h4> Why we need static ? </h4>
+<p> One rule-of-thumb: ask yourself "does it make sense to class members(variable, methods), even if no Obj has been constructed yet?" If so, it should definitely be static.</p>
+
+<h4>Static Variable</h4>
+<ul> 
+	<li> If you declare any variable as static, it is known static variable</li>
+	<li>It is a variable which belongs to the class and not to object(instance).</li>
+	<li>These variables will be initialized first while class is loading into JVM, before the initialization of any instance variables.</li>
+	<li>A single copy to be shared by all instances of the class.</li>
+	<li>A static variable can be accessed directly by the class name and doesn&rsquo;t need any object</li>
+</ul>
+	
+	<h5>Sample Program for initialising Variables without using static keyword</h5>
+@CODE_START@@JAVA@class Employee {
+	int empId;
+	String empName;
+	String compName = "Pioneer Coders";
+}
+	@CODE_END@
+	
+<p>Suppose there are 3000 employees in our company, now all instance data members will get memory each time when object is created. All employees have its unique empId and empName so instance data member is good but all have same company name eventhough multipule times instance data is created. Here, company refers to the common property of all objects. If we make it static,this field will get memory only once.</p>
+<p><b>Note :</b>static field is shared by all objects.</p>
+<section>  
+    <div id="Employee" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:450px;border-radius:10px;">class Employee {
+	int empId;
+	String empName;
+	// static variable
+	static String compName = "Pioneer Coders";
+	
+	public Employee (int empId, String empName) {
+	this.empId = empId;
+	this.empName = empName;
+	}
+	void display() {
+	System.out.println(empId + "::" +empName + "::" +compName);
+	}
+	public static void main(String[] args){ 
+	Employee employee1 = new Employee(111,"Rama");
+	Employee employee2 = new Employee(222,"Krishna");
+	employee1.display();
+	employee2.display();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Employee','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+
+@IMG_START@JAVA/statickeywordtutorial_image1/png@IMG_END@
+<h4>Static Method :</h4>
+<ul>
+	<li>If you put static keyword in front of method then it becomes static method</li>
+	<li>It is a method which belongs to the class and not to the object(instance)</li>
+	<li>A static method can access only static data. It can not access non-static data (instance variables)</li>
+	<li>A static method can call only other static methods and can not call a non-static method from it.</li>
+	<li>A static method can be accessed directly by the class name and doesn&rsquo;t need any object</li>
+	<li>A static method cannot refer to "this" or "super" keywords in anyway</li>
+</ul>
+
+<h5>Simple Example on Static methods</h5>
+<section>  
+    <div id="Carengine" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:450px;border-radius:10px;">class Carengine {
+	int mileage;
+	int speed;
+	
+	Carengine(int mileage){
+		this.mileage = mileage;
+	}
+	static void convertMpgToKpl(double mpg){
+		System.out.println("convertMpgToKpl");
+	}
+
+	public static void main(String[] args) {
+		//we can call static methods directly with class name.
+		Carengine.convertMpgToKpl(50);
+		
+		Carengine c = new Carengine(20);
+		//we can call static methods  with instance also.
+		c.convertMpgToKpl(80);
+	}
+}	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Carengine','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+
+<p> So in a class Car you might have a method double convertMpgToKpl(double mpg) which would be static, because one might want to know what 35mpg converts to, even if nobody has ever built a Car. But void setMileage(double mpg) (which sets the efficiency of one particular Car) can't be static since it's inconceivable to call the method before any Car has been constructed. </p>
+	
+
+<h4>Why main method is static?</h4>
+	<p>Because object is not required to call static method if it were non-static method, jvm creates object first then call main() method that will lead the problem of extra memory allocation.</p>
+
+<h4>Static Block :</h4>
+<ul>
+	<li>Is used to initialize the static data member.</li>
+	<li>It is executed before main method at the time of classloading.</li>
+	<li>A static block helps to initialize the static data members, just like constructors help to initialize instance members</li>
+</ul>
+<h5>Simple Example on Static Block</h5>
+<section>  
+    <div id="Sample" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class Sample {
+		static float pi;
+		static {
+			pi = 3.14f;
+			System.out.println("Static Block is Invoked");
+		}
+		public static void main(String[] args){ 
+			System.out.println("Hello main");
+		}
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Sample','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>

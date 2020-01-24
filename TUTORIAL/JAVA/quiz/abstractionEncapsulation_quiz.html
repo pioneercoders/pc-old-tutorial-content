@@ -1,0 +1,43 @@
+<!-- widget Quiz  -->	
+<h3>AbstractionEncapsulation Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','d','a','c','b'], selAnswers: []}">
+		<div>
+			<h6>1).The process of compartmentalizing the elements of an abstraction that constitute its structure and behavior is called as</h6>
+			<options values='{"values":["Hierarchy", "Encapsulation", "Modularity", "Entity Abstraction"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2). The essential characteristics of an object that distinguish it from all other kinds of objects and thus provide crisply defined conceptual boundaries, relative to the perspective of the viewer is called:</h6>
+			<options values='{"values":["Encapsulation", "Modularity", "Hierarchy", "Abstraction"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3). Abstraction is classified into _______ types</h6>
+			<options values='{"values":["4", "3", "2", "1"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4).Single inheritance, Multiple inheritance, and Aggregation comes under _______ </h6>
+			<options values='{"values":["Modularity", "Typing", "Hierarchy", "None of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. Is java supports multiple inheritance?</h6>
+			<options values='{"values":["Yes", "No"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

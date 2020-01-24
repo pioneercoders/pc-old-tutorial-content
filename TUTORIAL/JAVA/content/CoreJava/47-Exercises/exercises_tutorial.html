@@ -1,0 +1,703 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1.Write a program to find the largest of two numbers.?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class LargestNumber {
+	public static void main(String[] args) {
+	// TODO Auto-generated method stub
+		System.out.println("Enter a and b");
+		Scanner s=new Scanner(System.in);
+		int a=s.nextInt();
+		int b=s.nextInt();
+		largestNumber(a,b);
+	}
+	public static int largestNumber(int num1,int num2){	
+		if(num1>num2)
+		{
+			System.out.println("a is large number");
+			return num1;
+		}
+		else{
+			System.out.println("b is large number");
+			return num2;
+		}
+	}
+	
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter a and b values<br>
+		1<br>
+		4<br>
+		b is large number
+		</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>2.Write a program swap two numbers.?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class SwapWithTemp {
+
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter a and b values");
+	int a = sc.nextInt();
+	int b = sc.nextInt();
+	int temp;
+	System.out.println("before swapping a and b values are..."+a +", "+b);
+	temp=a;
+	a=b;
+	b=temp;
+	System.out.println("after swapping a and b values are..."+a +", "+b);
+
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter a and b values<br>
+		2<br>
+		4<br>
+		before swapping a and b values are...2, 4<br>
+		after swapping a and b values are...4, 2</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>3.Write a program swap two numbers without using a temporary variable.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class SwapWithoutTemp {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a and b values ");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		System.out.println("Before swapping a and b values are "+a +", "+b);
+		int A=0,B=0;
+		swapWithoutTemp(a,b);
+	}		
+	public static void swapWithoutTemp(int a, int b) {
+		int A=a+b;
+		int B=A-b;
+		  A=A-B;
+		System.out.println("After swapping a and b values are "+A +", "+B);	
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter a and b values <br>
+10<br>
+30<br>
+Before swapping a and b values are 10, 30<br>
+After swapping a and b values are 30, 10
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>4.Write a program to add, subtract and multiplication of two numbers.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+
+public class ArithmeticOperation {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a and b values");
+		int a =sc.nextInt();
+		int b =sc.nextInt();
+		add(a , b);
+		difference(a , b);
+		product(a , b);
+		division(a , b);
+		
+	}
+	//-----Addition-----
+		
+	static int add(int num1,int num2) { 
+		int sum=num1+num2;
+		System.out.println("Sum of two numbers is:" +sum);
+		return sum;
+	}
+	//-----Subtraction-----
+	static int difference(int num1,int num2) { 
+		int difference=num1-num2;
+		System.out.println("Difference of two numbers is:" +difference);
+		return difference;
+	}	
+	//-----Multiplication-----
+	static int product(int num1,int num2) { 
+		int product=num1 * num2;
+		System.out.println("Product of two numbers is:" +product);
+		return product;
+	}
+	//-----Division-----
+	static int division(int num1,int num2) { 
+		int division=num1 / num2;
+		System.out.println("Division of two numbers is:" +division);
+		return division;
+	}
+
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter a and b values<br>
+10<br>
+20<br>
+Sum of two numbers is:30<br>
+Difference of two numbers is:-10<br>
+Product of two numbers is:200<br>
+Division of two numbers is:0
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>5.Write a program to find the greatest of three numbers.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class GreatestNumber {
+	public static void main(String[] args) {
+		int a, b, c, largest;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter any three numbers: ");
+		a = s.nextInt();
+		b = s.nextInt();
+		c = s.nextInt();
+
+		if (a >= b && a >= c) {
+			System.out.println("Largest number: " + a);
+		}
+		if (b >= a && b >= c) {
+			System.out.println("Largest number: " + b);
+		}
+		if (c >= a && c >= b) {
+			System.out.println("Largest number: " + c);
+		}
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter any three numbers:<br>
+1<br>
+5<br>
+7<br>
+Largest number: 7</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>6.Write a program to print the digit at ones place of a number.?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class OnesPlaceDigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Enter number");
+		Scanner s=new Scanner(System.in);
+		int number=s.nextInt();
+		unitsPlaceDigit(number);
+	}
+	public static int unitsPlaceDigit(int num) {
+    		 int remainder =num%10;
+	 	System.out.println("ones place digit is: " +remainder);
+	 	return remainder;
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter number<br>
+231<br>
+ones place digit is: 1
+</p>
+
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>7.Write a program to enter a number and then calculate the sum of its digits.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class SumOfDigits {
+	public static void main(String[] args) {
+	     // TODO Auto-generated method stub
+	     System.out.println("Enter the number");
+	     Scanner number =new Scanner(System.in);
+	     int num=number.nextInt();
+	     SumOfDigits(num);
+	}     
+	public static void SumOfDigits(int num1){
+	     int sum=0;    
+	     while(num1!=0)
+		{
+		     int remainder=num1%10;
+		     sum =sum+remainder;
+		     num1=num1/10;	 
+		 }   
+	     System.out.println("sum of digits of a number:" +sum );
+		     
+	 }	
+}	
+@CODE_END@
+<div class="output-panel">
+	<p>Enter the number<br>
+245<br>
+sum of digits of a number:11</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>8.Write a program to print reverse of a given number</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class ReverseNumber {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        	int number, reversenum = 0;
+		System.out.println("Enter the number to reverse");
+		Scanner in = new Scanner(System.in);
+		number = in.nextInt();
+		reverseNumber(number);
+	}
+	public static void reverseNumber(int num){
+		int reversenum=0;
+	        while( num != 0 )
+	     	 {
+	         reversenum = reversenum * 10;
+	          reversenum = reversenum + num%10;
+	          num = num/10;
+	        }	 
+	      System.out.println("Reverse of entered number is " +reversenum);
+	 }
+ }
+@CODE_END@
+<div class="output-panel">
+	<p>Enter the number to reverse<br>
+279<br>
+Reverse of entered number is 972</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>9.Write a program to determine whether a person is eligible to vote.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class CheckVoteEligibility {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int age=0;
+		System.out.println("Enter age of a person:");
+		Scanner scanner=new Scanner(System.in);
+	   	 age=scanner.nextInt();
+		checkVoteEligibility(age);	
+	}
+	  public static void checkVoteEligibility(int age){
+		if(age>=18)
+		{
+		     System.out.println("person is eligible for vote");
+		}
+		else
+		{
+		    System.out.println("person is not eligible for vote");
+		}
+	  }
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter age of a person:<br>
+40<br>
+person is eligible for vote
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>10.Write a program to find whether a given year is leap year or not.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class CheckLeapYear {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int year=0;
+		System.out.println("Enter year:");
+		Scanner scanner=new Scanner(System.in);
+	        year=scanner.nextInt();
+		checkLeapOrNot(year);
+	}
+        public static void checkLeapOrNot(int year){
+    		if(year%4==0)
+ 		{
+ 			System.out.println("It is leap year");
+ 		}
+ 		else
+		{
+ 			System.out.println("It is not leap year");
+ 		}
+  	 }
+
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter year:<br>
+2019<br>
+It is not leap year</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>11.Write a program to find given number is Palindrum or not.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class Palindrome{
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter a number to check palindrome or not:");
+		Scanner scanner=new Scanner(System.in);
+	 	int number =scanner.nextInt();
+	  	palindrome(number);
+		}
+	public static int palindrome(int n)
+	{
+		int temp=n;
+		int remainder=0;
+		int reverse=0;
+		while(n>0)
+		{
+		    remainder=n%10;
+		    reverse=reverse*10+remainder;//res=res+rev;  answer is sum of 124 is 7
+		    n=n/10;
+		}
+		if (temp==reverse)
+		{
+		     System.out.println("It is palindrome number");
+		}
+		else
+		{
+	             System.out.println("Not a palindrome");
+		}
+		return reverse;
+	}
+		
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter a number to check palindrome or not:<br>
+151<br>
+It is palindrome number
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>12.Write a program to find prime numbers between 1 to n.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class PrimesBetween1toN {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				
+		Scanner scanner = new Scanner(System.in);	   
+		System.out.println("Enter the value of n:");
+		int n = scanner.nextInt();
+		primesBetweenGivenNum(n);
+	}	
+	static String primesBetweenGivenNum(int number)   { 
+		String  primeNumbers = "";
+		for (int i = 1; i <= number; i++)  	   
+		{ 		 		  
+			int counter=0; 		  
+			for(int num =i; num>=1; num--)
+			{
+			   if(i%num==0)
+				{
+				    counter = counter + 1;
+				 }
+			}
+			if (counter ==2)
+			{
+				primeNumbers = primeNumbers + i + " ";
+			}	
+		  }	
+	      System.out.println("Prime numbers from 1 to n are :");
+	      System.out.println(primeNumbers);
+	      return primeNumbers;
+	}
+
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter the value of n:<br>
+6<br>
+Prime numbers from 1 to n are :<br>
+2 3 5 </P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>13.Write a program to Calculate factorial of a given number.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class Factorial {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter number to find factorial:");
+		Scanner scanner = new Scanner(System.in);
+		int n=scanner.nextInt();
+		factorial(n);
+	}
+	public static int factorial(int num){
+		int factorial=1;
+		for (int i=1;i<=num;i++)
+		{
+		    factorial=factorial*i;
+		}
+		System.out.println("Factorial of given number is:" +factorial);
+		return factorial;
+		
+	}
+
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter number to find factorial:<br>
+5<br>
+Factorial of given number is:120
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>14.Write a program to calculate sum of squares of first n numbers.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class SumOfSquars {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Integer: ");
+		int n = sc.nextInt();
+		System.out.println("You entered: " + n);
+
+		int sum = 1;
+
+		for (int x = 2; x <= n; x++) {
+			sum = sum + (x * x);
+		}
+		System.out.println(sum);
+
+	}
+}	
+@CODE_END@
+<div class="output-panel">
+	<p>Enter Integer: 3<br>
+You entered: 3<br>
+14
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>15.Write a program to find whether the given number is an Armstrong or not.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class ArmstrongNumber {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter number to check armstrong or not:");
+		Scanner scanner=new Scanner(System.in);
+		int number =scanner.nextInt();
+	    	armstrong(number);
+	}
+	private static int armstrong(int n) {
+		// TODO Auto-generated method stub
+		int sum=0,temp=n;
+		while(n!=0)
+		{		
+		    int	remainder=n%10;
+		    sum=sum+remainder*remainder*remainder;
+		    n=n/10;
+		}
+		if(temp==sum)
+		{
+         	    System.out.println("It is armstrong number" );
+		}
+		else
+		{
+		    System.out.println("Not  an armstrong number" );	
+		}
+		return n;
+	}
+		
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter number to check armstrong or not:<br>
+153<br>
+It is armstrong number
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>16.Write a program to find GCD of two numbers.?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class GCDNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(findGCD(8, 24));
+	}
+	public static int findGCD(int a,int b){
+		if(b==0)
+		{
+	            return a;
+		}
+		    return findGCD(b, a%b);
+	}
+
+}	
+@CODE_END@
+<div class="output-panel">
+	<p>value is :8</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>17.Write a program to print Fibonacci series without using recursion</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class FibonacciSeries{
+	public static void main(String args[]) {
+		int terms, last = 1, secondLast = 0, current, i;
+
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter number of terms in Fibonacci Series");
+		terms = in.nextInt();
+
+		/*
+		 * Nth term = (N-1)th thrm + (N-2)th term;
+		 */
+		for (i = 0; i < terms; i++) {
+			if (i < 2) {
+				current = i;
+			} else {
+				current = last + secondLast;
+				secondLast = last;
+				last = current;
+			}
+			System.out.print(current + " ");
+		}
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter number of terms in Fibonacci Series<br>
+6<br>
+0 1 1 2 3 5 </P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>18.Write a program to print Fibonacci series using recursion.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class FibonacciWithRecursion{
+	public static void main(String args[]) {
+		int terms, i;
+
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter number of terms in Fibonacci Series");
+		terms = in.nextInt();
+
+		/*
+		 * fibonacci(N) = fibonacci(N-1) + fibonacci(N-2);
+		 */
+		for (i = 0; i < terms; i++) {
+			System.out.print(fibonacci(i) + " ");
+		}
+	}
+
+	public static int fibonacci(int num) {
+		/* Exit condition of recursion */
+		if (num < 2)
+			return num;
+		return fibonacci(num - 1) + fibonacci(num - 2);
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Enter number of terms in Fibonacci Series<br>
+6<br>
+0 1 1 2 3 5 </P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>19.Write programs for this patterns@CODE_START@@JAVA@1
+22
+333
+4444
+55555@CODE_END@
+		</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class Pattern1 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n;
+		
+		System.out.println("enter n value");
+		n=in.nextInt();                                                                                                                                                                                                                                                                                                                                                                                                                                               
+		for(int i=1;i<=n;i++)
+		{
+			
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(+i);
+				
+			}
+			System.out.println( );   
+		}
+		}
+
+	} 
+@CODE_END@
+<div class="output-panel">
+	<p>enter n value<br>
+5<br>
+1<br>
+22<br>
+333<br>
+4444<br>
+55555
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

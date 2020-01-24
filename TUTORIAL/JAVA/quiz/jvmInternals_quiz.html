@@ -1,0 +1,42 @@
+<!-- widget Quiz  -->	
+<h3>JVM Internals Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['c','e','d','b'], selAnswers: []}">
+		<div>
+			<h6>1. JVM stands for</h6>
+			<options values='{"values":["Java virtual Mechanism","Java View Machine","Java Virtual Machine","Java Verify Machine"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2. Which of the following  operations will perform by JVM</h6>
+			<options values='{"values":["Loads code","Verifies code","Executes code","Provides runtime environment","All the above"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3. which of the following is not a jvm component</h6>
+			<options values='{"values":["Heap","Stack","PC Register","component"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Which of the following is true in case of heap and stack</h6>
+			@CODE_START@@JAVA@
+			i) stack memory is used to store local variables and function call
+			ii) Heap memory is used to store objects in java
+			iii)stack memory is used to store objects in java
+			iv)Heap memory is used to store local variables and function call
+			@CODE_END@
+			
+			<options values='{"values":[" ii&iv","i&ii","i&iv","iii&iv"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

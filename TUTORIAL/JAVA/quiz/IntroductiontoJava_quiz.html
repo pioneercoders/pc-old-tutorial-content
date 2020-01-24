@@ -1,0 +1,23 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','c'], selAnswers: []}">
+		<div>
+			<h6>1.Object-Oriented Programming means…</h6>
+			<options values='{"values":["Being objective about what you develop.", 
+                         "Designing the application based on the objects discovered when analyzing the program.", 
+                        "Writing an algorithm before writing your program and having a test plan.",
+                        " Writing a program composed of  Java Classes."]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. Banking application comes under…</h6>
+			<options values='{"values":[" Desktop Application.", " Web Application.", " Enterprise Application.", "Robotics."]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

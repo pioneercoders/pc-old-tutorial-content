@@ -1,0 +1,109 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Example Program for Inheritance</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class First {
+	static {
+		System.out.println("Print1");
+	}
+}
+
+class Second extends First {
+	static {
+		System.out.println("Print2");
+	}
+}
+
+class Third extends Second {
+	static {
+		System.out.println("Print3");
+	}
+}
+
+public class Simple {
+	public static void main(String args[]) {
+		Third third = new Third();
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Print1<br>
+	   Print2<br>
+	   Print3
+
+</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Another Example program for Inheritance.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class Vehicle {
+	String vehicleType;
+}
+
+public class Car extends Vehicle {
+	String modelType;
+
+	public void showDetail() {
+		vehicleType = "car";// accessing vehicle class member
+		modelType = "sports";
+		System.out.println(modelType + " " + vehicleType);
+
+	}
+
+	public static void main(String args[]) {
+		Car car = new Car();
+		car.showDetail();
+	}
+
+}
+@CODE_END@
+<div class="output-panel">
+	<p>sports car
+</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Example of Child class calling Parent class constructor using super keyword.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class Parent {
+	String name;
+
+	public Parent(String n) {
+		name = n;
+	}
+}
+
+public class Child extends Parent {
+	String name;
+
+	public Child(String n1, String n2) {
+		super(n1);// passing argument to parent class constructor
+		this.name = n2;
+	}
+
+	public void details() {
+		System.out.println(super.name + " and " + name);
+	}
+
+	public static void main(String args[]) {
+		Child childobj = new Child("Parent", "Child");
+		childobj.details();
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Parent and Child
+</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>

@@ -1,0 +1,111 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Simple thread program</accordion-title>
+		<accordion-content>
+@CODE_START@@JAVA@package pioneercoders;
+public class GuruThread1 implements Runnable
+{
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        Thread guruThread1 = new Thread("pioneer1");
+        Thread guruThread2 = new Thread("pioneer2");
+        guruThread1.start();
+        guruThread2.start();
+        System.out.println("Thread names are following:");
+        System.out.println(guruThread1.getName());
+        System.out.println(guruThread2.getName());
+    }
+    @Override
+    public void run() {
+    }
+
+}
+
+@CODE_END@
+<div class="output-panel">
+	<P>Thread names are following:<br> 
+	pioneer1<br> 
+	pioneer2
+</P>
+</div>
+
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Example to create multiple threads </accordion-title>
+		<accordion-content>
+@CODE_START@@JAVA@package pioneercoders;
+class Threadexp extends Thread {
+   private Thread t;
+   private String threadName;
+   
+   Threadexp( String name) {
+      threadName = name;
+      System.out.println("Creating " +  threadName );
+   }
+   
+   public void run() {
+      System.out.println("Running " +  threadName );
+      try {
+         for(int i = 4; i > 0; i--) {
+            System.out.println("Thread: " + threadName + ", " + i);
+            // Let the thread sleep for a while.
+            Thread.sleep(50);
+         }
+      }catch (InterruptedException e) {
+         System.out.println("Thread " +  threadName + " interrupted.");
+      }
+      System.out.println("Thread " +  threadName + " exiting.");
+   }
+   
+   public void start () {
+      System.out.println("Starting " +  threadName );
+      if (t == null) {
+         t = new Thread (this, threadName);
+         t.start ();
+      }
+   }
+}
+
+public class TestThread {
+
+   public static void main(String args[]) {
+      Threadexp T1 = new Threadexp( "Thread-1");
+      T1.start();
+      
+      Threadexp T2 = new Threadexp( "Thread-2");
+      T2.start();
+   }   
+}
+@CODE_END@
+<div class="output-panel">
+	<P>Creating Thread-1
+Starting Thread-1<br>
+Creating Thread-2<br>
+Starting Thread-2<br>
+Running Thread-1<br>
+Thread: Thread-1, 4<br>
+Running Thread-2<br>
+Thread: Thread-2, 4<br>
+Thread: Thread-1, 3<br>
+Thread: Thread-2, 3<br>
+Thread: Thread-1, 2<br>
+Thread: Thread-2, 2<br>
+Thread: Thread-1, 1<br>
+Thread: Thread-2, 1<br>
+Thread Thread-1 exiting.<br>
+Thread Thread-2 exiting.<br>
+</P>
+</div>
+
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>
+

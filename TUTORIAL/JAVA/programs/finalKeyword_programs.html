@@ -1,0 +1,59 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program with final keyword</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="Bikeandcar" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'bnc',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class Bikeandcar {  
+		 final int speedlimit=90;//final variable  
+		 void run(){  
+		  speedlimit=400;  
+		 }  
+		 public static void main(String args[]){  
+		 Bikeandcar obj=new  Bikeandcar();  
+		 obj.run();  
+		 }  
+		}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Bikeandcar','bnc','java' )">Run</button>
+	<div>
+        <iframe id="bnc"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Example for initialising blank final variable</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="Speeding" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'sp',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class Speeding {  
+		  final int speedlimit;//blank final variable  
+			
+		  Speeding(){  
+		  speedlimit=70;  
+		  System.out.println(speedlimit);  
+		  }  
+		  
+		  public static void main(String args[]){  
+			new Speeding();  
+		 }  
+		} 
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Speeding','sp','java' )">Run</button>
+	<div>
+        <iframe id="sp"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>
+

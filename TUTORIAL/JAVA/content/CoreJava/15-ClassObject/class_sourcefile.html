@@ -1,0 +1,21 @@
+
+<h4>Source file declaration rules :</h4>
+<ul> 
+<li> As the last part of this section lets us now look into the source file declaration rules. These rules are essential when declaring classes, import statements and package statements in a source file.</li>
+<li>There can be only one public class per source file.</li>
+<li>A source file can have multiple non public classes.</li>
+<li>The public class name should be the name of the source file as well which should be appended by .java at the end. For example : The class name is . public class Employee{} Then the source file should be as Employee.java.</li>
+<li>If the class is defined inside a package, then the package statement should be the firststatement in the source file.</li>
+<li>If import statements are present then they must be written between the package statement and the class declaration. If there are no package statements then the import statement should be the first line in the source file.</li>
+<li>Import and package statements will simply to all the classes present in the source file. It is not possible to declare different import and/or package statements to different classes in the source file.</li>
+<li>Classes have several access levels and there are different types of classes; abstract classes, final classes etc. I will be explaining about all these in the access modifiers chapter.Apart from the above mentioned types of classes, Java also has some special classes called Inner classes and Anonymous classes.</li>
+</ul>
+
+<h4>Java Package :</h4>
+<p>In simple it is a way of categorizing the classes and interfaces. When developing applications in Java, hundreds of classes and interfaces will be written, therefore categorizing these classes is a must as well as makes life much easier.</p>
+
+<h4>Import statements :</h4>
+<p>In java if a fully qualified name, which includes the package and the class name, is given then the compiler can easily locate the source code or classes. Import statement is a way of giving the proper location for the compiler to find that particular class.For example following line would ask compiler to load all the classes available in directory java_installation/java/io :</p>
+
+<h5>Syntax</h5>
+@CODE_START@@JAVA@import java.io.*;@CODE_END@

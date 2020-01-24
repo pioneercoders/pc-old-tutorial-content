@@ -1,0 +1,273 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program for printing the ArrayElements?</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="PrintingArrayElements" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class PrintingArrayElements {
+	public static void main(String args[]) {
+		String[] greeting = new String[3];
+		greeting[0] = "Say hi to";
+		greeting[1] = "Pioneer";
+		greeting[2] = "Coders.";
+		for (int i = 0; i < greeting.length; i++) {
+			System.out.println(greeting[i]);
+		}
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('PrintingArrayElements','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Write a program for copy array elements to another array?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class CopyOfArray {
+	public static void main(String args[]) {
+		char[] copyFrom = { 'p', 'i', 'o', 'n', 'e', 'e', 'r', 'c', 'o', 'd',
+				'e', 'r', 's' };
+		char[] copyTo = new char[7];
+		System.arraycopy(copyFrom, 7, copyTo, 0, 6);
+		System.out.println(new String(copyTo));
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>coders </p>
+</div>
+
+<section>  
+    <div id="CopyOfArray" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'pca',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class CopyOfArray {
+	public static void main(String args[]) {
+		char[] copyFrom = { 'p', 'i', 'o', 'n', 'e', 'e', 'r', 'c', 'o', 'd',
+				'e', 'r', 's' };
+		char[] copyTo = new char[7];
+		System.arraycopy(copyFrom, 7, copyTo, 0, 6);
+		System.out.println(new String(copyTo));
+	}
+}
+
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('CopyOfArray','pca','java' )">Run</button>
+	<div>
+        <iframe id="pca"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Write a program for finding the common elements in given arrays?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="FindCommonElements" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class FindCommonElements {
+	public static void main(String args[]) {
+		int[] arr1 = { 12, 7, 32, 9, 2 };
+		int[] arr2 = { 3, 2, 12, 9, 40, 32, 4 };
+		for (int i = 0; i < arr1.length; i++) {
+			for (int j = 0; j < arr2.length; j++) {
+				if (arr1[i] == arr2[j]) {
+					System.out.println(arr1[i]);
+				}
+			}
+		}
+	}
+}
+
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('FindCommonElements','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Write a program for finding Average of Array?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="AveragOfArrayElements" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class AveragOfArrayElements {
+	public static void main(String args[]) {
+		int n, sum = 0;
+		float average=0;
+		int a[] = new int[3];
+		n = 3;
+		for (int i = 0; i < n; i++) {
+			{
+				sum = sum + a[i];
+			}
+
+			average = (float) sum / n;
+
+		}
+		System.out.println(" Average:" + average);
+	}
+}
+
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('AveragOfArrayElements','preview4','java' )">Run</button>
+	<div>
+        <iframe id="preview4"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Write a program for finding maximum element of given Array?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="MaxElementOfArray" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class MaxElementOfArray {
+	static void max(int arr[]) {
+		int max = arr[0];
+		for (int i = 1; i < arr.length; i++) {
+			if (max < arr[i])
+				max = arr[i];
+		}
+		System.out.println(max);
+	}
+
+	public static void main(String args[]) {
+		int a[] = { 33, 3, 4, 5 };
+		max(a);
+	}
+}
+
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('MaxElementOfArray','preview5','java' )">Run</button>
+	<div>
+        <iframe id="preview5"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+			<accordion-title>Write a program for finding minimum element of given Array?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="MinElementOfArray" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class MinElementOfArray {
+	static void min(int arr[]) {
+		int min = arr[0];
+		for (int i = 1; i < arr.length; i++) {
+			if (min > arr[i])
+				min = arr[i];
+		}
+		System.out.println(min);
+	}
+
+	public static void main(String args[]) {
+		int a[] = { 33, 3, 4, 5 };
+		min(a);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('MinElementOfArray','preview6','java' )">Run</button>
+	<div>
+        <iframe id="preview6"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+			<accordion-title>Write a program for Reversal Of Array?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class ReverseOfArray {
+	public static void main(String args[]) {
+		ArrayList arrayList = new ArrayList();
+		arrayList.add("P");
+		arrayList.add("I");
+		arrayList.add("O");
+		arrayList.add("N");
+		arrayList.add("E");
+		arrayList.add("E");
+		arrayList.add("R");
+		arrayList.add("C");
+		arrayList.add("O");
+		arrayList.add("D");
+		arrayList.add("E");
+		arrayList.add("R");
+		arrayList.add("S");
+		System.out.println("Before Reverse Order:" + arrayList);
+		Collections.reverse(arrayList);
+		System.out.println("After Reverse Order:" + arrayList);
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>Before Reverse Order:[P, I, O, N, E, E, R, C, O, D, E, R, S]<br>
+	   After Reverse Order:[S, R, E, D, O, C, R, E, E, N, O, I, P]
+	</p>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+			<accordion-title>Write program for sorting an array?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class SortingArray {
+	public static void main(String args[]) {
+		int array[] = { 4, 10, -2, 6, -3, 16, 0, -7, -9, 14 };
+		Arrays.sort(array);
+		for (int i = 0; i < array.length; i++) {
+			if (i != 0) {
+				System.out.print(", ");
+			}
+			System.out.print(array[i]);
+		}
+		System.out.println();
+		int index = Arrays.binarySearch(array, 0);
+		System.out.println(" Found 0 at Index " + index);
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>-9, -7, -3, -2, 0, 4, 6, 10, 14, 16<br>
+		Found 0 at Index 4
+	</p>
+</div>
+
+		</accordion-content>
+	</accordion-item>
+	
+	
+</pc-accordion>

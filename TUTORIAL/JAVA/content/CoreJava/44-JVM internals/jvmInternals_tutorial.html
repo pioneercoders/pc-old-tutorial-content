@@ -1,0 +1,31 @@
+	<p>JVM (Java Virtual Machine) is a software. It is a specification that provides Runtime environment in which java bytecode can be executed.</p>	
+		@IMG_START@JAVA/jvm/jpg@IMG_END@
+		<h4>Operation of JVM</h4>
+		<h5>JVM mainly performs following operations</h5>
+		<ul>
+			<li>Allocating sufficient memory space for the class properties.</li>
+			<li>Provides runtime environment in which java bytecode can be executed</li>
+			<li>Converting byte code instruction into machine level instruction.JVM is separately available for every Operating System while installing java software so thatJVM is platform dependent.</li>
+		</ul>
+		<p><b>Note:</b> Java is platform Independent but JVM is platform dependent because every Operating system have different-different JVM which is install along with JDK Software.</p>
+	
+		<p><b>Class loader subsystem:</b></p>
+		<p>Class loader subsystem will load the .class file into java stack and later sufficient memory will be allocated for all the properties of the java program into following five memory locations.</p>
+		<ul>
+			<li>Heap area</li>
+			<li>Method area</li>
+			<li>Java stack</li>
+			<li>PC register</li>
+			<li>Native stack</li>
+		</ul>
+		
+		<p><b>Heap area:</b></p>
+			<ul><li>In which object references will be stored.</li></ul>
+		<p><b>Method area:</b></p>
+			<ul><li>In which static variables non-static and static method will be stored.</li></ul>
+		<p><b>Java Stack</b></p>
+			<ul><li>In which all the non-static variable of class will be stored and whose address referred by object reference.</li></ul>
+		<p><b>Pc Register</b></p>
+			<ul><li>Which holds the address of next executable instruction that means that use the priority for the method in the execution process</li></ul>
+		<p><b>Native Stack:</b></p>
+			<ul><li>Native stack holds the instruction of native code (other than java code) native stack depends on native library. Native interface will access interface between native stack and native library.</li></ul>

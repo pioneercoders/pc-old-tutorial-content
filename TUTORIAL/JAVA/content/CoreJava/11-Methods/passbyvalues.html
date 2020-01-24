@@ -1,0 +1,58 @@
+
+<h4>Passing Parameters by Values:</h4>
+<p>When calling a method, you need to provide arguments, which
+	must be given in the same order as their respective parameters in
+	the method specification. This is known as parameter order
+	association.</p>
+<p>For example, the following method prints a message n times:</p>
+
+<h5>Simple example to Print a message n times</h5>
+@CODE_START@@JAVA@ class PrintData { public static void
+PrintMessage(String message,int n) { for ( int i =0; i< n;i++)
+System.out.println(message); } public static void main(String[]
+args){ PrintMessage("pioneercoders",5); } } @CODE_END@
+
+<div class="output-panel">
+	<p>pioneercoders</p>
+	<p>pioneercoders</p>
+	<p>pioneercoders</p>
+	<p>pioneercoders</p>
+	<p>pioneercoders</p>
+</div>
+
+<p>Here, you can use nPrintln("Hello", 3) to print "Hello"
+	three times. The nPrintln("Hello", 3) statement passes the actual
+	string parameter, "Hello", to the parameter, message; passes 3 to
+	n; and prints "Hello" three times. However, the statement
+	nPrintln(3, "Hello") would be wrong. When you invoke a method with
+	a parameter, the value of the argument is passed to the parameter.
+	This is referred to as pass-by-value. If the argument is a
+	variable rather than a literal value, the value of the variable is
+	passed to the parameter. The variable is not affected, regardless
+	of the changes made to the parameter inside the method. For
+	simplicity, Java programmers often say passing an argument x to a
+	parameter y, which actually means passing the value of x to y.</p>
+<h4>Example</h4>
+<p>Following is a program that demonstrates the effect of
+	passing by value. The program creates a method for swapping two
+	variables. The swap method is invoked by passing two arguments.
+	Interestingly, the values of the arguments are not changed after
+	the method is invoked.</p>
+
+<h5>Simple example to swap the numbers</h5>
+@CODE_START@@JAVA@ class TestPassByValue { public static void
+main(String[] args){ int num1=1; int num2=2;
+System.out.println("Before swap method, num1 is " + num1 + "and
+num2 is " + num2); // Invoke the swap method swap(num1, num2);
+System.out.println("After swap method, num1 is " + num1 + "and num2
+is " + num2); } /** Method to swap two variables */ public static
+void swap(int n1,int n2) { System.out.println("\tInside the swap
+method"); System.out.println("\t\tBefore swapping n1 is " + n1 +
+"and n2 is " + n2); // Swap n1 with n2 int temp = n1; n1 = n2; n2 =
+temp; } } @CODE_END@
+<div class="output-panel">
+	<p>Before swap method, num1 is 1and num2 is 2</p>
+	<p>Inside the swap method</p>
+	<p>Before swapping n1 is 1and n2 is 2</p>
+	<p>After swapping n1 is 2and n2 is 1</p>
+</div>

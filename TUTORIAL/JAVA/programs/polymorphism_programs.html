@@ -1,0 +1,86 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Example for method Overloading By passing different arguments?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class PolymorphismEx1 {
+	void add(int i, int j) {
+		System.out.println("result is : "+(i + j));
+	}
+
+	void add(float i, float j) {
+		System.out.println("result is : "+(i + j));
+	}
+
+	void add(String s1, String s2) {
+		System.out.println("result is : "+s1 + s2);
+	}
+
+	public static void main(String args[]) {
+		PolymorphismEx1 obj = new PolymorphismEx1();
+		obj.add(10, 20);
+		obj.add(10.0f, 20.0f);
+		obj.add("pioneer", "coders");
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<P>result is : 30<br>
+	   result is : 30.0<br>
+	   result is : pioneercoders
+
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>EXample program for method-overriding?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class Loan {
+	public float getIR() {
+		return 5.0f;
+	}
+}
+
+class GoldLoan extends Loan {
+	public float getIR() {
+		return 7.0f;
+	}
+}
+
+class CraftLoan extends Loan {
+	public float getIR() {
+		return 4.0f;
+	}
+}
+
+class StudyLoan extends Loan {
+	public float getIR() {
+		return 12.0f;
+	}
+}
+
+public class OverridingEX {
+	public static void main(String args[]) {
+		Loan goldLoan = new GoldLoan();
+		System.out.println(" Gold-Loan IR is ...." + goldLoan.getIR());
+		Loan craftLoan = new CraftLoan();
+		System.out.println(" Craft-Loan IR is ... " + craftLoan.getIR());
+		Loan studyLoan = new StudyLoan();
+		System.out.println(" Study-Loan IR is.... " + studyLoan.getIR());
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<P> Gold-Loan IR is ....7.0<br>
+		Craft-Loan IR is ... 4.0<br>
+		Study-Loan IR is.... 12.0
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>

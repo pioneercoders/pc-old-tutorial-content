@@ -1,0 +1,208 @@
+<h4> What is Inheritance ? </h4> 
+<p>In nature, Accquiring the properties and behavior of one entity to other is called inheritance.</p>
+<p>In Java, Accquiring the properties and behavior of superclass to subclass is called inheritance. </p>
+
+<h4> Why we need Inheritance ? </h4>
+<ul>
+	<li> Software Resuabality </li>
+	<li> Increased Relibality (resulting from reuse and sharing well-tested code)</li>
+	<li> Rapid Prototyping (Quickly assemble from pre-existing components) <li>
+</ul>
+
+@IMG_START@JAVA/Inheritance_Animal/jpg@IMG_END@
+
+<p> As show in above diagram all the class are comes in to family of animals. the common states and behaviors of a family will be defined in super class.  Yet each entity also defines additional features that make them different: that we will put it in subclass.  A class inherits a super class with the help of keyword: extends </p>
+<h4> Syntax </h4>
+
+@CODE_START@@JAVA@class classname extends anotherclass{
+... body of class
+}
+@CODE_END@
+
+<h4>Type of Inheritances :</h4>
+
+@IMG_START@JAVA/Types_Of_Inhertiance_In_Java/jpg@IMG_END@
+
+
+<h5>1. Single Inheritance</h5>
+<p>When a subclass is derived from it's parent class then this mechanism is known as single inheritance. In case of simple inheritance there is only a sub class and it's parent class. It is also called simple inheritance or one level inheritance. </p>
+
+	<h5>Single Hello World Example</h5>
+
+	@CODE_START@@JAVA@
+	public class Animal {
+	
+		public Animal() {
+			System.out.println("A new animal has been created!");
+		}
+		
+		public void sleep() {
+			System.out.println("An animal sleeps...");
+		}
+		
+		public void eat() {
+			System.out.println("An animal eats...");
+		}
+	}
+	
+	public class Bird extends Animal {
+	
+		public Bird() {
+			System.out.println("A new bird has been created!");
+		}
+		
+		@Override
+		public void sleep() {
+			System.out.println("A bird sleeps...");
+		}
+		
+		@Override
+		public void eat() {
+			System.out.println("A bird eats...");
+		}
+	}
+	
+	public class AppMain {
+		public static void main(String[] args) {
+			Animal animal = new Animal();
+			Bird bird = new Bird();
+			
+			
+			animal.sleep();
+			animal.eat();
+			
+			bird.sleep();
+			bird.eat();
+			
+		}
+	}
+
+	@CODE_END@
+
+<div class="output-panel"> 
+	<p> A new animal has been created! </p>
+	<p> A new animal has been created! </p>
+	<p> A new bird has been created! </p>
+	<p> An animal sleeps...</p>
+	<p> An animal eats...</p>
+	<p> A bird sleeps...</p>
+	<p> A bird eats...</p>
+</div>	
+
+
+<h4>2. Multilevel Inheritance</h4>
+<p>It is the enhancement for the concept of single inheritance. When a subclass is derived from a derived class then this mechanism is known as the multilevel inheritance. The derived class is called the subclass or child class for it's parent class and this parent class works as the child class for it's just above ( parent ) class. Multilevel inheritance can go up to any number of level.</p>
+
+	<h5>Simple Hello World Example</h5>
+@CODE_START@@JAVA@
+	public class Animal {
+	
+		public Animal() {
+			System.out.println("A new animal has been created!");
+		}
+		
+		public void sleep() {
+			System.out.println("An animal sleeps...");
+		}
+		
+		public void eat() {
+			System.out.println("An animal eats...");
+		}
+	}
+	
+	public class Bird extends Animal {
+	
+		public Bird() {
+			System.out.println("A new bird has been created!");
+		}
+		
+		@Override
+		public void sleep() {
+			System.out.println("A bird sleeps...");
+		}
+		
+		@Override
+		public void eat() {
+			System.out.println("A bird eats...");
+		}
+	}
+	
+	public class Dove extends Bird{
+		public Bird() {
+			super();
+			System.out.println("A new Dove has been created!");
+		}
+		
+		@Override
+		public void sleep() {
+			System.out.println("A Dove sleeps...");
+		}
+		
+		@Override
+		public void eat() {
+			System.out.println("A Dove eats...");
+		}
+	}
+
+	public class AppMain {
+		public static void main(String[] args) {
+			Animal animal = new Animal();
+			Bird bird = new Bird();
+			Dove dove = new Dove();
+			
+			animal.sleep();
+			animal.eat();
+			
+			bird.sleep();
+			bird.eat();
+			
+			dove.sleep();
+			dove.eat();
+		}
+	}
+
+	@CODE_END@
+
+<div class="output-panel"> 
+	<p> A new animal has been created! </p>
+	<p> A new animal has been created! </p>
+	<p> A new bird has been created!</p>
+	<p> A new animal has been created! </p>
+	<p> A new Dove has been created! </p>
+	
+	<p> An animal sleeps...</p>
+	<p> An animal eats...</p>
+	<p> A bird sleeps...</p>
+	<p> A bird eats...</p>
+	<p> A Dove sleeps...</p>
+	<p> A Dove eats... </p>
+</div>	
+
+
+
+<h4>3. Multiple Inheritance</h4>
+<p>The mechanism of inheriting the features of more than one base class into a single class is known as multiple inheritance. Java does not support multiple inheritance but the multiple inheritance can be achieved by using the interface.</p>
+<p>In Java Multiple Inheritance can be achieved through use of Interfaces by implementing more than one interfaces in a class.</p>
+
+<h4> Why java doesn't support multiple inheritance </h4>
+<p><b> Multiple inheritance of state: Ability to inherit fields from multiple classes </b>
+
+One reason why the Java programming language does not permit you to extend more than one class is to avoid the issues of multiple inheritance of state, which is the ability to inherit fields from multiple classes
+</p>
+
+<p> <b> Multiple inheritance of implementation </b>
+ Ability to inherit method definitions from multiple classes
+
+Problems with this approach: name conflicts and ambiguity. If a subclass and superclass contain same method name (and signature), compiler can't determine which version to invoke.
+</p>
+<p> Multiple inheritance can be really difficult to understand. When you have a multiple inheritance with two classes which have methods, states in conflicts, how do you handle this ? the creators of Java decided it was way to complicated and not really in the Java philosophy (make development a lot easier).</p>
+
+<h4> How to achive multiple inheritance in Java </h4>
+<p>
+Multiple inheritance--and all the problems it generates--was discarded from Java. The desirable features of multiple inheritance are provided by interfaces--conceptually similar to Objective C protocols.</p>
+<p>
+An interface is not a definition of a class. Rather, it's a definition of a set of methods that one or more classes will implement. An important issue of interfaces is that they declare only methods and constants. Variables may not be defined in interfaces.
+</p>
+
+	
+

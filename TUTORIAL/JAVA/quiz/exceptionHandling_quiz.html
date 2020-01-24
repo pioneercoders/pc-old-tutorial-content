@@ -1,0 +1,32 @@
+<!-- widget Quiz  -->	
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','a','d'], selAnswers: []}">
+		<div>
+			<h6>1).	When does Exceptions in Java arises in code sequence?</h6>
+			<options values='{"values":["Run Time","Compilation Time","Can Occur Any Time","None of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. Which of these keywords is not a part of exception handling?</h6>
+			<options values='{"values":["try","finalyy","throw","catch"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<br>
+		<div>
+			<h6>3. Which of these keywords must be used to monitor for exceptions? </h6>
+			<options values='{"values":["try","finalyy","throw","catch"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<div>
+			<h6>4. Which of these keywords must be used to handle the exception thrown by try block in some rational manner?</h6>
+			<options values='{"values":["try","finalyy","throw","catch"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

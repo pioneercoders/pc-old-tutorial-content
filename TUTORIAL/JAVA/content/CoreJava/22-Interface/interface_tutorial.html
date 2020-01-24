@@ -1,0 +1,93 @@
+<h4> What is Interface ?</h4>
+<p> a point where two systems meet and interact.</p>
+<p> As you've already learned, objects define their interaction with the outside world through the methods that they expose. Methods form the object's interface with the outside world; the buttons on the front of your television set, for example, are the interface between you and the electrical wiring on the other side of its plastic casing. You press the "power" button to turn the television on and off.</p>
+
+<p>In its most common form, an interface is a group of related methods with empty bodies. A bicycle's behavior, if specified as an interface, might appear as follows:</p>
+
+@CODE_START@@JAVA@interface Bicycle {
+
+    //  wheel revolutions per minute
+    void changeCadence(int newValue);
+
+    void changeGear(int newValue);
+
+    void speedUp(int increment);
+
+    void applyBrakes(int decrement);
+}
+@CODE_END@
+
+<h4>Points to note:</h4>
+<ul>
+	<li>An interface can contain only abstract methods.</li>
+	<li>All methods in an interface are implicitly public and abstract</li>
+	<li>By default all the variables in interace are public static fianel </li>
+	<li>We can't create object for interface, but we can create reference for interface </li>
+	<li>A class must and should implement this interface </li>
+	<li>One or more classes can implement one interface </li>
+	<li>The class which implements the interface needs to provide functionality for the methods declared in the interface</li>
+	<li>An interface reference can point to objects of its implementing classes</li>
+	<li>An interface can extend from one or many interfaces. A class can extend only one class but implement any number of
+		interfaces</li>
+</ul>
+
+<h5>Implementing Interfaces </h5>
+
+@CODE_START@@JAVA@class ACMEBicycle implements Bicycle {
+
+    int cadence = 0;
+    int speed = 0;
+    int gear = 1;
+
+   // The compiler will now require that methods
+   // changeCadence, changeGear, speedUp, and applyBrakes
+   // all be implemented. Compilation will fail if those
+   // methods are missing from this class.
+
+    void changeCadence(int newValue) {
+         cadence = newValue;
+    }
+
+    void changeGear(int newValue) {
+         gear = newValue;
+    }
+
+    void speedUp(int increment) {
+         speed = speed + increment;   
+    }
+
+    void applyBrakes(int decrement) {
+         speed = speed - decrement;
+    }
+
+    void printStates() {
+         System.out.println("cadence:" +
+             cadence + " speed:" + 
+             speed + " gear:" + gear);
+    }
+}
+
+@CODE_END@
+
+@CODE_START@@JAVA@class AppMain{
+	public static void main(String args[]){
+		Bicycle bicy ; //interface refernce 
+		bicy = new ACMEBicycle(); // implemented class object is assigned
+		bicy.changeGear(3);
+		bicy.speedUp(70);
+		bicy.printStates();	
+	}
+}
+@CODE_END@
+
+<ul>
+<li> A class uses the implements keyword to implement an interface. </li>
+<li> When a class implements an interface, you can think of the class as signing a contract, agreeing to perform the specific behaviors of the interface.</li>
+<li> The signature of the interface method and the same return type or subtype should be maintained when overriding the methods.</li>
+<li> An implementation class itself can be abstract and if so interface methods need not be implemented. </li>
+<li> Checked exceptions should not be declared on implementation methods other than the ones declared by the interface method or subclasses of those declared by the interface method.</li>
+</ul>
+
+<iframe width="560" height="315"
+	src="https://www.youtube.com/embed/0f8PQeJ6UEk?version=3"
+	frameborder="0" allowfullscreen></iframe>

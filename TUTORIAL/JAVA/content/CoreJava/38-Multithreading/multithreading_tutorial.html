@@ -1,0 +1,310 @@
+	<h4>Process</h4>
+		<p>Process is heavy weight, it will take more execution time and it will provide least performance in the application</p>
+	
+	<h4>Thread:</h4>
+		<p>Thread is light weight, it will take less execution time and it will provide more performance in the applications</p>
+		
+		<p>There are two thread models to execute applications</p>
+			<p><b>1)Single thread model</b></p>
+			<p><b>2)Multi thread model</b></p>
+		
+	<h4>Single thread model:</h4>
+	<ul>
+		<li>This model is able to allow only one thread at a time to execute applications, it will follow sequential execution, it will increase execution time and it will provide less performance in the applications</li>
+	</ul>	
+	<h4>Multi thread model:</h4>
+	<ul>
+		<li>This model is able to allow more than one thread at a time to execute applications, it will follow parallel execution, it will take less execution time and it will provide very good performance in application</li>
+		<li>To create threads in java applications, java has provided the following predefined library in java.langpackage</li>
+	</ul>
+	@IMG_START@JAVA/multithreading1/jpg@IMG_END@
+	<h4>Creation of threads:</h4>
+	<p>There are two ways to prepare threads</p>
+	<p>1)Extending Thread class</p>
+	<p>2)Implementing Runnable Interace</p>
+		
+	<h4>1)Extending Thread class:</h4>
+	<p>In this approach, we have to declare an user defined class, it must be executed from java.lang.threadclass</p>
+	
+	<p><b>Example:</b></p>
+@CODE_START@@JAVA@class MyThread extends Thread 
+{
+
+..........................
+
+..........implementation................
+
+..........................
+
+} 
+@CODE_END@		
+	<p><b>Example of multithreading using Thread class</b></p>
+	
+	<p>Thread based program for displaying 1 to 10 numbers after each and every second.</p>
+	
+	<h4>State or Life cycle of thread</h4>
+	
+	<p><b>State of a thread are classified into five types they are</b></p>
+	
+	<p><b>1).New State</b></p>
+	<p><b>2).Ready State</b></p>
+	<p><b>3).Running State</b></p>
+	<p><b>4).Waiting State</b></p>
+	<p><b>5).Halted or dead State</b></p>
+	@IMG_START@JAVA/threadlifecycle/jpg@IMG_END@
+	<h4>New State</h4>	
+		<ul><li>If any new thread class is created that represent new state of a thread, In new state thread is created and about to enter into main memory. No memory is available if the thread is in new state</li></ul>
+	
+	<h4>Ready State</h4>
+		<ul><li>In ready state thread will be entered into main memory, memory space is allocated for the thread and 1st time waiting for the CPU.</li></ul>
+	
+	<h4>Running State</h4>
+		<ul><li>Whenever the thread is under execution known as running state</li></ul>
+	
+	<h4>Halted or dead State</h4>
+		<ul><li>If the thread execution is stoped permanently than it comes under dead state, no memory is available for the thread if its comes to dead state.</li></ul>
+	<P><b>Note:</b>If the thread is in new or dead state no memory is available but sufficient memory is available if that is in ready or running or waiting state.</p>	
+	
+	<h3>Thread class properties</h3>
+	
+	<p>Thread class contains constant data members, constructors, predefined methods.</p>
+	
+	<p><b>Constant data members</b></p>
+	
+	<p><b>1.MAX-PRIORITY</b></p>
+	<p><b>2.MIN-PRIORITY</b></p>
+	<p><b>3.NORM-PRIORITY</b></p>
+	
+	
+	<p><b>MAX-PRIORITY</b></p>
+		<ul><li>Which represent the minimum priority that a thread can have whose values is 10.</li></ul>
+	<p><b>Syntax:</b></p>
+@CODE_START@@JAVA@public static final int  MAX-PRIORITY=10@CODE_END@	
+	
+	<p><b>MIN-PRIORITY</b></p>
+		<ul><li>Which represents the minimum priority that a thread can have.</li></ul>
+	<p><b>Syntax:</b></p>
+@CODE_START@@JAVA@public static final int  MIN-PRIORITY=0@CODE_END@	
+		
+	<p><b>NORM-PRIORITY</b></p>
+		<ul><li>Which represent the default priority that is assigned to a thread.</li></ul>
+	<p><b>Syntax:</b></p>
+@CODE_START@@JAVA@public static final int  NORM-PRIORITY=5@CODE_END@	
+	
+	<h4>Constructors of Thread class</h4>
+		<p><b>1.Thread()</b></p>
+		<p><b>2.Thread(String name)</b></p>
+		<p><b>3.Thread(object)</b></p>
+		<p><b>4.Thread(object, String name)</b></p>
+	<p><b>Thread()</b></p>
+		<ul><li>Which will be execute to set the predefined name for newly created thread, these names are generally in the form of thread -0, thread -1, ....Syntax to call constructor:</li></ul>
+	<p><b>Syntax</b></p>
+	@CODE_START@@JAVA@ Thread t = new Thread();@CODE_END@	
+
+	<p><b>Thread(String name)</b></p>	
+		<ul><li>Which can be used to provide user defined name for newly created thread.</li></ul>
+	<p><b>Syntax</b></p>
+	@CODE_START@@JAVA@Thread t = new Thread("new thread");@CODE_END@	
+	
+	<p><b>Thread(object)</b></p>
+		<ul><li>Which can be used to provide default name for newly created user defined thread.</li></ul>
+	<p><b>Syntax</b></p>	
+	@CODE_START@@JAVA@UserdefinedThreadclass obj = new UserdefinedThreadclass();@CODE_END@
+	
+	<p><b>Thread(object, String name)</b></p>
+		<ul><li>Which will be used to provide user defined name for the newly created user defined thread.</li></ul>
+	<p><b>Syntax</b></p>
+@CODE_START@@JAVA@UserdefinedThreadclass obj = new UserdefinedThreadclass();
+Thread t = new Thread(object, "new thread");
+@CODE_END@
+
+	
+	<h4>Methods of Thread class</h4>	
+	<p><b>getPriority()</b></p>
+		<ul><li>This method is used to get the current priority of thread.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+int x = t.getPriority();
+System.out.println(x);@CODE_END@	
+	
+	<p><b>setPriority()</b></p>
+		<ul><li>This method is used to set the current priority of thread.</li><ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+x = t.setPriority(any priority number between o to 10);
+or
+x = t.setPriority(Thread.MAX-PRIORITY)
+@CODE_END@	
+	
+	<p><b>getName()</b></p>
+		<ul><li>This method is used to get the current executing thread name.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+String s = t. getName();
+System.out.println(s);@CODE_END@	
+	
+	<p><b>setName()</b></p>
+		<ul><li>This method is used to set the userdefined name for the thread.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+t. setName("mythread");@CODE_END@	
+	
+	
+	<p><b>isDeamon()</b></p>
+		<ul><li>Which returns true if the current thread is background thread otherwise return false.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+boolean b = t. isDeamon();@CODE_END@	
+	
+	<p><b>run()</b></p>
+		<ul><li>Which contains the main business logic that can be executed by multiple threads simultaneously in every user defined thread class run method should be overridden.</li></ul>
+@CODE_START@@JAVA@public Class_Name extends Thread {
+public void run()
+{
+
+..................
+
+}
+
+}@CODE_END@
+	
+	<p><b>start()</b></p>
+		<ul><li>Used to convert ready state thread to running state.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+t.start();@CODE_END@	
+	
+	<p><b>sleep()</b></p>
+		<ul><li>Used to change running state thread to ready state based on time period it is a static method should be called with class reference.</li></ul>
+@CODE_START@@JAVA@public static final sleep(long millisecond)throws InterruptedException { 
+try { Thread.sleep(3000);
+}
+
+catch(InterruptedException ) ie { ................ ................ ................
+}
+
+}@CODE_END@
+	
+	<ul><li>Once the given time period is completed thread state automatically change from waiting to running state.</li></ul>
+	
+	<p><b>suspend()</b></p>
+		<ul><li>Used to convert running state thread to waiting state, which will never come back to running state automatically.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+t.suspend();@CODE_END@			
+	
+	<p><b>resume()</b></p>
+		<ul><li>Used to change the suspended thread state(waiting state) to ready state.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+t.resume();@CODE_END@	
+	<p><b>Note:</b>Without using suspend() method resume() method can not be use.</p>
+	
+	
+	<p><b>What is the difference between sleep() and suspend()</b></p>
+	<ul>
+		<li><b>Sleep()</b> can be used to convert running state to waiting state and automatically thread convert from waiting state to running state once the given time period is completed.</li>
+		<li>Where as <b>Suspend()</b> can be used to convert running state thread to waiting state but it will never return back to running state automatically.</li>
+	</ul>
+	
+	<p><b>stop()</b></p>
+		<ul><li>This method is used to convert running state thread to dead state.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+t.stop();@CODE_END@	
+	
+	<p><b>isAlive()</b></p>
+		<ul><li>Which is return true if the thread is in ready or running or waiting state and return false if the thread is in new or dead state.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+t.isAlive();@CODE_END@
+	
+	<p><b>currentThread()</b></p>
+		<ul><li>Used to get the current thread detail like thread name thread group name and priority</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+t.currentThread();@CODE_END@	
+	
+	
+	<p><b>Note:</b></p>
+	<p>The default thread name is thread-0, (if it is a main thread default name is main)</p>
+	<p>The default thread group name is main</p>
+	<p>Default thread priority is "5" is normal priority.</p>
+	
+	<p><b>join()</b></p>
+		<ul><li>Which can be used to combined more than one thread into a single group signature is public final void join()throws InterruptedException</li></ul>
+@CODE_START@@JAVA@try { 
+t.join(); 
+t2.join(); 
+............... 
+................
+}@CODE_END@	
+	
+	
+	<p><b>getState()</b></p>
+		<ul><li>This method is used to get the current state of thread.</li></ul>
+@CODE_START@@JAVA@Thread t = new Thread();
+t.getState();@CODE_END@	
+	
+	
+	<h4>Daemon Thread:</h4>
+	<ul>
+		<li>It will be executed internally to provide service to some other threads and it will be terminated along with the thread which is taking services from Daemon thread</li>
+		<li>To make thread a Daemon thread we have to use the following method</li>
+	</ul>
+@CODE_START@@JAVA@public void setDaemon(Boolean b)
+public Boolean isDaemon()
+@CODE_END@		
+	
+	<p><b>yield()</b></p>
+		<ul><li>Which will keep the currently executing thread into temporarily pass and allows other threads to execute</li></ul>
+	
+	<h4>2)Implementing Runnable Interace:</h4>
+	<p>In this approach we have to declare an user defined class, it must implement java.lang.Runnable interface</p>	
+@CODE_START@@JAVA@class MyThread implements Runnable
+{
+
+........implementation........
+
+..............................
+
+}@CODE_END@		
+	
+	<h4>Rules to create the thread using Runnable interface</h4>
+	<ul>
+		<li>Create any user defined class and implements runnable interface within that</li>
+		<li>Override run() method within the user defined class.</li>
+		<li>call start() method to execute run() method of thread class</li>
+	</ul>
+	
+	<h4>Thread Synchronization</h4>
+	<ul>
+		<li>Whenever multiple threads are trying to use same resource than they may be chance to of getting wrong output, to overcome this problem thread synchronization can be used.</li>
+		<li><b>Definition:</b> Allowing only one thread at a time to utilized the same resource out of multiple threads is known as thread synchronization or thread safe.</li>
+	</ul>
+	<ul>
+		<li>In java language thread synchronization can be achieve in two different ways.</li>
+		<p><b>1.)Synchronized block</b></p>
+		<p><b>2)Synchronized method</b></p>
+	</ul>
+
+	
+	
+	
+	<p><b>Note:</b>synchronization is a keyword(access modifier in java)</p>
+	
+	<h4>Synchronized block</h4>
+
+	<ul><li>Whenever we want to execute one or more than one statement by a single thread at a time(not allowing other thread until thread one execution is completed) than those statement should be placed in side synchronized block.</li></ul>
+@CODE_START@@JAVA@
+class Class_Name implements Runnable or extendsThread
+{
+	public void run() { synchronized(this) {
+		..............................
+		..............................
+	}
+} @CODE_END@	
+	
+	<h4>Synchronized method</h4>
+	<ul><li>Whenever we want to allow only one thread at a time among multiple thread for execution of a method than that should be declared as synchronized method.</li></ul>
+@CODE_START@@JAVA@ class Class_Name implements Runnable or extendsThread
+{
+	public void run() { synchronized void fun() {
+		..............................
+		..............................
+	}
+	
+	public void run() {
+		fun();
+		......
+	}
+}@CODE_END@			

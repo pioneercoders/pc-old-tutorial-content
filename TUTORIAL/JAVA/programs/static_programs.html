@@ -1,0 +1,63 @@
+
+<pc-accordion>
+		<accordion-item>
+		<accordion-title>write an Example program for static keyword</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="simplestatic" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'p1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class simplestatic {
+		static float pi;
+		static {
+			pi = 3.14f;
+			System.out.println("value of pi = "+pi);
+		}
+		public static void main(String[] args){ 
+			System.out.println("main method calles");
+		}
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('simplestatic','p1','java' )">Run</button>
+	<div>
+        <iframe id="p1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+		<accordion-title>Program of counter using static</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Counter" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'Counter1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Counter {  
+		static int count=0;//will get memory only once and retain its value  
+		  
+		Counter(){  
+		count++;  
+		System.out.println(count);  
+		}  
+		  
+		public static void main(String args[]){  
+		  
+		Counter c1=new Counter();  
+		Counter c2=new Counter();  
+		Counter c3=new Counter();  
+		  
+		 }  
+		} 
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Counter','Counter1','java' )">Run</button>
+	<div>
+        <iframe id="Counter1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

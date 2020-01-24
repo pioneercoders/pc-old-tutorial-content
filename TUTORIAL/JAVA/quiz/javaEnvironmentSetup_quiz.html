@@ -1,0 +1,99 @@
+<div class="ppt_comingsoon" style="height:500px;text-align:center;vertical-align:middle;">
+	<span style="line-height:500px;font-size:32px;color:#b84519">Java Environment Setup Test Coming soon</span>
+</div>
+<!-- <div id="container">
+<header>
+<h1>Functions Quiz</h1>
+</header>
+	
+	<section>
+	
+		<form name="quizForm" onsubmit="return showResult()">
+			<h3>1).	What is a method signature? </h3>
+			<input type="radio" name="q1" value="a" id="q1a">a. The signature of a method is the name of the method the type of its return value<br>
+			<input type="radio" name="q1" value="b" id="q1b">b. The signature of a method is the name of the method and the name of its parameters<br>
+			<input type="radio" name="q1" value="c" id="q1c">c. The signature of a method is the name of the method and the data types of its parameters.<br>
+			<input type="radio" name="q1" value="d" id="q1d">d. The signature of a method is the name of the method, its parameter list, and it return.<br>
+			<br>
+			<h3>2). Which of the following is true for method?</h3>
+			<input type="radio" name="q2" value="a" id="q2a">a. method is a set of code which is referred to by name and can be called (invoked) at any point in a program simply by utilizing the method's name.<br>
+			<input type="radio" name="q2" value="b" id="q2b">b. Each method has its own name.<br>
+			<input type="radio" name="q2" value="c" id="q2c">c. When that name is encountered in a program, the execution of the program branches to the body of that method.  <br>
+			<input type="radio" name="q2" value="d" id="q2d">d. All the above<br>
+			<br>
+			<h3>3). a)For every method  void as default return type </h3>
+			<h3 style="padding-left:35px;">	b)In addition, methods can be saved and utilized again and again in newly developed programs.</h3>
+			<input type="radio" name="q3" value="a" id="q3a">a. a only true<br>
+			<input type="radio" name="q3" value="b" id="q3b">b. b only truebr><br>
+			<input type="radio" name="q3" value="c" id="q3c">c. a & b are true<br>
+			<input type="radio" name="q3" value="d" id="q3d">d. a & b are false<br>
+			<br>
+			
+			<input type="submit" value="Submit">
+			<input id = "reset" type="Reset" value="Reset" onClick="formReset()">
+			<div id="results"></div>
+		</form>
+		
+	</section>
+	
+	</div>
+	
+	
+	 <script type="text/javascript">
+ 
+ var	results = document.getElementById('results');
+results.style.display = 'none';
+
+function showResult() {
+
+
+	var total = 3;
+	var score = 0;
+	var answers =  ["c","d","c"];
+	
+	var q1 = document.forms['quizForm']['q1'].value;
+	var q2 = document.forms['quizForm']['q2'].value;
+	var q3 = document.forms['quizForm']['q3'].value;
+	
+	
+
+	
+	for(i=1; i<=total; i++) {
+		if(eval('q'+i) == null || eval('q'+i) == '') {
+			alert('You missed question #' + i);
+			return false;
+		}
+	}
+	
+
+	for(i=1; i <= total; i++){
+		if(eval('q'+i) == answers[i -1]){
+				score++
+		}
+	}
+	
+	results.style.display = 'block';
+	results.innerHTML = 'Your Score is <strong>'+ score +'</strong> of <strong>'+ total+'</strong>';
+	
+	
+	
+	var quizeObj= {
+	score  : score,
+	Total : total
+	
+	};	
+	
+	callBack(quizeObj);
+	
+	return false;
+}
+
+function formReset(){
+	console.log("HEHERERE");
+	
+	results.style.display='none';
+
+}	
+
+ </script>
+ -->

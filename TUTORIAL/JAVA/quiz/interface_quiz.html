@@ -1,0 +1,33 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','b','b'], selAnswers: []}">
+		<div>
+			<h6>1.A point where two systems meet and interact is called____?</h6>
+			<options values='{"values":[" polymorphism.", 
+                         "Interface.", 
+                        "Inheritance.",
+                        " object"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                  <div>
+			<h6>2. Which of the following are incorrect?</h6>
+			<options values='{"values":[" A Class can extend only one class but implements  any number of interfaces.", 
+                         "All methods in interface are private and abstract.", 
+                        " We can’t create object for an interface.",
+                        "One or more classes can implement one interface."]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+                <div>
+			<h6>3. The keyword used for implementing Interface is ?</h6>
+			<options values='{"values":["extends", 
+                         "implements"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

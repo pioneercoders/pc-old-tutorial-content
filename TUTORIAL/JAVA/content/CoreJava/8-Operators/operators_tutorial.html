@@ -1,0 +1,363 @@
+<h4> What is operator ? </h4>
+	<p>
+	An Operator is a symbol (such as +, -, * etc) that shows an operation (i.e. you want to do something with the values). b/w operands.
+	</p>
+	<p> Ex: x + y = 5; in this  + is Operator, x & y are Operands. in thhis example + is operating the sum of operands. 
+	</p>
+	
+	<p> <b> Below are the operators in JAVA </b> </p>
+	<ul>
+		<li>Arithmetic Operators</li>
+		<li>Relational Operators</li>
+		<li>Logical Operators</li>
+		<li>Bitwise Operators</li>
+		<li>Assignment Operators</li>
+		<li>Ternary or Conditional Operators</li>
+	</ul>
+	<table class="pc-table">
+		<tr> 
+			<td>Operator</td>
+			<td>Type</td>
+		</tr>
+		<tr> 
+			<td>++,-- </td>
+			<td>Unary Operator</td>
+		</tr>
+		<tr> 
+			<td>+,-,*,/,%</td>
+			<td>Arithmetic Operator</td>
+		</tr>
+		<tr> 
+			<td><,<=,>,>=,==,!=</td>
+			<td>Relational Operator</td>
+		</tr>
+		<tr> 
+			<td>&&,||,!</td>
+			<td>Logical Operator</td>
+		</tr>
+		<tr> 
+			<td>&,|,<<,>>,^</td>
+			<td>Bitwise Operator</td>
+		</tr>
+		<tr> 
+			<td>=,+=,-=,*=,/=,%=</td>
+			<td>Assignment Operator</td>
+		</tr>
+		<tr> 
+			<td>?:</td>
+			<td>Ternary or Conditional Operators</td>
+		</tr>
+	</table>
+	<h4>Assignment</h4>
+	<p>It assigns the value on its right to the operand on its left</p>
+	@CODE_START@@JAVA@int speed = 0;@CODE_END@
+	<p>All binary operators except for the assignment operators are evaluated from left to right; assignment operators are evaluated right to left.</p>
+	<h4>Arithmetic Operators</h4>
+	<p>The Java programming language provides operators that perform addition, subtraction, multiplication, and division. There's a good chance you'll recognize them by their counterparts in basic mathematics. The only symbol that might look new to you is "%", which divides one operand by another and returns the remainder as its result.</p>
+	<table class="pc-table">
+		<tr> 
+			<td>Operator</td>
+			<td>Description</td>
+		</tr>
+		<tr> 
+			<td>+</td>
+			<td>Additive Operator (also used for String concatenation)</td>
+		</tr>
+		<tr> 
+			<td>-</td>
+			<td>Subtraction Operator</td>
+		</tr>
+		<tr> 
+			<td>*</td>
+			<td>Multiplication Operator</td>
+		</tr>
+		<tr> 
+			<td>/</td>
+			<td>Division Operator</td>
+		</tr>
+		<tr> 
+			<td>%</td>
+			<td>Remainder Operator</td>
+		</tr>
+	</table>
+	
+<h5>program on Arithmetic Operators.</h5>
+<section>  
+    <div id="ArithmeticDemo" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:450px;border-radius:10px;">class ArithmeticDemo {	
+	public static void main(String[] args){
+		int result=1+2;     // result is now 3
+		System.out.println( "1+2 =" +result);
+		int original_result=result;
+		result= result-1;   // result is now 2
+		System.out.println("result "+ (original_result - 1));
+		original_result = result;
+		result = result * 2; // result is now 4
+		System.out.println("result "+ (original_result * 2));
+		original_result = result;
+		result = result / 2; // result is now 2
+		System.out.println("result "+ (original_result / 2));
+		original_result = result;
+		result = result + 8; // result is now 10
+		System.out.println( "result "+ (original_result + 8));
+		original_result = result;
+		result = result % 7; // result is now 3
+		System.out.println("result "+ (original_result % 7));
+		}
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="compileAndRunCode('ArithmeticDemo','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+
+	<p>You can also combine the arithmetic operators with the simple assignment operator to create compound assignments. For example, x+=1; and x=x+1; both increment the value of x by 1.</p>
+	<p>The + operator can also be used for concatenating (joining) two strings together, as shown in the following ConcatDemo program:</p>
+	<h4>program on Concat Strings using Arithmetic Operators.</h4>
+<section>  
+    <div id="ConcatDemo" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:200px;border-radius:10px;"> class ConcatDemo {
+	 public static void main(String[] args){ 
+		 String firstString= "This is ";
+		 String secondString= "a concated string ";
+		 String thirdString= firstString + secondString;
+		 System.out.println(thirdString);
+	 }
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="compileAndRunCode('ConcatDemo','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+
+	<p> By the end of this program, the variable thirdString contains "This is a concatenated string.", which gets printed to standard output.</p>
+	<h4>The Unary Operators</h4>
+	<p>The unary operators require only one operand; they perform various operations such as incrementing/decrementing a value by one, negating an expression, or inverting the value of a boolean.</p>
+	<table class="pc-table">
+		<tr> 
+			<td>Operator</td>
+			<td>Description</td>
+		</tr>
+		<tr> 
+			<td>+</td>
+			<td>Unary plus operator; indicates positive value (numbers are positive without this, however)</td>
+		</tr>
+		<tr> 
+			<td>-</td>
+			<td>Unary minus operator; negates an expression</td>
+		</tr>
+		<tr> 
+			<td>++</td>
+			<td>Increment operator; increments a value by 1</td>
+		</tr>
+		<tr> 
+			<td>--</td>
+			<td>Decrement operator; decrements a value by 1</td>
+		</tr>
+		<tr> 
+			<td>!</td>
+			<td>Logical complement operator; inverts the value of a boolean</td>
+		</tr>
+	</table>
+	<p>The following program, UnaryDemo, tests the unary operators:</p>
+
+<h5>program on Unary Operators.</h5>
+<section>  
+    <div id="UnaryDemo" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:300px;border-radius:10px;">public class UnaryDemo {
+	public static void main(String[] args){
+		int result= +1;   			// result is now 1
+		System.out.println(+result);// result is now 0
+		System.out.println(+result);	
+		result++; 					// result is now 1
+		System.out.println(+result);	
+		result = result-1;			// result is now -1
+		System.out.println(+result);	
+		boolean success= false;
+		System.out.println(success);// false
+		System.out.println(!success);// true
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('UnaryDemo','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>						
+	<p>The increment/decrement operators can be applied before (prefix) or after (postfix) the operand. The code result++; and ++result; will both end in result being incremented by one. The only difference is that the prefix version (++result) evaluates to the incremented value, whereas the postfix version (result++) evaluates to the original value. If you are just performing a simple increment/decrement, it doesn't really matter which version you choose. But if you use this operator in part of a larger expression, the one that you choose may make a significant difference.</p>
+	<p> The following program, PrePostDemo, illustrates the prefix/postfix unary increment operator:</p>
+	
+		
+<h5>program on post/prefix Operators.</h5>
+<section>  
+    <div id="PrePostDemo" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class PrePostDemo {	
+	public static void main(String[] args){
+		int i = 3;
+		i++	;		 			
+		System.out.println(+i);	// prints 4
+		++i ;					
+		System.out.println(i); 	// prints 5
+		System.out.println(++i);// prints 6
+		System.out.println(i++);// prints 6
+		System.out.println(i);	// prints 7
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('PrePostDemo','preview4','java' )">Run</button>
+	<div>
+        <iframe id="preview4"></iframe>
+    </div>
+</section>	
+						
+	<h4>The Relational Operators</h4>
+	<p>The equality and relational operators determine if one operand is greater than, less than, equal to, or not equal to another operand. The majority of these operators will probably look familiar to you as well. Keep in mind that you must use "==", not "=", when testing if two primitive values are equal.</p>
+	<table class="pc-table">
+		<tr> 
+			<td>Operator</td>
+			<td>Description</td>
+		</tr>
+		<tr> 
+			<td>==</td>
+			<td>Equal to</td>
+		</tr>
+		<tr> 
+			<td>!=</td>
+			<td>Not Equal to</td>
+		</tr>
+		<tr> 
+			<td>></td>
+			<td>Greater than</td>
+		</tr>
+		<tr> 
+			<td>>=</td>
+			<td>Greater than or equal to</td>
+		</tr>
+		<tr> 
+			<td><</td>
+			<td>Less than</td>
+		</tr>
+		<tr> 
+			<td><=</td>
+			<td>Less than or equal to</td>
+		</tr>
+	</table>
+	<p>The following program, ComparisonDemo, tests the comparison operators:</p>
+	<h5>program on Relational Operators.</h5>
+<section>  
+    <div id="ComparisonDemo" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:350px;border-radius:10px;">public class ComparisonDemo {	
+	public static void main(String[] args){ 
+		int value1 = 1;
+		int value2 = 2;
+		if(value1 == value2)
+		System.out.println("value1 == value2");	
+		if(value1 != value2)
+		System.out.println("value1 != value2");	
+		if(value1 > value2)
+		System.out.println("value1 > value2");	
+		if(value1 < value2)
+		System.out.println("value1 < value2");	
+		if(value1 <= value2)
+		System.out.println("value1 <= value2");
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('ComparisonDemo','preview5','java' )">Run</button>
+	<div> 
+        <iframe id="preview5"></iframe>
+    </div>
+</section>	
+
+	<h4>The Logical Operators</h4>
+	<p>The && and || operators perform Conditional-AND and Conditional-OR operations on two boolean expressions. These operators exhibit "short-circuiting" behavior, which means that the second operand is evaluated only if needed.</p>
+	
+<h5>program on Logical Operators.</h5>
+<section>  
+    <div id="ConditionalDemo1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:210px;border-radius:10px;">public class ConditionalDemo1 {
+	public static void main(String[] args){ 
+		int value1 = 1;
+		int value2 = 2;
+		if((value1 == 1) && (value2 == 2))
+		System.out.println("value1  is 1 AND Value2 is 1");	
+		if((value1 == 1) || (value2 == 1))
+		System.out.println("value1  is 1 OR Value2 is 1");	
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('ConditionalDemo1','preview6','java' )">Run</button>
+	<div>
+        <iframe id="preview6"></iframe>
+    </div>
+</section>
+
+	<h4>The Bitwise and Bit Shift Operators</h4>
+	<p>The Java programming language also provides operators that perform bitwise and bit shift operations on integral types. The operators discussed in this section are less commonly used. Therefore, their coverage is brief; the intent is to simply make you aware that these operators exist.</p>
+	<p>Bitwise operator works on bits and performs bit-by-bit operation. Assume if a = 60 and b = 13; now in binary format they will be as follows </p>
+	<p>a = 0011 1100</p>
+	<p>b = 0000 1101</p>
+	<p>a&b = 0000 1100</p>
+	<p>a|b = 0011 1101</p>
+	<p>a^b = 0011 0001</p>
+	<p>~a  = 1100 0011</p>
+	<table class="pc-table">
+		<tr> 
+			<td>Operator</td>
+			<td>Description</td>
+			<td>Example</td>
+		</tr>
+		<tr> 
+			<td>& (bitwise and)</td>
+			<td>Binary AND Operator copies a bit to the result if it exists in both operands.</td>
+			<td>(A & B) will give 12 which is 0000 1100</td>
+		</tr>
+		<tr> 
+			<td>| (bitwise or)</td>
+			<td>Binary OR Operator copies a bit if it exists in either operand.</td>
+			<td>(A | B) will give 61 which is 0011 1101</td>
+		</tr>
+		<tr> 
+			<td>^ (bitwise XOR)</td>
+			<td>Binary XOR Operator copies the bit if it is set in one operand but not both.</td>
+			<td>(A ^ B) will give 49 which is 0011 0001</td>
+		</tr>
+		<tr> 
+			<td>~ (bitwise compliment)</td>
+			<td>Binary Ones Complement Operator is unary and has the effect of 'flipping' bits.</td>
+			<td>(~A ) will give -61 which is 1100 0011 in 2's complement form due to a signed binary number.</td>
+		</tr>
+		<tr> 
+			<td><< (left shift)</td>
+			<td>Binary Left Shift Operator. The left operands value is moved left by the number of bits specified by the right operand.</td>
+			<td>A << 2 will give 240 which is 1111 0000</td>
+		</tr>
+		<tr> 
+			<td>>> (right shift)</td>
+			<td>Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand.</td>
+			<td>A >> 2 will give 15 which is 1111</td>
+		</tr>
+		<tr> 
+			<td>>>> (zero fill right shift)</td>
+			<td>Shift right zero fill operator. The left operands value is moved right by the number of bits specified by the right operand and shifted values are filled up with zeros.</td>
+			<td>A >>>2 will give 15 which is 0000 1111</td>
+		</tr>
+	</table>
+	<h4>The Conditional Operators</h4>
+	@CODE_START@@JAVA@variable x = (expression) ? value if true : value if false;@CODE_END@
+	<p>Which can be thought of as shorthand for an if-then-else statement (discussed in the Control Flow Statements section of this lesson). This operator is also known as the ternary operator because it uses three operands. In the following example, this operator should be read as: "If someCondition is true, assign the value of value1 to result. Otherwise, assign the value of value2 to result."</p>
+

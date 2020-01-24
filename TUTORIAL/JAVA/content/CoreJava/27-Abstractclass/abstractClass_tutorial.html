@@ -1,0 +1,86 @@
+<h4>What is abstract class in Java?</h4>
+<p> Abstract Means existing in thought or as an idea but not having a physical or concrete existence. <p>
+<p>Similarly in Java, An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.</p>
+<p>An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:</p>
+
+@CODE_START@@JAVA@abstract void moveTo(double deltaX, double deltaY);@CODE_END@
+<p>If a class includes abstract methods, then the class itself must be declared abstract, as in:</p>
+@CODE_START@@JAVA@public abstract class GraphicObject {
+   // declare fields
+   // declare nonabstract methods
+   abstract void draw();
+}
+@CODE_END@
+<p> When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.</p>
+
+<ul>
+<li>Use the abstract keyword to declare a class abstract.</li>
+<li>An abstract class is something which is incomplete and you can not create instance of abstract class.</li>
+<li>We can create refernce for abstract class </li> 
+<li>A concrete class must extends and implements all abstract method in abstract class.</li>
+</ul>
+
+<h5>Simple Example on Abstract Class</h5>
+
+	@CODE_START@@JAVA@
+	abstract class Shape {
+		abstract void draw();
+	}
+	class Rectangle extends Shape {
+		void draw() {
+		System.out.println("Drawing Rectangle");
+		}
+	}
+	class Traingle extends Shape {
+		void draw() {
+		System.out.println("Drawing Traingle");
+		}
+	}
+	public class AbstractDemo {
+		public static void main(String[] args){ 
+		Shape s1 = new Rectangle();
+		s1.draw();
+		s1 = new Traingle();
+		s1.draw();
+		}
+	}
+	@CODE_END@
+<div class="output-panel"> 
+<p>Drawing Rectangle</p>
+<p>Drawing Traingle</p>
+</div>	
+
+
+<h4>Applying the abstraction with composition :</h4>
+
+	<h5>Simple Example on Applying Abstraction with Composition</h5>
+
+	@CODE_START@@JAVA@
+	public class Car {
+		Engine engine = new Engine();
+		Wheel wheel = new Wheel();
+		int price;
+		String name;
+		String color;
+		void move() {
+			// move forward
+		}
+	}
+	public class Engine {
+		int engineCapacity;
+		int engineHorsePower;
+		void internalCombustion() {
+			// Engine method
+		}
+	}
+	public class Wheel {
+		String wheelName;
+		int wheelPrice;
+		void rotate() {
+			// wheel method
+		}
+	}
+	@CODE_END@
+<p>You can see that the attributes and methods related to the Engine and Wheel are moved to the respective classes.</p>
+<p>Engine and Wheel are referred from the Car type. When ever an instance of Car is created, both Engine and Wheel will be available for the Car and when there are changes to these Types(Engine and Wheel), changes will only be confined to these classes and will not affect the Car class.</p>
+@IMG_START@JAVA/abstractclasstutorial_image1/png@IMG_END@

@@ -1,0 +1,76 @@
+<p>Till now understand variables and operators, it's time to learn about expressions, statements, and blocks. Operators may be used in building expressions, which compute values; expressions are the core components of statements; statements may be grouped into blocks.</p>
+	<p>An expression construct through variables, operators, and method invocations, which are constructed according to the syntax of the language, that evaluates to a single value.</p>
+	
+	<h5>Example programm for Expression</h5>
+<section>  
+    <div id="EvaluateExpression" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class EvaluateExpression {
+	public static void main(String[] args) {
+		<!--java.util.Scanner sc=new java.util.Scanner(System.in);
+		System.out.println("enter 3 values...");
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int c=sc.nextInt();-->
+		getEvaluate(1,2,3);
+	}
+	public static int getEvaluate(int x,int y,int z){
+		int result=(2*x)+(3*y)+(3*z);
+		System.out.println("result is "+result);
+		return result;
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('EvaluateExpression','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+
+	<h4>Statements</h4>
+	<p>Statements are roughly equivalent to sentences in natural languages. A statement forms a complete unit of execution. The following types of expressions can be made into a statement by terminating the expression with a semicolon (;).</p>
+	<ul>
+		<li>Assignment expressions</li>
+		<li>Any use of ++ or --</li>
+		<li>Method invocations</li>
+		<li>Object creation expressions</li>
+	
+	</ul>
+	<p>Such statements are called expression statements. Here are some examples of expression statements.</p>
+	
+	
+	<h5>Syntax for Staments</h5>
+
+	@CODE_START@@JAVA@
+	 // assignment statement   aValue = 8933.234;  
+	 // increment statement   aValue++;  
+	 // Method Invocation statement  System.  out  .println("Hello World"  ); 
+	 // Object Creation statement  Bicycle    myBike   = new  Bicycle(); 	
+	@CODE_END@
+
+	<h4>Blocks</h4>
+	<p>A block is a group of zero or more statements between balanced braces and can be used anywhere a single statement is allowed. The following example, BlockDemo, illustrates the use of blocks:</p>
+	<h5>Simple Example on block</h5>
+<section>  
+    <div id="BlockDemo" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">class BlockDemo {  
+		public static void main(String[] args){  
+			boolean   condition = true;  
+			if(condition) { 	// begin block 1  
+				System.out.println("condition is true"); 
+			}  					//end block  
+			else{ 			//begin block 2  
+				System.out.println("condition is false"); 
+			}  					//end block 2  
+		}  
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('BlockDemo','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+

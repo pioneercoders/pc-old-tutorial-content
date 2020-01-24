@@ -1,0 +1,73 @@
+<h4>Abstract Method :</h4>
+<p>Abstract methods are those which need to be implemented in subclass / child class. Abstract methods are only defined in superclass / parent class but with no body.</p>
+<h5>Syntax</h5>
+
+@CODE_START@@JAVA@
+abstract class ClassName {
+	// Variable Declaration
+	// Constructor 
+	// Method 
+	abstract returntype methodName (params);
+}	
+@CODE_END@
+<p><b>className</b>is a valid identifier in java. It is a class name.</p>
+<p><b>abstract</b>is a keyword to define that method an abstract method.</p>
+<p><b>returntype</b>is return type of a method.</p>
+<p><b>methodName</b>mthName is a method name and valid java identifier.</p>
+	<h5>Example of on Abstract Method</h5>
+
+	@CODE_START@@JAVA@
+	abstract class Shape {
+		public static final float pi = 3.14f;
+		protected float height;
+		protected float width;
+		abstract float area();
+	}
+	class Square extends Shape {
+		Square ( float h, float w) {
+			height = h;
+			width = w;
+		}
+		float area() {
+			return height * width;
+		}
+	}
+	class Rectangle extends Shape {
+		Rectangle ( float h, float w) {
+			height = h;
+			width = w;
+		}
+		float area() {
+			return height * width;
+		}
+	}
+	class Circle extends Shape {
+		float radius;
+		Circle (float r){
+			radius = r;
+		}
+		float area() {
+			return pi * radius * radius;
+		}
+	}
+	public class AbstractMethodDemo {
+		public static void main(String[] args){ 
+			Square sObj = new Square(5,5);
+			Rectangle rObj = new Rectangle(5,7);
+			Circle cObj = new Circle(2);
+			System.out.println("Area of the Square :" + sObj.area());
+			System.out.println("Area of the Rectangle :" + rObj.area());
+			System.out.println("Area of the Circle :" + cObj.area());
+		}
+	}
+	@CODE_END@
+
+<div class="output-panel"> 
+<p>Area of the Square :25.0</p>
+<p>Area of the Rectangle :35.0</P>
+<p>Area of the Circle :12.56</p>
+</div>	
+<h4>Declaring a method as abstract has two results :</h4>
+<p>1.The class must also be declared abstract. If a class contains an abstract method, the class must be abstract as well.</p>
+<p>2.Any child class must either override the abstract method or declare itself abstract.A child class that inherits an abstract method must override it. If they do not, they must be abstract,and any of their children must override it.</p>
+<p>Eventually, a descendant class has to implement the abstract method; otherwise, you would have a hierarchy of abstract classes that cannot be instantiated.</p>

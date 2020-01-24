@@ -1,0 +1,151 @@
+<h4> What is Class ? </h4>
+<p>
+Class is template of an real-time entity. Every entity in this real world has set of properties and it exhibits some behaviors.
+We will bind this properties and behaviors into a single unit called class.
+</p>
+
+@IMG_START@JAVA/class-car/jpg@IMG_END@
+
+<p>
+Actually class keyword is derived from word classification in java, every real entity in this world need to be classified to differentiate. Like humans classifies the things, systems also need classification. Java class classifies the real entity's to the system to understand the about entity.
+<br>
+Ex: Car, Human, Animals, Restaurant etc. <br>
+All this classification as a human we will understand.<br>
+<b> How we will tell to the system about this entity's? </b> <br>
+Ans : through class we will define so that system will understand.
+</p>
+
+
+<h4> Whey we need Class ? </h4>
+
+<p>Class used for creating real world objects in memory.</p>
+
+<h5>Syntax</h5>
+
+@CODE_START@@JAVA@<class modifiers> class <class name>  {
+	// Dealing with Classes (Class body) 
+	// variables 
+	<field declarations (Static and Non-Static)>
+	// methods
+	<method declarations (Static and Non-Static)>
+}
+@CODE_END@
+
+<p>A class can contain fields to describe about properties and methods to describe the behavior of an object.</p>
+
+<p>Below is an example showing the <b>Class of the Car </b> that defines 3 fields namely <b>wheels, speed, brand, model and color.</b> Also the class contains a member <b>function traveling(String source, String destination).</b></p>
+
+<h5>Simple Program on Class and Object of the Car</h5>	
+<section>  
+    <div id="Car" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:550px;border-radius:10px;">class Car {
+	
+	// fields
+	int wheels;
+	int speed;
+	String brand;
+	String model;
+	String color;
+	
+	// display method
+	void traveling(String source, String destination) {
+		System.out.println("traveling from: "+source+" to: "+destination+" with speed of: "+speed);
+	}
+	
+	// main method 
+	public static void main(String[] args){ 
+	// object creation
+	Car maruthiAlto = new Car();
+	// accessing variables in object using (.) operator
+	maruthiAlto.wheels = 4;
+	maruthiAlto.speed = 60;
+	maruthiAlto.brand = "maruthi";
+	maruthiAlto.color = "red";
+	// accessing methods in object
+	maruthiAlto.traveling("Delhi", "Bangalore");
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Car','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+
+
+<h4>Object</h4>
+<p>An object is an instance of a class or object is creation of memory structure for class. </p>
+<h5> Characteristics of an object.</h5>
+<p> Objects have state, behaviors and identity.</p>
+<ul>
+	<li> State : represent the data(values) of an object.</li>
+	<li> Behavior : represent the behavior (functionality's )  of an object.</li>
+	<li> Identity : every object in this world has identity to differentiate with others object. </li>
+</ul>	
+
+<b>Example: </b><br>A Student has properties- id, name and email etc. behaviors - reading, writing and studing etc.</p>
+
+<p>Let us now look deep into what are objects. If we consider the real-world we can find many objects around us, Cars, Dogs, Humans, etc. All these objects have a properties, behavior and state.</p>
+
+<p>If you compare the software object with a real world object, they have very similar characteristics.</p>				
+<p>Software objects also have a state and behavior. A software object's state is stored in fields and behavior is shown via methods.</p>	
+<p>So in software development, methods operate on the internal state of an object and the object-to-object communication is done via methods.</p>
+
+<h4>Creating an Object :</h4>
+<p>As mentioned previously a class provides the blueprints for objects. So basically an object is created from a class. In java the new key word is used to create new objects. </p>
+<p>There are three steps when creating an object from a class:</p>
+<p><b>Declaration </b>A variable declaration with an object type.</p>
+<p><b>Instantiation </b>The 'new' key word is used to create the object.</p>
+<p><b>Initialization </b>The 'new' keyword is followed by a call to a constructor. This call initializes the new object.</p>
+
+<h5>Object Creation Syntax</h5>
+@CODE_START@@JAVA@/* First create an object */
+ClassName ObjectReference = new Constructor();
+@CODE_END@
+
+<h4>Accessing Instance Variables and Methods :</h4>
+<p>Instance variables and methods are accessed via (.) dot operator on object reference.</p>
+
+<h5>Syntax</h5>
+@CODE_START@@JAVA@/* Now call a variable as follows */
+ObjectReference.variableName;
+/* Now you can call a class method as follows */
+ObjectReference.methodName();
+@CODE_END@
+	
+	
+<h5>Example on Creating an Object and accessing instance variables and methods. </h5>
+
+<section>  
+    <div id="Supercar" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:450px;border-radius:10px;">class Supercar {
+    int wheels;
+    int speed;
+	String brand;
+	String color;
+    public void traveling(String city1,String city2){
+        System.out.println(city1 +" and "+ city2);
+    }
+	public static void main(String[] args){ 
+		// Object creation
+		Supercar maruthiAlto = new Supercar();
+		// accessing variables in object using (.) operator
+		maruthiAlto.wheels = 4;
+		maruthiAlto.speed = 60;
+		maruthiAlto.brand = "maruthi";
+		maruthiAlto.color = "red";
+		// accessing methods in object using(.) operator
+		maruthiAlto.traveling("Delhi", "Bangalore");
+	}
+}
+	
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Supercar','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>

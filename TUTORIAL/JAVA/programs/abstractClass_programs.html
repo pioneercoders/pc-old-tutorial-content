@@ -1,0 +1,142 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Example Program for abstract class.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+abstract class Example1 {
+	void method1() {
+		System.out.println("method1-Example1");
+	}
+
+	abstract void method2();
+
+	abstract void method3();
+}
+
+public class Example2 extends Example1 {
+	void method2() {
+		System.out.println("method2-Example2");
+	}
+
+	void method3() {
+		System.out.println("method3-Example2");
+	}
+
+	void method4() {
+		System.out.println("method4-Example2");
+	}
+
+	public static void main(String args[]) {
+		Example1 example1 = new Example2();
+		example1.method1();
+		example1.method2();
+		example1.method3();
+		// example1.method4();//error check this point
+		System.out.println();
+		Example2 example2 = new Example2();
+		example2.method1();
+		example2.method2();
+		example2.method3();
+		example2.method4();
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>method1-Example1<br>
+	   method2-Example2<br>
+	   method3-Example2<br>
+
+	   method1-Example1<br>
+	   method2-Example2<br>
+	   method3-Example2<br>
+	   method4-Example2
+
+</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Example for understanding abstractclass.</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+abstract class First {
+	void method1() {
+		System.out.println("method1-first");
+	}
+
+	void method2() {
+		System.out.println("method2-first");
+	}
+
+	void method3() {
+		System.out.println("method3-first");
+	}
+}
+
+public class Second extends First {
+
+	public static void main(String args[]) {
+		First first = new Second();
+		first.method1();
+		first.method2();
+		first.method3();
+	}
+}
+
+@CODE_END@
+<div class="output-panel">
+	<p>method1-first<br>
+	   method2-first<br>
+   	   method3-first
+</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Write a example program for abstraction ?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class AbstractionEx {
+	public static void main(String args[]) {
+		A a = new C();
+		a.method1();
+		a.method2();
+		a.method3();
+	}
+}
+
+abstract class A {
+	abstract void method1();
+
+	abstract void method2();
+
+	abstract void method3();
+}
+
+abstract class B extends A {
+	void method1() {
+		System.out.println("method1");
+	}
+}
+
+class C extends B {
+	void method2() {
+		System.out.println("method2");
+	}
+
+	void method3() {
+		System.out.println("method3");
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>method1<br>
+	   method2<br>
+	   method3</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>

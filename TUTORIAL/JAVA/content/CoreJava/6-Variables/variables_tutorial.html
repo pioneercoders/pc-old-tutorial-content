@@ -1,0 +1,62 @@
+
+<h4>What is Variable?</h4>
+<p>In maths, a variable is a quantity that may change within the context of a mathematical problem or experiment.<p>
+@CODE_START@@JAVA@Ex: a = x+y; here a,x and y are variables to store different 
+	numbers for each and every expriment of addition.
+Expriment 1:  x=4 , y=5 then a = 9
+Expriment 2:  x=6 , y=6 then a = 12
+@CODE_END@
+
+<p>In Java also it is similar, variable is name of reserved area allocated in memory locations to store values. Variables are used to store information to be referenced and manipulated in a program.</p>
+
+@IMG_START@JAVA/variable_memory/png@IMG_END@
+
+<h4>Whey we need a Variable?</h4>
+<p> A computer program is a collection of instructions that performs a specific task to automate physical process, to process any task we need data , In computers we capture this data in the form of variables</p>
+
+<h4>Variable declarations</h4>	
+<p>
+When you declare a variable, Java reserves memory locations of sufficient size to store the variable type. The actual data values will be stored in these memory locations. variable contains variable name it allowcates a default value.
+</p>
+
+<h4>Syntax</h4>
+
+@CODE_START@@JAVA@Datatype variable_name;
+byte age;
+@CODE_END@
+
+<h4>Variable initialization</h4>
+<p>It is the process of storing user defined values at the time of allocation of memory space.</p>
+
+<h4>Syntax</h4>
+
+@CODE_START@@JAVA@byte age =100;@CODE_END@
+
+<h4>Variable assignment</h4>
+<p>Assigning or providing a Value to variable if it is already declared or initialized.</p>
+
+<h4>Syntax</h4>
+
+@CODE_START@@JAVA@Variable_name = Value;
+int marks =80;
+int total;
+total = 25; 	     //direct assigned variable
+total = marks;  	  	 //assigned value in term of variable
+total = marks + 15;	//assigned value as term of expression
+@CODE_END@
+
+	
+<h4>Rules to declare a Variable</h4>
+<ul>
+	<li>Every variable name should start with either alphabets or underscore ( _ ) or dollar ( $ ) symbol.</li>
+	<li>The convention, however, is to always begin your variable names with a letter, not "$" or "_".</li>
+	<li>Variable names are case-sensitive.</li>
+	<li>No space are allowed in the variable declarations.</li>
+	<li>Except underscore ( _ ) no special symbol are allowed in the middle of variable declaration</li>
+	<li>Variable name always should exist in the left hand side of assignment operators.</li>
+	<li>Maximum length of variable is 64 characters.</li>
+	<li>No keywords should access variable name.</li>
+</ul>
+
+<h4>Best Practices for Variable declaration</h4>
+Conventions (and common sense) apply to this rule as well. When choosing a name for your variables, use full words instead of cryptic abbreviations. Doing so will make your code easier to read and understand. In many cases it will also make your code self-documenting; fields named cadence, speed, and gear, for example, are much more intuitive than abbreviated versions, such as s, c, and g.

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>		
+	<div class="container">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 content-main">
+			<div class="content-body">
+				<div class="__header">
+					<h2 class="_title">Control Statements</h2>				
+				</div>	
+				<div class="col-lg-12 col-sm-12 col-md-12 col-lg-12 _content-main-text">
+					<h3 class="subheading">Control Statements :</h3>
+					<p>In this tutorial we are going to discuss the control statements. Different types of control statements: the decision making statements (if-then, if-then-else and switch), looping statements (while, do-while and for) and branching statements (break, continue, return) supported by the Java programming language.</p>
+					<p>The control statement are used to controll the flow of execution of the program . This execution order depends on the supplied data values and the conditional logic. Java contains the following types of control statements:</p>
+					<p>Selection Statements</p>
+					<p>Repetition Statements</p>
+					<p>Branching Statements</p>
+					<h3 class="subheading">Selection Statements(The if-then and if-then-else Statements) :</h3>
+					<h4>The if-then Statement:</h4>
+					<p>The if-then statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular test evaluates to true. For example, the Bicycleclass could allow the brakes to decrease the bicycle's speed only if the bicycle is already in motion. One possible implementation of the applyBrakes method could be as follows: </p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Syntax</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">if</span><span> (conditional_expression) {</span><br>
+									<span><</span><span>statements></span><br>
+									<span>..........;</span><br>
+									<span>..........;</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on if Condition</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">void</span><span> applyBrakes {</span><br>
+									<span class="comment">// the "if" clause : bicycle must be moving</span><br>
+									<span class="keywords">if</span><span> (isMoving) {</span><br>
+									<span class="comment">// the "then" clause : decrease current speed</span><br>
+									<span>currentSpeed--</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<p>If this test evaluates to false (meaning that the bicycle is not in motion), control jumps to the end of the if-then statement.</p>
+					<p>In addition, the opening and closing braces are optional, provided that the "then" clause contains only one statement:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on if Condition</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">void</span><span> applyBrakes {</span><br>
+									<span class="comment">// same as above, but without braces</span><br>
+									<span class="keywords">if</span><span> (isMoving) {</span><br>
+									<span>currentSpeed--</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<p>Deciding when to omit the braces is a matter of personal taste. Omitting them can make the code more brittle. If a second statement is later added to the "then" clause, a common mistake would be forgetting to add the newly required braces. The compiler cannot catch this sort of error; you'll just get the wrong results.</p>
+					<h4>The if-then-else Statement:</h4>
+					<p>The if-then-else statement provides a secondary path of execution when an "if" clause evaluates to false. You could use an if-then-else statement in the applyBrakes method to take some action if the brakes are applied when the bicycle is not in motion. In this case, the action is to simply print an error message stating that the bicycle has already stopped. </p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Syntax</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">if</span><span> (conditional_expression) {</span><br>
+									<span><</span><span>statements></span><br>
+									<span>..........;</span><br>
+									<span>..........;</span><br>
+									<span>}</span><br>
+									<span class="keywords">else</span><span> (conditional_expression) {</span><br>
+									<span><</span><span>statements></span><br>
+									<span>..........;</span><br>
+									<span>..........;</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on if Condition</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">void</span><span> applyBrakes {</span><br>
+									<span class="keywords">if</span><span> (isMoving) {</span><br>
+									<span>currentSpeed--</span><br>
+									<span>}</span><br>
+									<span class="keywords">else</span><span> {</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("The Bicycle has" + "already stopped!");</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<p>The following program, IfElseDemo, assigns a grade based on the value of a test score: an A for a score of 90% or above, a B for a score of 80% or above, and so on.</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on if else Condition</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> IfElseDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">int</span><span> testscore = 76;</span><br>
+									<span class="keywords">char</span><span> grade;</span><br>
+									<span class="keywords">if</span><span> (testscore >= 90) {</span><br>
+									<span>grade = 'A';</span><br>
+									<span>}</span><br>
+									<span class="keywords">else if</span><span> (testscore >= 80) {</span><br>
+									<span>grade = 'B';</span><br>
+									<span>}</span><br>
+									<span class="keywords">else if</span><span> (testscore >= 70) {</span><br>
+									<span>grade = 'C';</span><br>
+									<span>}</span><br>
+									<span class="keywords">else if</span><span> (testscore >= 60) {</span><br>
+									<span>grade = 'D';</span><br>
+									<span>}</span><br>
+									<span class="keywords">else</span><span> {</span><br>
+									<span>grade = 'F';</span><br>
+									<span>}</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("Grade = " +</span><span class="data"> grade</span>);<br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>Grade = C</span><br>
+							</samp>
+						</figure>
+					</main>
+					<p>You may have noticed that the value of testscore can satisfy more than one expression in the compound statement: 76 >= 70 and 76 >= 60. However, once a condition is satisfied, the appropriate statements are executed (grade = 'C';) and the remaining conditions are not evaluated.</p>
+					<h4>The switch Statement :</h4>
+					<p>Unlike if-then and if-then-else statements, the switch statement can have a number of possible execution paths. A switch works with the byte, short, char, and int primitive data types. It also works with enumerated types (discussed in Enum Types), the String class, and a few special classes that wrap certain primitive types: Character, Byte, Short, and Integer (discussed in Numbers and Strings).</p>
+					<p>The following code example, SwitchDemo, declares an int named month whose value represents a month. The code displays the name of the month, based on the value of month, using the switchstatement.</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Syntax</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">switch</span><span> (control_expression) {</span><br>
+									<span>case expression 1</span><br>
+									<span><</span><span>statements></span><br>
+									<span>case expression 2</span><br>
+									<span><</span><span>statements></span><br>
+									<span>..........;</span><br>
+									<span>..........;</span><br>
+									<span>case expression n</span><br>
+									<span><</span><span>statements></span><br>
+									<span>default :</span><br>
+									<span><</span><span>statements> ;</span><br>
+									<span>}</span><span class="comment"> end switch</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on Switch Statement</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> SwitchDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">int</span><span> month = 8;</span><br>
+									<span class="keywords">String</span><span> monthString;</span><br>
+									<span class="keywords">switch</span><span> (month) {</span><br>
+									<span class="data">case 1:</span> monthString = "January";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 2:</span> monthString = "February";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 3:</span> monthString = "March";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 4:</span> monthString = "April";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 5:</span> monthString = "May";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 6:</span> monthString = "June";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 7:</span> monthString = "July";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 8:</span> monthString = "Augest";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 9:</span> monthString = "September";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 10:</span> monthString = "October";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 11:</span> monthString = "November";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">case 12:</span> monthString = "December";<br>
+									<span class="keywords">break</span><br>
+									<span class="data">default:</span> monthString = "Invalid Month";<br>
+									<span class="keywords">break</span><br>
+									<span>}</span><br>
+									<span>System.</span><span class="data">out</span><span>.println(</span><span class="data"> monthString</span>);<br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>Augest</span><br>
+							</samp>
+						</figure>
+					</main>
+					<p>The body of a switch statement is known as a switch block. A statement in the switch block can be labeled with one or more case or default labels. The switch statement evaluates its expression, then executes all statements that follow the matching case label.</p>
+					<p>You could also display the name of the month with if-then-else statements:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on if else Condition</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">int</span><span> month = 8;</span><br>
+									<span class="keywords">if</span><span> (month >= 1) {</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("January");</span><br>
+									<span>}</span><br>
+									<span class="keywords">else if</span><span> (month == 2) {</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("February");</span><br>
+									<span>}</span><br>
+									<span>....</span><span class="comment"> // and so on </span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<p>Deciding whether to use if-then-else statements or a switch statement is based on readability and the expression that the statement is testing. An if-then-else statement can test expressions based on ranges of values or conditions, whereas a switch statement tests expressions based only on a single integer, enumerated value, or String object.Another point of interest is the break statement. Each break statement terminates the enclosing switch statement. Control flow continues with the first statement following the switch block. The break statements are necessary because without them, statements in switch blocks fall through: All statements after the matching case label are executed in sequence, regardless of the expression of subsequent case labels, until a break statement is encountered. The programSwitchDemoFallThrough shows statements in a switch block that fall through. The program displays the month corresponding to the integer month and the months that follow in the year:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on Switch Statement</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">public class</span><span> SwitchDemoFallThrough {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">java.util.ArrayList</span><span> futureMonths = </span><span class="keywords"> new</span> java.util.ArrayList();<br>
+									<span class="keywords">int</span><span> month = 8;</span><br>
+									<span class="keywords">switch</span><span> (month) {</span><br>
+									<span class="data">case 1:</span> <span class="data"> futureMonths</span>.add("January");<br>
+									<span class="data">case 2:</span> <span class="data"> futureMonths</span>.add("February");<br>
+									<span class="data">case 3:</span> <span class="data"> futureMonths</span>.add("March");<br>
+									<span class="data">case 4:</span> <span class="data"> futureMonths</span>.add("April");<br>
+									<span class="data">case 5:</span> <span class="data"> futureMonths</span>.add("May");<br>
+									<span class="data">case 6:</span> <span class="data"> futureMonths</span>.add("June");<br>
+									<span class="data">case 7:</span> <span class="data"> futureMonths</span>.add("July");<br>
+									<span class="data">case 8:</span> <span class="data"> futureMonths</span>.add("Augest");<br>
+									<span class="data">case 9:</span> <span class="data"> futureMonths</span>.add("September");<br>
+									<span class="data">case 10:</span> <span class="data"> futureMonths</span>.add("October");<br>
+									<span class="data">case 11:</span> <span class="data"> futureMonths</span>.add("November");<br>
+									<span class="data">case 12:</span> <span class="data"> futureMonths</span>.add("December");<br>
+									<span class="keywords">break</span><br>
+									<span class="data">default:</span> <span class="keywords">break</span><br>
+									<span>}</span><br>
+									<span class="keywords">if</span><span> (futureMonths.isEmpty()) {</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("Invalid month number");</span><br>
+									<span>}</span><br>
+									<span class="keywords">else</span> {<br>
+									<span class="keywords">for</span>(<span class="keywords">String</span> monthName : futureMonths){<br>
+									<span>System.</span><span class="data">out</span><span>.println(</span><span class="data">monthName</span>);<br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>This is the output form the code :</span><br>
+								<span>Augest</span><br>
+								<span>September</span><br>
+								<span>October</span><br>
+								<span>November</span><br>
+								<span>December</span><br>
+							</samp>
+						</figure>
+					</main>
+					<p>Technically, the final break is not required because flow falls out of the switch statement. Using a break is recommended so that modifying the code is easier and less error prone. The default section handles all values that are not explicitly handled by one of the case sections.</p>
+					<p>The following code example, SwitchDemo2, shows how a statement can have multiple case labels. The code example calculates the number of days in a particular month:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example2 on Switch Statement</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">public class</span><span> SwitchDemo2 {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">int</span><span> month = 2;</span><br>
+									<span class="keywords">int</span><span> year = 2000;</span><br>
+									<span class="keywords">int</span><span> numDays = 0;</span><br>
+									<span class="keywords">switch</span><span> (month) {</span><br>
+									<span>case 1: case 3: case 5: case 7: case 8: case 10: case 12: numDays = 31;</span><br>
+									<span class="keywords">break;</span><br>
+									<span>case 4: case 6: case 9: case 11: numDays = 30;</span><br>
+									<span class="keywords">break;</span><br>
+									<span>case 2:</span><br>
+									<span class="keywords">if</span>(((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0))<br>
+									<span>numDays = 29;</span><br>
+									<span class="keywords">else</span><br>
+									<span>numDays = 28;</span><br>
+									<span class="keywords">break;</span><br>
+									<span class="data">default:</span> <br>
+									<span>System.</span><span class="data">out</span><span>.println("Invalid month");</span><br>
+									<span class="keywords">break</span><br>
+									<span>}</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("Number of days = "</span><span class="data"> + numDays</span>);<br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>This is the output form the code :</span><br>
+								<span>Number of days = 29</span><br>
+							</samp>
+						</figure>
+					</main>
+					<h4>Using Strings in switch Statements:</h4>
+					<p>In Java SE 7 and later, you can use a String object in the switch statement's expression. The following code example, StringSwitchDemo, displays the number of the month based on the value of the String named month:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example using Strings in Switch Statement</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> StringSwitchDemo {</span><br>
+									<span class="keywords">public static int </span> getMonthNumber(<span class="keywords">String</span> month) {<br>
+									<span class="keywords">int </span> monthNumber = 0;<br>
+									<span class="keywords">if</span> (month == null) {<br>
+									<span class="keywords">return </span> monthNumber;<br>
+									<span>}</span><br>
+									<span class="keywords">switch</span><span> (month.toLowerCase()) {</span><br>
+									<span class="data">case </span>"January":<br>
+									<span>monthNumber = 1;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"February":<br>
+									<span>monthNumber = 2;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"March":<br>
+									<span>monthNumber = 3;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"April":<br>
+									<span>monthNumber = 4;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"May":<br>
+									<span>monthNumber = 5;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"June":<br>
+									<span>monthNumber = 6;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"July":<br>
+									<span>monthNumber = 7;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"Augest":<br>
+									<span>monthNumber = 8;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"September":<br>
+									<span>monthNumber = 9;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"October":<br>
+									<span>monthNumber = 10;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"November":<br>
+									<span>monthNumber = 11;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">case </span>"December":<br>
+									<span>monthNumber = 12;</span><br>
+									<span class="keywords">break</span><br>
+									<span class="data">default:</span><br>
+									<span>monthNumber = 0;<br>
+									<span class="keywords">break</span><br>
+									<span>}</span><br>
+									<span class="keywords">return</span> monthNumber;<br>
+									<span>}</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">String </span><span> month = "Augest";</span><br>
+									<span class="keywords">int </span><span> returnMonthNumber = </span><span class="keywords">StringSwitchDemo</span>.getMonthNumber(month);<br>
+									<span class="keywords">if</span>(returnMonthNumber == 0){<br>
+									<span>System.</span><span class="data">out</span><span>.println("Invalid month");</span><br>
+									<span>}</span><br>
+									<span class="keywords">else</span> {<br>
+									<span>System.</span><span class="data">out</span><span>.println(</span><span class="data"> returnMonthNumber</span>);<br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>8</span><br>
+							</samp>
+						</figure>
+					</main>
+					<p>The String in the switch expression is compared with the expressions associated with each case label as if the String.equals method were being used. In order for the StringSwitchDemo example to accept any month regardless of case, month is converted to lowercase (with the toLowerCase method), and all the strings associated with the case labels are in lowercase.</p>
+					<p><b>Note :</b>This example checks if the expression in the switch statement is null. Ensure that the expression in any switch statement is not null to prevent a NullPointerException from being thrown.</p>
+					<h3 class="subheading">Repetition Statements(The while and do-while Statements) :</h3>
+					<h3 class="subheading">while loop statements :</h3>
+					<p>The while statement continually executes a block of statements while a particular condition is true. Its syntax can be expressed as: </p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Syntax</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">while</span><span> (expression) {</span><br>
+									<span><</span><span>statements></span><br>
+									<span>..........;</span><br>
+									<span>..........;</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<p>The while statement evaluates expression, which must return a boolean value. If the expression evaluates to true, the while statement executes the statement(s) in the while block. The whilestatement continues testing the expression and executing its block until the expression evaluates to false. Using the while statement to print the values from 1 through 10 can be accomplished as in the following WhileDemo program:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on While Condition</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> WhileDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">int</span><span> count = 1;</span><br>
+									<span class="keywords">while</span><span> (count < </span><span>11) {</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("Count is = " +</span><span class="data"> count</span>);<br>
+									<span>count++</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<p>You can implement an infinite loop using the while statement as follows: </p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Syntax</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">while</span><span> (true) {</span><br>
+									<span class="comment">// your code goes here</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<h3 class="subheading">do-while loop statements :</h3>
+					<p>This is another looping statement that tests the given condition past so you can say that the do-while looping statement is a past-test loop statement. First the do block statements are executed then the condition given in while statement is checked. So in this case, even the condition is false in the first attempt, do block of code is executed at least once. Syntax: do{ ; ...; ...; }while (expression); The difference between do-while and while is that do-while evaluates its expression at the bottom of the loop instead of the top. Therefore, the statements within the do block are always executed at least once, as shown in the following DoWhileDemo program: </p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on Do-While Condition</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> DoWhileDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">int</span><span> count = 1;</span><br>
+									<span class="keywords">do</span><span> {</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("Count is = " +</span><span class="data"> count</span>);<br>
+									<span>count++</span><br>
+									<span>}</span><span class="keywords">while</span><span> (count < </span><span>11) </span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<h3 class="subheading">For loop statement :</h3>
+					<p>The for statement provides a compact way to iterate over a range of values. Programmers often refer to it as the "for loop" because of the way in which it repeatedly loops until a particular condition is satisfied. The general form of the for statement can be expressed as follows:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Syntax</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">for</span><span> (initialization;condition;increment or decrement) {</span><br>
+									<span><</span><span>statements></span><br>
+									<span>..........;</span><br>
+									<span>..........;</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<p>When using this version of the for statement, keep in mind that:</p>
+					<p>1.The initialization expression initializes the loop; it's executed once, as the loop begins.</p>
+					<p>2.When the termination expression evaluates to false, the loop terminates.</p>
+					<p>3.The increment expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to increment or decrement a value.</p>
+					<p>The following program, ForDemo, uses the general form of the for statement to print the numbers 1 through 10 to standard output:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on For loop</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> ForDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">int</span><span> count = 1;</span><br>
+									<span class="keywords">for</span>(<span class="keywords">int</span> i; i<span><</span>11; i++){</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("Count is = " +</span><span class="data"> i</span>);<br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>The Output of this program is :</span><br>
+								<span>Count is :1</span><br>
+								<span>Count is :2</span><br>
+								<span>Count is :3</span><br>
+								<span>Count is :4</span><br>
+								<span>Count is :5</span><br>
+								<span>Count is :6</span><br>
+								<span>Count is :7</span><br>
+								<span>Count is :8</span><br>
+								<span>Count is :9</span><br>
+								<span>Count is :10</span><br>
+							</samp>
+						</figure>
+					</main>
+					<p>Notice how the code declares a variable within the initialization expression. The scope of this variable extends from its declaration to the end of the block governed by the for statement, so it can be used in the termination and increment expressions as well. If the variable that controls a for statement is not needed outside of the loop, it's best to declare the variable in the initialization expression. The names i, j, and k are often used to control for loops; declaring them within the initialization expression limits their life span and reduces errors.The three expressions of the for loop are optional; an infinite loop can be created as follows:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Example for infinite for loop</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="comment">// infinite loop</span><br>
+									<span class="keywords">for</span><span> ( ; ; ) {</span><br>
+									<span class="comment">// your code goes here</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<p>The for statement also has another form designed for iteration through Collections and arrays This form is sometimes referred to as the enhanced for statement, and can be used to make your loops more compact and easy to read. To demonstrate, consider the following array, which holds the numbers 1 through 10:</p>
+					<p>int[] numbers= {1,2,3,4,5,6,7,8,9,10};</p>
+					<p>The following program, EnhancedForDemo, uses the enhanced for loop through the array:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example on Enhanced For loop through an array </figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> EnhancedForDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">int</span><span>[] numbers = {1,2,3,4,5,6,7,8,9,10};</span><br>
+									<span class="keywords">for</span>(<span class="keywords">int</span> item : numbers){</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("Count is = " +</span><span class="data"> item</span>);<br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>Count is :1</span><br>
+								<span>Count is :2</span><br>
+								<span>Count is :3</span><br>
+								<span>Count is :4</span><br>
+								<span>Count is :5</span><br>
+								<span>Count is :6</span><br>
+								<span>Count is :7</span><br>
+								<span>Count is :8</span><br>
+								<span>Count is :9</span><br>
+								<span>Count is :10</span><br>
+							</samp>
+						</figure>
+					</main>
+					<p>We recommend using this form of the for statement instead of the general form whenever possible.</p>
+					<h3 class="subheading">Branching statement :</h3>
+					<h4>The Break Statement :</h4>
+					<p>The break statement has two forms: labeled and unlabeled. You saw the unlabeled form in the previous discussion of the switch statement. You can also use an unlabeled break to terminate a for, while, or do-while loop, as shown in the following BreakDemo program:</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Syntax</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">break</span>;<span class="comment">//  breaks the innermost loop or switch statement.</span><br>
+									<span class="keywords">break</span> label;<span class="comment">//   breaks the outermost loop in a series of nested loops.</span><br>
+								</code>
+							</div>
+						</figure>
+					</main>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example Break Statement</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> BreakDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">int </span>[] arrayOfInts = {32, 87, 3, 589, 12, 1076, 2000, 8, 622, 127};<br>
+									<span class="keywords">int </span> searchFor = 12;<br>
+									<span class="keywords">int </span> i;<br>
+									<span class="keywords">boolean </span> fountIt = false;<br>
+									<span class="keywords">for</span> (i = 0; i <span><</span> arrayOfInts.length; i++) {<br>
+									<span class="keywords">if</span> (arrayOfInts[i] == searchFor) {<br>
+									<span> fountIt = true;</span><br>
+									<span class="keywords">break </span>;<br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span class="keywords">if</span>(fountIt){<br>
+									<span>System.</span><span class="data">out</span><span>.println("Found +"</span><span class="data">searchFor</span> + "at index +<span class="data"> i</span>);</span><br>
+									<span>}</span><br>
+									<span class="keywords">else</span> {<br>
+									<span>System.</span><span class="data">out</span><span>.println(</span><span class="data"> searchFor</span> + "not in the array");<br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>Found 12 at index 4</span><br>
+							</samp>
+						</figure>
+					</main>
+					<p>This program searches for the number 12 in an array. The break statement, shown in boldface, terminates the for loop when that value is found. Control flow then transfers to the statement after the for loop.</p>
+					<p>An unlabeled break statement terminates the innermost switch, for, while, or do-while statement, but a labeled break terminates an outer statement. The following program, BreakWithLabelDemo, is similar to the previous program, but uses nested for loops to search for a value in a two-dimensional array. When the value is found, a labeled break terminates the outer for loop (labeled "search"):</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example Break Statement with label</figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> BreakWithLabelDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">int </span>[][] arrayOfInts = {32, 87, 3, 589, 12, 1076, 2000, 8, 622, 127, 77, 955};<br>
+									<span>};</span><br>
+									<span class="keywords">int </span> searchFor = 12;<br>
+									<span class="keywords">int </span> i;<br>
+									<span class="keywords">int </span> j;<br>
+									<span class="keywords">boolean </span> fountIt = false;<br>
+									<span>search:</span><br>
+									<span class="keywords">for</span> (i = 0; i <span><</span> arrayOfInts.length; i++) {<br>
+									<span class="keywords">for</span> (j = 0; j <span><</span> arrayOfInts.length; j++) {<br>
+									<span class="keywords">if</span> (arrayOfInts[i][j] == searchFor) {<br>
+									<span> fountIt = true;</span><br>
+									<span class="keywords">break </span> search;<br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span class="keywords">if</span>(fountIt){<br>
+									<span>System.</span><span class="data">out</span><span>.println("Found +"</span><span class="data">searchFor</span> + "at index +<span class="data"> i</span> , +<span class="data"> j</span>);<br>
+									<span>}</span><br>
+									<span class="keywords">else</span> {<br>
+									<span>System.</span><span class="data">out</span><span>.println(</span><span class="data"> searchFor</span> + "not in the array");<br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>Found 12 at index 1, 0</span><br>
+							</samp>
+						</figure>
+					</main>
+					<p>The break statement terminates the labeled statement; it does not transfer the flow of control to the label. Control flow is transferred to the statement immediately following the labeled (terminated) statement. </p>
+					<h4> The Continue Statement :</h4>
+					<p>The continue statement skips the current iteration of a for, while , or do-while loop. The unlabeled form skips to the end of the innermost loop's body and evaluates the boolean expression that controls the loop. The following program, ContinueDemo , steps through a String, counting the occurences of the letter "p". If the current character is not a p, the continue statement skips the rest of the loop and proceeds to the next character. If it is a "p", the program increments the letter count. </p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example Continue Statement </figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> ContinueDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">String </span> searchMe = "peter piper picked a " + "peck of peppers";<br>
+									<span class="keywords">int </span> max = <span class="data">searchMe</span>.length();<br>
+									<span class="keywords">int </span> numPs = 0;<br>
+									<span class="keywords">for</span> (i = 0; i <span><</span> max; i++) {<br>
+									<span class="comment">// interested only in p's</span><br>
+									<span class="keywords">if</span> (searchMe.charAt(i) != 'p') {<br>
+									<span class="keywords">continue</span>;<br>
+									<span>}</span><br>
+									<span>numPs++</span><br>
+									<span>}</span><br>
+									<span>System.</span><span class="data">out</span><span>.println("Found +"</span><span class="data">numPs</span> + "p's in the String. );<br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>Found 9 p's in the string.</span><br>
+							</samp>
+						</figure>
+					</main>
+					<p>To see this effect more clearly, try removing the continue statement and recompiling. When you run the program again, the count will be wrong, saying that it found 35 p's instead of 9.A labeled continue statement skips the current iteration of an outer loop marked with the given label. The following example program, ContinueWithLabelDemo, uses nested loops to search for a substring within another string. Two nested loops are required: one to iterate over the substring and one to iterate over the string being searched. The following program, ContinueWithLabelDemo, uses the labeled form of continue to skip an iteration in the outer loop.</p>
+					<main>
+						<figure>
+							<figcaption id="example1-caption">Simple Example Continue Statement with label </figcaption>
+							<div class="code_block">
+								<code>
+									<span class="keywords">class</span><span> ContinueWithLabelDemo {</span><br>
+									<span class="keywords">public static void </span>main(String[] args){ <br>
+									<span class="keywords">String </span> searchMe = "Look for a substring in me ";<br>
+									<span class="keywords">String </span> subString = "sub";<br>
+									<span class="keywords">boolean </span> fountIt = false;<br>
+									<span class="keywords">int </span> max = <span class="data">searchMe</span>.length() - <span class="data">subString</span>.length();<br>
+									<span>test:</span><br>
+									<span class="keywords">for</span> (i = 0; i <span><=</span> max; i++) {<br>
+									<span class="keywords">int </span> n = <span class="data">subString</span>.length();<br>
+									<span class="keywords">int </span> j = i;<br>
+									<span class="keywords">int </span> K = 0;<br>
+									<span class="keywords">while </span> (n-- != 0) {<br>
+									<span class="keywords">if</span> (searchMe.charAt(j++) != subString.charAt(k++)) {<br>
+									<span class="keywords">continue</span> test;<br>
+									<span>}</span><br>
+									<span>}</span><br>
+									<span>foundIt = true;</span><br>
+									<span class="keywords">break</span> test;<br>
+									<span>}</span><br>
+									<span>System.</span><span class="data">out</span><span>.println(</span><span class="data">FoundIt?</span>"Fount it" : "Didn't find it");<br>
+									<span>}</span><br>
+									<span>}</span><br>
+								</code>
+							</div>
+							<samp>Output<br>
+								<span>Found it.</span><br>
+							</samp>
+						</figure>
+					</main>
+					<h4>The return statement :</h4>
+					<p>The last of the branching statements is the return statement. The return statement exits from the current method, and control flow returns to where the method was invoked. The return statement has two forms: one that returns a value, and one that doesn't. To return a value, simply put the value (or an expression that calculates the value) after the return keyword.</p>
+					<p>return ++count;</p>
+					<p>The data type of the returned value must match the type of the method's declared return value. When a method is declared void, use the form of return that doesn't return a value.</p>
+					<p>return;</p>
+					<h3 class="subheading">Summary of Control Flow Statements :</h3>
+					<p>The if-then statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular test evaluates to true. The if-then-else statement provides a secondary path of execution when an "if" clause evaluates to false. Unlike if-then and if-then-else, the switch statement allows for any number of possible execution paths. The while and do-while statements continually execute a block of statements while a particular condition is true. The difference between do-while and while is that do-while evaluates its expression at the bottom of the loop instead of the top. Therefore, the statements within the do block are always executed at least once. The for statement provides a compact way to iterate over a range of values. It has two forms, one of which was designed for looping through collections and arrays.</p>
+				</div>	
+			</div>	
+		</div>	
+	</div>	
+</body>
+</html>

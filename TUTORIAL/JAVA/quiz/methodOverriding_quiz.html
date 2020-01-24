@@ -1,0 +1,43 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','b','b'], selAnswers: []}">
+		<div>
+			<h6>1. The overriding method has the same name, type of parameter and return type as the method it overrides?</h6>
+			<options values='{"values":["Yes", 
+                         "No"]}'
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                  <div>
+			<h6>2. An overriding method that return a subtype of the type returned by the overridden method is called?</h6>
+			<options values='{"values":["Override return type.", 
+                         "Method override retun type.", 
+                        " Covariant return type.",
+                        " None"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+                <div>
+			<h6>3. The symbol that is used to indicate that the method is override is?</h6>
+			<options values='{"values":["$", 
+                         "@", 
+                        "#",
+                        "None"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4. Select  which of the following are incorrect ?</h6>
+			<options values='{"values":[" Method overriding is used for Run time polymorphism.", 
+                         "A method declared final can be overridden.", 
+                        " A method declared static cannot be overridden but can be re-declared.",
+                        "  Method-overriding occurs in two classes."]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		
+		
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

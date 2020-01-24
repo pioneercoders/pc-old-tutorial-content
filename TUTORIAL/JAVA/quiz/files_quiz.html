@@ -1,0 +1,75 @@
+<!-- widget Quiz  -->	
+<h3>Files Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','a','c','b','a','a','c','b','c'], selAnswers: []}">
+		<div>
+			<h6>1. Which of these is used to perform all input & output operations in Java?</h6>
+			<options values='{"values":["streams","Variables","Classes","Methods"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2. Which of these is a type of stream in Java?</h6>
+			<options values='{"values":["Integer stream","Short stream","Byte stream ","Long stream"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3. Which of these classes are used by Byte streams for input and output operation? </h6>
+			<options values='{"values":["InputStream","InputOutputStream","Reader","All of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4. Which of these stream contains the classes which can work on character stream?</h6>
+			<options values='{"values":["InputStream","OutputStream","Character Stream","All of the mentioned"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5.  Which of these classes are used by character streams for input and output operations?</h6>
+			<options values='{"values":["InputStream","Writer","ReadStream","InputOutputStream"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6. Which of these class is used to read characters in a file?</h6>
+			<options values='{"values":["FileReader","FileWriter","FileInputStream","InputStreamReader"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. Which of these method of FileReader class is used to read characters from a file?</h6>
+			<options values='{"values":["read()","scanf()","get()","getInteger()"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. Which of these class can be used to implement input stream that uses a character array as the source?</h6>
+			<options values='{"values":["BufferedReader","FileReader","CharArrayReader","FileArrayReader"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>9. Which of these is a method to clear all the data present in output buffers?</h6>
+			<options values='{"values":["clear()","flush()","fflush()","close()"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>10. Which of these classes can return more than one character to be returned to input stream? </h6>
+			<options values='{"values":["BufferedReader","Bufferedwriter","PushbachReader","CharArrayReader"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

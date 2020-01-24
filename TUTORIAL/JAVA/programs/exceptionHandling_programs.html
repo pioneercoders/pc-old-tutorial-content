@@ -1,0 +1,164 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>write a simple program for ClassCastException?</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class ClasscastEx {
+}
+
+class Sample extends ClasscastEx {
+}
+
+public class Check {
+
+	public static void main(String args[]) {
+		ClasscastEx exobj = new ClasscastEx();
+		Sample sample = (Sample) exobj;
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>java.lang.ClassCastException: ClasscastEx cannot be cast to Sample</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Example  for ClassNotFound Exception.</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="TestEx" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class TestEx {
+	public static void main(String args[]) throws ClassNotFoundException {
+		Class.forName("Sample"); //here checks for Sample class
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('TestEx','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>  
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Example program for try-block.</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="TestEx1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class TestEx1 {
+	public static void main(String args[]) {
+		int var1, var2;
+		try {
+			// try block to handle code that may cause exception
+			var1 = 0;
+			var2 = 62 / var1;
+			System.out.println("This is try block....");
+		} catch (ArithmeticException e) {
+			// This block is to catch divide-by-zero error
+			System.out.println("Error: Don't divide a number by zero");
+		}
+		System.out.println("this is out of try-catch block ...");
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('TestEx1','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>  
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write a example program using try-cathch and finally blocks?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Check" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Check {
+	static void myMethod(int testnum) throws Exception {
+		System.out.println("method started");
+		if (testnum == 12)
+			throw new Exception();
+		System.out.println("method ended");
+		return;
+	}
+
+	public static void main(String args[]) {
+		int testnum = 12;
+		try {
+			System.out.println("try block begin");
+			myMethod(testnum);
+			System.out.println("try block ends");
+		} catch (Exception e) {
+			System.out.println("An Exception");
+		} finally {
+			System.out.println("finally");
+		}
+		System.out.println("out of try-catch block");
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Check','preview4','java' )">Run</button>
+	<div>
+        <iframe id="preview4"></iframe>
+    </div>  
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Example program using try with multiple catch blocks?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Check1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Check1 {
+	public static void main(String args[]) {
+		int num1 = 10;
+		int num2 = 0;
+		int result = 0;
+		int arr[] = new int[5];
+		try {
+			result = num1 / num2;
+			System.out.println("Result of Division:" + result);
+		} catch (ArithmeticException e) {
+			System.out.println("Err:Divided by Zero " + result);
+			arr[0] = 0;
+			arr[1] = 1;
+			arr[2] = 2;
+			arr[3] = 3;
+			arr[4] = 4;
+			arr[5] = 5;
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Err:Array Out of Bound");
+		}
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Check1','preview5','java' )">Run</button>
+	<div>
+        <iframe id="preview5"></iframe>
+    </div>  
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>

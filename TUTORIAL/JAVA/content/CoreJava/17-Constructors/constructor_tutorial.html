@@ -1,0 +1,60 @@
+<h4> What is constructor ? </h4> 
+
+<ul>
+<li> A java constructor has the same name as the name of the class to which it belongs.</li>
+<li> Constructor&rsquo;s syntax does not include a return type, since constructors never return a value.</li>
+<li> It is invoked at the time of object creation with new operator. </li>
+<li> If there is no constructor in a class, compiler automatically creates a default constructor.</li>
+<li> Class can have any number of constructors that differ in parameter lists.</li>
+</ul>
+
+<h4> Why we need constructor ? </h4>
+<p> Constructor is used to initialize the instance variables values at the time of object creation. </p>
+
+<h4> Types of java constructors </h4>
+<p>There are two types of constructors:</p>
+<p>1.Default constructor (no-arg constructor)</p>
+<p>2.Parameterized constructor</p>
+<p>Below is an example of a Car class containing 2 constructors. (one default and one parameterized constructor).</p>
+
+<h5>Simple Example on Student class Containing a constructors</h5>
+
+<section>  
+    <div id="Car" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:550px;border-radius:10px;">class Car {
+	int wheels;
+	int speed;
+	String brand;
+	String color;
+	
+	Car() {
+		System.out.println("Finished with Default Constructor");
+	}
+	
+	Car(int carWheels, int carSpeed) { // Parameterized constructor
+		wheels = carWheels;
+		speed = carSpeed;
+	}
+	void displayCarInfo(){
+		System.out.println("Car with: "+wheels+" wheels and travling "+
+												"with speed of:"+speed);
+	}
+	
+	public static void main(String[] args){ 
+	Car carObj1, carObj2;
+	
+	carObj1 = new Car();
+	carObj1.displayCarInfo();
+	
+	carObj2 = new Car(6, 60);
+	carObj2.displayCarInfo();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Car','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>

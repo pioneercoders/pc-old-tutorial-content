@@ -1,0 +1,127 @@
+
+<pc-accordion>
+
+	<accordion-item>
+		<accordion-title>simaple program to show working of user defined generics</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class Test
+{
+    // A Generic method example
+    static <T> void genericDisplay (T element)
+    {
+        System.out.println(element.getClass().getName() +
+                           " = " + element);
+    }
+  
+    // Driver method
+    public static void main(String[] args)
+    {
+         // Calling generic method with Integer argument
+        genericDisplay(11);
+  
+        // Calling generic method with String argument
+        genericDisplay("GeeksForGeeks");
+  
+        // Calling generic method with double argument
+        genericDisplay(1.0);
+    }
+}
+@CODE_END@
+<div class="output-panel">
+	<P>java.lang.Integer = 11<br>
+	java.lang.String = GeeksForGeeks<br>
+	java.lang.Double = 1.0
+
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+
+	<accordion-item>
+		<accordion-title>Example program of generics with single parameter</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class Genericssample<T>
+{
+    // An object of type T is declared
+    T obj;
+    Test(T obj) {  this.obj = obj;  }  // constructor
+    public T getObject()  { return this.obj; }\\\
+}
+  
+// Driver class to test above
+class Main
+{
+    public static void main (String[] args)
+    {
+        // instance of Integer type
+        Genericssample <Integer> iObj = new Genericssample<Integer>(15);
+        System.out.println(iObj.getObject());
+  
+        // instance of String type
+        Genericssample <String> sObj =
+                          new Genericssample<String>("Generics from PioneerCoders");
+        System.out.println(sObj.getObject());
+    }
+}
+@CODE_END@
+<div class="output-panel">
+	<P>15<br>
+	Generics from PioneerCoders
+
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Example program passing multiple parameters in Generic classes</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+// A Simple Java program to show multiple
+// type parameters in Java Generics
+ 
+// We use < > to specify Parameter type
+class Test<T, U>
+{
+    T obj1;  // An object of type T
+    U obj2;  // An object of type U
+ 
+    // constructor
+    Test(T obj1, U obj2)
+    {
+        this.obj1 = obj1;
+        this.obj2 = obj2;
+    }
+ 
+    // To print objects of T and U
+    public void print()
+    {
+        System.out.println(obj1);
+        System.out.println(obj2);
+    }
+}
+ 
+// Driver class to test above
+class Main
+{
+    public static void main (String[] args)
+    {
+        Test <String, Integer> obj =
+            new Test<String, Integer>("coders", 15);
+ 
+        obj.print();
+    }
+}
+@CODE_END@
+<div class="output-panel">
+	<P>coders<br>
+	15
+</P>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>

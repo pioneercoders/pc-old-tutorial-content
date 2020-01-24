@@ -1,0 +1,49 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>Write a program for hello world?</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="HelloWorld" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class HelloWorld {
+	   public static void main(String[] args) {
+	      // Prints "Hello, World" in the terminal window.
+	      System.out.println("Hello, World");
+	   }
+	}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('HelloWorld','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Write a program for Hello word with String...arg as arguments?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="Hello" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Hello {
+	static public void main(String... args) {
+		System.out.println("Hello,World");
+	}
+};
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Hello','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>
+

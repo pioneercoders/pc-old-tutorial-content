@@ -1,0 +1,25 @@
+<!-- widget Quiz  -->	
+<h3>ClassObject Quiz</h3>
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','a'], selAnswers: []}">
+		<div>
+			<h6>1). Which of the following statements  is false about objects ?</h6>
+			<options values='{"values":["An instance of a class is an object", "Objects can access both static and instance data", "Objects do not permit encapsulation", "Object is the super class of all other classes"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2). Select correct option(s) about class Object.</h6>
+			<options values='{"values":["The class Object is a superclass of all other classes.", "A variable of type Object can hold reference any object or  a null reference", "You must explicitly extend class object",
+			"All class and array types inherit the methods of class Object","Options 1,2 &4"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

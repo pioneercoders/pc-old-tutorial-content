@@ -1,0 +1,95 @@
+	<ul>
+		<li>Java annotations are used to provide meta data for your Java code. Being meta data, Java annotations do not directly affect the execution of your code, although some types of annotations can actually be used for that purpose.</li>
+		<li>Java annotations were added to Java from Java 5. This text covers Java annotations as they look in Java 6. As far as I know, Java annotations have not changed in Java 7, so this text should be valid for Java 7 programmers too.</li>
+	</ul>
+	<p><b>Java Annotation Purposes</b></p>
+	
+	<p>Java annotations are typically used for the following purposes:</p>
+	<ul>
+		<li>Compiler instructions</li>
+		<li>Build-time instructions</li>
+		<li>Runtime instructions</li>
+	</ul>
+		<p><b>Compiler instructions</b></p>	
+	<ul><li>Java has 3 built-in annotations that you can use to give instructions to the Java compiler. These annotations are explained in more detail later in this text.</li></ul>
+		
+		<p><b>Build-time instructions</b></p>
+		<ul><li>Java annotations can be be used at build-time, when you build your software project. The build process includes generating source code, compiling the source, generating XML files (e.g. deployment descriptors), packaging the compiled code and files into a JAR file etc. Building the software is typically done by an automatic build tool like Apache Ant or Apache Maven. Build tools may scan your Java code for specific annotations and generate source code or other files based on these annotations.</li></ul>
+		
+		<p><b>Runtime instructions</b></p>
+		<ul><li>Normally, Java annotations are not present in your Java code after compilation. It is possible, however, to define your own annotations that are available at runtime. These annotations can then be accessed viaJava Reflection, and used to give instructions to your program, or some third party API.</li></ul>
+	
+	<p><b>Annotation Basics</b></p>
+	<p>A Java annotation in its shortest form looks like this</p>
+	<p><b>@Entity</b></p>
+	<ul><li>The @ character signals to the compiler that this is an annotation. The name following the @ character is the name of the annotation. In the example above the annotation name is Entity.</li></ul>
+	
+	<p><b>Annotation Elements</b></p>
+	<ul><li>A Java annotation can have elements for which you can set values. An element is like an attribute or parameter. Here is an example of a Java annotation with an element</li></ul>
+	
+	<p><b>@Entity(tableName = "vehicles")</b></p>
+	<ul>
+		<li>The annotation in this example contains a single element named tableName, with the value set to vehicles. Elements are enclosed inside the parentheses after the annotation name. Annotations without elements do not need the parentheses.</li>
+		<li>An annotation can contain multiple elements. Here is a multiple element<b>Java annotation example</b></li>
+	</ul>
+	@CODE_START@@JAVA@@Entity(tableName = "vehicles", primaryKey = "id") @CODE_END@	
+	
+	<ul><li>In case an annotation contains just a single element, it is convention to name that element value, like this</li></ul>
+	
+	<p><b>@InsertNew(value = "yes")</b></p>
+	<ul><li>When an annotation just contains a single element named value, you can leave out the element name, and just provide the value. Here is an example of an annotation element with only the value provided</li></ul>
+	
+	@CODE_START@@JAVA@@InsertNew("yes")@CODE_END@
+	
+	<p><b>Built-in Java Annotations</b></p>
+	<ul><li>Java comes with three built-in annotations which are used to give the Java compiler instructions. These annotations are</li></ul>
+	<p><b>1.@Deprecated</b></p>
+	<p><b>2.@Override</b></p>
+	<p><b>3.@SuppressWarnings</b></p>
+	
+	<h4>@Deprecated:</h4>
+	<ul><li>The @Deprecated annotation is used to mark a class, method or field as deprecated, meaning it should no longer be used. If your code uses deprecated classes, methods or fields, the compiler will give you a warning. Here is @Deprecated Java annotation example:</li></ul>
+@CODE_START@@JAVA@@Deprecated
+public class MyComponent {
+}@CODE_END@
+
+	<ul>
+		<li>The use of the @Deprecated Java annotation above the class declaration marks the class as deprecated.</li>
+		<li>You can also use the @Deprecated annotation above method and field declarations, to mark the method or field as deprecated.</li>
+		<li>When you use the @Deprecated annotation, it is a good idea to also use the corresponding @deprecatedJavaDoc symbol, and explain why the class, method or field is deprecated, and what the programmer should use instead.</li>
+	</ul>
+@CODE_START@@JAVA@@Deprecated
+public class MyComponent {
+}@CODE_END@		
+	
+	<h4>@Override</h4>
+	<ul>
+		<li>The @Override Java annotation is used above methods that override methods in a superclass. If the method does not match a method in the superclass, the compiler will give you an error.</li>
+		<li>The @Override annotation is not necessary in order to override a method in a superclass. It is a good idea to use it still, though. In case someone changed the name of the overridden method in the superclass, your subclass method would no longer override it. Without the @Override annotation you would not find out. With the @Override annotation the compiler would tell you that the method in the subclass is not overriding any method in the superclass.</li>
+	</ul>
+	<p>Here is an <b>@Override</b>Java annotation example:</p>
+@CODE_START@@JAVA@public class MySuperClass {
+	public void doTheThing() {
+		System.out.println("Do the thing");
+	}
+}
+
+public class MySubClass extends MySuperClass {
+@Override
+	public void doTheThing() {
+		System.out.println("Do it differently");
+	}
+}@CODE_END@		
+	<ul><li>In case the method doTheThing() in MySuperClass changes signature so that the same method in the subclass no longer overrides it, the compiler will generate an error.</li></ul>
+	
+	<h4>@SuppressWarnings</h4>
+	<ul>
+		<li>The @SuppressWarnings annotation makes the compiler suppress warnings for a given method. For instance, if a method calls a deprecated method, or makes an insecure type cast, the compiler may generate a warning. You can suppress these warnings by annotating the method containing the code with the @SuppressWarnings annotation.</li>
+	</ul>
+	
+	<p>Here is a <b>@SuppressWarnings</b>Java annotation example:</p>
+@CODE_START@@JAVA@@SuppressWarnings
+
+public void methodWithWarning() {
+}
+@CODE_END@	

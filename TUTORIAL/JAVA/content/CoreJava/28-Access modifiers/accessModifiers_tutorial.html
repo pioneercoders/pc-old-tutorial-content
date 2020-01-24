@@ -1,0 +1,60 @@
+<p>Access modifiers specifies who can access them. There are four access modifiers used in java. They are public, private, protected, no modifier (declaring without an access modifier). Using 'no modifier' is also sometimes referred as 'package-private' or 'default' or 'friendly' access. Usage of these access modifiers is restricted to two levels. The two levels are class level access modifiers and member level access modifiers.</p>
+<h4>I) Class level access modifiers (java classes only) :</h4>
+<p>Only two access modifiers is allowed, public and no modifier</p>
+<ul>
+	<li>If a class is 'public', then it CAN be accessed from ANYWHERE.</li>
+	<li>If a class has 'no modifier', then it CAN ONLY be accessed from 'same package'.</li>
+</ul>
+<h4>II) Member level access modifiers (java variables and java methods) :</h4>
+<p>All the four public, private, protected and no modifier is allowed.</p>
+<p><b>public and no modifier </b>- the same way as used in class level.</p>
+<p><b>private </b>- members CAN ONLY access</p>
+<p><b>protected </b>- CAN be accessed from 'same package' and a subclass existing in any package can access.</p>
+<p>For better understanding, member level access is formulated as a table:</p>
+<table class="pc-table">
+	<tr>
+		<td>Access Modifiers</td>
+		<td>Same Class</td>
+		<td>Same Package</td>
+		<td>Sub Class</td>
+		<td>Other Packages</td>
+	</tr>
+	<tr>
+		<td>Public</td>
+		<td>Y</td>
+		<td>Y</td>
+		<td>Y</td>
+		<td>Y</td>
+	</tr>
+	<tr>
+		<td>Protected</td>
+		<td>Y</td>
+		<td>Y</td>
+		<td>Y</td>
+		<td>N</td>
+	</tr>
+	<tr>
+		<td>No Access Modifiers</td>
+		<td>Y</td>
+		<td>Y</td>
+		<td>N</td>
+		<td>N</td>
+	</tr>
+	<tr>
+		<td>Private</td>
+		<td>Y</td>
+		<td>N</td>
+		<td>N</td>
+		<td>N</td>
+	</tr>
+</table>
+<p>First row {public Y Y Y Y} should be interpreted as:</p>
+<p>i)Y - A member declared with 'public' access modifier CAN be accessed by the members of the 'same class'.</p>
+<p>ii)Y - A member declared with 'public' access modifier CAN be accessed by the members of the 'same package'.</p>
+<p>iii)Y - A member declared with 'public' access modifier CAN be accessed by the members of the 'subclass'.</p>
+<p>iV)Y - A member declared as 'public' CAN be accessed from ‘Other packages’.Second row {protected Y Y Y N} should be interpreted as:</p>
+<p>V)Y - A member declared with 'protected' access modifier CAN be accessed by the members of the 'same class'.</p>
+<p>Vi)Y - A member declared with 'protected' access modifier CAN be accessed by the members of the 'same package'.</p>
+<p>Vii)Y - A member declared with 'protected' access modifier CAN be accessed by the members of the 'subclass'.</p>
+<p>Viii)N - A member declared with 'protected' access modifier CANNOT be accessed by the members of the 'Other package'.</p>
+<p>similarly interpret the access modifiers table for the third (no access modifier) and fourth (private access modifier) records.</p>

@@ -1,0 +1,14 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['d'], selAnswers: []}">
+		<div>
+			<h6>1.Select which of the following statements are incorrect?</h6>
+			<options values='{"values":[" Software platform runs on top of hardware platform.", 
+                         "Java provides security.", 
+                        "Multi-Threading shares same memory.",
+                        "Java includes automatic garbage collection and operator overloading."]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

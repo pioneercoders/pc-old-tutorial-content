@@ -1,0 +1,183 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>First Example program on method-overriding</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class Animal{
+	   public void eat()
+	   {
+	      System.out.println("Animal is eating");
+	   }
+	}
+public	class Goat extends Animal{
+	   public void eat(){
+	      System.out.println("Goat is eating leafs");
+	   }
+	   public static void main( String args[]) {
+		   Goat obj = new Goat();
+	      obj.eat();
+	   }
+	}
+@CODE_END@
+<div class="output-panel">
+	<p>Goat is eating leafs</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>Second Example programm on method-overriding</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class ABC{
+	   public void disp()
+	   {
+	      System.out.println("disp() method of parent class");
+	   }
+	   public void abc()
+	   {
+	      System.out.println("abc() method of parent class");
+	   }	   
+	}
+public class Example extends ABC{
+	   public void disp(){
+	      System.out.println("disp() method of Child class");
+	   }
+	   public void xyz(){
+	      System.out.println("xyz() method of Child class");
+	   }
+	   public static void main( String args[]) {
+	      //Parent class reference to child class object
+	      ABC obj = new Example();
+	      obj.disp();
+	      obj.abc();
+	   }
+	}
+@CODE_END@
+<div class="output-panel">
+	<p>disp() method of Child class<br>
+	   abc() method of parent class
+</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>Third Example programm on method-overriding</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+
+public class CrunchifyObjectOverriding {
+
+	public static void main(String args[]) {
+		Company a = new Company(); // Company reference and object
+		Company b = new eBay(); // Company reference but eBay object
+
+		a.address();// runs the method in Company class
+		b.address();// Runs the method in eBay class
+	}
+}
+class Company {
+
+	public void address() {
+		System.out.println("This is Address of Crunchify Company...");
+	}
+}
+class eBay extends Company {
+
+	public void address() {
+		System.out.println("This is eBay's Address...");
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>This is Address of Crunchify Company...<br>
+	   This is eBay's Address...
+</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+			<accordion-item>
+		<accordion-title>Forth Example program on method-overriding</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+public class CrunchifyObjectOverriding {
+
+	public static void main(String args[]) {
+		Company a = new Company(); // Company reference and object
+		Company b = new eBay(); // Company reference but eBay object
+
+		a.address();// runs the method in Company class
+		b.address();// Runs the method in eBay class
+	}
+}
+class Company {
+
+	public void address() {
+		System.out.println("This is Address of Crunchify Company...");
+	}
+}
+class eBay extends Company {
+
+	public void address() {
+		super.address(); // invokes the super class method
+		System.out.println("This is eBay's Address...");
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>This is Address of Crunchify Company...<br>
+	   This is Address of Crunchify Company...<br>
+	   This is eBay's Address...
+</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+				<accordion-item>
+		<accordion-title>Fifth Example programm on method-overriding</accordion-title>
+		<accordion-content>
+		@CODE_START@@JAVA@package pioneercoders;
+class Bank {
+	int getRateOfInterest() {
+		return 0;
+	}
+}
+class SBI extends Bank {
+	int getRateOfInterest() {
+		return 8;
+	}
+}
+class ICICI extends Bank {
+	int getRateOfInterest() {
+		return 7;
+	}
+}
+class AXIS extends Bank {
+	int getRateOfInterest() {
+		return 9;
+	}
+}
+public class Test2 {
+
+	public static void main(String args[]) {
+		SBI s = new SBI();
+		ICICI i = new ICICI();
+		AXIS a = new AXIS();
+		System.out.println("SBI Rate of Interest: " + s.getRateOfInterest());
+		System.out.println("ICICI Rate of Interest: " + i.getRateOfInterest());
+		System.out.println("AXIS Rate of Interest: " + a.getRateOfInterest());
+	}
+}
+@CODE_END@
+<div class="output-panel">
+	<p>SBI Rate of Interest: 8<br>
+	   ICICI Rate of Interest: 7<br>
+	   AXIS Rate of Interest: 9
+</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

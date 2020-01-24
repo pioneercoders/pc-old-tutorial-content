@@ -1,0 +1,176 @@
+
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>write a programm for basic operations using ArithematicOperators?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="ArithmeticOperators1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'arithmetic1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class ArithmeticOperators1 {
+	public static void main(String args[]) {
+		System.out.println("Arithmetic operators example :");
+		int i = 50 + 10;
+		int j = i - 10;
+		int k = j * 2;
+		double l = k / 4;
+		System.out.println("i =" + i);
+		System.out.println("j =" + j);
+		System.out.println("k =" + k);
+		System.out.println("l =" + l);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('ArithmeticOperators1','arithmetic1','java' )">Run</button>
+	<div>
+        <iframe id="arithmetic1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>write a programm for adding, subtraction and multiplication using Assignment-Operators?</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="Arithmeticprog2" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'arithmetic2',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class Arithmeticprog2 {
+	public static void main(String args[]) {
+		// 1. Simple Assignment Operator
+		int value = 5;
+		System.out.println("Value is" + value);
+		// += Assignment Operator
+		int value1 = 2;
+		int value2 = 4;
+		value2 += value1;
+		System.out.println("value1 =" + value1);
+		System.out.println("value2 =" + value2);
+		// -= Assignment Operator
+		value1 = 2;
+		value2 = 4;
+		value2 -= value1;
+		System.out.println("value1 =" + value1);
+		System.out.println("value2 =" + value2);
+		// *= Assignment Operator
+		value1 = 2;
+		value2 = 4;
+		value2 *= value1;
+		System.out.println("value1 =" + value1);
+		System.out.println("value2 =" + value2);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Arithmeticprog2','arithmetic2','java' )">Run</button>
+	<div>
+        <iframe id="arithmetic2"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write a sample programm for BitWiseOperators?</accordion-title>
+		<accordion-content>
+<section>  
+    <div id="BitWiseOperators" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'bitwise1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class BitWiseOperators {
+	public static void main(String args[]) {
+		int a = 60/* 60 = 0011 1100 */;
+		int b = 13/* 13 = 0000 1101 */;
+		int c = 0;
+		c = a & b;/* 12 = 0000 1100 */
+		;
+		System.out.println("a & b =" + c);
+		c = a | b;/* 61 = 0011 1101 */
+		;
+		System.out.println("a | b =" + c);
+		c = ~a;/* -61 = 1100 0011 */
+		;
+		System.out.println("~a " + c);
+		c = a << 2;/* 240 = 1111 0000 */
+		;
+		System.out.println("a << 2 =" + c);
+		c = a >> 2;/* 15 = 1111 */
+		;
+		System.out.println("a >> 2 =" + c);
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('BitWiseOperators','bitwise1','java' )">Run</button>
+	<div>
+        <iframe id="bitwise1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write a sample programm for LogicalOperators?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="LogicalOperatorsExample" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'logic1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class LogicalOperatorsExample {
+	public static void main(String args[]) {
+		boolean a = true;
+		boolean b = false;
+		boolean c = true;
+		System.out.println("a && b && c =" + (a && b && c));
+		System.out.println("a || b || c =" + (a || b || c));
+		System.out.println("!(a && b && c) = " + !(a && b && c));
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('LogicalOperatorsExample','logic1','java' )">Run</button>
+	<div>
+        <iframe id="logic1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>write a sample programm for RelationalOperators?</accordion-title>
+		<accordion-content>
+
+<section>  
+    <div id="BitWiseOperators2" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'bit1',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:250px;border-radius:10px;">public class BitWiseOperators2 {
+	public static void main(String args[]) {
+		int a = 5;
+		int b = 10;
+		int c = 15;
+		System.out.println("Relational Operators and returned values:" + c);
+		System.out.println("a > b =" + (a > b));
+		System.out.println(" a < b =" + (a < b));
+		System.out.println("b >= a =" + (b >= a));
+		System.out.println("b <= a =" + (b <= a));
+		System.out.println("b == c " + (b == c));
+		System.out.println("b != c =" + (b != c));
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('BitWiseOperators2','bit1','java' )">Run</button>
+	<div>
+        <iframe id="bit1"></iframe>
+    </div>
+</section>
+
+		</accordion-content>
+	</accordion-item>
+	
+	
+</pc-accordion>

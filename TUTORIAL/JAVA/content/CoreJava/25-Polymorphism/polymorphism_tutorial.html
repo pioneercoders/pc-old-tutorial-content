@@ -1,0 +1,82 @@
+<h4> What is polymorphism ?</h4>
+<p>Polymorphism is derived from 2 greek words: poly and morphs. The word "poly" means many and "morphs" means forms. So polymorphism means many forms.</p>
+<p> similar principle can also be applied to object-oriented programming languages like the Java. the capabality of a method to do different things based on the object. </p>
+
+<h5> Types of Polymorphism </h5>
+There are two types of polymorphism in java: 
+<ul> 
+	<li> Runtime Polymorphism : Method overriding is one of the way by which java achieve Run Time Polymorphism.</li>
+	<li> Compile Time Polymorphism: Method overloading is one of the way by which java achieve Compile Time Polymorphism. </li>
+</ul>
+
+<h4> Runtime Polymorphism </h4>
+<ul>
+	<li> The ability of a reference variable to change behavior(method invoking) according to what object instance it is holding </li>
+	<li> The method that is executed will be determined at runtime by object. If an object of a parent class is used then the method in the parent class will be executed, but if an object of the subclass is used, then the method in the child class will be executed.</li>
+	<li> In other words, it is the type of the object being referred to (not the type of the reference variable) that determines which version of an overridden method will be executed.</li>
+</ul>
+
+@CODE_START@@JAVA@class Human{
+	String gender;
+	public void sayHi(String name){
+	 System.out.println("Welcome to Pioneer Coders"+name);
+	}
+}
+
+class Female extends Human{
+	public void sayHi(String name){
+	 System.out.println("Welcome to Pioneer Coders Ms: "+name);
+	}
+}
+
+class Male extends Human{
+	public void sayHi(String name){
+	 System.out.println("Welcome to Pioneer Coders Mr: "+name);
+	}
+}
+class AppTest{
+	public static void main(String args[]){
+	 Human h ; // super class reference.
+	 Scaner s = new Scanner(System.in);
+	 String gender = s.next();
+	 String name = s.next();
+	 
+	 if(gender.equales("F")){
+		h = new Female(); // subclass object	
+	 }else if(gender.equales("M")){
+		h = new Male();  // subclass object 
+	}
+	 
+	 // the type of the object h holds will determine at runtime.
+	 // based on the object the sayHi methold of Male or Female will called runtime
+	 // according to object, method calling is changing at runtime.
+	 h.sayHi(name); 
+	 
+	}
+}
+@CODE_END@
+
+<h4> Compile Time Polymorphism </h4>
+<p> In Compile Time polymorphism the actual method call is resolved statically at compile time only. Static polymorphism is achieved by method overloading</p>
+
+@CODE_START@@JAVA@
+class Calculation {  
+  public void sum(int a,int b){
+	System.out.println(a+b);
+  }  
+  public void sum(int a,int b,int c){
+	System.out.println(a+b+c);
+  }  
+} 
+
+public class AppTest{
+	
+  public static void main(String args[]) {  
+    Calculation obj=new Calculation();  
+    obj.sum(10,10,10);  
+    obj.sum(20,20);  
+  }  
+}
+@CODE_END@
+<p> When we compile this Calculation and AppTest the compiler resolves the method call obj.sum() based on no of parameters and the entire process is done by Compiler so it is Compile time Polymorphism. </p>
+

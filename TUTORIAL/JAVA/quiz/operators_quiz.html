@@ -1,0 +1,56 @@
+<h3>Operators Quiz</h3>
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b','d','b','b','d'], selAnswers: []}">
+		<div>
+			<h6>1). Which of the following means that in order for the conditional to happen, either x must be less than 3 or y must be greater than or equal to 4 ?</h6>
+			<options values='{"values":["If ((x > 3) || (y < = 4))", "If (x < 3 y >= 4)", "((x < 3) && (y > 4))", "((x<3)|| (y>=4))"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+<h6>2). What value is assigned to x as the result of executing the following code?</h6>
+@CODE_START@@JAVA@int y = 3;
+int y++;
+int x = y++;
+@CODE_END@		
+<options values='{"values":["3", "4", "5", "6"]}' 
+bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3). Which of the following is true?</h6>
+			<options values='{"values":["The && operator is equivalent to &2", "The && operator is equivalent to &*2", "The && operator always evaluates both operands", "The && operator does not evaluate its second operand if the value of the first operand is false"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4).What is the output of following java programm ?</h6>
+@CODE_START@@JAVA@int x = -4;
+System.out.println(x>>1)
+int y = 4;
+System.out.println(y>>1)@CODE_END@	
+<options values='{"values":["Compile Error", "-2 -2", "2 2", "0 2"]}' 
+bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.With x = 0, which of the following are legal lines of Java code for changing the value of x to 1?</h6>
+@CODE_START@@JAVA@x++;
+x=x+1;
+x+=1;
+x=+1;
+@CODE_END@
+<options values='{"values":["1,2&3", "1&4", "1,2,3&4 ", "3&2"]}' 
+bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6. Which of the following can be operands of arithmetic operators?</h6>
+			<options values='{"values":["Numeric", "Boolean", "Characters", " Both Numeric & Characters"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	

@@ -1,0 +1,154 @@
+<h4> What is this ? </h4>
+
+<p> This keyword refers to current class object. </p>
+
+<h5> What is current class object? </h5>
+
+@CODE_START@@JAVA@Car p1 = new Car();
+Car p2 = new Car();
+@CODE_END@
+<p>
+When we are working with p1 reference p1 Object of Product is current class object similarly when we are dealing with p2 reference p2 Object of Product is current class object.
+</p>
+
+<h4>Usage of this keyword</h4>
+<p> <b> Here is given the 6 usage of this keyword. </b> </p>
+
+<ul> 
+	<li>1.this keyword can be used to refer current class instance variable.</li>
+	<li>2.this() can be used to invoke current class constructor.</li>
+	<li>3.this keyword can be used to invoke current class method (implicitly)</li>
+	<li>4.this can be passed as an argument in the method call.</li>
+	<li>5.this can be passed as argument in the constructor call.</li>
+	<li>6.this keyword can also be used to return the current class instance.</li>
+</ul>
+
+<h4>Usage of this with a field</h4>
+<p>The most common reason for using the this keyword is because a field is shadowed by a method or constructor parameter.</p>
+<p>For example, the Car class was written like this</p>
+
+<h5>Example on Car class</h5>
+<section>  
+    <div id="Car" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:350px;border-radius:10px;">class Car {
+	public int speed;
+	public int wheels;
+	//Constructor
+	public Car (int wheels, int speed) {
+		wheels = wheels;
+		speed = speed;
+	}
+	void display() {
+		System.out.println("Car has "+wheels + " wheels and going with speed of " +speed);
+	}
+	public static void main(String[] args){ 
+		Car s1 = new Car(4,90);		
+		s1.display();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Car','preview1','java' )">Run</button>
+	<div>
+        <iframe id="preview1"></iframe>
+    </div>
+</section>
+	<p>In the above example, parameter (formal arguments) and instance variables are same local parameter has highest precedence, that is why we are using this keyword to distinguish between local variable and instance variable. </p>
+	<p>but it could have been written like this:</p>
+	
+	<h5>Simple Example2 on Car class </h5>
+<section>  
+    <div id="Car1" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:400px;border-radius:10px;">class Car1 {
+	public int wheels;
+	public int speed;
+	
+	//Constructor
+	public Car1 (int wheels, int speed) {
+		this.wheels = wheels;
+		this.speed = speed;
+	}
+	void display() {
+		System.out.println("Car1 has "+wheels + " wheels and going with speed of " +speed);
+	}
+	public static void main(String[] args){ 
+		Car1 s1 = new Car1(6,90);
+		s1.display();
+	}
+}
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Car1','preview2','java' )">Run</button>
+	<div>
+        <iframe id="preview2"></iframe>
+    </div>
+</section>	
+
+<h4>Using this with a Method call :</h4>
+ <p> By using this keyword we can call methods <p>
+<section>  
+    <div id="Car2" ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'java', previewId:'preview',
+		rendererOptions: { fontSize: 16 },
+		advanced: { highlightActiveLine: true}
+	}" style="min-height:450px;border-radius:10px;">class Car2 {
+	public int wheels;
+	public int speed;
+	
+	//Constructor
+	public Car2 (int wheels, int speed) {
+		this.wheels = wheels;
+		this.speed = speed;
+	}
+	void travling(){
+		System.out.println("Car2 --> travling");
+		
+	}
+	void display() {
+		System.out.println("Car2 has "+wheels + " wheels and going with speed of " +speed);
+		this.travling();
+	}
+	public static void main(String[] args){ 
+		Car2 s1 = new Car2(6,90);
+		s1.display();
+	}
+}	
+	</div>
+	<button type="button"  class="cws-button border-radius bt-color-3 pull-right runspace" ng-click="runCode('Car2','preview3','java' )">Run</button>
+	<div>
+        <iframe id="preview3"></iframe>
+    </div>
+</section>
+
+<h4>Using this with a Constructor :</h4>
+	<p>From within a constructor, you can also use the this keyword to call another constructor in the same class. Doing so is called an explicit constructor invocation. Here's another Rectangle class, with a different implementation from the one in the Objects section.</p>
+	
+	<h5>Simple Example on this constructor</h5>
+
+@CODE_START@@JAVA@public class Rectangle {
+	private int x, y;
+	private int width, height;
+	public Rectangle(){
+	this (0, 0, 0, 0);
+	}
+	public Rectangle (int width, int height) {
+	this (0, 0, width, height);
+	}
+	public Rectangle (int x, int y, int width, int height) {
+	this.x = x;
+	this.y = y;
+	this.width = width;
+	this.height = height;
+	}
+	..........
+}	
+@CODE_END@
+
+	<p>This class contains a set of constructors. Each constructor initializes some or all of the rectangle's member variables. The constructors provide a default value for any member variable whose initial value is not provided by an argument. For example, the no-argument constructor calls the four-argument constructorwith four 0 values and the two-argument constructor calls the four-argument constructor with two 0 values. As before, the compiler determines which constructor to call, based on the number and the type of arguments.</p>
+	
+	<p>the invocation of another constructor must be the first line in the constructor.</p>
+	
+	<h4>Where to use this() constructor call?</h4>
+	<p>The this() constructor call should be used to reuse the constructor in the constructor. It maintains the chain between the constructors i.e. it is used for constructor chaining.</p>
+	
