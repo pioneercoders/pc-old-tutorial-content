@@ -1,0 +1,22 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c,'a'], selAnswers: []}">
+		<div>
+			<h6>1.How to Specify the function that creates an object's prototype?</h6>
+			<options values='{"values":["Object.prototype.constructor","Object.prototype._proto_","Both"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.A prototype is a model that displays the?</h6>
+			<options values='{"values":["appearance","behaviour","both","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.Prototype is used to create properties at run time?</h6>
+			<options values='{"values":["True","false"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

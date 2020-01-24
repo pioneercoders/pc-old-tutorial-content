@@ -1,0 +1,34 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','a','a','b','b'], selAnswers: []}">
+		<div>
+			<h6>1.Type of scope?</h6>
+			<options values='{"values":["local scope & Global scope","Internal Scope","External Scope","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Variables declared within a JavaScript function, become ________ to the function?</h6>
+			<options values='{"values":["Local","Global","Internal","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.All global variables belong to the ________object?</h6>
+			<options values='{"values":["window","Indirect","Direct","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Local variables are deleted when the function is_________.</h6>
+			<options values='{"values":["Global","local","Universal","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.Function arguments (parameters) work as ______variables inside functions?</h6>
+			<options values='{"values":["True","false"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>	
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
