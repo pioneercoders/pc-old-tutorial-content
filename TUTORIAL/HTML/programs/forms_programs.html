@@ -1,0 +1,410 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. Example on text input controls</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<form name="textInputs" method="post" action="myForm.jsp" id="textInputs1">
+		<p>
+			<label>Name</label><br>
+			<input type="text" name="name" id="sname" />
+		</p>
+		<p>
+			<label>Email</label><br>
+			<input type="text" name="email" id="semail" />
+		</p>
+		<p>
+			<label>Mobile No</label><br>
+			<input type="text" name="mobileNO" id="smobileNo"/>
+		</p>
+		<p>
+			<label>Address</label><br>
+			<textarea type="text" name="address" id="saddress"/></textarea>
+		</p>
+		<p>
+			<input type="submit"><input type="reset" value="reset">
+		</p>
+	</form>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p>
+		<form name="textInputs" method="post" action="myForm.jsp" id="textInputs1">
+		<p>
+			<label>Name</label><br>
+			<input type="text" name="name" id="sname" />
+		</p>
+		<p>
+			<label>Email</label><br>
+			<input type="text" name="email" id="semail" />
+		</p>
+		<p>
+			<label>Mobile No</label><br>
+			<input type="text" name="mobileNO" id="smobileNo"/>
+		</p>
+		<p>
+			<label>Address</label><br>
+			<textarea type="text" name="address" id="saddress"/></textarea>
+		</p>
+		<p>
+			<input type="submit"><input type="reset" value="reset">
+		</p>
+	</form>
+	</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>2. Example on checkboxes</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<form name="textInputs" method="post" action="myForm.jsp" id="textInputs1">
+		<div>
+			<label>Social Networks</label><br>
+			<input type="checkbox" name="fb" id="fb" value="facebook" />Facebook
+			<input type="checkbox" name="twitter" id="twitter" value="twitter" />Twitter
+			<input type="checkbox" name="linkedIn" id="linkedIn" value="linkedIn" />LinkedIn
+			<input type="checkbox" name="what'app" id="what'app" value="what'app" />What'app
+		</div>
+		<div>
+			<label>Courses You are Interested in</label><br>
+			<input type="checkbox" name="html" id="html" value="html" />HTML
+			<input type="checkbox" name="css" id="css" value="css" />CSS
+			<input type="checkbox" name="js" id="js" value="js" />JS
+			<input type="checkbox" name="java" id="java" value="java" />Java
+		</div>
+		<div>
+			<input type="submit"><input type="reset" value="reset">
+		</div>
+	</form>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p title="Pioneer Coders">
+		<form name="textInputs" method="post" action="myForm.jsp" id="textInputs1">
+		<div>
+			<label>Social Networks</label><br>
+			<input type="checkbox" name="fb" id="fb" value="facebook" />Facebook
+			<input type="checkbox" name="twitter" id="twitter" value="twitter" />Twitter
+			<input type="checkbox" name="linkedIn" id="linkedIn" value="linkedIn" />LinkedIn
+			<input type="checkbox" name="what'app" id="what'app" value="what'app" />What'app
+		</div>
+		<div>
+			<label>Courses You are Interested in</label><br>
+			<input type="checkbox" name="html" id="html" value="html" />HTML
+			<input type="checkbox" name="css" id="css" value="css" />CSS
+			<input type="checkbox" name="js" id="js" value="js" />JS
+			<input type="checkbox" name="java" id="java" value="java" />Java
+		</div>
+		<div>
+			<input type="submit"><input type="reset" value="reset">
+		</div>
+	</form>
+	</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+		<accordion-title>3. Example on radio buttons</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<form name="textInputs" method="post" action="myForm.jsp" id="textInputs1">
+		<div>
+			<label>Gender</label><br>
+			<input type="radio" name="gender" id="male" value="male" />Male
+			<input type="radio" name="gender" id="female" value="female" />Female
+			
+		</div>
+		<div>
+			<label>Interested in</label><br>
+			<input type="radio" name="course" id="ui" value="ui" />UI
+			<input type="radio" name="course" id="backend" value="backend" />Backend
+		</div>
+		<div>
+			<input type="submit"><input type="reset" value="reset">
+		</div>
+	</form>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p title="Pioneer Coders">
+	<form name="textInputs" method="post" action="myForm.jsp" id="textInputs1">
+		<div>
+			<label>Gender</label><br>
+			<input type="radio" name="gender" id="male" value="male" />Male
+			<input type="radio" name="gender" id="female" value="female" />Female
+			
+		</div>
+		<div>
+			<label>Interested in</label><br>
+			<input type="radio" name="course" id="ui" value="ui" />UI
+			<input type="radio" name="course" id="backend" value="backend" />Backend
+		</div>
+		<div>
+			<input type="submit"><input type="reset" value="reset">
+		</div>
+	</form>
+	</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>4. Example on Select Box</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<form name="select" method="post" action="myForm.jsp" id="select">
+		<div>
+			<label>Month</label><br>
+			<select name="months">
+				<option>January</option>
+				<option>Febraury</option>
+				<option>March</option>
+				<option>April</option>
+				<option>May</option>
+				<option>June</option>
+				<option>July</option>
+				<option>August</option>
+				<option>September</option>
+				<option>October</option>
+				<option>November</option>
+				<option>December</option>
+				
+			</select>
+			
+		</div>
+		<div>
+			<label>Cities in India</label><br>
+			<select name="cities">
+				<option>Ahmedabad</option>
+				<option>Bangalore</option>
+				<option>Chennai</option>
+				<option>Delhi</option>
+				<option>Goa</option>
+				<option>Hyderbad</option>
+				<option>Kolkata</option>
+				<option>Mumbai</option>
+				<option>Pune</option>
+			</select>
+			
+		</div>
+		<div>
+			<input type="submit"><input type="reset" value="reset">
+		</div>
+	</form>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p title="Pioneer Coders">
+		<form name="select" method="post" action="myForm.jsp" id="select">
+		<div>
+			<label>Month</label><br>
+			<select name="months">
+				<option>January</option>
+				<option>Febraury</option>
+				<option>March</option>
+				<option>April</option>
+				<option>May</option>
+				<option>June</option>
+				<option>July</option>
+				<option>August</option>
+				<option>September</option>
+				<option>October</option>
+				<option>November</option>
+				<option>December</option>
+				
+			</select>
+			
+		</div>
+		<div>
+			<label>Cities in India</label><br>
+			<select name="cities">
+				<option>Ahmedabad</option>
+				<option>Bangalore</option>
+				<option>Chennai</option>
+				<option>Delhi</option>
+				<option>Goa</option>
+				<option>Hyderbad</option>
+				<option>Kolkata</option>
+				<option>Mumbai</option>
+				<option>Pune</option>
+			</select>
+			
+		</div>
+		<div>
+			<input type="submit"><input type="reset" value="reset">
+		</div>
+	</form>
+	</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+			<accordion-item>
+		<accordion-title>5. Example on Form Elements</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<div>Registration Form</div>
+	<form name="select" method="post" action="myForm.jsp" id="select">
+		<div>
+			<label>Name</label><br>
+			<div>
+				<input type="text" name="sname" placeholder="Enter student Name"/>
+			</div>
+		</div>
+		<div>
+			<label>Email</label>
+			<div>
+				<input type="text" name="semail" placeholder="Enter student Email"/>
+			</div>
+		</div>
+		<div>
+			<label>Mobile No</label>
+			<div>
+				<input type="text" name="emobileNo" placeholder="Enter student Mobile NO"/>
+			</div>
+		</div>
+		<div>
+			<label>Highest Degree percentage</label>
+			<div>
+				<input type="text" name="percentage" placeholder="Enter student Percentage"/>
+			</div>
+		</div>
+		<div>
+			<label>Gender</label>
+			<div>
+				<input type="radio" name="gender" value="male"/>Male
+				<input type="radio" name="gender" value="female"/>Female
+			</div>
+		</div>
+		
+		<div>
+			<label>Highest Degree</label>
+			<div>
+				<select>
+					<option>SSC/10th</option>
+					<option>Inter/PUC/Deploma</option>
+					<option>Graduation</option>
+					<option>MCA</option>
+					<option>P.G</option>
+					<option>Ph.D</option>
+				</select>
+			</div>
+		</div>
+		<div>
+			<label>Courses You are Interested in</label><br>
+			<div>
+				<input type="checkbox" name="html" id="html" value="html" />HTML
+				<input type="checkbox" name="css" id="css" value="css" />CSS
+				<input type="checkbox" name="js" id="js" value="js" />JS
+				<input type="checkbox" name="java" id="java" value="java" />Java
+			</div>
+		</div>
+		<div>
+			<label>Address</label>
+			<div>
+				<textarea name="address" placeholder="address"></textarea>
+			</div>
+		</div>
+		<div>
+			<label>Upload Image</label>
+			<div>
+				<input type="file" name="profileImg"/>
+			</div>
+		</div>
+		<div>
+			<input type="submit"><input type="reset" value="reset">
+		</div>
+		
+	</form>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p title="Pioneer Coders">
+			<div>Registration Form</div>
+	<form name="select" method="post" action="myForm.jsp" id="select">
+		<div>
+			<label>Name</label><br>
+			<div>
+				<input type="text" name="sname" placeholder="Enter student Name"/>
+			</div>
+		</div>
+		<div>
+			<label>Email</label>
+			<div>
+				<input type="text" name="semail" placeholder="Enter student Email"/>
+			</div>
+		</div>
+		<div>
+			<label>Mobile No</label>
+			<div>
+				<input type="text" name="emobileNo" placeholder="Enter student Mobile NO"/>
+			</div>
+		</div>
+		<div>
+			<label>Highest Degree percentage</label>
+			<div>
+				<input type="text" name="percentage" placeholder="Enter student Percentage"/>
+			</div>
+		</div>
+		<div>
+			<label>Gender</label>
+			<div>
+				<input type="radio" name="gender" value="male"/>Male
+				<input type="radio" name="gender" value="female"/>Female
+			</div>
+		</div>
+		<div>
+			<label>Highest Degree</label>
+			<div>
+				<select>
+					<option>SSC/10th</option>
+					<option>Inter/PUC/Deploma</option>
+					<option>Graduation</option>
+					<option>MCA</option>
+					<option>P.G</option>
+					<option>Ph.D</option>
+				</select>
+			</div>
+		</div>
+		<div>
+			<label>Courses You are Interested in</label><br>
+			<div>
+				<input type="checkbox" name="html" id="html" value="html" />HTML
+				<input type="checkbox" name="css" id="css" value="css" />CSS
+				<input type="checkbox" name="js" id="js" value="js" />JS
+				<input type="checkbox" name="java" id="java" value="java" />Java
+			</div>
+		</div>
+		<div>
+			<label>Address</label>
+			<div>
+				<textarea name="address" placeholder="address"></textarea>
+			</div>
+		</div>
+		<div>
+			<label>Upload Image</label>
+			<div>
+				<input type="file" name="profileImg"/>
+			</div>
+		</div>
+		<div>
+			<input type="submit"><input type="reset" value="reset">
+		</div>
+		
+	</form>
+	</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+<pc-accordion>

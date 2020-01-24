@@ -1,0 +1,91 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['c','d','d','a','c','a','a','c','b','d'], selAnswers: []}">
+		<div>
+			<h6>1. How can you make a bulleted list?</h6>
+			<options values='{"values":["&lt;list&gt;","&lt;nl&gt;","&lt;ul&gt;","&lt;ol&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. How can you make a numbered list?</h6>
+			<options values='{"values":["&lt;list&gt;","&lt;nl&gt;","&lt;ul&gt;","&lt;ol&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. What bullets types are available?</h6>
+			<options values='{"values":["disc","square","circle","all the above"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4. Is it possible to change the color of the bullet?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5. which of the following is correct?</h6>
+			<options values='{"values":["&lt;select&gt;&lt;list&gt;option one &lt;/list&gt;&lt;list&gt;option two &lt;/list&gt;&lt;/select&gt;","&lt;select&gt;&lt;drop-down-list&gt;option one &lt;/drop-down-list&gt;&lt;drop-down-list&gt;option two &lt;/drop-down-list&gt;&lt;/select&gt;","&lt;select&gt;&lt;option&gt;option one &lt;/option&gt;&lt;option&gt;option two &lt;/option&gt;&lt;/select&gt;","None"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6. The tag used to create a new list item and also include a hyperlink is?</h6>
+			<options values='{"values":["&lt;li&gt;","&lt;dl&gt;<dl>","&lt;dd&gt;","&lt;dt&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. From which tag the descriptive list starts?</h6>
+			<options values='{"values":["&lt;dl&gt;","&lt;li&gt;","&lt;ll&gt;","&lt;dt&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. &lt;ul&gt;-&lt;/ul&gt; tag is used to ________?</h6>
+			<options values='{"values":["Display the numbered list","Underline the text","Display the bulleted list","Bold the text"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		<div>
+			<h6>9. Which is the correct to create an Arabic numeral list?</h6>
+			<options values='{"values":["&lt;ul type=&rdquo;1&rdquo;&gt;","&lt;ol type=&rdquo;1&rdquo;&gt;","&lt;il type=&rdquo;1&rdquo;&gt;","&lt;li type=&rdquo;1&rdquo;&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		<div>
+			<h6>10. An ordered list is a ________ list and an unordered list is a ________ list?</h6>
+			<options values='{"values":["Bulleted & numbered","Bulleted & tabular","Tabular & numbered","Numbered & bulleted"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

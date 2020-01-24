@@ -1,0 +1,73 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['d','c','b','b','c','a','a','b','b','c'], selAnswers: []}">
+		<div>
+			<h6>1. HTML attribute  for setting HTML background?</h6>
+			<options values='{"values":["background-color","bgcolor","background","a and c"]}'
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2. maxlength and minlength attibutes are belongs to which Element?</h6>
+			<options values='{"values":["checkbox","table rows","input","radio"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3. 'name' attribute of an HTML element can be?</h6>
+			<options values='{"values":["Unique","Non-unique"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4. 'id' attribute of an HTML element is non-unique?</h6>
+			<options values='{"values":["True","False"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. How to move a table to the right?</h6>
+			<options values='{"values":["&lt;table move=&rdquo;right&rdquo;&gt;&lt;/table&gt;","&lt;table move=&rdquo;left&rdquo;&gt;&lt;/table&gt;","&lt;table align=&rdquo;right&rdquo;&gt;&lt;/table&gt;","&lt;table align=&rdquo;left&rdquo;&gt;&lt;/table&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6. The colspan attribute defines the number of columns a cell should span?</h6>
+			<options values='{"values":["True","False"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. The rowspan attribute specifies the number of rows a cell should span?</h6>
+			<options values='{"values":["True","False"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. Which attribute is used to specify number of rows?</h6>
+			<options values='{"values":["rownum","rowspan","rownumber","row"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		<div>
+			<h6>9. width=100 and width=100%  are same? </h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		<div>
+			<h6>10. What is the correct HTML for inserting a background image?</h6>
+			<options values='{"values":["&lt;body bg=&rdquo;background.gif&rdquo;&gt;","&lt;body img=&rdquo;background.gif&rdquo;&gt;","&lt;body style=&rdquo;background-image:url(background.gif)&rdquo;&gt;","None"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

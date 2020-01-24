@@ -1,0 +1,60 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1.Create an iframe using iframe tag.</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<iframe src="demo.html" border="1"></iframe>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+		<p><iframe src="demo.html" border="1"></iframe></p>
+</div>
+		</accordion-content>
+		</accordion-item>
+		<accordion-item>
+		<accordion-title>2. Create an iframe using iframe tag and set iframe width and height 80% and 300px</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+		<p><iframe src="demo.html" border="1" width="80%" height="300px"></iframe>/p>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+		<p><iframe src="http://www.pioneercoders.com" border="1" width="80%" height="300px"></iframe></p>
+</div>
+		</accordion-content>
+		</accordion-item>
+		<accordion-item>
+		<accordion-title>3. create an iframe set width 80% and height 400px. in that iframe load www.pioneercoders.com</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<p><iframe name="iframe_1" border="1" width="80%" height="400px"></iframe></p>
+	<p><a href="http://www.pioneercoders.com" target="iframe_1"></p>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+		<p><iframe src="demo.html" name="iframe_1" border="1" width="80%" height="400px"></iframe></p>
+		<p><a href="http://www.pioneercoders.com" target="iframe_1"></p>
+</div>
+		</accordion-content>
+		</accordion-item>
+			<accordion-item>
+		<accordion-title>4. change the color of the iframe border</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<p><iframe src="https://www.pioneercoders.com" style="border:2px solid green"></iframe></p>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+		<p><iframe src="http://www.pioneercoders.com" style="border:medium solid green"></iframe></p>
+</div>
+		</accordion-content>
+		</accordion-item>
+</pc-accordion>

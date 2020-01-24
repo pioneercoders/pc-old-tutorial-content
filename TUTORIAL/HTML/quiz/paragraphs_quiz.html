@@ -1,0 +1,63 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','d','a','d','a','a','c'], selAnswers: []}">
+		<div>
+			<h6>1. &lt;p&gt; tag is a?</h6>
+			<options values='{"values":["block element","inline element","inline-block element","All"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2.Wihch of the following is correct?</h6>
+			<options values='{"values":["&lt;p&gt;pioneercoders&lt;p&gt;","&lt;p&gt;pioneercoders","&lt;p&gt;pioneecoders&lt;/p&gt;","All the above"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3.which of the following is true?</h6>
+		    <options values='{"values":["&lt;p&gt; &lt;table&gt; &lt;/table&gt;&lt;/p&gt;","&lt;p&gt; &lt;div&gt; &lt;/div&gt;&lt;/p&gt;","&lt;p&gt; &lt;span&gt; &lt;/span&gt;&lt;/p&gt;","All the above"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4.Future version of HTML will not allow you to skip end tags in case of Paragraph tag?</h6>
+		    <options values='{"values":["True","False"]}'  
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.Which tag is used to divide the HTML document into the paragraphs ?</h6>
+		    <options values='{"values":["paragraph","par","para","p"]}'  
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6.Paragraph in HTML is having end tag?</h6>
+		    <options values='{"values":["True","False"]}'  
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>7.Text written inside the following pair of tags is considered as paragraph?</h6>
+		    <options values='{"values":["&lt;p&gt;&lt;/p&gt;","&lt;paragraph&gt;&lt;/paragraph&gt;","None of These","&lt;para&gt;&lt;/para&gt;"]}'  
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		
+		<div>
+		   <h6>8.Browsers automatically add an __________ before and after a paragraph?</h6>
+		   <options values='{"values":["empty space","empty spacing","empty line","None of These"]}'  
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

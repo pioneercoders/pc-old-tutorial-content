@@ -1,0 +1,80 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','a','c','c','c','d','c','b','c','c','a'], selAnswers: []}">
+		<div>
+			<h6>1. Hyper link applies to text only?</h6>
+			<options values='{"values":["true","false"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2. How can you create email link?</h6>
+			<options values='{"values":["&lt;a href=&rdquo;mailto:email@domain.com&rdquo;&gt;Email&lt;/a&gt;","href=&rdquo;mailto:email@domain.com&rdquo;&gt;Email&lt;/a&gt;","&lt;anchor href=&rdquo;mailto:email@domain.com&rdquo;&gt;Email&lt;/anchor&gt;","&lt;link href=&rdquo;mailto:email@domain.com&rdquo;&gt;Email&lt;/link&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3. What is URI?</h6>
+			<options values='{"values":["Uniform Resource Internet","Uniform Relocate Identifier","Universal Resource Identifier","Universal Relocate Internet"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4. Name the tag which is used for hyperlinks?</h6>
+			<options values='{"values":["anchor","hyperlinks","&lt;a&gt;","All the above"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5. Value of Attribute "href" is also called as __________ of the Destination Web Page?</h6>
+			<options values='{"values":["URM","URS","URL","URN"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6. Which of the Attribute(s) Cannot be Present if the href attribute is not present?</h6>
+			<options values='{"values":["All of these","target","hreflang","rel"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		
+		
+		<div>
+			<h6>7. A linked page using anchor tag is normally displayed in the ____________?</h6>
+			<options values='{"values":["New Window","Current Window","New Tab","None of these"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>8. Relationship Between the Current document and the Linked document is specified using ___________ attribute.?</h6>
+			<options values='{"values":["href","relation","rel","target"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>9. Which of the following is incorrect value provided to "rel" attribute of Anchor Tag?</h6>
+			<options values='{"values":["previous","license","help","bookmark"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		<div>
+			<h6>10. Which of the Anchor Attribute is used to specify the language of the linked document?</h6>
+			<options values='{"values":["alang","None of these","lang","hreflang"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+        <div>
+			<h6>11. _________ attribute is used to specify , where to open the linked document?</h6>
+			<options values='{"values":["target","rel","pos","href"]}' 
+			bind-model='quizObj.selAnswers' id="10"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	

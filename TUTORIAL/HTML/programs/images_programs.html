@@ -1,0 +1,55 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. include the image using img tag</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<p><img src="pclogo" alt="pc logo"></p>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+		<p>@IMG_START@HTML/pclogo2/png@IMG_END@</p>
+</div>
+		</accordion-content>
+		</accordion-item>
+		<accordion-item>
+		<accordion-title>2. include the img tag and set height=220px and width="200"</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+		<p><img src="pclogo" alt="pc logo" height="220px" width="200px"></p>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+		<p>@IMG_START@HTML/pclogo2/png@IMG_END@</p>
+</div>
+		</accordion-content>
+		</accordion-item>
+		<accordion-item>
+		<accordion-title>3. Include the images into HTML which are in another folder.</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<p><img src="pc/pcimg/pclogos/pclogo" alt="pc logo" height="220px" width="200px"></p>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+		<p>@IMG_START@HTML/pclogo2/png@IMG_END@</p>
+</div>
+		</accordion-content>
+		</accordion-item>
+			<accordion-item>
+		<accordion-title>4. Add animated img</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<p><img src="animated.gif" alt="pc logo" height="220px" width="200px"></p>
+</body>
+</html>@CODE_END@
+
+		</accordion-content>
+</pc-accordion>

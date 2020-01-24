@@ -1,0 +1,69 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','a','a','a','b','a','b','a','c','d'], selAnswers: []}">
+		<div>
+			<h6>1. A webpage displays a picture. What tag was used to display that picture?</h6>
+			<options values='{"values":["pictire","img","image","src"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. Which among the following is(are) incorrect?</h6>
+			<options values='{"values":["&lt;img src=&rdquo;imagepath&rdquo;&gt;","&lt;img src=&rdquo;imagepath&rdquo; alt=&rdquo;&gt;","&lt;img src=&rdquo;imagepath&gt;","None"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. image tag is empty element?</h6>
+			<options values='{"values":["true","false"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4. How to change the size of the image?</h6>
+			<options values='{"values":["width and height","&lt;img-size&gt;","using size attribute","none of the above"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5. If the image cannot be displayed then _______ specifies an alternate text for an image?</h6>
+			<options values='{"values":["text attribute","alt attribute","value attribute","caption attribute"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6. Which of the following pair of attribute is required for img tag ?</h6>
+			<options values='{"values":["src and alt","src and a","img and src","img and alt"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. The &lt;map&gt; tag is used to define a _________ side image-map.?</h6>
+			<options values='{"values":["server","client","user","none of the above"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. &lt;img&gt; tag has no end tag.?</h6>
+			<options values='{"values":["true","false"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		<div>
+			<h6>9. Which of the following attribute is supported in HTML5 ??</h6>
+			<options values='{"values":["border","longdesc","None of these","align"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		<div>
+			<h6>10. alt attribute is more useful in the situation where user have ____________?</h6>
+			<options values='{"values":["None of these","High Speed Internet Connection","Broadband Connection","Slow Internet Connection"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

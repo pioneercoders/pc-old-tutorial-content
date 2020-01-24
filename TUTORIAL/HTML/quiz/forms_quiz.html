@@ -1,0 +1,72 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','b','b','d','a','b','e','c','b','a'], selAnswers: []}">
+		<div>
+			<h6>1. Which tag creates a check box for form in HTML?</h6>
+			<options values='{"values":["&lt;checkbox&gt;","&lt;input type=&rdquo;checkbox&rdquo;&gt;","&lt; input =textbox&gt;","none"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2. Which tag creates a radio button for form in HTML?</h6>
+			<options values='{"values":["&lt;input type=&rdquo;checkbox&rdquo;&gt;","&lt;input type=&rdquo;radio&rdquo;&gt;","&lt;input type=&rdquo;radio_button&rdquo;&gt;","&lt;input type=&rdquo;circle&rdquo;&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3. Which tag creates a textarea for form in HTML?</h6>
+			<options values='{"values":["&lt;input type=&rdquo;text-area&rdquo;&gt;","&lt;textarea&gt;","&lt;input type=&rdquo;text&rdquo;&gt;","&lt;input type=&rdquo;textbox&rdquo;&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4. which of the following  is used for clearing data in the form elements?</h6>
+			<options values='{"values":["&lt;input type=&rdquo;clear&rdquo;&gt;","&lt;input type=&rdquo;delete&rdquo;&gt;","&lt;input type=&rdquo;clean&rdquo;&gt;","&lt;input type=&rdquo;reset&rdquo;&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. which of the following  is(are) used for sending form data?</h6>
+			<options values='{"values":["&lt;input type=&rdquo;submit&rdquo;&gt;","&lt;input type=&rdquo;send&rdquo;&gt;","&lt;input type=&rdquo;formsubmit&rdquo;&gt;","None"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6. Can I have two or more actions in the same form?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. most frequently used HTTP methods for sending the form data in HTML?</h6>
+			<options values='{"values":["HEAD","PUT","POST","GET","C and D","None"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8.The text inside the &lt;TEXT AREA&gt; tag works like?</h6>
+			<options values='{"values":["&lt;P&gt;formatted text","&lt;T&gt;formatted text","&lt;PRE&gt; formatted text","none of these"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		<div>
+			<h6>9.&lt;INPUT&gt; is?</h6>
+			<options values='{"values":["format tag","empty tag","both(a)and(b)","none of these"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		<div>
+			<h6>10. Which of the following tags below are used for a multi-line text input control?</h6>
+			<options values='{"values":["textarea tag","textml tag","text tag","Both b and c above"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

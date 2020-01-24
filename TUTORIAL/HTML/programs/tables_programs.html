@@ -1,0 +1,347 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. Write a sample code to create table to display the student information</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Mobile No</th>
+			<th>Gender</th>
+			<th>Degree</th>
+			<th>Percentage</th>
+			<th>City</th>
+		</tr>
+		<tr>
+			<td>raju</td>
+			<td>raju123@gmail.com</td>
+			<td>9111133444</td>
+			<td>Male</td>
+			<td>B.Tech</td>
+			<td>75%</td>
+			<td>Hyderbad</td>
+		</tr>
+		<tr>
+			<td>rajeev</td>
+			<td>rajeev@gmail.com</td>
+			<td>9447211263</td>
+			<td>Male</td>
+			<td>B.Tech</td>
+			<td>70%</td>
+			<td>Chennai</td>
+		</tr>
+	</table>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p>
+		<table  border="1">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Mobile No</th>
+			<th>Gender</th>
+			<th>Degree</th>
+			<th>Percentage</th>
+			<th>City</th>
+		</tr>
+		<tr>
+			<td>raju</td>
+			<td>raju123@gmail.com</td>
+			<td>9111133444</td>
+			<td>Male</td>
+			<td>B.Tech</td>
+			<td>75%</td>
+			<td>Hyderbad</td>
+		</tr>
+		<tr>
+			<td>rajeev</td>
+			<td>rajeev@gmail.com</td>
+			<td>944721123</td>
+			<td>Male</td>
+			<td>B.Tech</td>
+			<td>70%</td>
+			<td>Chennai</td>
+		</tr>
+	</table>
+	</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+	<accordion-item>
+		<accordion-title>2. Example on rowspan and colspan</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<table border="1">
+		<tr>
+			<th colspan="3">Data Types</th>
+		</tr>
+		<tr>
+			<td rowspan="5">Java Data Types</td>
+		</tr>
+		<tr>
+			<td>int</td>
+		</tr>
+		<tr>
+			<td>char</td>
+		</tr>
+		<tr>
+			<td>Boolean</td>
+		</tr>
+		<tr>
+			<td>float</td>
+		</tr>
+		<tr>
+			<td>double</td>
+		</tr>
+		<tr>
+			<td rowspan="4">C Data Types</td>
+		</tr>
+		<tr>
+			<td>int</td>
+		</tr>
+		<tr>
+			<td>char</td>
+		</tr>
+		<tr>
+			<td>float</td>
+		</tr>
+		<tr>
+			<td>double</td>
+		</tr>
+	</table>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p>
+		<table border="1">
+		<tr>
+			<th colspan="3">Data Types</th>
+		</tr>
+		<tr>
+			<td rowspan="6">Java Data Types</td>
+		</tr>
+		<tr>
+			<td>int</td>
+		</tr>
+		<tr>
+			<td>char</td>
+		</tr>
+		<tr>
+			<td>Boolean</td>
+		</tr>
+		<tr>
+			<td>float</td>
+		</tr>
+		<tr>
+			<td>double</td>
+		</tr>
+		<tr>
+			<td rowspan="5">C Data Types</td>
+		</tr>
+		<tr>
+			<td>int</td>
+		</tr>
+		<tr>
+			<td>char</td>
+		</tr>
+		<tr>
+			<td>float</td>
+		</tr>
+		<tr>
+			<td>double</td>
+		</tr>
+	</table>
+	</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+		
+		<accordion-item>
+		<accordion-title>3. Example on rowspan and colspan</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+		<table border="1">
+			<tr>
+				<th colspan="14">Data Types</th>
+				
+			</tr>
+			<tr>
+				<th colspan="8">Primitive</th>
+				<th colspan="6">Non-primitive</th>
+			</tr>
+			<tr>
+				<th colspan="1">Boolean</th>
+				<th colspan="7">Numeric</th>
+				<td>String</td>
+				<td>Array</td>
+				<td>class, etc.</td>
+			</tr>
+			<tr>
+				<td rowspan="3">boolean</td>
+				<th colspan="1">Character</th>
+				<th colspan="6">Integral</th>
+			</tr>
+			<tr>
+			
+				<td rowspan="2">char</td>
+				<th colspan="4">Integer</th>
+				<th colspan="2">Floating-point</th>
+			</tr>
+			<tr>
+				<td>byte</td>
+				<td>short</td>
+				<td>int</td>
+				<td>long</td>
+				<td>float</td>
+				<td>double</td>
+			</tr>
+		</table>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p>
+		<table border="1">
+			<tr>
+				<th colspan="14">Data Types</th>
+				
+			</tr>
+			<tr>
+				<th colspan="8">Primitive</th>
+				<th colspan="6">Non-primitive</th>
+			</tr>
+			<tr>
+				<th colspan="1">Boolean</th>
+				<th colspan="7">Numeric</th>
+				<td>String</td>
+				<td>Array</td>
+				<td>class, etc.</td>
+			</tr>
+			<tr>
+				<td rowspan="3">boolean</td>
+				<th colspan="1">Character</th>
+				<th colspan="6">Integral</th>
+			</tr>
+			<tr>
+			
+				<td rowspan="2">char</td>
+				<th colspan="4">Integer</th>
+				<th colspan="2">Floating-point</th>
+			</tr>
+			<tr>
+				<td>byte</td>
+				<td>short</td>
+				<td>int</td>
+				<td>long</td>
+				<td>float</td>
+				<td>double</td>
+			</tr>
+		</table>
+	</p>
+</div>
+		</accordion-content>
+		
+			<accordion-item>
+		<accordion-title>4. Example on rowspan and colspan</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<body>
+	<table border="1">
+			<tr>
+				<th colspan="10">Courses</th>
+			</tr>
+			<tr>
+				<td rowspan="6" colspan="2">UI</td>
+			</tr>
+			<tr>
+				<td>HTML/HTML5</td>
+			</tr>
+			<tr>
+				<td>CSS</td>
+			</tr>
+			<tr>
+				<td>Javascript</td>
+			</tr>
+			<tr>
+				<td>Angular</td>
+			</tr>
+			<tr>
+				<td>jquery</td>
+			</tr>
+			<tr>
+				<td rowspan="6" colspan="2">Java</td>
+			</tr>
+			<tr>
+				<td>CoreJava</td>
+			</tr>
+			<tr>
+				<td>Advanced Java</td>
+			</tr>
+			<tr>
+				<td>JSP</td>
+			</tr>
+			<tr>
+				<td>Hibernate</td>
+			</tr>
+			<tr>
+				<td>Spring</td>
+			</tr>
+		</table>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p>
+		<table border="1">
+			<tr>
+				<th colspan="10">Courses</th>
+			</tr>
+			<tr>
+				<td rowspan="6" colspan="2">UI</td>
+			</tr>
+			<tr>
+				<td>HTML/HTML5</td>
+			</tr>
+			<tr>
+				<td>CSS</td>
+			</tr>
+			<tr>
+				<td>Javascript</td>
+			</tr>
+			<tr>
+				<td>Angular</td>
+			</tr>
+			<tr>
+				<td>jquery</td>
+			</tr>
+			<tr>
+				<td rowspan="6" colspan="2">Java</td>
+			</tr>
+			<tr>
+				<td>CoreJava</td>
+			</tr>
+			<tr>
+				<td>Advanced Java</td>
+			</tr>
+			<tr>
+				<td>JSP</td>
+			</tr>
+			<tr>
+				<td>Hibernate</td>
+			</tr>
+			<tr>
+				<td>Spring</td>
+			</tr>
+		</table>
+	</p>
+</div>
+		</accordion-content>
+</pc-accordion>

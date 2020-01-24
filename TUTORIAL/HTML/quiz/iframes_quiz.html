@@ -1,0 +1,43 @@
+<!-- widget Quiz  -->	
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['c','a','b','a','c'], selAnswers: []}">
+		<div>
+			<h6>1.The iframe element is not supported in? </h6>
+			<options values='{"values":["HTML 4.1","XHTML 1.0","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2.Can I create a link to a page with a particular iframe open inside of it?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3.An iframe is used to display?</h6>
+		    <options values='{"values":["Web Page","a web page within a web page","Both a and b","None of the above"]}'  
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4.What does &lt;iframe&gt; do?</h6>
+		    <options values='{"values":["&lt;iframe&gt; creates an inline frame","&lt;iframe&gt; creates an block frame","Both a and b","None of the above"]}'  
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5.That major attribute of frame are not supported by?</h6>
+		    <options values='{"values":["HTML5","IE6","Both a and b","None of the above"]}'  
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->
+

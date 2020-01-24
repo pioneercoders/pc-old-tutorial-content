@@ -1,0 +1,62 @@
+<!-- widget Quiz  -->	
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','b','c','c','a','b','a','b'], selAnswers: []}">
+		<div>
+			<h6>1. what is the difference between an opening tag &closing tag?</h6>
+			<options values='{"values":["Opening tag has a / in front","Closing tag has a / in front","There is no difference","None"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2. How many tags are there in a regular element?</h6>
+			<options values='{"values":["1","2","3","4"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3. title tag will be used in ?</h6>
+			<options values='{"values":["Inside the &lt;html&gt;","Inside the &lt;body&gt;","Inside &lt;head&gt;","All"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div><!-- &lt;&gt; -->
+			<h6>4. What is the HTML element for strong Text?</h6>
+			<options values='{"values":["&lt;h2;&gt;","&lt;p;&gt;","&lt;strong&gt;","&lt;b&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. Which HTML element defines the title of document?</h6>
+			<options values='{"values":["title","body","head","meta"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6. Which HTML element defines the footer of document?</h6>
+			<options values='{"values":["header","footer","bottom","section"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. There are some HTML elements which don't need to be closed, such as &lt;img.../&gt;,&lt;hr /&gt;and&lt;br /&gt; elements.
+			These are known as ....... elements?</h6>
+			<options values='{"values":["void","head","body","section"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. HTML tags are case sensitive?</h6>
+			<options values='{"values":["true","false"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

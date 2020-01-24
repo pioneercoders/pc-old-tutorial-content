@@ -1,0 +1,74 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b','a','b','a','b','a','d','b','a'], selAnswers: []}">
+		<div>
+			<h6>1. Tables are defined using?</h6>
+			<options values='{"values":["table start tag and end tag","tbl start and tag","tb start and end tag","none of the aboe"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2. The box or basic unit of the table that holds the data is called a?</h6>
+			<options values='{"values":["data cell","cell","box","box cell"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3. What attribute is used to give border color to a table in HTML?</h6>
+			<options values='{"values":["border-color","bordercolor","br-color","color-border"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6> 4. A table has 10 rows. How many times tr tag will be used?</h6>
+			<options values='{"values":["9","10","20","11"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. Required tag that is used to create a table row?</h6>
+			<options values='{"values":["&lt;tr&gt;","&lt;th&gt;","&lt;table&gt;","&lt;tbl&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6. Which of the following table tags is used to create a table cell?</h6>
+			<options values='{"values":["&lt;cel&gt;","&lt;td&gt;","&lt;tr&gt;","&lt;table-data&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. Table content can be placed only within the following tag(s)?</h6>
+			<options values='{"values":["&lt;td&gt; or &lt;th&gt;","&lt;td&gt; or &lt;tr&gt;","&lt;td&gt; or &lt;tl&gt;","None"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. Choose the correct HTML to left-align the content inside a tablecell?</h6>
+			<options values='{"values":["&lt;td valign=&rdquo;left&rdquo;&gt;","&lt;td left &gt;","&lt;td leftalign&gt;","&lt;td align=&rdquo;left&rdquo;&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+
+		<div>
+			<h6>9. Use &lt;td&gt; and &lt;/td&gt; to add what to your tables?</h6>
+			<options values='{"values":["row","steps","columns","none"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		<div>
+			<h6>10. Main container for &lt;tr&gt;, &lt;td&gt; and &lt;th&gt; is ?</h6>
+			<options values='{"values":["&lt;table&gt;","&lt;group&gt;","&lt;data&gt;","All of the above"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

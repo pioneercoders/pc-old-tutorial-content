@@ -1,0 +1,41 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','d','a','a'], selAnswers: []}">
+		<div>
+			<h6>1. &lt;span&gt; tag is an inline element?</h6>
+			<options values='{"values":["true","false"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>2.which of the following is incorrect?</h6>
+			<options values='{"values":["&lt;span class=&rdquo;cls1&rdquo;&gt;&lt;/span&gt;","&lt;span id=&rdquo;id1&rdquo;&gt;&lt;/span&gt;","&lt;span&gt; alt=&rdquo;alt1&rdquo;&lt;/span&gt;","&lt;span lang=&rdquo;english&rdquo;&gt;&lt;span&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>3.The &lt;span&gt; tag is invalid within the following tags?</h6>
+			<options values='{"values":["table","font","center","All the above"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.What is the difference between &lt;span&gt; and &lt;div&gt; tags?</h6>
+			<options values='{"values":["&lt;span&gt;tag is an inline element, whereas the &lt;div&gt;tag is a block level element.","&lt;span&gt; and &lt;div&gt are inline elements;","Both a and b","None of these"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.&LT;Span&gt; tag will  validate in XHTML?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

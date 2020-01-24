@@ -1,0 +1,39 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','a','c','b','a'], selAnswers: []}">
+		<div>
+			<h6>1. What is a better way to design the layout of a web page table tag or div?</h6>
+			<options values='{"values":["table","div","both a and b","p tag"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Nested divs are possible in HTML?</h6>
+			<options values='{"values":["true","false"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.What are &lt;div&gt; tags used for?</h6>
+			<options values='{"values":["To replace paragraphs.i.e. p tags"," To logically divide the paragraphs"," To logically divide the document","To provide space between tables"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.HTML div is a ____________element?</h6>
+			<options values='{"values":["inline","block","both a and b","None of these"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.The &lt;div&gt; tag is for ____________?</h6>
+			<options values='{"values":["Division","Separate","Document","Focus"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

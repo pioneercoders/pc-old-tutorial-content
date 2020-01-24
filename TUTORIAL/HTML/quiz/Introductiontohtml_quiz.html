@@ -1,0 +1,65 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['c','b','b','d','d','b','a','a','c','a'], selAnswers: []}">
+		<div>
+			<h6>1. What does HTML stands For?</h6>
+			<options values='{"values":["Home Tool Markup Language","Hyperlinks and Text Markup Language","Hyper Text Markup Language","Home Text Makeup Language"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. HTML is what type of language?</h6>
+			<options values='{"values":["Scripting language","Markup language","Programming language","Network protocal"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. How to define The document Should be HTML5?</h6>
+			<options values='{"values":["&lt;html&gt;","&lt;!DOCTYPE html&gt;","&lt;body&gt;","&lt;head&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4. Why HTML?</h6>
+			<options values='{"values":["All","Designing static pages","Both b&d","Developing static web pages"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5. Which of the following is used for writing HTML?</h6>
+			<options values='{"values":["Sublime Text","Atom","Notepad++","All the Above"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6. HTML tags are written in lowercase only?</h6>
+			<options values='{"values":["True","False"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7. What is use of HTML?</h6>
+			<options values='{"values":["Create static web pages","Create dynamic web pages","Design static web pages","Design dynamic web pages"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8. HTML tags are keywords (tag names) surrounded by angle brackets?</h6>
+			<options values='{"values":["True","False"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		<div>
+			<h6>9. Latest Version of HTML?</h6>
+			<options values='{"values":["HTML4","HTML4.5","HTML5","HTML5+"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		<div>
+			<h6>10. Can we hide HTML source code?</h6>
+			<options values='{"values":["No","Yes"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

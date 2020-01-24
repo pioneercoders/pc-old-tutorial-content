@@ -1,0 +1,35 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['d','a','a','b','a'], selAnswers: []}">
+		<div>
+			<h6>1.List the types of layouts?</h6>
+			<options values='{"values":["Static Layout","Liquid Layout","Responsive Layout","All the above"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.A responsive page layout uses both __________ and media queries?</h6>
+			<options values='{"values":["relative units","units","queries","None"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.A liquid page layout are aslo called as __________ layout?</h6>
+			<options values='{"values":["fluid width","fixed width","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.A static page layout are aslo called as __________ layout?</h6>
+			<options values='{"values":["fluid width","fixed width","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+        <div>
+			<h6>5.A responsive page layout uses both relative units and media queries, combining the ideas of a__________ and __________ ?</h6>
+			<options values='{"values":["liquid layout and adaptive layout","static layout and responsive","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>	
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
