@@ -1,0 +1,39 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','a','b','b'], selAnswers: []}">
+		<div>
+			<h6>1._______ class is a mediator between java application and database.</h6>
+			<options values='{"values":["main class.", 
+                         "driver class.", 
+                        "inherited class.",
+                        "None"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2. The driver which is platform dependent and database independent?</h6>
+			<options values='{"values":["JDBC-ODBC Bridge driver.", 
+                         " Network protocol driver.", 
+                        "Thin driver.",
+                        "Native-API driver."]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. Network protocol driver is both platform and database___?</h6>
+			<options values='{"values":[" Dependent.", 
+                         " Independent."]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>4. Select one which is incorrect based on JDBC-ODBC Bridge drivers?</h6>
+			<options values='{"values":[" It is easy to use.", 
+                         "It is used in real time application.", 
+                        " It can be easily connected to any database.",
+                        " It is not a protable driver."]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

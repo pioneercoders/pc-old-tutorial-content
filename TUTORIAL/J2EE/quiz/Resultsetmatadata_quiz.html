@@ -1,0 +1,20 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','a'], selAnswers: []}">
+		<div>
+			<h6>1. The data selected into the ResultSet object is referenced by___</h6>
+			<options values='{"values":["ResultSetMetaData", 
+                         "DatabaseMetaData"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2. Is getMetaData() method is used to get ResultSetMetaData?</h6>
+			<options values='{"values":["True", 
+                         "False"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

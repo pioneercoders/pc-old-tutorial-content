@@ -1,0 +1,21 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','a'], selAnswers: []}">
+		<div>
+			<h6>1. The columns present in the rows of a Resultset may have null values?</h6>
+			<options values='{"values":["True", 
+                         "False"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2.To access the records in the ResultSet in a iterating method we use___ method </h6>
+			<options values='{"values":["next()", 
+                         "nextele()", 
+                        "get()"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

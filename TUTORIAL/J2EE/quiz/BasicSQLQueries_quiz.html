@@ -1,0 +1,41 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['c','b','a','b'], selAnswers: []}">
+		<div>
+			<h6>1. Select which of the following is incorrect?</h6>
+			<options values='{"values":[" SQL is case insensitive.", 
+                         "SQL is a set rules and guidelines", 
+                        " SQL statements must be written in single statement only."]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2. Which SQL statement is used  extract data from database?</h6>
+			<options values='{"values":["EXTRACT.", 
+                         "SELECT", 
+                        "GET",
+                        "OPEN"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>3. Which SQL statement is used to delete data from database?</h6>
+			<options values='{"values":["DELETE", 
+                         "REMOVE", 
+                        "DROP"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>4. How to select all columns from the table employee?</h6>
+			<options values='{"values":["SELECT all FROM employee.", 
+                         "SELECT * FROM employee.", 
+                        " SELECT all columns FROM employee.",
+                        "None of the above."]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+                 
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

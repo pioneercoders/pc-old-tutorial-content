@@ -1,0 +1,21 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b'], selAnswers: []}">
+		<div>
+			<h6>1.Database metadata is one of the JDBC-API?</h6>
+			<options values='{"values":["True", 
+                         "False"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. The method getMetaData() is used for?</h6>
+			<options values='{"values":["To read database server", 
+                         "To obtain object of DatabaseMetaData", 
+                        "To read driver software name",
+                        "To read database server version"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

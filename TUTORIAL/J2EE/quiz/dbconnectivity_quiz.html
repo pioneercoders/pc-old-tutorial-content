@@ -1,0 +1,22 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','a'], selAnswers: []}">
+		<div>
+			<h6>1. The first and foremost thing to connect the java application to database is</h6>
+			<options values='{"values":["Create a connection", 
+                         " Register the driver.", 
+                        "Create SQL statement.",
+                        "Execute SQL statement."]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2.Is required to close the database connection after completion of the section? </h6>
+			<options values='{"values":["Yes", 
+                         "No"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

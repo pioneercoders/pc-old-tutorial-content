@@ -1,0 +1,113 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','b','b','d','d','c','c','a','b','c','d','b','d','a','b','d'],selAnswers:[]}">
+		<div>
+			<h6>1.What servlet processor was developed by Apache Foundation and Sun?</h6>
+			<options values='{"values":["Apache Tomcat", "Apache Web server", "Sun servlet processor", "None of the above is correct."]}' bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. How does Tomcat execute a JSP? </h6>
+			<options values='{"values":["As a CGI script", "As an independent process", "By one of Tomcat's threads", "None of the above is correct."]}' bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. Which of the following protocol is used for web page browsing ? </h6>
+			<options values='{"values":["https", "http", "ftp", "none of these"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4.Which statements are true about http protocol?</h6>
+			<options values='{"values":["Runs on top of Tcp/IP", "It has web specific feature", "Web server processes http request", "But it is not IETF standard"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. Which tag doesn't belongs to web.xml?</h6>
+			<options values='{"values":["web-app", "welcome-file-list", "servlet", "servlet-mappings"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6. Which of these are true about DD?</h6>
+			<options values='{"values":["We can delare no of servlets in one DD", "There is only one DD per one Web application", "There is no limit for DD per one Web application", "There is one DD per one servlet"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>7. Where we can put jar file?</h6>
+			<options values='{"values":["classes", "library", "lib(correct)", "WEB-INF"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		
+		
+		<div>
+			<h6>8. Who does controll life-cycle of a servlet?</h6>
+			<options values='{"values":["browser", "client", "container", "user"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+		
+		<div>
+			<h6>9. Which tag of DD maps internal name of servlet to fully qualified class name?</h6>
+			<options values='{"values":["servlet", "servlet-mapping", "web-app", "servlet-mappings"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>10. Which tag of DD maps internal name of servlet to public URL pattern?</h6>
+			<options values='{"values":["servlet", "servlet-mapping", "web-app", "servlet-mappings"]}'
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		
+		<div >
+			<h6>11. Which is the life-cycle procedure?</h6>
+			<options values='{"values":["constructor call=>class loading=>init()=>service()=>destroy()", "constructor call=>class loading=>init()=>service()=>destroy()", "class loading=>constructor call=>init()=>service()=>destroy()", "constructor call=>class loading=>service()=>init()=>destroy()"]}'
+			bind-model='quizObj.selAnswers' id="10"></options>
+		</div>
+		
+		<div >
+			<h6>12. Which life-cycle method make ready the servlet for garbage collection?</h6>
+			<options values='{"values":["init", "service", "system.gc", "destroy"]}'
+			bind-model='quizObj.selAnswers' id="11"></options>
+		</div>
+		
+		<div >
+			<h6>13. Which life cycle method is  called  once in tservlet life?</h6>
+			<options values='{"values":["class loading", "init()", "service()", "destroy()"]}'
+			bind-model='quizObj.selAnswers' id="12"></options>
+		</div>
+		
+		<div >
+			<h6>14. Which of these life-cycle method you can over-ride in your class?</h6>
+			<options values='{"values":["init()", "service()", "doGet()", "All of these"]}'
+			bind-model='quizObj.selAnswers' id="13"></options>
+		</div>
+		
+		<div >
+			<h6>15. Can you run a servlet in application server?</h6>
+			<options values='{"values":["yes", "no"]}'
+			bind-model='quizObj.selAnswers' id="14"></options>
+		</div>
+		
+		<div >
+			<h6>16. Servlet is a stand-alone java application , true or false?</h6>
+			<options values='{"values":["yes", "no"]}'
+			bind-model='quizObj.selAnswers' id="15"></options>
+		</div>
+		
+		<div >
+			<h6>17.Which interface contain servlet life-cycle methods?</h6>
+			<options values='{"values":["HttpServlet", "GenericServlet", "Service", "Servlet"]}'
+			bind-model='quizObj.selAnswers' id="16"></options>
+		</div>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

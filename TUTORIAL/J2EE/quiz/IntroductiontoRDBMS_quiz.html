@@ -1,0 +1,32 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['c','c','a'], selAnswers: []}">
+		<div>
+			<h6>1. RDBMS stands for?</h6>
+			<options values='{"values":["Relational DataBase Managerical System.", 
+                         "Relation Database Mangement System.", 
+                        "Relational Database Management System.",
+                        "None of the above."]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2. RDBMS was introduced by?</h6>
+			<options values='{"values":["Dennies Richie.", 
+                         "James Goshling.", 
+                        " E.F.Codd.",
+                        "Brendan Eich."]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+                <div>
+			<h6>3. Each ‘boat’ has each ‘id’. This comes under which type of relationship?</h6>
+			<options values='{"values":[" One-One", 
+                         " One-Many", 
+                        " Many-Many",
+                        "None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

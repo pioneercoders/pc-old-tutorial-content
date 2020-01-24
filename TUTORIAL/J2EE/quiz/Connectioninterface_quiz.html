@@ -1,0 +1,22 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c'], selAnswers: []}">
+		<div>
+			<h6>1.The another method to create connection object is by java.sqlPreparedStatement object?</h6>
+			<options values='{"values":["True", 
+                         "False"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2.The method used to set the commit status.</h6>
+			<options values='{"values":["public void commit()", 
+                         "public void rollback()", 
+                        "public void set AutoCommit(boolean status)",
+                        "public int commit()"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

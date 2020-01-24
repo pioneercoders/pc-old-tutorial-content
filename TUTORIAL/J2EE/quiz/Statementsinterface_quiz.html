@@ -1,0 +1,28 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b','b'], selAnswers: []}">
+		<div>
+			<h6>1.Is PreparedStatement reduces the effect on the database during execution time? </h6>
+			<options values='{"values":["True", 
+                         "False"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2.Statement object is used for excecuting dynamic SQL statements? </h6>
+			<options values='{"values":["True", 
+                         "False"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. public ResultSet executeQuery(String sql) defines...</h6>
+			<options values='{"values":["Used to execute specified query", 
+                         "Used to execute SELECT query", 
+                        "Used to execute queries that may return multiple results",
+                        "Used to execute batch of commands"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

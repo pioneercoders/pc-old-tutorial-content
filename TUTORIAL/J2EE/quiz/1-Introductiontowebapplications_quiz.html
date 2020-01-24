@@ -1,0 +1,83 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['c','c','c','c','b','b','b','d','c','d','c','c'],selAnswers:[]}">
+		<div>
+			<h6>1.What are the correct statement about server?</h6>
+			<options values='{"values":["can be one physical machine", "can be software", "can be hardware", "non of these"]}' bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. What are the jobs of web-server?</h6>
+			<options values='{"values":["Get the resources", "Find the resources", "Return the requested thing to user", "Get the Request"]}' bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. What is full form of MIME type? </h6>
+			<options values='{"values":["Mail Interface Multiple Extension", "Mail Internet Multiple Extension", "Multiple Internet Mail Extension", "Multiple Interface Mail Extension"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4.Which of these are MIME types?</h6>
+			<options values='{"values":["application/java", "image/bmp", "text/htm(or)html", "text/css"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. What is true about MIME type?</h6>
+			<options values='{"values":["It tells the browser what type of data browser will send", "It tells the browser what type of data browser will receive", "It tells the server what type of data server will receive", "It tells the server what type of data server will send"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6. What is the nature of HTML page ?</h6>
+			<options values='{"values":["dynamic", "static", "both dynamic and static", "none of these"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>7. Which of these are webserver?</h6>
+			<options values='{"values":["Internet Information Services(IIS)", "tomcat", "Lighttpd", "glassfish"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		
+		
+		<div>
+			<h6>8. Which of these is not a Application Server?</h6>
+			<options values='{"values":["JBoss", "JRun", "WebLogic Server", "ApacheHTTPServer"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+		
+		<div>
+			<h6>9. What is bytecode? </h6>
+			<options values='{"values":["Machine-specific code", "Java code", "Machine=independent code", "None of the above is correct"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>10. In which folder of tomcat you have to put your web application?</h6>
+			<options values='{"values":["web-app", "web-apps", "webapp", "webapps"]}'
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		
+		<div >
+			<h6>11. In which folder we can put web.xml?</h6>
+			<options values='{"values":["class", "package", "WEB-INF", "webapps"]}'
+			bind-model='quizObj.selAnswers' id="10"></options>
+		</div>
+		
+		<div >
+			<h6>12. Where we can put jar file? </h6>
+			<options values='{"values":["classes", "library", "lib(correct)", "WEB-INF"]}'
+			bind-model='quizObj.selAnswers' id="11"></options>
+		</div>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

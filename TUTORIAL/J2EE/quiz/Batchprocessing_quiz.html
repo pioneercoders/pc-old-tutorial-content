@@ -1,0 +1,30 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','b','b'], selAnswers: []}">
+		<div>
+			<h6>1.A set of queries can be executed with a single statement is achieved by____?</h6>
+			<options values='{"values":["Transaction Management", 
+                         "Batch Processing", 
+                        "None"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2. Which one of the following increases the performance of an application?</h6>
+			<options values='{"values":["Transaction Management", 
+                         "Batch Processing", 
+                        "None"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. When one operation failed then an Exception will be thrown to cancel all the operations of the batch.The method called in the Exception is____</h6>
+			<options values='{"values":["commit();", 
+                         "rollback();", 
+                        "Autocommit();",
+                        "None"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

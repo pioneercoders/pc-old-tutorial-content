@@ -1,0 +1,122 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','c','a','b','b','c','c','d','d','b','a','a','d','a','a','c','c'],selAnswers:[]}">
+		<div>
+			<h6>1. What is sent to the user via HTTP, invoked using the HTTP protocol on the user's computer, and run on the user's computer as an application?</h6>
+			<options values='{"values":["A Java application", "A Java applet", "A Java servlet", "None of the above is correct"]}' bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2. What is invoked via HTTP on the Web server computer when it responds to requests from a user's Web browser?</h6>
+			<options values='{"values":["A Java application", "A Java applet", "A Java servlet", "None of the above is correct"]}' bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. Which http method send by browser that asks the server to get the page only? </h6>
+			<options values='{"values":["get", "post", "option", "put"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>4.  Which http method send by browser that gives the server what user data typed in the form?</h6>
+			<options values='{"values":["put", "post", "get", "none of these"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5. How to send data in get method? </h6>
+			<options values='{"values":["we can&apos;t", "Through url", "Through payload", "None of these"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6.  When we are sending data in URL in get method, how to separate parameters </h6>
+			<options values='{"values":["by semicolon", "by comma", "by ampersand", "by fullstop"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>7. When we are sending data in URL in get method, how to separate path and parameter? </h6>
+			<options values='{"values":["By comma separator", "By &", "By ?", "All of these"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		
+		
+		<div>
+			<h6>8. When we are sending data in URL in get method, how to separate  parameters?</h6>
+			<options values='{"values":[",", ";", "?", "&"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		
+		
+		<div>
+			<h6>9. Which method is called when client request come?</h6>
+			<options values='{"values":["get()", "post()", "init()", "service()"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>10. Which method doesn't exists in HttpServlet Class?</h6>
+			<options values='{"values":["serice", "init", "doGet", "doPost"]}'
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>11. Which http method is idempotent? </h6>
+			<options values='{"values":["get", "post", "trace", "option"]}'
+			bind-model='quizObj.selAnswers' id="10"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>12. If you are not putting method name in your form tag, what is the default method? </h6>
+			<options values='{"values":["get", "post"]}'
+			bind-model='quizObj.selAnswers' id="11"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>13. Which method decide which method will call i.e doGet() or doPost()
+				based on http method of http request?</h6>
+			<options values='{"values":["do Option", "do Trace", "do Method", "Service"]}'
+			bind-model='quizObj.selAnswers' id="12"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>14. Get is faster that Post method. true or false.?</h6>
+			<options values='{"values":["serice", "true", "false"]}'
+			bind-model='quizObj.selAnswers' id="13"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>15. How many caracters we can send though doGet()?</h6>
+			<options values='{"values":["1024", "1028", "1082", "All of these"]}'
+			bind-model='quizObj.selAnswers' id="14"></options>
+		</div>
+		<br>
+		
+		<div >
+			<h6>16. When init parameters are read by container?</h6>
+			<options values='{"values":["When container starts", "When doGet/doPost called", "When Servlet intialised", "When constuctor called"]}'
+			bind-model='quizObj.selAnswers' id="15"></options>
+		</div>
+		
+		<br>
+		
+		<div >
+			<h6>17.Which method shows the client what server is receiving?</h6>
+			<options values='{"values":["goGet", "doOption", "doTrace", "doPost"]}'
+			bind-model='quizObj.selAnswers' id="16"></options>
+		</div>
+		
+	<div id="results" ng-hide="true" ></div>
+</div>

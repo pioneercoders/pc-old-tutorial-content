@@ -1,0 +1,32 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','b','b'], selAnswers: []}">
+		<div>
+			<h6>1. An API that is used to communicate with java application and database is?</h6>
+			<options values='{"values":["ODBC", 
+                         "JDBC", 
+                        "MySQL",
+                        " Oracle"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                  <div>
+			<h6>2. Select which of the following statements are incorrect?</h6>
+			<options values='{"values":[" JDBC is both platform and database independent.", 
+                         "JDBC implemented in java with pointers.", 
+                        " JDBC can access any type of data in RDBMS."]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+                <div>
+			<h6>3. The packages java.sql and javax.sql comes under____?</h6>
+			<options values='{"values":["Java", 
+                         "JDBC"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		
+		
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

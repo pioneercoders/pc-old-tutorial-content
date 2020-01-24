@@ -1,0 +1,30 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b','b'], selAnswers: []}">
+		<div>
+			<h6>1.Transation Management is a set of operations that is to be performed in one task?</h6>
+			<options values='{"values":["True", 
+                         "False"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+                 <div>
+			<h6>2. Which among the following are not a property of transaction management?</h6>
+			<options values='{"values":["Atomicity", 
+                         "Inconsistency", 
+                        "Durability",
+                        "Isolation"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3. Which among the following is a type of Transaction?</h6>
+			<options values='{"values":["Money Transaction", 
+                         "Distributed Transaction", 
+                        "Static Transaction",
+                        "Banking Transaction"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
