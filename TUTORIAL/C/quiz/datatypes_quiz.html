@@ -1,0 +1,19 @@
+<!-- widget Quiz  -->	
+<h3>Introduction to C Quiz</h3>
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','a'], selAnswers: []}">
+		<div>
+			<h6> 1. What is the default value of char variable? </h6>
+			<options values='{"values":["u0000", "0", "null", "not defined"]}' bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+	
+		<div >
+			<h6> 2. What is the default value of long? </h6>
+			<options values='{"values":["0", "1", "0L", "1L"]}' bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->
