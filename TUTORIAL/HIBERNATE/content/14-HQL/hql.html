@@ -1,0 +1,55 @@
+<h3>Hibernate Query Language(HQL) :</h3>
+<p class="subheading text-justify">
+Hibernate Query Language (HQL) is an object-oriented query language, similar to SQL, but instead of operating on tables and columns, HQL works with persistent objects and their properties. HQL is database independent.HQL queries internally converted into d/b specific SQL queries using Dialect class.</p>
+<h3>Steps to work with HQL</h3>
+<p>1) write the HQL query as per requirement.</p>
+<p>2) create an org.hibernate.Query object by passing HQL query.To do this we can call createQuery(String hql) method from session interface</p>
+<h5 class="subheading no-margin">Syntax</h5>
+@CODE_START@@HIBERNATE@Query query =session.createQuery(hqlquery);
+@CODE_END@
+<h5 class="subheading no-margin">Note :</h5>
+<p class="text-justify">session.getNamedQuery(String namedQueryName) method is  used to create an object  of Query for a named Hql query string defined in the mapping file.</p>
+<p>3) if the Query contains parameters, set those values.</p>
+<p>4) execute query object</p>
+<h5 class="subheading no-margin">Syntax</h5>
+@CODE_START@@HIBERNATE@query.list();(or)
+query.iterate();
+query.executeUpdate();
+@CODE_END@
+<h4 class="subheading">Example code for HQL select operation</h4>
+@CODE_START@@HIBERNATE@String hql="From com.pioneercoders.Employee";
+Query query=session.createQuery(hql);
+List results=query.list();
+@CODE_END@
+<h4 class="subheading">Example code for HQL insert operation</h4>
+@CODE_START@@HIBERNATE@String hql="INSERT INTO Employee(firstName, lastName, salary)"+"SELECT firstName, lastName, salary FROM old_employee";
+Query query=session.createQuery(hql);
+int result=query.executeUpdate();
+@CODE_END@
+<h4 class="subheading">Example code for HQL update operation</h4>
+@CODE_START@@HIBERNATE@String hql="UPDATE Employee set salary = :salary "+ "WHERE id = :employee_id";
+Query query=session.createQuery(hql);
+Query.setParameter("salary", 1000);
+Query.setParameter("employee_id", 10);
+int result=query.executeUpdate();
+@CODE_END@
+<h3 class="subheading">HQL with Aggregate functions</h3> 
+<p>You may call avg(), min(), max() etc. aggregate functions by HQL. Let's see some common examples:</p>
+@CODE_START@@HIBERNATE@Query query=session.createQuery("select sum(salary) from Emp");
+List list=query.list();;
+Iterator iterator=list.iterator();
+while(iterator.hasNext()){
+	System.out.println(iterator.next());
+}@CODE_END@
+<h3 class="subheading">Example to get maximum salary of employee</h3>
+@CODE_START@@HIBERNATE@Query query=session.createQuery("select max(salary) from Emp");
+@CODE_END@
+<h3 class="subheading">Example to get minimum salary of employee</h3>
+@CODE_START@@HIBERNATE@Query query=session.createQuery("select min(salary) from Emp");
+@CODE_END@
+<h3 class="subheading">	Example to count total number of employee ID</h3>
+@CODE_START@@HIBERNATE@Query query=session.createQuery("select count(id) from Emp"); 
+@CODE_END@
+<h3 class="subheading">	Example to get average salary of each employees</h3>
+@CODE_START@@HIBERNATE@Query query=session.createQuery("select avg(salary) from Emp"); 
+@CODE_END@

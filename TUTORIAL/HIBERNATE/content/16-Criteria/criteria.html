@@ -1,0 +1,50 @@
+<h3 class="subheading">Criteria API:</h3>
+<p class="text-justify">The Criteria API provides an object-oriented way to retrieve persistent object's.This provides a simplified API to build queries dynamically at runtime.Criteria is an alternative way to write the queries without using HQL.The Criteria Api allows queries to build at runtime without direct string manipulations.Criteria is an API from hibernate and used to write queries  in object oriented manner rather than  sql(or) HQL.Criteria Api is more useful when we have variable no of conditions in a query.
+We can execute only Select statements by using criteria,we can not execute Update,Delete,statements using crieteria.Criteria api also include aggregation mathods.</P>
+<h3 class="subheading">Steps to work with Criteria API</h3>
+<p class="text-justify">1) create an Create org.hibernate.Criteria Object object by passing Entity class.To do this we can call createCriteria(EntityClassName.class) method from session interface</p>
+@CODE_START@@HIBERNATE@Criteria criteria =session.createCriteria(EntityClassName.class);
+@CODE_END@
+<P class="text-justify">2) Create org.hibernate.criterion Object per each
+condition of the query and add to Criteria object</P>
+@CODE_START@@HIBERNATE@Criteria criterion =Restrictions.eq("propertyName", propertyValue);
+criteria.add(criterion);@CODE_END@
+<p class="text-justify">3) Execute org.hibernate.Criteria object(by calling list() method on Criteria object)</p>
+@CODE_START@@HIBERNATE@List list=criteria.list();@CODE_END@
+<p>Criteria is an interface present in org.hibernate package used  to represent the query in object oriented manner.CriteriaImpl is an implementation class of Criteria.</P>
+
+<h5 class="subheading">Example code to read all the Employee records:</h5>
+@CODE_START@@HIBERNATE@Session session=sessionFactory.openSession();
+Criteria crieteria =session.createCriteria("com.pioneercoders.pojo.Employee");
+List employees=criteria.list();
+for(Employee emp:employees){
+	System.Out.println(emp.getName()+" : "+emp.getSalary());
+}@CODE_END@
+<h5 class="subheading">Example code to read the employee records whose name is "Ramu"</h5>
+@CODE_START@@HIBERNATE@Session session =sessionFactory.openSession();
+Criteria crit=session.createCriteria(Employee.class);
+Criterion nameCriterion=Restrictions.eq("name","ramu");
+crit.add(nameCriterion);
+List results=crit.list();@CODE_END@
+<h5 class="subheading">Example code to read All the employee records whose salary is>8000.0</h5>
+@CODE_START@@HIBERNATE@Session session =sessionFactory.openSession();
+Criteria crit=session.createCriteria(Employee.class);
+crit.add(Restrictions.gt("salary",new Double(8000.0)));
+List results=crit.list();@CODE_END@
+<h3 class="subheading">Projections</h3>
+<p class="text-justify">If we want to select particular properties (columns) (OR) to perform aggregate function use projections.We have done this in HQL also,but there we don't need any support As part of HQL query itself we can specify required Properties(Column) names.But in crieteria we have seperate API to specify required properties.</p>
+<h3 class="subheading">Steps to work with Projections</h3>
+<p class="text-justify">1) Create org.hibernate.criterion.projection Object's.</p>
+@CODE_START@@HIBERNATE@Projection nameProjection =Projections.property("name");
+projection salaryProjection =Projections.property("salary");
+@CODE_END@
+<p class="text-justify">Projection is an interface, which represents one selected property (OR) selected aggregate funtions.Projection is a utility class which contains methods to create projection Objects.These methods returns different xxxProjection Objects.</p>
+<P class="text-justify">2)Create org.hibernate.criterion.ProjectionList Object</P>
+@CODE_START@@HIBERNATE@ProjectionList plist=Projections.projectionList();@CODE_END@
+<p class="text-justify">ProjectionList is a class,which is used to hold multiple Projection Objects</p>
+<p class="text-justify">3) Add Projection object's to ProjectionList.</p>
+@CODE_START@@HIBERNATE@plist.add(nameProjection);
+plist.add(salaryProjection);@CODE_END@
+<p>4) Set and Exicute the criteria.</p>
+@CODE_START@@HIBERNATE@crit.setProjection(plist);
+Listresult=crit.list();@CODE_END@

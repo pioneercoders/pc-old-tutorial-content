@@ -1,0 +1,32 @@
+<!-- @IMG_START@J2EE/Coming2/PNG@IMG_END@ -->
+<h3 class="subheading">Collection in Hibernate</h3>
+<p class="padding-left text-justify">A collection is defined as a one-to-many reference. The simplest collection type in Hibernate is &lt;list&gt;.This collection is a list of unordered objects and can contain duplicates. This is similar to java.util.List.</p>
+<h3 class="subheading">Different Collection Types in Hibernate</h3>
+<p class="padding-left text-justify">java.util.List</p>
+<p class="padding-left text-justify">java.util.Set</p>
+<p class="padding-left text-justify">java.util.SortedSet</p>
+<p class="padding-left text-justify">java.util.Map</p>
+<p class="padding-left text-justify">java.util.SortedMap</p>
+<p class="padding-left text-justify">java.util.Collection</p>
+<p class="padding-left text-justify">or write the implementation of org.hibernate.usertype.UserCollectionType</p>
+<h3 class="subheading">List Type Collection</h3>
+<p>If our persistent class has List object, we can map the List easily either by <list> element of class in mapping file or by annotation.</p>
+<b>Ex Syntax</b>
+@CODE_START@@HIBERNATE@<class name="Question" table="question_tbl">  
+	<list name="answers" table="answers_tbl">  
+	<key column="qid"></key>  
+	<index column="int"></index>  
+	<element column="answer" type="string"></element>  
+	</list>  
+</class>
+@CODE_END@
+<h3 class="subheading">Set Type Collection</h3>
+<p>Set collection allows only the unique Objects to the collections.&ltset&gt&ltset&gt element is used for mapping properties of type Set.</p>
+<b>Ex:</b>
+@CODE_START@@HIBERNATE@<class name="Product">
+    <id name="serialNumber" column="productSerialNumber"/>
+    <set name="parts">
+        <key column="productSerialNumber" not-null="true"/>
+        <one-to-many class="Part"/>
+    </set>
+</class>@CODE_END@

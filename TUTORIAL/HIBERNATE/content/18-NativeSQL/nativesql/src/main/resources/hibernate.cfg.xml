@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<!--  database details starts -->
+		<!-- The JDBC driver class. -->
+		
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- The JDBC URL to the database instance. -->
+		
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_query</property>
+		<!-- database username -->
+		
+		<property name="hibernate.connection.username">root</property>
+		<!-- database password -->
+		
+		<property name="hibernate.connection.password">root</property>
+		<!--  database details ends it is common for every database here we are using mysql database  -->
+		<!-- *********************************************** -->
+		<!-- Below properties additionally provided by hibernate  -->
+		<!-- This property makes Hibernate generate the appropriate SQL for the chosen database. -->
+		
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- Below one is hibernate tool(hbm2ddl.auto) it automatically creates table in db 
+		    hibernate.hbm2ddl.auto"=create-> it will always creates the table 
+		    hibernate.hbm2ddl.auto"=update ->first it checks table is created or not if created ,it doesnt create otherwise it create 
+		    -->
+		
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- hibernate.show_sql"=true ->  it will generates sql queries to the console  -->
+		
+		<property name="hibernate.show_sql">true</property>
+		<!-- hibernate.format_sql"=true ->it will generates sql queries in proper format in console  -->
+		
+		<property name="hibernate.format_sql">true</property>
+        <!-- ********************************************************** -->
+        <!--  if we use annotations at class level we have to refer (mapping class="hibernateex.Student" -->
+		
+		<mapping class="com.pioneercoders.model.Course"></mapping>
+		
+
+		
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,31 @@
+<h3 class="subheading no-padding">Caching</h3>
+<p class="text-justify">Caching/buffer is a temprary memory that holds data for temporary period.The process of storing data in cache/buffer and using that data accross the multiple request/execution is called as caching/bufferring.</P>
+<p class="text-justify">In client server environment the cache/buffer that resides at client side holds result given by server application and reduces n/w round trips b/w client and server accross the multiple same request.</P>
+<p class="text-justify">Hibernate supports two levels of caching.They are given below</p>
+<h3 class="subheading no-padding">First Level Cache: </h3>
+<P class="text-justify">First level cache in hibernate is enabled by default and you do not need to do anything to get this functionality working.In fact,you can not disable it even forcefully.Its easy to  
+understand the first level cache if we understand the fact that it is associated with Session object.</P>
+<!-- <img src="" alt="first level "> -->
+<p class="text-justify">1. First level cache is associated with "session" object and other session objects in application can not see it.</p>
+<p class="text-justify">2. The scope of cache objects is of session.Once session is closed,cached objects are gone forever.</p>
+<p class="text-justify">3. When we query an entity first time,it is retrieved from database and stored in first  level cache associated with hibernate session.</p>
+<p class="text-justify">4. If we query same object again with same session object,it will be loaded from cache and no sql query will be executed.</p>
+<p class="text-justify">5. The loaded entity can be removed from session using evict() method.The next loading of this entity will again make a database call if it has been removed using evict() method.</p>
+<p class="text-justify">6. The whole session cache can be removed using clear() method.It will remove all the entities stored in cache.</p>
+<h3 class="subheading no-padding">Second level Cache: </h3>
+<p class="text-justify">Second level cache is called as global cache.To turn on the second level caching,the first step is to choose a cache provider in the Hibernate configuration file "hibernate.cfg.xml".Hibernate supports several kinds of cache implementation,such as EHCache,OSCache,SwarmChe and JBossCache.In a non-distributed environment,we may simply choose EHCache,which is also the default cache provider for hibernate</P>
+<h3 class="subheading">EH cache: </h3>
+<p class="text-justify">Eh cache is lightweight and easy to use in process cache.it supports read only,readwrite,memory andd disk-based caching.It does not supports clustering.</p>
+<h3 class="subheading">OS cache: </h3>
+<p class="text-justify">It is another open source caching solution.It is part of larger package,Which also provides caching for JSp pages (or)arbitary objects.It supports read only,readwrite,memory and disk-based caching.It is also provides basic support for clustring via either java groups  (or)JMS.</p>
+<h3 class="subheading">SwarmCache: </h3>
+<p class="text-justify">It is Simple clustred based caching solution based on java groups.It supports read only,non-strict read and write i.e this type cache is suitable for applications that typically have many more read operations than write operations.</p>
+<h3 class="subheading">JBoss TreeCache: </h3>
+<p class="text-justify">It is a power ful replicated(synchronous or asynchronus) and transactional cache.It supported in JTA Environment.</P>
+<h3  class="subheading">Caching Strategies</h3>
+<h5 class="subheading no-margin">1.Read Only</h5>
+<p class="text-justify">This caching strategy should be used for persistent objects that will always read but never updated.Its good for reading and caching application configuration and other static data that are never updated.This is the simplest strategy with best performance because thers is no overload to check if the object is updated in database or not.</p>
+<h5 class="subheading no-margin">Read Write</h5>
+<p class="text-justify">Its good for persistent objects that can be updated by the hibernate application.However if the data is updated either through backed or other applications,then there is no way hibernate will know about it and data might be stale.So while using this strategy,make sure you are using Hibernate API for updating the data.</P>
+<h5 class="subheading no-margin">Nonrestricted Read Write</h5>
+<p class="text-justify">If the application only occasionally needs to update data and strict transaction isolation is not required,a nonstrict -read-write cache might be appropriate.</p>

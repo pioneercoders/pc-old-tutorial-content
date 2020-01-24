@@ -1,0 +1,67 @@
+<h3 class="subheading">Native SQL :</h3>
+<p class="text-justify">You can also express queries in the native SQL dialect of your database. This is useful if you want to utilize database-specific features such as query hints or the CONNECT keyword in Oracle. It also provides a clean migration path from a direct SQL/JDBC based application to Hibernate.</p>
+
+<p class="text-justify">Hibernate3 allows you to specify handwritten SQL, including stored procedures, for all create, update, delete, and load operations.</p>
+<h4>Usage of sql queries</h4>
+<p>Execution of native SQL queries is controlled via the SQLQuery interface, which is obtained by calling Session.createSQLQuery(). The following sections describe how to use this API for querying.</H4><p>Your application will create a native SQL query from the session with the <b>createSQLQuery()</b> method on the Session interface. :</p>
+
+<div class="ex-print">
+<span style="color:#088;"> public SQLQuery</span><span> createSQLQuery(<span style="color:#088;">String</span><span> sqlString)</span><span style="color:#088;">throws</span><span> HibernateException</span><br>
+</div>
+<p>After you pass a string containing the SQL query to the createSQLQuery() method, you can associate the SQL result with either an existing Hibernate entity, a join, or a scalar result using addEntity(), addJoin(), and addScalar() methods respectively.</p>
+
+<h3 class="subheading">Scalar Queries :</h3>
+
+<p>The most basic SQL query is to get a list of scalars (values) from one or more tables. Following is the syntax for using native SQL for scalar values:</p>
+<div class="ex-print">
+<span style="color:#088;">String</span><span> sql="SELECT ID,NAME,BIRTHDATE FROM EMPLOYEE";</span><br>
+<span style="color:#088;">SQLQuery</span><span> query=session.createSQLQuery(sql);</span><br>
+<span>query.setResultTransformer(<span style="color:#088;">Criteria.</span><span>ALIAS_TO_ENTITY_MAP);</span><br>
+<span style="color:#088;">List</span><span> results=query.list();</span><br>
+</div>
+<p>These will return a List of Object arrays (Object[]) with scalar values for each column in the EMPLOYEE table. Hibernate will use ResultSetMetadata to deduce the actual order and types of the returned scalar values.</p>
+<p>To avoid the overhead of using ResultSetMetadata, or simply to be more explicit in what is returned, one can use addScalar():</p>
+<div class="ex-print">
+<span style="color:#088;">SQLQuery query=</span><span> session.createSQLQuery("SELECT ID,NAME,BIRTHDATE FROM EMPLOYEE");</span><br>
+<span>.addScalar(<span style="color:#088;">"ID",</span> <span>Hibernate.LONG);</span><br>
+<span>.addScalar(<span style="color:#088;">"NAME",</span> <span>Hibernate.STRING);</span><br>
+<span>.addScalar(<span style="color:#088;">"BIRTHDATE",</span> <span>Hibernate.DATE);</span><br>
+
+</div>
+<p>This will return Object arrays, but now it will not use ResultSetMetadata but will instead explicitly get the ID, NAME and BIRTHDATE column as respectively a Long, String and a Short from the underlying resultset. This also means that only these three columns will be returned, even though the query is using * and could return more than the three listed columns.</p>
+<p>It is possible to leave out the type information for all or some of the scalars.</P>
+<div class="ex-print">
+<span style="color:#088;">SQLQuery query=</span><span> session.createSQLQuery("SELECT ID,NAME,BIRTHDATE FROM EMPLOYEE");</span><br>
+<span>.addScalar(<span style="color:#088;">"ID",</span> <span>Hibernate.LONG);</span><br>
+<span>.addScalar(<span style="color:#088;">"NAME");</span><br>
+<span>.addScalar(<span style="color:#088;">"BIRTHDATE");</span> <br>
+
+</div>
+<P>This is essentially the same query as before, but now ResultSetMetaData is used to determine the type of NAME and BIRTHDATE, where as the type of ID is explicitly specified.</P>
+<P>How the java.sql.Types returned from ResultSetMetaData is mapped to Hibernate types is controlled by the Dialect. If a specific type is not mapped, or does not result in the expected type, it is possible to customize it via calls to registerHibernateType in the Dialect.</P>
+
+
+<h3 class="subheading">Entity Queries :</h3>
+<p>The above queries were all about returning scalar values, basically returning the "raw" values from the resultset. The following is the syntax to get entity objects as a whole from a native sql query via addEntity().</p>
+<div class="ex-print">
+<span style="color:#088;">String</span><span> sql="SELECT * FROM EMPLOYEE";</span><br>
+<span style="color:#088;">SQLQuery</span><span> query=session.createSQLQuery(sql);</span><br>
+<span>query.addEntity(<span style="color:#088;"> Employee.</span><span>class);</span><br>
+<span style="color:#088;">List</span><span> results=query.list();</span><br>
+</div>
+<P>Assuming that EMPLOYEE is mapped as a class with the columns ID, NAME and BIRTHDATE the above query will  return a List where each element is a EMPLOYEE entity.</P>
+<P>If the entity is mapped with a many-to-one to another entity it is required to also return this when performing the native query, otherwise a database specific "column not found" error will occur. The additional columns will automatically be returned when using the * notation, but we prefer to be explicit as in the following example for a many-to-one to a Address:</P>
+<div class="ex-print">
+<span style="color:#088;"></span><span>session.createSQLQuery("SELECT SELECT ID, NAME, BIRTHDATE, ADDRESS_ID FROM EMPLOYEE");</span><br>
+<span>query.addEntity(<span style="color:#088;"> Employee.</span><span>class);</span><br>
+<span style="color:#088;">List</span><span> results=query.list();</span><br>
+</div>
+<h4>Named Sql Queyries:</h4>
+<p>Named SQL queries can be defined in the mapping document and called in exactly the same way as a named HQL query. In this case, you do not need to call addEntity().you have to write this code in hibernate mapping file cfg.xml.</p>	
+<div class="ex-print">
+<span style="color:#088;">List</span><span> people=session.getNamedQuery("persons");</span><br>
+<span>.setString(<span style="color:#088;">"namePattern",namePattern</span><span>);</span><br>
+<span>.setMaxResults(<span style="color:#088;"></span><span>50);</span><br>
+<span>.list();</span><br>
+</div>
+</div>

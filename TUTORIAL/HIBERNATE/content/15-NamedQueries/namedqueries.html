@@ -1,0 +1,55 @@
+<h3 class="subheading">Named Queries :</h3>
+<p class="text-justify">It is very useful concept in hibernate. It lets you separate queries from coding section of the application to the mapping xml file(.hbm files). The query is given unique name for the entire application. The application can use the query by using the name of the query.</p>
+<h3 class="subheading">why we need Named Queries</h3>
+<p class="text-justify">While executing either HQL, NativeSQL Queries if we want to execute the same queries for multiple times and in more than one client program application then we can use the Named Queries mechanism.</p>
+<p class="text-justify">In this Named Queries concept, we use some name for the query configuration, and that name will be used when ever the same query is required to execute</p>
+<p class="text-justify">In hibernate mapping file we need to configure a query by putting some name for it and in the client application, we need to use getNamedQuery() given by session interface, for getting the Query reference and we need to execute that query by calling list()</p>
+<p class="text-justify">If you want to create Named Query then we need to use query element in the hibernate mapping file</p>
+<h3 class="subheading">Advantage is </h3>
+<p class="text-justify">The memory cost of caching the query is really small. Remember that Hibernate needs to have all the entities meta-data in memory anyway.</p>
+<h3 class="subheading">There are two ways to define the named query in hibernate:</h3>
+<p class="text-justify">1.using xml based</p>
+<p class="text-justify">2.using annotation based</p>
+<h5 class="subheading">Syntax for xml based NamedQuery</h5>
+@CODE_START@@HIBERNATE@<hibernate-mapping>
+	<class name="---" table="---">
+		<id name="---" column="---"/>
+		<property name="---" column="---" length="10"/>
+		<property name="---" column="---" />
+		--- --- --- ---
+	</class> 
+	<query name="Give Query Name">
+		select * from PRODUCTS
+	</query>	
+</hibernate-mapping>
+@CODE_END@
+<h5 class="subheading">Syntax for Annotation based NamedQuery</h5>
+@CODE_START@@HIBERNATE@@NamedQueries({
+	@NamedQuery(
+	name = "findEmployeeById",
+	query = "from Employee e where e.id = :id"
+	)
+})
+@Entity
+@Table(name = "employee")
+public class Employee implements java.io.Serializable {
+	...
+}@CODE_END@
+<h3 class="subheading">Named query definition has two important attributes:</h3>
+<p><b>1.name :</b> The name of name query by which it will be located using hibernate session.<br>
+<b>2.query:</b> Here you give the HQL statement to get executed in database.</p>
+@CODE_START@@HIBERNATE@@NamedQueries({
+@NamedQuery(name = " queryName ", query = " queryString ")
+})
+@CODE_END@
+<h3 class="subheading">How to call a named query?</h3>
+We can call the named query by getNamedQuery() method of Session interface.
+@CODE_START@@HIBERNATE@Query query = session.getNamedQuery("queryName");@CODE_END@
+<h5 class="subheading">Syntax for Annotation based NamedQuery with NativeSql base</h5>	
+@CODE_START@@HIBERNATE@@NamedNativeQueries({
+@NamedNativeQuery(
+name = "findEmployeeByIdNativeSQL",
+query = "select * from Employee_details where emp_id = :passId",
+resultClass = Employee_details.class
+)
+})@CODE_END@
