@@ -1,0 +1,42 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','c','d','a','a'], selAnswers: []}">
+		<div>
+			<h6>1.What is the content of the box model?</h6>
+			<options values='{"values":["Place where the padding and header appear.","Place where the text and images appear.",
+										"Place where the text and margin appear.","Both a and c"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.What is element's full height with the following styles?div {height: 300px; padding: 4px; border: 2px dashed green; margin:0;}?</h6>
+			<options values='{"values":["300 px","306 px","312 px","200PX"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.What is the padding of the box model?</h6>
+			<options values='{"values":["Around the border, and is not affected by the background color of the box.",
+										"Around the margin and is affected by the background color of the box.",
+										"Around the margin and is affected","The area around the content that is affected by the background color of the box."]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+        <div>
+			<h6>4.Where is the border in the box model?</h6>
+			<options values='{"values":["Around the content and padding","Around the margin and padding","Between the content and padding","All of the above"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.When setting the width and height of an element, you are only affecting the content area and not the full size.?</h6>
+			<options values='{"values":["True","False"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>	
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

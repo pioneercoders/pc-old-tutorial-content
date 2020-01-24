@@ -1,0 +1,112 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. Write a sample code to the element selector?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>	
+<style>
+	p {
+		text-align: center;
+		color: red;
+	} 
+</style>
+</head>
+<body>
+	<p>Every paragraph will be affected by the style.</p>
+	<p id="para1">Me too!</p>
+	<p>And me!</p>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<p style="color:red;text-align:center">Every paragraph will be affected by the style.</p>
+	<p id="para1" style="color:red;text-align:center">Me too!</p>
+	<p style="color:red;text-align:center">And me!</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+		<accordion-item>
+		<accordion-title>2. Write a sample code for id selector?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	#para1 {
+		text-align: center;
+		color: red;
+		}
+</style>
+</head>
+<body>
+	<p id="para1">Hello World!</p>
+	<p>This paragraph is not affected by the style.</p>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p style="color:red;text-align:center">Hello World!</p>
+	<p>This paragraph is not affected by the style.</p>	
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+			<accordion-item>
+		<accordion-title>3. Write a sample code for class selector?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<html>
+<head>
+<style>
+	.para1 {
+		text-align: center;
+		color: red;
+		}
+</style>
+</head>
+<body>
+	<p class="para1">Hello World!</p>
+	<p>This paragraph is not affected by the style.</p>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<p style="color:red;text-align:center">Hello World!</p>
+	<p>This paragraph is not affected by the style.</p>	
+</div>
+		</accordion-content>
+	</accordion-item>
+	</accordion-content>
+	</accordion-item>
+	
+			<accordion-item>
+		<accordion-title>4. Write a sample code for grouping selector?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@<!DOCTYPE html>
+<html>
+<head>
+<style>
+	 h1,h2, p 
+	 {
+		text-align: center;
+		color: red;
+	}
+</style>
+</head>
+<body>
+	<h1>Hello World!</h1>
+	<h2>Smaller heading!</h2>
+	<p>This is a paragraph.</p>
+</body>
+</html>@CODE_END@
+<div class="output-panel">
+	<h1 style="color:red;text-align:center;margin-top:35px">Hello World!</h1>
+	<h2 style="color:red;text-align:center">Smaller heading!</h2>
+	<p style="color:red;text-align:center">This is a paragraph.</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

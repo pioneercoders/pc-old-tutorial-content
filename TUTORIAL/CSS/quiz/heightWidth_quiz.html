@@ -1,0 +1,40 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','a','b','b'], selAnswers: []}">
+		<div>
+			<h6>1.Which of the following would be used to create an ID called header which has a width of 750px, a height of 30px and the color of the text is black?</h6>
+			<options values='{"values":["#header{height:30px;width:750px;color:black;}",".header{height:30px;width:750px;colour:black;}","#header{height:30px;width:750px;text:black;}",".header{height:30px;width:750px;color:black}"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which property is used to set the minimum width of a box?</h6>
+			<options values='{"values":["width","height","min-width","All"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.Min-height property does not work in either Netscape 7 or IE 6?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Which property is used to set the height of a box.?</h6>
+			<options values='{"values":["Width","Height","Min-height","None"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+        <div>
+			<h6>5.Is it height:100% and height:100px is same?</h6>
+			<options values='{"values":["yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>	
+
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

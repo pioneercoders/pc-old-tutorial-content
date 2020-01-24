@@ -1,0 +1,52 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b','c','d','a','d','a'], selAnswers: []}">
+		<div>
+			<h6>1.Which of the following property allows you to control the shape or appearance of the marker of a list?</h6>
+			<options values='{"values":["list-style-type","list-style-position","list-style-image","list-style"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which of the following property specifies whether a long point that wraps to a second line should align with the first line or start underneath 
+					the start of the marker of a list?</h6>
+			<options values='{"values":["list-style-type","list-style-position","list-style-image","list-style"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.Which of the following property specifies an image for the marker rather than a bullet point or number?</h6>
+			<options values='{"values":["list-style-type","list-style-position","list-style-image","list-style"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Which of the following property serves as shorthand for the marker properties?</h6>
+			<options values='{"values":["list-style-type","list-style-position","list-style-image","list-style"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+        <div>
+			<h6>5.Which of the following property specifies the distance between a marker and the text in the list?</h6>
+			<options values='{"values":["marker-offset","list-style-position","list-style-image","list-style"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6.How do you make a list not display bullet points?</h6>
+			<options values='{"values":["list-style-type:no-bullet","list:none","bulletpoints:none","list-style-type: none"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7.How do you make a list  display as square points?</h6>
+			<options values='{"values":["list-style-type:square","list:square","bulletpoints:square","list-style-type: none"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>						
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

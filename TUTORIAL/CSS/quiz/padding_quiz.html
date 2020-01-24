@@ -1,0 +1,55 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['c','d','b','a','d','d','a'], selAnswers: []}">
+		<div>
+			<h6>1.In the following code snippet, what value is given for the top padding: padding: 7px 10px 3px 8px?</h6>
+			<options values='{"values":["3px","8px","7px","10px"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which of the following property specifies the left padding of an element?</h6>
+			<options values='{"values":["padding","padding-bottom","padding-top","padding-left"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.Which of the following property specifies the bottom padding of an element?</h6>
+			<options values='{"values":["padding","padding-bottom","padding-top","padding-left"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.In the following code snippet, what value is given for the top padding: padding: 15px 10px 20px 18px?</h6>
+			<options values='{"values":["15px","18px","20px","10px"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+        <div>
+			<h6>5.How do you insert padding so that it is:10 pixels at the top,15 pixels at the bottom,5 pixels at the right,10 pixels to the left?</h6>
+			<options values='{"values":["padding:10px 15px 5px 10px","padding:15px 5px 10px 10px","padding:10px 5px 10px 15px","padding:10px 5px 15px 10px"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6.What is padding?</h6>
+			<options values='{"values":[
+			"This property is used to generate space around border.",
+			"This property is used to generate spaces between letters",
+			"This property is used to generate spaces between text",
+			"This property is used to generate spaces around content"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7.If we are using padding property,you allowed to use negative property?</h6>
+			<options values='{"values":["No","YES"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

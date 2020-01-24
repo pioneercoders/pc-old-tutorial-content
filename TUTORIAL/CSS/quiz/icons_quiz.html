@@ -1,0 +1,17 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b'], selAnswers: []}">
+		<div>
+			<h6>1.To use the Bootstrap glyphicons, add the line inside the __________ section of your HTML page.?</h6>
+			<options values='{"values":["&lt;head&gt;","&lt;body&gt;","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.What is the primary favicon file?</h6>
+			<options values='{"values":["favico","favicon.ico","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

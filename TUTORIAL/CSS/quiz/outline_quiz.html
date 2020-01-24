@@ -1,0 +1,40 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','a','d','a','b'], selAnswers: []}">
+		<div>
+			<h6>1.Which property is used to set the width of the outline?</h6>
+			<options values='{"values":["width","Outline-width","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which property is used to set the color of the outline?</h6>
+			<options values='{"values":["Outline-color","Outline","Color","None"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.Which property is used to set the line style for the outline?</h6>
+			<options values='{"values":["Outline-color","Outline-width","Both a and b","Outline-style"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Which property is used to set all the outlining properties in a single statement?</h6>
+			<options values='{"values":["The outline property is used to set all the outlining properties in a single statement.",
+										"Outline-color","Outline-width","Outline-style"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+        <div>
+			<h6>5.Is it Outline and Border is same?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>	
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

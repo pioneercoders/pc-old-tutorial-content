@@ -1,0 +1,173 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. Write a sample code to apply border for div?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	 div{
+		border:1px solid #000;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Hello World!</h1>
+		<p>This page has a light blue background color!</p>
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="border:1px solid #000;margin-top:35px">
+		<h1>Hello World!</h1>
+		<p>This page has a light blue background color!</p>
+	</div>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+	<accordion-title>2.Write a sample code to apply border-bottom for h1?</accordion-title>
+	<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	 h1{
+		border-bottom:1px solid rgb(255, 255, 0);
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Hello World!</h1>
+		<p>This page has a light blue background color!</p>
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div>
+		<h1 style="border-bottom:1px solid rgb(255, 255, 0);margin-top:35px">Hello World!</h1>
+		<p>This page has a light blue background color!</p>
+	</div>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+	<accordion-title>3.Write a sample code to apply border-styles?</accordion-title>
+	<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	p.multiple
+	{
+	border-top:1px solid black;
+	border-left:1px dotted black;
+	border-bottom:1px dashed black;
+	border-right:1px double black;
+	padding:5px;
+	width:350px;
+	}
+</style>	
+</head>
+<body>
+	<p class="multiple">
+	This is the paragraph with multiple border style
+	</p>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style = "margin-top:35px"> 
+		<p style="border-top:1px solid black;border-left:1px dotted black;border-bottom:1px dashed black;border-right:1px double black;padding:5px;width:350px;">
+			This is the paragraph with multiple border style
+		</p>
+	</div>	
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+	<accordion-title>4.Write a sample code to apply border-radius?</accordion-title>
+	<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	  div{
+		border-top-right-radius: 60px; 
+		border-top-left-radius: 40px; 
+		border-bottom-left-radius: 80px;
+		background-color:green;
+		width:100px;
+		height:50px;
+		}
+	</style>	
+</head>
+<body>
+	<div>
+		
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style = "margin-top:35px"> 
+		<div style="background-color:green;border-top-right-radius:60px;border-top-left-radius:40px;border-bottom-left-radius: 80px;
+		height:50px;width:100px">
+	   </div>
+	</div>	
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+	<accordion-title>5.Write a sample code to apply border-radius?</accordion-title>
+	<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	  .panel-1{
+		border-radius:60px;
+		border:5px solid red;
+		background-color:green;
+		width:100px;
+		height:50px;
+		}
+		.panel-2{
+		border-radius:100px;
+		background-color:skyblue;
+		width:50px;
+		height:50px;
+		border:2px solid blue;
+		}
+	</style>	
+</head>
+<body>
+	<div class="panel-1">
+	</div>
+	<div class="panel-2">		
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style = "margin-top:35px"> 
+		<div style="background-color:green;border-radius:60px;border:5px solid red;
+		height:50px;width:100px">
+	   </div>
+	   <div style="background-color:skyblue;border-radius:100px;margin-top:10px;border:2px solid blue;
+		height:50px;width:50px">
+	   </div>
+	</div>	
+</div>
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

@@ -1,0 +1,96 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. Write a sample code to apply overflow:scroll for div?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    background-color: #eee;
+    width:500px;
+    height:100px;
+    border:1px dotted black;
+    overflow: scroll;
+}
+</style>
+</head>
+<body>
+	<h2>CSS Overflow</h2>
+	<p>
+		Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar
+		both horizontally and vertically (even if you do not need it):
+	</p>
+	<div>
+		You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content
+		overflows an element's box.You can use the overflow property when you want to have better control 
+		of the layout. The overflow property specifies  what happens if content overflows an element's box.
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<p><div style="margin-top:35px"></p>			
+		<h2>CSS Overflow</h2>
+		<p>Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll 
+			inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
+		</p>
+		<div style="background-color: #eee; width: 500px; height: 100px; border: 1px dotted black; overflow: scroll;">
+			You can use the overflow property when you want to have better control of the layout. The overflow property specifies
+			what happens if content overflows an element's box.You can use the overflow property when you want to have better control 
+			of the layout. The overflow property specifies  what happens if content overflows an element's box.
+		</div>
+     </div>
+	 <p style="clear:both"></p>
+</div>
+		</accordion-content>
+	</accordion-item>
+		<accordion-item>
+		<accordion-title>2.Write a sample code to apply overflow-x:hidden and overflow-y:scroll for div?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    background-color: #eee;
+    width:300px;
+    height:100px;
+    border: 1px dotted black;
+    overflow-x:hidden;
+	overflow-y:scroll;
+}
+</style>
+</head>
+<body>
+	<h2>CSS Overflow</h2>
+	<p>
+		Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar
+		both horizontally and vertically (even if you do not need it):
+	</p>
+	<div>
+		You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content
+		overflows an element's box.You can use the overflow property when you want to have better control 
+		of the layout. The overflow property specifies  what happens if content overflows an element's box.
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<p><div style="margin-top:35px"></p>			
+		<h2>CSS Overflow</h2>
+		<p>Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll 
+			inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):
+		</p>
+		<div style="background-color:#eee; width:300px; height:100px; border:1px dotted black;overflow-x:hidden;overflow-y:scroll">
+			You can use the overflow property when you want to have better control of the layout. The overflow property specifies
+			what happens if content overflows an element's box.You can use the overflow property when you want to have better control 
+			of the layout. The overflow property specifies  what happens if content overflows an element's box.
+		</div>
+	<p style="clear:both"></p>
+</div>
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

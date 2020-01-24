@@ -1,0 +1,100 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. Write a sample code to apply box-model for a div?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    background-color: lightblue;
+    width: 500px;
+    padding: 25px;
+    border: 25px solid navy;
+}
+</style>
+</head>
+<body>
+	<div>
+		Friendship is a miracle of God. It is a promise of togetherness of a lifetime. 
+		Anything lesser than that is not worth having a friend. Here is a compilation of short 
+		stories on friendship with an inspiration for you to become not only a better person but
+		also understand the meaning of true friendship.
+
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="background-color: lightblue; width:500px;padding: 25px;border: 25px solid navy;margin-top:35px">
+		Friendship is a miracle of God. It is a promise of togetherness of a lifetime. 
+		Anything lesser than that is not worth having a friend. Here is a compilation of short 
+		stories on friendship with an inspiration for you to become not only a better person but
+		also understand the meaning of true friendship.
+	</div>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+		<accordion-title>2. Write a sample example for box-model?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	 .panel-1{
+		 border: 1px dotted black; 
+		 width:70%; 
+		 margin-left:1em;
+		 background-color:#FCFFCD;
+	 }
+	 .panel-2
+		{
+		  border-top-width:thick;
+		  border-bottom-width:medium;
+		  border-top-style:solid;
+		  border-bottom-style: solid;
+		  margin:0.5cm;
+		}
+	 .panel-3
+	  {
+	   border-width:thin; 
+	   border-style: solid;
+	   margin:0.5cm;
+	  }
+	</style>
+</head>
+<body>
+<div  class="panel-1">
+			Wrapping div
+	<div class="panel-2">
+		Inside the first embedded div.
+	</div>
+	<div  class="panel-3">
+		Inside the second embedded div.
+	</div>
+</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="margin-top:35px">
+		<div style="border:1px dotted black; width:70%;  
+            margin-left:1em; background-color:#FCFFCD;">
+					Wrapping div
+			<div style="border-top-width:thick; border-bottom-width:medium;
+				border-top-style: solid; border-bottom-style: solid;
+				margin:0.5cm">
+				Inside the first embedded div.
+			</div>
+			<div style="border-width:thin; border-style: solid; margin:0.5cm">
+				Inside the second embedded div.
+			</div>
+		</div>
+	</div>
+</div>
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

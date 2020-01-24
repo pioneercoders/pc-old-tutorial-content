@@ -1,0 +1,39 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','c','b','d','b'], selAnswers: []}">
+		<div>
+			<h6>1.Which property is used to set the color of a text?</h6>
+			<options values='{"values":["Color","Font","Radius","Colour"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.What property is used to change the text color of an element?</h6>
+			<options values='{"values":["Fontcolor","Textcolor","Color","Font-color"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.Which is the correct CSS syntax?</h6>
+			<options values='{"values":["{p:color=black(p}","p{color: black;}","{p;color:black}","p:color=black"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.A hexadecimal is a __________ digit representation of a color?</h6>
+			<options values='{"values":["2","3","4","6"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.All the browsers support rgb() property of color?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

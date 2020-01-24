@@ -1,0 +1,42 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['b','d','b','a','a'], selAnswers: []}">
+		<div>
+			<h6>1.The overflow property in CSS can take one of the following values.
+				i)visible <br>
+				ii)hidden<br>
+				iii)scroll<br>
+				iv)non-scroll<br>
+				v)auto
+			</h6>
+			<options values='{"values":[
+			"i, ii, iii and iv only","i, ii, iii and v only","i, ii, iv and v only","All i, ii, iii, iv and v"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which of the following value is not correct for the overflow CSS property?</h6>
+			<options values='{"values":["visible","hidden","scroll","hide"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.What CSS property is used to stack overlapping page elements?</h6>
+			<options values='{"values":["z-index property","overflow property","float property","padding property"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.The overflow-x properties specifies whether to change the overflow of content just __________?</h6>
+			<options values='{"values":["horizontally","vertically","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+        <div>
+			<h6>5.overflow-y specifies what to do with the __________edges of the content.?</h6>
+			<options values='{"values":["top/bottom","left/right","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>	
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

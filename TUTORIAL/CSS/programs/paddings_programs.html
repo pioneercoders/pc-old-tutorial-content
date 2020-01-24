@@ -1,0 +1,119 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. Write a sample code to apply padding property?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<p style = "border:1px solid black;padding:15px;"> All paddings will be 15px.</p>
+	<p style = "border:1px solid black;padding:10px 2%;"> Top and bottom padding will be 10px, left and right padding will be 2% of the total width of the document.</p>
+	<p style = "border:1px solid black;padding:10px 2% -10px;"> Top padding will be 10px, left and right padding will be 2% of the total width of the document, bottom padding will be -10px.</p>
+	<p style = "border:1px solid black;padding:10px 2% -10px auto;"> top padding will be 10px, right padding will be 2% of the total width of the document, bottom padding will be -10px, left padding will be set by the browser.</p>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<p style = "border:1px solid black;padding:15px;margin-top:35px"> All paddings will be 15px.</p>
+	<p style = "border:1px solid black;padding:10px 2%;"> Top and bottom padding will be 10px, left and right padding will be 2% of the total width of the document.</p>
+	<p style = "border:1px solid black;padding:10px 2% -10px;"> Top padding will be 10px, left and right padding will be 2% of the total width of the document, bottom padding will be -10px.</p>
+	<p style = "border:1px solid black;padding:10px 2% -10px auto;"> top padding will be 10px, right padding will be 2% of the total width of the document, bottom padding will be -10px, left padding will be set by the browser.</p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+		<accordion-title>2.Write a sample code to apply padding for the class?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.content-panel
+	{
+	background-color:skyblue;
+	color:#fff;
+	padding:30px;
+	}
+	</style>
+</head>
+<body>
+	 <div class="content-panel">
+		The CSS padding properties are used to generate space around elements.
+		The padding properties set the size of the white space outside the border.
+		With CSS, you have full control over the margins. There are CSS properties 
+		for setting	the padding for each side of an element (top, 
+		right, bottom, and left).
+	 </div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="background-color:skyblue;color:#fff;padding:30px;margin-top:35px">
+		The CSS padding properties are used to generate space around elements.
+		The padding properties set the size of the white space outside the border.
+		With CSS, you have full control over the margins. There are CSS properties for setting
+		the padding for each side of an element (top, right, bottom, and left).
+	 </div>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+			<accordion-title>3.Write a sample code to apply padding for the classes?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.content-panel-1
+	{
+	background-color:skyblue;
+	color:#fff;
+	padding:30px;
+	}
+	.content-panel-2
+	{
+	background-color:red;
+	color:#fff;
+	padding:30px 50px;
+	}
+	</style>
+</head>
+<body>
+	 <div class="content-panel-1">
+		The CSS padding properties are used to generate space around elements.
+		The padding properties set the size of the white space outside the border.
+		With CSS, you have full control over the margins. There are CSS properties 
+		for setting	the padding for each side of an element (top, 
+		right, bottom, and left).
+	 </div>
+	 <div class="content-panel-2">
+		The CSS padding properties are used to generate space around elements.
+		The padding properties set the size of the white space outside the border.
+		With CSS, you have full control over the margins. There are CSS properties 
+		for setting	the padding for each side of an element (top, 
+		right, bottom, and left).
+	 </div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="background-color:skyblue;color:#fff;padding:30px;margin-top:35px">
+		The CSS padding properties are used to generate space around elements.
+		The padding properties set the size of the white space outside the border.
+		With CSS, you have full control over the margins. There are CSS properties for setting
+		the padding for each side of an element (top, right, bottom, and left).
+	 </div><br>
+	 <div style="background-color:red;color:#fff;padding:30px 50px">
+		The CSS padding properties are used to generate space around elements.
+		The padding properties set the size of the white space outside the border.
+		With CSS, you have full control over the margins. There are CSS properties for setting
+		the padding for each side of an element (top, right, bottom, and left).
+	 </div>
+</div>
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

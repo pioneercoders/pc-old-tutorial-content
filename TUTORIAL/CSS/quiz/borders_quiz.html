@@ -1,0 +1,69 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','d','a','b','c','d','d','b','b','a'], selAnswers: []}">
+		<div>
+			<h6>1.Which of the following property is used to set the width of an image border?</h6>
+			<options values='{"values":["border","height","width","-moz-opacity"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which of the following property changes the color of bottom border?</h6>
+			<options values='{"values":["border-top-color","border-left-color","border-right-color","border-bottom-color"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.The border-color property allows you to change the __________of the border?</h6>
+			<options values='{"values":["color","width","font","border"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.The border-width property allows you to change the __________of the border?</h6>
+			<options values='{"values":["color","width","font","border"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.The  __________ allows you to change the style of bottom border?</h6>
+			<options values='{"values":["border-left-style","border-right-style","border-bottom-style","border-top-style"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>	
+        <div>
+			<h6>6.The  __________ allows you to change the width of top border?</h6>
+			<options values='{"values":["border-left-width","border-right-width","border-bottom-width","border-top-width"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+        <div>
+			<h6>7.The border-style property Is?</h6>
+			<options values='{"values":["solid","dotted","groove","All of the above"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+        <div>
+			<h6>8.If we want to set border to 2px dotted write style for it?</h6>
+			<options values='{"values":["border:2px solid","border:2px dotted","border:2px groove","border:none"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+        <div>
+			<h6>9.If we want to set border-radius to 10px  write style for it?</h6>
+			<options values='{"values":["border-radius:2px ","border-radius:10px","border:2px ","border:none"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		<div>
+			<h6>10.The border-radius property not supported in IE8 and earlier Versions?</h6>
+			<options values='{"values":["Yes","No"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

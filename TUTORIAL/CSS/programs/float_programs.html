@@ -1,0 +1,126 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. Write a sample code to apply float-left for divs?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.panel-1
+	{
+	width:50%;
+	height:50%;
+	background-color:navy;
+	float:left;
+	border:1px solid black;
+	}
+	.panel-2
+	{
+	width:40%;
+	height:50%;
+	background-color:green;
+	float:left;
+	border:1px solid black;
+	}
+	</style>
+</head>
+<body>
+	<div class="panel-1">
+		The CSS float property is a positioning property. It is used to push an element to the left or right,
+		allowing other element to wrap around it. It is generally used with images and layouts.
+		To understand its purpose and origin, let's take a look to its print display. In the print display,
+		image is set into the page such that text wraps around it as needed
+	</div>
+	<div class="panel-2">
+		A floated element may be moved as far to the left or the right as possible. Simply, it means that a floated
+		element can display at extreme left or extreme right.
+		The elements after the floating element will flow around it.
+		The elements before the floating element will not be affected.
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<p><div style="margin-top:35px"></p>
+			<p><div style="width:50%;height:50%;background-color:navy;float:left;border:1px solid black;">
+				The CSS float property is a positioning property. It is used to push an element to the left or right,
+				allowing other element to wrap around it. It is generally used with images and layouts.
+				To understand its purpose and origin, let's take a look to its print display. In the print display,
+				image is set into the page such that text wraps around it as needed
+			</div></p>	
+			<p><div style="width:38%;height:50%;background-color:green;float:left;border:1px solid black;">
+				A floated element may be moved as far to the left or the right as possible. Simply, it means that a floated
+				element can display at extreme left or extreme right.
+				The elements after the floating element will flow around it.
+				The elements before the floating element will not be affected.
+			</div></p>
+		</div>
+	</p>
+	<p style="clear:both"></p>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+		<accordion-title>2. Write a sample code to apply float-right for divs?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.panel-1
+	{
+	width:50%;
+	height:50%;
+	background-color:navy;
+	float:right;
+	border:1px solid black;
+	}
+	.panel-2
+	{
+	width:40%;
+	height:50%;
+	background-color:green;
+	float:right;
+	border:1px solid black;
+	}
+	</style>
+</head>
+<body>
+	<div class="panel-1">
+		The CSS float property is a positioning property. It is used to push an element to the left or right,
+		allowing other element to wrap around it. It is generally used with images and layouts.
+		To understand its purpose and origin, let's take a look to its print display. In the print display,
+		image is set into the page such that text wraps around it as needed
+	</div>
+	<div class="panel-2">
+		A floated element may be moved as far to the left or the right as possible. Simply, it means that a floated
+		element can display at extreme left or extreme right.
+		The elements after the floating element will flow around it.
+		The elements before the floating element will not be affected.
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<p><div style="margin-top:35px">
+			<p><div style="width:50%;height:50%;background-color:navy;float:right;border:1px solid black;">
+				The CSS float property is a positioning property. It is used to push an element to the left or right,
+				allowing other element to wrap around it. It is generally used with images and layouts.
+				To understand its purpose and origin, let's take a look to its print display. In the print display,
+				image is set into the page such that text wraps around it as needed
+			</div></p>	
+			<p><div style="width:38%;height:50%;background-color:green;float:right;border:1px solid black;">
+				A floated element may be moved as far to the left or the right as possible. Simply, it means that a floated
+				element can display at extreme left or extreme right.
+				The elements after the floating element will flow around it.
+				The elements before the floating element will not be affected.
+			</div></p>
+		</div>
+	</p>
+	<p style="clear:both"></p>
+</div>
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

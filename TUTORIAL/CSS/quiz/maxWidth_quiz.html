@@ -1,0 +1,39 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b','b','a','c'], selAnswers: []}">
+		<div>
+			<h6>1.Which property is used to set the maximum width of an element?</h6>
+			<options values='{"values":[" Max-width","Width","Both a and b","None"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>	
+		<div>
+			<h6>2.Select the most appropriate CSS media query statement to change the #wrapper selector's width value to 90% on screen devices not wider than 1024px?</h6>
+			<options values='{"values":["@media only screen and (min-width: 1024px) { #wrapper { width: 90%; } }","@media only screen and (max-width: 1024px) { #wrapper { width: 90%; } }",
+			"@media all and (min-width: 1024px) { #wrapper { width: 90%; } }","@media print and (max-width: 1024px) { #wrapper { width: 90%; } }"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.It is important to make media elements (e.g., img, form, input, table, video, audio, and iframe) responsive by setting their width and max-width properties to 100px?</h6>
+			<options values='{"values":["true","false"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Select the most appropriate CSS media query statement to set section elements to stop floating on screen devices with an available width of 480px or less?</h6>
+			<options values='{"values":["@media only screen and (max-width: 480px) { section { float: none; } }","@media (min-width: 480px) { section { float: none; } }",
+			"@media all { section { float: none; } }","@media only screen and (width: 480px) { section { float: none; } }"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+        <div>
+			<h6>5.Select the most appropriate CSS media query statement to change the font-size of nav elements to 1.5em when the screen is between 480 and 1024px wide on any type of device?</h6>
+			<options values='{"values":["@media only screen and (min-width: 1024px) { nav { font-size: 1.5em; } }","@media (min-width: 481px) and (max-width: 1023px) { nav { font-size: 1.5em; } }",
+			"@media all and (min-width: 480px) and (max-width: 1024px) { nav { font-size: 1.5em; } }",
+			"@media print and (min-width: 480px) and (max-width: 1024px) { nav { font-size: 1.5em; } }"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>			
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

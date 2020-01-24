@@ -1,0 +1,49 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['d','b','d','a','c','b'], selAnswers: []}">
+		<div>
+			<h6>1.Which of the following property specifies the left margin of an element?</h6>
+			<options values='{"values":["margin","margin-bottom","margin-top","margin-left"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.In the following code snippet, what value is given for the left margin: margin: 5px 10px 3px 8px?</h6>
+			<options values='{"values":["3px","8px","5px","10px"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.Which snippet of CSS is commonly used to center a website horizontally?</h6>
+			<options values='{"values":["site-align:center","margin:center","margin:auto 0","margin:0 auto"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.In the following code snippet, what value is given for the top margin: margin: 15px 10px 20px 18px?</h6>
+			<options values='{"values":["15px","18px","20px","10px"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.Which of the following property specifies the top margin of an element?</h6>
+			<options values='{"values":["margin","margin-bottom","margin-top","margin-left"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6.What is margin?</h6>
+			<options values='{"values":[
+			"This property is used to generate space between letters",
+			"This property is used to generate space around border",
+			"This property is used to generate space around content",
+			"This property is used to generate spaces between text"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

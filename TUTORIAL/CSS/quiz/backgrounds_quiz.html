@@ -1,0 +1,59 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['c','a','b','a','d','a','b','a','c'], selAnswers: []}">
+		<div>
+			<h6>1.How to add background color for all the h1 elements?</h6>
+			<options values='{"values":["h1.all{background-color:red}","all.h1{background-color:red}","h1{background-color:red}","h1.background-color=red"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which property is used to change the background color?</h6>
+			<options values='{"values":["background-color:","bg-color:","bground:","b-color:"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.Which property is used to change the background image ?</h6>
+			<options values='{"values":["bg-image:","background-image:","bground:","b-image:"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4..Which property is used to control the repetition of an image in the background?</h6>
+			<options values='{"values":["background-repeat","bg-repeat","b-repeat","bg repeat"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.Which property is used to control the position of an image in the background?</h6>
+			<options values='{"values":["bground-position","b-position","bg-position"," background-position"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6.How to change  the position of background-image on top corner of right side?</h6>
+			<options values='{"values":["background-position: right top;","background-position: left top;","background-position: rightside top;","background-position: leftside top;"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+				<br>
+		<div>
+			<h6>7.Which property is used to repeat the background image vertically?</h6>
+			<options values='{"values":["background-repeat:repeat-x","background-repeat:repeat-y","background-repeat:repeat-z","None"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8.Which property is used to repeat the background image horizantally?</h6>
+			<options values='{"values":["background-repeat:repeat-x","background-repeat:repeat-y","background-repeat:repeat-z","None"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		<div>
+			<h6>9.To fix background-image with page which style we used?</h6>
+			<options values='{"values":["background-attachment:fix;","background-attachment:scroll;","background-attachment:fixed;","background-repeat:fixed"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>	
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

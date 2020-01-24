@@ -1,0 +1,39 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['d','a','a','d','b'], selAnswers: []}">
+		<div>
+			<h6>1.Which of the following property is used to set the opacity of an image?</h6>
+			<options values='{"values":["border","height","width","-moz-opacity"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.The opacity-level describes the transparency-level, it ranges from 0.0 to__________?</h6>
+			<options values='{"values":["0.1","0.3","0.9","0.5"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.When an element has a __________value of  the element is completely invisible?</h6>
+			<options values='{"values":["0","1","2","0.5"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Which value specifies color opacity?</h6>
+			<options values='{"values":["RGB","HSL","Color","RGBA"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.When an element has a __________value of  the element is completely opaque (solid)?</h6>
+			<options values='{"values":["0","1","2","0.5"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

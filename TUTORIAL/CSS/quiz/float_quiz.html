@@ -1,0 +1,36 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','d','c','d','c'], selAnswers: []}">
+		<div>
+			<h6>1.Which property is a positioning property?</h6>
+			<options values='{"values":["Float","Left","Right","None"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which is used to float the element to the left.?</h6>
+			<options values='{"values":["float:right","left","right","float:left"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.A block-level element with the CSS float property?</h6>
+			<options values='{"values":[" always floats to the top of the page","flows around other content on the page",
+											"will be rendered next to other such elements if space allows","does not scroll with the page"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Which property specifies which sides of an element other floating elements are not allowed?</h6>
+			<options values='{"values":["Cleared","Clear","Float","Both a and b"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+        <div>
+			<h6>5.What is CSS Float?</h6>
+			<options values='{"values":["Allows other element to wrap around an element","Element can be pushed to the left to right","Both a and b","None"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

@@ -1,0 +1,53 @@
+<!-- widget Quiz  -->	
+
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','b','d','d','d','a','b'], selAnswers: []}">
+		<div>
+			<h6>1.Which property of a hyperlink signifies unvisited hyperlinks?</h6>
+			<options values='{"values":[":link",":visited",":unvisited","None"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.Which property of a hyperlink signifies visited hyperlinks?</h6>
+			<options values='{"values":[":link",":visited",":unvisited","None"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.Which property of a hyperlink signifies an element that currently has the user's mouse pointer hovering over it?</h6>
+			<options values='{"values":[":link",":visited",":unvisited",":hover"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Link in HTML can be of following type(s)?</h6>
+			<options values='{"values":["Visited","Active","Unvisited","All are the Types of Links"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>5.Default Style and Color of Unvisited Link in any browser is ____________?</h6>
+			<options values='{"values":["Normal and Blue","Underline and Pink","Underline and Magento","Underlined and Blue"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		
+		<div>
+			<h6>6.Visited Link in Mozilla Firefox is Generally shown in __________ Color?</h6>
+			<options values='{"values":["Purple","Brown","Red","Pink"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		 <div>
+			<h6>7.Default color of active link in browser is ____________?</h6>
+			<options values='{"values":["green","red","blue","brown"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>
+	
+<!-- widget Quiz post -->

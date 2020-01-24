@@ -1,0 +1,95 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','e','d','b','b','c','b','a','a','b','d','a','a','a','c'], selAnswers: []}">
+		<div>
+			<h6>1.What is CSS?</h6>
+			<options values='{"values":["Cascading style sheets","Cascaded style sheets","Colorful Style Sheets","Creative style sheets"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>		
+		<div>
+			<h6>2.What is the use of CSS?</h6>
+			<options values='{"values":["Easy maintenance","CSS saves time","Offline Browsing","Pages load faster","All the above"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.What are the components of css style?	</h6>
+			<options values='{"values":["Selector","Property","Value","All the above"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.How many ways to write css styles?</h6>
+			<options values='{"values":["Internal style","above a,c & d","Inline style","External style"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+		<div>
+			<h6>5.Where in an HTML document is the correct place to refer  external style sheet?</h6>
+			<options values='{"values":["In body section","In head section","End of the document","In title section"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6.Which HTML tag is used to refer internal style sheet?</h6>
+			<options values='{"values":["<div>","<script>","<style>","<head>"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+		<div>
+			<h6>7.Which one is css correct syntax?</h6>
+			<options values='{"values":["{body:color=black}","body{color: black;}","body:color=black;","{body;color:black;}"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+		<div>
+			<h6>8.To select an element with a specific id, which character is used?</h6>
+			<options values='{"values":["#",".","@","("]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>
+		<div>
+			<h6>9.To group selectors, separate each selector with a ___________ ?</h6>
+			<options values='{"values":["comma","semicolon","colon","less-than"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+		<div>
+			<h6>10.To select an element with a specific class, which character is used?</h6>
+			<options values='{"values":["#",".","@","("]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>
+		<div>
+			<h6>11.What is universal selector?</h6>
+			<options values='{"values":["#","@","&","*"]}' 
+			bind-model='quizObj.selAnswers' id="10"></options>
+		</div>
+		<br>
+		<div>
+			<h6>12. id is called as ___________  selector?</h6>
+			<options values='{"values":["Unique selector","universal selector"," Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="11"></options>
+		</div>
+		<br>
+		<div>
+			<h6>13.A CSS comment starts with ___________and ends with ___________?</h6>
+			<options values='{"values":["/* this is a comment */","// this is a comment //","// this is a comment","<! this is a comment>"]}' 
+			bind-model='quizObj.selAnswers' id="12"></options>
+		</div>
+		<br>
+		<div>
+			<h6>14.Each page must include a reference to the external style sheet file inside the ___________ element?</h6>
+			<options values='{"values":["&lt;link&gt;","&lt;style&gt;","&lt;head&gt;","&lt;body&gt;"]}' 
+			bind-model='quizObj.selAnswers' id="13"></options>
+		</div>
+		<br>
+		<div>
+			<h6>15.Which style has highest priority?</h6>
+			<options values='{"values":["External style","Internal style","inline style","Both a,b&c"]}' 
+			bind-model='quizObj.selAnswers' id="14"></options>
+		</div>
+		<br>
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

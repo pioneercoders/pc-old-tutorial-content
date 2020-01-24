@@ -1,0 +1,175 @@
+<pc-accordion>
+	<accordion-item>
+		<accordion-title>1. Write a sample code to apply text-align,word-spacing and letter-spacing for a div?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	div
+	{
+	text-align:center;
+	word-spacing:5px;
+	letter-spacing:2px;
+	}
+</style>
+</head>
+<body>
+	<div>
+		The text-align property is used to align the text of a document.
+		The letter-spacing property is used to add or subtract space between the letters that make up a word.
+		The word-spacing property is used to add or subtract space between the words of a sentence.
+	</div>
+</body>	
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="margin-top:35px;text-align:center;word-spacing:5px;letter-spacing:2px">
+		The text-align property is used to align the text of a document.
+		The letter-spacing property is used to add or subtract space between the letters that make up a word.
+		The word-spacing property is used to add or subtract space between the words of a sentence.
+	</div>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+		<accordion-title>2. Write a sample code to apply text-indent,text-shadow and text-transform for a class ?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.panel{
+   text-shadow:4px 4px 8px #000;
+   text-indent:20px;
+   text-transform:capitalized;
+   }
+</style>
+</head>
+<body>
+	<div>
+		The text-indent property is used to indent the text of a paragraph.
+		The text-transform property is used to capitalize text or convert text.
+		The text-shadow property is used to set the text shadow around a text.
+	</div>
+	<div class="panel">
+		This text will have first line indented by 20px and this line will remain at its actual position this is done by CSS text-indent property.
+		This text will be capitalized.If your browser supports the CSS text-shadow property,this text will have a #ccc shadow..
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="margin-top:35px">
+		The text-indent property is used to indent the text of a paragraph.
+		The text-transform property is used to capitalize text or convert text.
+		The text-shadow property is used to set the text shadow around a text.
+	</div>
+	<div style="text-shadow:4px 4px 8px #000;text-indent:20px;text-transform:capitalized">
+		This text will have first line indented by 20px and this line will remain at its actual position this is done by CSS text-indent property.
+		This text will be capitalized.If your browser supports the CSS text-shadow property,this text will have a #000 shadow..
+	</div>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+		<accordion-title>3. Write a sample code to apply text-decoration ?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	p{
+	  text-decoration:underline;
+	}
+</style>
+</head>
+<body>
+	<p> This will be underlined.
+		The Text Decoration property is used to underline, overline, and strikethrough text.Possible values are none, 
+		underline, overline, line-through, blink.
+	</p>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="margin-top:35px">
+		<p style = "text-decoration:underline"> This will be underlined.
+		The Text Decoration property is used to underline, overline, and strikethrough text.Possible values are none, 
+		underline, overline, line-through, blink.
+		</p>
+	</div>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+		<accordion-title>4. Write a sample code to apply text-shadow?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	p{
+	  text-shadow:4px 4px 8px red;
+	  
+	}
+</style>
+</head>
+<body>
+	<p> 
+		Text Shadow property is used to set the text shadow around a text.This may not be supported by all the browsers.
+	</p>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="margin-top:35px">
+		<p style = "text-shadow:4px 4px 8px red;"> 
+			Text Shadow property is used to set the text shadow around a text.This may not be supported by all the browsers.
+		</p>
+	</div>
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+		<accordion-title>5. Write a sample code to apply word-spacing and letter-spacing?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	div
+	{
+	word-spacing:10px;
+	letter-spacing:5px;
+	}
+</style>
+</head>
+<body>
+	<div> 
+		The letter-spacing property is used to add or subtract space between the letters that make up a word.
+		Possible values are normal or a number specifying space.
+		The Word Spacing property is used to add or subtract space between the words of a sentence.
+		Possible values are normal or a number specifying space.
+	</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel">
+	<div style="margin-top:35px">
+		<div style = "word-spacing:10px;letter-spacing:5px"> 
+			The letter-spacing property is used to add or subtract space between the letters that make up a word.
+			Possible values are normal or a number specifying space.
+			The Word Spacing property is used to add or subtract space between the words of a sentence.
+			Possible values are normal or a number specifying space.
+		</div>
+	</div>
+</div>
+		</accordion-content>
+	</accordion-item>
+</pc-accordion>

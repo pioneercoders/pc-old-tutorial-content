@@ -1,0 +1,66 @@
+<div>
+	<form name="quizForm" ng-init="quizObj = {actAnswers : ['a','d','a','c','a','b','a','b','d','c'], selAnswers: []}">
+		<div>
+			<h6>1.Which css property is used to change the color of the Text?</h6>
+			<options values='{"values":["color","text-color","bg-color","color-text"]}' 
+			bind-model='quizObj.selAnswers' id="0"></options>
+		</div>
+		<br>
+		<div>
+			<h6>2.How to change the first letter in text to uppercase?</h6>
+			<options values='{"values":["text-transform:lowercase","text-transform:camelCase","text-transform:uppercase","text-transform:capitalize"]}' 
+			bind-model='quizObj.selAnswers' id="1"></options>
+		</div>
+		<br>
+		<div>
+			<h6>3.How to change the text into uppercase?</h6>
+			<options values='{"values":["text-transform:uppercase","text-transform:capitalize","text-transform:lowercase","text-transform:camelCase"]}' 
+			bind-model='quizObj.selAnswers' id="2"></options>
+		</div>
+		<br>
+		<div>
+			<h6>4.Which CSS property controls the text size?</h6>
+			<options values='{"values":["font-height","text-size","font-size","text-style"]}' 
+			bind-model='quizObj.selAnswers' id="3"></options>
+		</div>
+		<br>
+        <div>
+			<h6>5.Which property is used to underline, overline, and strikethrough text?</h6>
+			<options values='{"values":["text-decoration","text-indent","text-align","text"]}' 
+			bind-model='quizObj.selAnswers' id="4"></options>
+		</div>
+		<br>
+		<div>
+			<h6>6.Which property is used to set the text shadow around a text?</h6>
+			<options values='{"values":["text-indent","text-shadow","shadow","text-decoration"]}' 
+			bind-model='quizObj.selAnswers' id="5"></options>
+		</div>
+		<br>
+        <div>
+			<h6>7.Which property is used to add or subtract space between the words of a sentence?</h6>
+			<options values='{"values":[" Word Spacing","Letter Spacing","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="6"></options>
+		</div>
+		<br>
+         <div>
+			<h6>8.Which property is used to add or subtract space between the letters of a sentence?</h6>
+			<options values='{"values":[" Word Spacing","Letter Spacing","Both a and b","None of the above"]}' 
+			bind-model='quizObj.selAnswers' id="7"></options>
+		</div>
+		<br>	
+		<div>
+			<h6>9.Which property is used to align the text of a document?</h6>
+			<options values='{"values":["text","text-format","align","text-align"]}' 
+			bind-model='quizObj.selAnswers' id="8"></options>
+		</div>
+		<br>
+        <div>
+			<h6>10.Which property is used to control the flow and formatting of text?</h6>
+			<options values='{"values":["Text-space","Space","white-space","None"]}' 
+			bind-model='quizObj.selAnswers' id="9"></options>
+		</div>
+		<br>	
+		
+	</form>
+	<div id="results" ng-hide="true" ></div>
+</div>

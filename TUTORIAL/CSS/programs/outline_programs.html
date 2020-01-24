@@ -1,0 +1,131 @@
+<pc-accordion>
+	<accordion-item>
+	<accordion-title>1.Write a code to apply outline styles?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Outlines</title>
+	<style>
+		h1 {
+			font-size:40px;
+		}
+		pre {
+			padding: 20px;
+			border: 20px dotted;
+			outline: 20px solid red;
+			margin: 40px 0;
+		}
+		p {
+			font-size: 40px;
+			outline-color: #999;
+			outline-style: dashed;
+			outline-width: thin;
+			margin: 40px 0;
+		}
+		p strong {
+			outline:5px double rgba(0,255,0,.2);
+		}
+				
+	</style>
+</head>
+<body>
+	<h1>Outlines</h1>
+	<pre>padding: 20px;
+		 border: 20px dotted;
+		outline: 20px solid red;
+	</pre>
+	<p>The width, style, and color of the outline around a box. An outline is rendered around the outside of the border of a box.
+	<strong>It does not affect the size or position of the box, or any other box.</strong></p>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel"> 
+<style>
+  
+</style>
+	<div style="margin-top:35px">  
+		<h1 style="font-size:40px">Outlines</h1>
+
+			<pre style="padding: 20px;border: 20px dotted;outline: 20px solid red;margin: 40px 40px;">
+			<code>
+			   padding: 20px;
+			   border: 20px dotted;
+			   outline: 20px solid red;
+			</code>
+			</pre>
+
+		 <p style="font-size: 20px;outline-color: #999;outline-style: dashed;outline-width: thin;margin: 40px 0;">The width, style, and color of the outline around a box. An outline is rendered around the outside of the border of a box.
+		<strong style="outline:5px double rgba(0,255,0,.2);">It does not affect the size or position of the box, or any other box.</strong></p>
+	</div> 	
+</div>
+		</accordion-content>
+	</accordion-item>
+	<accordion-item>
+	<accordion-title>2.Write a code to apply outline-offset styles?</accordion-title>
+		<accordion-content>
+@CODE_START@@HTML@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.container {
+			margin: 40px auto;
+			max-width: 700px;
+		}
+		.element {
+		  display: block;
+		  margin: 60px auto;
+		  max-width: 400px;
+		  padding: 20px;
+		  border: 3px solid black;
+		  background-color: white;
+		  text-align: center;
+		  outline: 10px solid deepPink;
+		  outline-offset: 1em;
+		}
+		.element-2 {
+		  outline: 10px dotted #0099CC;
+		  outline-offset: 2em;
+		}	
+	</style>
+</head>
+<body>
+<div class="container">
+	  <p>
+		All of the following boxes have a 3px solid black border. The outline is drawn outside the border.
+	  </p>
+	 <div class="element">
+		I have a pink outline and a black border. The <code>outline-offset</code> is set to <code>1em</code>.
+	  </div>
+	  <div class="element element-2">
+		I have a blue outline and a black border. The <code>outline-offset</code> is set to <code>2.5em</code>. My outline overlaps the element above me.
+	  </div>
+</div>
+</body>
+</html>
+@CODE_END@
+<div class="output-panel"> 
+	<div style="margin-top:35px">  
+		<div style="margin: 40px auto;max-width: 700px;">
+			<p>
+			All of the following boxes have a 3px solid black border. The outline is drawn outside the border.
+		  </p>
+		  <div style="display: block; margin: 60px auto;max-width: 400px;padding: 20px;border: 3px solid black;
+				background-color: white;text-align: center;outline: 10px solid deepPink;outline-offset: 1em;">
+			I have a pink outline and a black border. The outline-offset is set to 1em.
+		  </div>
+		  </p>
+		  <div style="display: block; margin: 60px auto;max-width: 400px;padding: 20px;border: 3px solid black;
+				background-color: white;text-align: center;outline: 10px solid deepPink;outline-offset: 1em;outline: 10px dotted #0099CC;outline-offset: 2em">
+			I have a blue outline and a black border. The outline-offset is set to 2.5em. My outline overlaps the element above me.
+		  </div>  
+		</div>
+	</div> 	
+</div>
+		</accordion-content>
+	</accordion-item>
+	
+</pc-accordion>	
