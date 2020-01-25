@@ -43,7 +43,7 @@
 	<p>1.Declare a template with required data types</p>
 	<p>2.Create many number of instances for this template as many as we required.</p>
 	<p>3.Each instance give to each student.</p>
-	<p>This best solution can be achieve in programming scenario by using ‘STRUCTURE’ concept.</p>
+	<p>This best solution can be achieve in programming scenario by using â€˜STRUCTUREâ€™ concept.</p>
 		
 	<p><b>Differences between Arrays and Structures</b></p>
 		
@@ -71,7 +71,7 @@
 			<td>4.	There is no special keyword in declaration of an array.
 				Syntax: int Arrayname[ArraySize].
 			</td>
-			<td>4.	A special keyword ‘struct’ is used in declaration of structure.
+			<td>4.	A special keyword â€˜structâ€™ is used in declaration of structure.
 				Syntax:  struct StructureIdentifier
 				{
 					Structure Member1;
@@ -107,7 +107,7 @@ struct struct_Identifier struct_var[size];@CODE_END@
 		<p>When a structure includes another structure, it is a nested structure. There is no limit to the number of structures that can be nested. In nested structures each low level structures are declared separately and then grouped in the high level structure. We must declare the innermost structure first, then the next level, working upward toward the outer structure.</p>
 	<h4>Pointer to Structures</h4>
 	
-	<p>The address of a given structure variable can be obtained by using address operator ‘&’. We can use pointer to structures to access structure members by using their address. The operator which is used in this context is arrow operator '&#8594;' </p>
+	<p>The address of a given structure variable can be obtained by using address operator â€˜&â€™. We can use pointer to structures to access structure members by using their address. The operator which is used in this context is arrow operator '&#8594;' </p>
 			
 	<p><b>Declare and initialize a pointer variable to a structure</b></p>	
 	
@@ -129,7 +129,7 @@ void main( )
 { . . .	
 . . .	}	
 /*Second variable declared as pointer variable of STUDENT type 
-with global scope and initialize to address of variable ‘stu1’ 
+with global scope and initialize to address of variable â€˜stu1â€™ 
 of STUDENT type . */@CODE_END@		
 
 @CODE_START@@C@Method 3:
@@ -142,31 +142,31 @@ void main( )
 struct SUDENT stu1, * ptr = &stu1;	
 }	
 /* Second variable declared as pointer variable of STUDENT type
- with local scope and initialize to address of variable ‘stu1’ 
+ with local scope and initialize to address of variable â€˜stu1â€™ 
  of STUDENT type . */@CODE_END@		
 	
 	<p>Accessing structure member using pointer through the use of a special operator called arrow operator.</p>
 	
 	<p><b>Pointer with in Structures</b></p>
 	
-	<p>Structure may contain the pointer variable as member. Pointers are used to store the address of memory location. They can be de-referenced by ‘ * ’ operator. Whenever we need to print the content of variable pointed by some pointer, we have to dereference the pointer variable.</p>
+	<p>Structure may contain the pointer variable as member. Pointers are used to store the address of memory location. They can be de-referenced by â€˜ * â€™ operator. Whenever we need to print the content of variable pointed by some pointer, we have to dereference the pointer variable.</p>
 	
 	<h4>Structures and Functions</h4>
 	
 	<p>A user define function can access the members of a structure in 3 ways.</p>
 	<ul>
 		<li>Passing individual structure members as parameters to a function.</li>
-		<li>Passing the entire structure by its name (pass – by – Value) to a function.</li>
-		<li>Passing the entire structure by its address (pass – by – Address) to a function.</li>
+		<li>Passing the entire structure by its name (pass â€“ by â€“ Value) to a function.</li>
+		<li>Passing the entire structure by its address (pass â€“ by â€“ Address) to a function.</li>
 	</ul>
 	
 	<p><b>Passing the Entire Structure</b></p>
 	
-	<p>Passing a structure is really no different from passing individual elements. Since the structure is a type, we simply specify the type in the formal parameters of the called function. Similarly, the function can return a structure. The same pass – by – value rules apply when we pass a structure to a function.</p>
+	<p>Passing a structure is really no different from passing individual elements. Since the structure is a type, we simply specify the type in the formal parameters of the called function. Similarly, the function can return a structure. The same pass â€“ by â€“ value rules apply when we pass a structure to a function.</p>
 
 	<p><b>Self-Referential Structures</b></p>
 	
-	<p>Self – referential structures are those structures that contain a reference to data of its same type, i.e., in addition to other data, a self referential structure contains a pointer to a data that is of the same type as that of the structure. For example, consider the structure node given as follows.</p>
+	<p>Self â€“ referential structures are those structures that contain a reference to data of its same type, i.e., in addition to other data, a self referential structure contains a pointer to a data that is of the same type as that of the structure. For example, consider the structure node given as follows.</p>
 	
 	<p><b>Example;</b></p>
 @CODE_START@@C@struct node{	
