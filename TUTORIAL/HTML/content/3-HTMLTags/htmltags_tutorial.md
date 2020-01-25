@@ -1,7 +1,7 @@
 <h4>HTML Tags:</h4>
 <p>HTML tags are used to mark-up HTML elements </p>
 <p>	HTML tags are keywords(tag names) surrounded by <span class="ch1">< > </span>angle 	brackets.</p>
-<p><span class="ch1"><</span><span class="ch1">tagname></span>content<span class="ch1"> <</span><span class="ch1">/tagname></span></p>
+<p><span class="ch1"><</span><span class="ch1">  tagname></span>content<span class="ch1"> <</span><span class="ch1">/tagname> </span></p>
 <p>The first tag in a pair is the start tag, the second tag is the end tag</p>
 <p>The end tag is written like the start tag, but with a slash before the 	tag name</p>
 <p>The start tag is often called the opening tag. The end tag is often 	called the closing tag.</p>
