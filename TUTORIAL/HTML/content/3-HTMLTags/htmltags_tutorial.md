@@ -19,7 +19,7 @@
 <p>The text between<span class="cbody"> <b><</span> </b><span class="cbody"><b>body></b></span> and <span class="cbody"> <b><</b></span><span class="cbody"><b>/body></b></span> describes the visible page content. </p>
 <p>Only the content in <span> <</span> body> area (the white area) is displayed by the browser.</p>
 <p><b>Commonly Used Tags</b></p>
-<table class="pc-table" style="width:60%">
+<table class="pc-table" style="width:80%">
 	<tr> 
 		<td style="font-weight:bold"><b>Tag </b></td>
 		<td><b>Description</b></td>
