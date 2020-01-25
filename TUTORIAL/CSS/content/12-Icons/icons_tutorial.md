@@ -58,17 +58,18 @@
 </body>
 </html>@CODE_END@
 <div class="min-height-50" id="cssIcons2"><button type="button"  class="cws-button border-radius bt-color-3 pull-right" ng-click="tryYourSelf('cssIcons2','css')">Try Yourself</button></div>		
-			<h4>Output</h4>
+<h4>Output</h4>
 				@IMG_START@CSS/cssiconstutorial_image2/png@IMG_END@
-			<h4 >Google Icons :</h4>
-					<p>To use the Google icons, add the following line inside the <head> section of your HTML page.</p>
-					<p><<span>link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"></span></p>
+
+<h4 >Google Icons :</h4>
+				<p>To use the Google icons, add the following line inside the <head> section of your HTML page.</p>
+				<p><<span>link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"></span></p>
 					<p><b>Note :</b>No downloading or installation is required!</p>
 <p><b>Simple Example on Font Awesome Icons</b></p>	
 @CODE_START@@HTML@<!DOCTYPE html>
 <html>
 <head>
-					<link rel = "stylesheet" href = "/fonts.googleapis.com/icon?family=Material+Icons">
+				<link rel = "stylesheet" href = "/fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 	<p> Some Google Icons:</p>
