@@ -41,7 +41,7 @@
 @CODE_START@@HTML@<!DOCTYPE html>
 <html>
 <head>
-	<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+				<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body class = "container">
 	<p> Some Bootstrap Icons:</p>
@@ -68,7 +68,7 @@
 @CODE_START@@HTML@<!DOCTYPE html>
 <html>
 <head>
-	<link rel = "stylesheet" href = "/fonts.googleapis.com/icon?family=Material+Icons">
+					<link rel = "stylesheet" href = "/fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 	<p> Some Google Icons:</p>
