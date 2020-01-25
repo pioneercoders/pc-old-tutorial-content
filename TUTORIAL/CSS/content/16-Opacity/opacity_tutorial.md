@@ -1,15 +1,18 @@
-	<h4>CSS Opacity:</h4>
-	<p>The opacity CSS property specifies the level of transparency of an element. Opacity range is from 0 to 1.</p>
-	<p><b>Opacity:0;</b> specifies the full transperant meaning the element will be visibled clearly. </p>
-	<p><b>Opacity:1;</b> specifies the full opaque meaning the element will not be visibled clearly. </p>
-	<p><b>Example</b></p>
-	@CODE_START@@HTML@img{
+<h4>CSS Opacity:</h4>
+<p>The opacity CSS property specifies the level of transparency of an element. Opacity range is from 0 to 1.</p>
+<p><b>Opacity:0;</b> specifies the full transperant meaning the element will be visibled clearly. </p>
+<p><b>Opacity:1;</b> specifies the full opaque meaning the element will not be visibled clearly. </p>
+<p><b>Example</b></p>
+@CODE_START@@HTML@img{
 		opacity:0.5;
-	}@CODE_END@
-	@IMG_START@CSS/transparent/png@IMG_END@	
+	}
+@CODE_END@
+
+@IMG_START@CSS/transparent/png@IMG_END@	
 	
-	<h4>Creating a Transparent Image</h4>
-	<p>You can create Transparent Background Images by using the CSS property opacity.</p>	
+<h4>Creating a Transparent Image</h4>
+<p>You can create Transparent Background Images by using the CSS property opacity.</p>	
+
 		<div>
 			<div style="float:left">
 				@IMG_START@CSS/Opacity1.0/png@IMG_END@
@@ -19,21 +22,22 @@
 			</div>
 		</div>
 		<div class="clear"></div>
-		<h4>The Opacity Property :</h4>
-		<p>The following example demonstrates how to make a image transparent:</p>
+<h4>The Opacity Property :</h4>
+<p>The following example demonstrates how to make a image transparent:</p>
 <p>Simple Example on CSS Opacity</p>	
 <section>  
-<div ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'html', previewId:'preview1',
+	
+	<div ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'html', previewId:'preview1',
 	onLoad: htmlcssjsContentOnLoaded,
 	rendererOptions: { fontSize: 16 },
 	advanced: { highlightActiveLine: true}
-}" style="min-height:200px;"><xmp> <!-- Change code and see.-->
- <style>
-   img{
+	}" style="min-height:200px;"><xmp> <!-- Change code and see.-->
+ 	<style>
+  	 img{
 	border:1px solid black;
 	opacity:0.2;								
-}
- </style>
+	}
+ 	</style>
 <img src = "../pclogo.png" />
 </xmp>
 </div>
