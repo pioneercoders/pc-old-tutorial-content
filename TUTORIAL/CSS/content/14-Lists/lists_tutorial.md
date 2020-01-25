@@ -12,17 +12,17 @@
 	rendererOptions: { fontSize: 16 },
 	advanced: { highlightActiveLine: true}
 }" style="min-height:200px;"><xmp> <!-- Change code and see.-->
- <style>
-     ul{
-         background-color:green;
-         padding:20px;
+ 	<style>
+    							 ul{
+         					background-color:green;
+        				 padding:20px;
          
          }
          ul li{
              background-color:lightgrey;
 			 margin:5px;
          }
- </style>
+	 </style>
 <ul>
 	<li>Unordered Lists - Items are marked with bullets</li>
 	<li>Ordered Lists - list items are marked with numbers or letters.</li>
