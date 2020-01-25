@@ -3,7 +3,7 @@
 <p>Lists are two types</p>
 <ul>
 	<li>Unordered Lists - Items are marked with bullets<li>
-	<li>Ordered Lists - list items are marked with numbers or letters.</li>
+	<li>Ordered Lists - list items are marked with numbers or letters</li>
 </ul>
 <h4>Unordered List Example</h4>
 <section>  
