@@ -1,12 +1,14 @@
-					<h4 >How To Add Icons :</h4>
-					<p>The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.</p>
-					<p>Add the name of the specified icon class to any inline HTML element (like <<span>i></span> or <<span>span></span>).</p>
-					<p>All the icons in the icon libraries below, are scalable vectors that can be customized with CSS (size, color, shadow, etc.)</p>
-					<h4 >Font Awesome Icons :</h4>
-					<p>To use the Font Awesome icons, add the following line inside the <head> section of your HTML page.</p>
-					<p><<span>link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"></span>></p>
-					<p><b>Note :</b>No downloading or installation is required!</p>
-<p><b>Simple Example on Font Awesome Icons</b></p>	
+<h4 >How To Add Icons :</h4>
+<p>The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.</p>
+<p>Add the name of the specified icon class to any inline HTML element (like <<span>i></span> or <<span>span></span>).</p>
+<p>All the icons in the icon libraries below, are scalable vectors that can be customized with CSS (size, color, shadow, etc.)</p>
+					
+<h4 >Font Awesome Icons :</h4>
+<p>To use the Font Awesome icons, add the following line inside the <head> section of your HTML page.</p>
+<p><<span>link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"></span>></p>
+<p><b>Note :</b>No downloading or installation is required!</p>
+<p><b>Simple Example on Font Awesome Icons</b></p>
+
 @CODE_START@@HTML@<!DOCTYPE html>
 <html>
 <head>
