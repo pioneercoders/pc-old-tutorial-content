@@ -9,7 +9,7 @@
 	<p>2.Typedef structure declaration.</p>
 	
 	<p><b>Tagged structure declaration</b></p>
-	<p>A Tagged structure declaration can be used to define structure variables and return type. It is starts with the keyword ëstructí. The second element is the tag. The tag is the identifier for the structure.</p>
+	<p>A Tagged structure declaration can be used to define structure variables and return type. It is starts with the keyword ‚Äòstruct‚Äô. The second element is the tag. The tag is the identifier for the structure.</p>
 	<!-- <img src="/pioneercoders/resources/images/CPointers7.png"> -->
 	<p><b>Syntax</b></p>
 	@CODE_START@@C@struct TAG
@@ -28,7 +28,7 @@
 	};@CODE_END@	
 	
 	<p><b>Typedef structure declaration</b></p>
-	<p>The typedef structure declaration differs from the tagged structure declaration in two ways. First, the keyword ëtypedefí added to the beginning of the definition. Second, an identifier is required at the end of the block and before the semicolon</p>
+	<p>The typedef structure declaration differs from the tagged structure declaration in two ways. First, the keyword ‚Äòtypedef‚Äô added to the beginning of the definition. Second, an identifier is required at the end of the block and before the semicolon</p>
 	<!-- <img src="/pioneercoders/resources/images/CPointers8.png"> -->
 	<p><b>Syntax</b></p>
 	@CODE_START@@C@typedef struct
@@ -97,7 +97,7 @@ variables name()
 ...............; 
 } @CODE_END@		
 		
-		<p>Structure variable global declaration in ë typeof í structure declaration.</p>
+		<p>Structure variable global declaration in ‚Äò typeof ‚Äô structure declaration.</p>
 
 	<p><b>Local declaration of structure variable</b></p>
 @CODE_START@@C@struct	STUDENT 
@@ -144,15 +144,15 @@ double	Sphonenumber;
 }STUDENT; main( ) 
 { 
 STUDENT stu1,stu2; 
-stu1={ì SRINIVAS î , 31, 4, 123456}; 
+stu1={‚Äú SRINIVAS ‚Äù , 31, 4, 123456}; 
 stu2={" KRISHNA" , 24, 10, 245315}; 
 } @CODE_END@	
 	
-	<p><b>Note:</b>When one or more initializers are missing at static initialization of structure variable the structure members will be assigned null values, zero (0) for integers and floating-point numbers and null (ë\0í) character for characters and strings</p>
+	<p><b>Note:</b>When one or more initializers are missing at static initialization of structure variable the structure members will be assigned null values, zero (0) for integers and floating-point numbers and null (‚Äò\0‚Äô) character for characters and strings</p>
 	
 	<p><b>Dynamic structure variable initialization</b></p>
 	
-	<p>Dynamic initialization to a structure variable can be done by using input function ëscanf( )í. Before going in detail we must know about operators used in structures.</p>
+	<p>Dynamic initialization to a structure variable can be done by using input function ‚Äòscanf( )‚Äô. Before going in detail we must know about operators used in structures.</p>
 	
 	<p><b>Accessing of the structure variables</b></p>
 	
@@ -163,11 +163,11 @@ stu2={" KRISHNA" , 24, 10, 245315};
 	
 	<p>Two operators are used to access members of structure variables.</p>
 	
-	<p>i)The structure ëmember operatorí ( . ), also called as ëdirect selection operatorí, ëdot operatorí or period operator.</p>
-	<p>ii)The structure ëpointer operatorí ( --> ), also called ëarrow operatorí</p>
+	<p>i)The structure ‚Äòmember operator‚Äô ( . ), also called as ‚Äòdirect selection operator‚Äô, ‚Äòdot operator‚Äô or period operator.</p>
+	<p>ii)The structure ‚Äòpointer operator‚Äô ( --> ), also called ‚Äòarrow operator‚Äô</p>
 	
 	<p>The member operator accesses a structure member via the structure variable name. Member operator play a vital role in dynamic initialization of structure variables. To refers to a member in a structure we need to refer to both the structure variable and structure member respectively.</p>
-	<p>The pointer operator ñconsisting of a minus sign (-) and a greater than ( > ) sign without space in between.It accesses a structure member via a pointer to the structure.</p>
+	<p>The pointer operator ‚Äìconsisting of a minus sign (-) and a greater than ( > ) sign without space in between.It accesses a structure member via a pointer to the structure.</p>
 	
 	<p><b>Syntax</b></p>
 	@CODE_START@@C@Struct_var . member_name@CODE_END@	
