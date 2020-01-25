@@ -53,38 +53,40 @@
 <h4 >The Transparent color div:</h4>
 <p>The following example demonstrates how to make a div transparent :</p>
 <p><b>Simple Example on Transparent color</b></p>	
-<section>  
-<div ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'html', previewId:'preview2',
+
+	<section>  
+	<div ui-ace ="{useWrapMode: 'true', showGutter : 'true', theme:'monokai', mode: 'html', previewId:'preview2',
 	onLoad: htmlcssjsContentOnLoaded,
 	rendererOptions: { fontSize: 16 },
 	advanced: { highlightActiveLine: true}
-}" style="min-height:200px;"><xmp> <!-- Change code and see.-->
- <style>
-.sq{
+	}" style="min-height:200px;">
+	<xmp> <!-- Change code and see.-->
+ 	<style>
+	.sq{
 	width:100px; 
 	height:100px; 
 	background:orange; 
 	border: 1px solid black; 
 	float:left; 
 	align:center; 
-}
-.sq1{ 
+	}
+	.sq1{ 
 	opacity:1.0; 
-} 
-.sq2{ 
+	} 
+	.sq2{ 
 	opacity:0.5; 
-} 
-.sq2:hover{
+	} 
+	.sq2:hover{
 	background-color:green;
 	color:white;
 	opacity:1;
-}
- </style>
+	}
+ 	</style>
 	<div class = "sq sq1"> opacity 1.0 </div>
 	<div class = "sq sq2"> opacity 0.5(hover on it) </div>
-</xmp>
-</div>
-<div>
+	</xmp>
+	</div>
+	<div>
 	<iframe id="preview2"></iframe>
-</div>
-</section>			
+	</div>
+	</section>			
