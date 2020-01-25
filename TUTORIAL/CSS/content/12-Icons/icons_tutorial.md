@@ -30,9 +30,9 @@
 </html>@CODE_END@	
 <div class="min-height-50" id="cssIcons1"><button type="button"  class="cws-button border-radius bt-color-3 pull-right" ng-click="tryYourSelf('cssIcons1','css')">Try Yourself</button></div>				
 
-			<h4>Output</h4>
+<h4>Output</h4>
 				@IMG_START@CSS/cssiconstutorial_image1/png@IMG_END@
-			<h4 >Bootstrap Icons :</h4>
+<h4 >Bootstrap Icons :</h4>
 					<p>To use the Bootstrap glyphicons, add the following line inside the <<span>head></span> section of your HTML page.</p>
 					<p><<span>link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></span></p>
 					<p><b>Note :</b>No downloading or installation is required!</p>
