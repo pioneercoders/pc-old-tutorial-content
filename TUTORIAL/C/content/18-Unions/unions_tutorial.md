@@ -50,7 +50,7 @@ union POINT point1,point2;
 	
 			
 	<p><b>Initializing union</b></p>
-	<p>Initialization of a union variable is similar like initialization of structure a structure variable. Only one different is in the allocation of memory size. A union member’s share the same memory space, so fresh data replaces any existing data.</p>
+	<p>Initialization of a union variable is similar like initialization of structure a structure variable. Only one different is in the allocation of memory size. A union memberâ€™s share the same memory space, so fresh data replaces any existing data.</p>
 	
 	
 	<p><b>Array of union variables</b></p>
