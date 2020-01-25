@@ -28,7 +28,7 @@ Rest of the program
 		<ul>
 			<li>It is basically a "Two-way" decision statement (one for TRUE and other for FALSE)</li>
 			<li>The statement as executed only when the condition is true.</li>
-			<li>In case the condition is false the compiler skips the lines within the ìif Blockî.</li>
+			<li>In case the condition is false the compiler skips the lines within the ‚Äúif Block‚Äù.</li>
 			<li>The condition is always enclosed within a pair of parenthesis ie ( ).</li>
 			<li>The conditional statement should not the terminated with Semi-colons (;)</li>
 			<li>The Statements following the "if"-statement are normally enclosed in Curly Braces { }.</li>
@@ -66,8 +66,8 @@ int main() {
 	<ul>
 		<li>It is observed that the if statement executes only when the condition following if is true.</li>
 		<li>It does nothing when the condition is false.</li>
-		<li>In if-else either True-Block or False ñ Block will be executed and not both</li>
-		<li>The ìelseî Statement cannot be used without ìifî.</li>
+		<li>In if-else either True-Block or False ‚Äì Block will be executed and not both</li>
+		<li>The ‚Äúelse‚Äù Statement cannot be used without ‚Äúif‚Äù.</li>
 	</ul>	
 	<p><b>Syntax</b></p>
 	@CODE_START@@C@if(Test Expression or Condition){
@@ -130,18 +130,18 @@ When a series of decisions are involved, we may have to use more than one if-els
 	
 	<p><b>Flow chart:</b></p>
 	@IMG_START@C/CcontrollStatements4/png@IMG_END@
-	<p><b>The "else ñ if" Ladder:  </b></p>
+	<p><b>The "else ‚Äì if" Ladder:  </b></p>
 	<ul>
-		<li>This is another way of putting ifís together when multiple decisions are involved.</li>
+		<li>This is another way of putting if‚Äôs together when multiple decisions are involved.</li>
 		<li>A multipath decision is a chain of if s in which the statement associated with each else is an if.</li>
-		<li>Hence it forms a ladder called elseñif ladder.</li>
+		<li>Hence it forms a ladder called else‚Äìif ladder.</li>
 	</ul>
 	<p><b>Syntax</b></p>
 	@IMG_START@C/CcontrollStatements5/png@IMG_END@
 	<ul>
 		<li>The above construction is known as else if ladders.</li>
 		<li>The conditions are evaluated from top to bottom.</li>
-		<li>As soon as a true condition is found, the statement associated with it is executed and the control is transferred to the Rest of the Program StatementñX (skipping rest of the ladder).</li>
+		<li>As soon as a true condition is found, the statement associated with it is executed and the control is transferred to the Rest of the Program Statement‚ÄìX (skipping rest of the ladder).</li>
 		<li>When all the " n? conditions become false, then the final else containing the default statement will be executed.</li>
 	</ul>
 	<p><b>Fig:else-if ladder</b></p>
