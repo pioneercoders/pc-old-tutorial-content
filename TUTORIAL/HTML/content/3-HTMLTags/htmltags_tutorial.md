@@ -1,4 +1,4 @@
-	<h4>HTML Tags:</h4>
+<h4>HTML Tags:</h4>
 <p>HTML tags are used to mark-up HTML elements </p>
 <p>	HTML tags are keywords(tag names) surrounded by <span class="ch1">< > </span>angle 	brackets.</p>
 <p><span class="ch1"><</span><span class="ch1">tagname></span>content<span class="ch1"> <</span><span class="ch1">/tagname></span></p>
